@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name LocalComponents)(type KiCad)(uri D:/code/G2/LocalComponents.pretty)(options "")(descr ""))
+)
