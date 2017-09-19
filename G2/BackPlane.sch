@@ -45,17 +45,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L +12V #PWR0203
-U 1 1 59BF8056
-P 2200 2350
-F 0 "#PWR0203" H 2200 2200 50  0001 C CNN
-F 1 "+12V" H 2215 2523 50  0000 C CNN
-F 2 "" H 2200 2350 50  0001 C CNN
-F 3 "" H 2200 2350 50  0001 C CNN
-	1    2200 2350
-	1    0    0    -1  
-$EndComp
-$Comp
 L GND #PWR0204
 U 1 1 59BF808A
 P 3950 2800
@@ -213,7 +202,7 @@ F 3 "http://www.mouser.se/ProductDetail/ROHM-Semiconductor/RBR3MM30ATR/?qs=sGAEp
 	1    2500 3200
 	-1   0    0    1   
 $EndComp
-Text Notes 1950 2100 0    60   ~ 0
+Text Notes 1400 2200 0    60   ~ 0
 3.5A / 41.5W
 $Comp
 L +3.3V #PWR0206
@@ -292,8 +281,6 @@ Connection ~ 3950 2800
 Connection ~ 4450 2800
 Connection ~ 4950 2500
 Wire Wire Line
-	2200 2350 2200 3200
-Wire Wire Line
 	3700 3200 4950 3200
 Connection ~ 4450 3500
 Connection ~ 4950 3200
@@ -301,7 +288,7 @@ Connection ~ 2200 2500
 Connection ~ 2800 2500
 Connection ~ 2800 3200
 Wire Wire Line
-	2200 2500 2350 2500
+	1950 2500 2350 2500
 Wire Wire Line
 	2200 3200 2350 3200
 Connection ~ 4450 3200
@@ -340,7 +327,7 @@ Text Label 4650 2500 0    60   ~ 0
 3.3V
 Text Label 4650 3200 0    60   ~ 0
 5.0V
-Text Label 2200 2850 1    60   ~ 0
+Text Label 2200 2900 2    60   ~ 0
 12V
 Text Label 4200 2800 0    60   ~ 0
 GND
@@ -438,4 +425,41 @@ Text Label 3100 2500 1    60   ~ 0
 3.3V-Feed
 Text Label 3100 3200 1    60   ~ 0
 5V-Feed
+$Comp
+L EMI_Filter_LCL FL201
+U 1 1 59C18455
+P 1650 2600
+F 0 "FL201" H 1650 2917 50  0000 C CNN
+F 1 "EMI_Filter_LCL" H 1650 2826 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" V 1650 2600 50  0001 C CNN
+F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=DSS1NB31H104Q91Avirtualkey64800000virtualkey81-DSS1NB31H104Q91A" V 1650 2600 50  0001 C CNN
+	1    1650 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 3200 2200 2500
+$Comp
+L GND #PWR03
+U 1 1 59C18794
+P 1650 2700
+F 0 "#PWR03" H 1650 2450 50  0001 C CNN
+F 1 "GND" H 1655 2527 50  0000 C CNN
+F 2 "" H 1650 2700 50  0001 C CNN
+F 3 "" H 1650 2700 50  0001 C CNN
+	1    1650 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L +12V #PWR04
+U 1 1 59C189A9
+P 1350 2500
+F 0 "#PWR04" H 1350 2350 50  0001 C CNN
+F 1 "+12V" H 1365 2673 50  0000 C CNN
+F 2 "" H 1350 2500 50  0001 C CNN
+F 3 "" H 1350 2500 50  0001 C CNN
+	1    1350 2500
+	0    -1   -1   0   
+$EndComp
+Text Label 1350 2500 3    60   ~ 0
+12V
 $EndSCHEMATC

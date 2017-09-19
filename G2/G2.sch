@@ -47,7 +47,7 @@ $EndDescr
 $Sheet
 S 1850 1500 1350 350 
 U 59BF7E73
-F0 "BackPlane" 60
-F1 "BackPlane.sch" 60
+F0 "Power" 60
+F1 "Power.sch" 60
 $EndSheet
 $EndSCHEMATC
