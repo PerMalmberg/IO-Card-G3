@@ -34,7 +34,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 2
+Sheet 2 6
 Title ""
 Date ""
 Rev ""
@@ -47,80 +47,80 @@ $EndDescr
 $Comp
 L GND #PWR0204
 U 1 1 59BF808A
-P 3950 2800
-F 0 "#PWR0204" H 3950 2550 50  0001 C CNN
-F 1 "GND" H 3955 2627 50  0000 C CNN
-F 2 "" H 3950 2800 50  0001 C CNN
-F 3 "" H 3950 2800 50  0001 C CNN
-	1    3950 2800
+P 4200 2800
+F 0 "#PWR0204" H 4200 2550 50  0001 C CNN
+F 1 "GND" H 4205 2627 50  0000 C CNN
+F 2 "" H 4200 2800 50  0001 C CNN
+F 3 "" H 4200 2800 50  0001 C CNN
+	1    4200 2800
 	1    0    0    -1  
 $EndComp
 $Comp
 L D_Zener D203
 U 1 1 59BF8261
-P 3950 2650
-F 0 "D203" V 3904 2729 50  0000 L CNN
-F 1 "3.3V" V 3995 2729 50  0000 L CNN
-F 2 "Diodes_SMD:D_SOD-123" H 3950 2650 50  0001 C CNN
-F 3 "http://www.mouser.se/ProductDetail/Vishay-Semiconductors/BZT52C3V3-E3-18/?qs=sGAEpiMZZMtQ8nqTKtFS%2fGqv07jO8JlbGw6qFNdMF40%3d" H 3950 2650 50  0001 C CNN
-	1    3950 2650
+P 4200 2650
+F 0 "D203" V 4154 2729 50  0000 L CNN
+F 1 "3.3V" V 4245 2729 50  0000 L CNN
+F 2 "Diodes_SMD:D_SOD-123" H 4200 2650 50  0001 C CNN
+F 3 "http://www.mouser.se/ProductDetail/Vishay-Semiconductors/BZT52C3V3-E3-18/?qs=sGAEpiMZZMtQ8nqTKtFS%2fGqv07jO8JlbGw6qFNdMF40%3d" H 4200 2650 50  0001 C CNN
+	1    4200 2650
 	0    1    1    0   
 $EndComp
 $Comp
 L C C203
 U 1 1 59BF8336
-P 4450 2650
-F 0 "C203" H 4565 2696 50  0000 L CNN
-F 1 "100n" H 4565 2605 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 4488 2500 50  0001 C CNN
-F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=08055C104JAT2Avirtualkey58110000virtualkey581-08055C104J" H 4450 2650 50  0001 C CNN
-	1    4450 2650
+P 4700 2650
+F 0 "C203" H 4815 2696 50  0000 L CNN
+F 1 "100n" H 4815 2605 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 4738 2500 50  0001 C CNN
+F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=08055C104JAT2Avirtualkey58110000virtualkey581-08055C104J" H 4700 2650 50  0001 C CNN
+	1    4700 2650
 	1    0    0    -1  
 $EndComp
 $Comp
 L CP C205
 U 1 1 59BF840B
-P 4950 2650
-F 0 "C205" H 5068 2696 50  0000 L CNN
-F 1 "100u" H 5068 2605 50  0000 L CNN
-F 2 "Capacitors_THT:CP_Radial_D6.3mm_P2.50mm" H 4988 2500 50  0001 C CNN
-F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=ULD1C101MED1TDvirtualkey64700000virtualkey647-ULD1C101MED1TD" H 4950 2650 50  0001 C CNN
-	1    4950 2650
+P 5200 2650
+F 0 "C205" H 5318 2696 50  0000 L CNN
+F 1 "100u" H 5318 2605 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D6.3mm_P2.50mm" H 5238 2500 50  0001 C CNN
+F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=ULD1C101MED1TDvirtualkey64700000virtualkey647-ULD1C101MED1TD" H 5200 2650 50  0001 C CNN
+	1    5200 2650
 	1    0    0    -1  
 $EndComp
-Text Notes 5150 2400 0    60   ~ 0
+Text Notes 5400 2400 0    60   ~ 0
 Max 5A / 16.5 W
 $Comp
 L D_Zener D204
 U 1 1 59BF8CE6
-P 3950 3350
-F 0 "D204" V 3904 3429 50  0000 L CNN
-F 1 "5.1V" V 3995 3429 50  0000 L CNN
-F 2 "Diodes_SMD:D_SOD-123" H 3950 3350 50  0001 C CNN
-F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=1N4733AW-TPvirtualkey54720000virtualkey833-1N4733AW-TP" H 3950 3350 50  0001 C CNN
-	1    3950 3350
+P 4200 3350
+F 0 "D204" V 4154 3429 50  0000 L CNN
+F 1 "5.1V" V 4245 3429 50  0000 L CNN
+F 2 "Diodes_SMD:D_SOD-123" H 4200 3350 50  0001 C CNN
+F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=1N4733AW-TPvirtualkey54720000virtualkey833-1N4733AW-TP" H 4200 3350 50  0001 C CNN
+	1    4200 3350
 	0    1    1    0   
 $EndComp
 $Comp
 L C C204
 U 1 1 59BF8CED
-P 4450 3350
-F 0 "C204" H 4565 3396 50  0000 L CNN
-F 1 "100n" H 4565 3305 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 4488 3200 50  0001 C CNN
-F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=08055C104JAT2Avirtualkey58110000virtualkey581-08055C104J" H 4450 3350 50  0001 C CNN
-	1    4450 3350
+P 4700 3350
+F 0 "C204" H 4815 3396 50  0000 L CNN
+F 1 "100n" H 4815 3305 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 4738 3200 50  0001 C CNN
+F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=08055C104JAT2Avirtualkey58110000virtualkey581-08055C104J" H 4700 3350 50  0001 C CNN
+	1    4700 3350
 	1    0    0    -1  
 $EndComp
 $Comp
 L CP C206
 U 1 1 59BF8CF4
-P 4950 3350
-F 0 "C206" H 5068 3396 50  0000 L CNN
-F 1 "100u" H 5068 3305 50  0000 L CNN
-F 2 "Capacitors_THT:CP_Radial_D6.3mm_P2.50mm" H 4988 3200 50  0001 C CNN
-F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=ULD1C101MED1TDvirtualkey64700000virtualkey647-ULD1C101MED1TD" H 4950 3350 50  0001 C CNN
-	1    4950 3350
+P 5200 3350
+F 0 "C206" H 5318 3396 50  0000 L CNN
+F 1 "100u" H 5318 3305 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D6.3mm_P2.50mm" H 5238 3200 50  0001 C CNN
+F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=ULD1C101MED1TDvirtualkey64700000virtualkey647-ULD1C101MED1TD" H 5200 3350 50  0001 C CNN
+	1    5200 3350
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -170,15 +170,15 @@ $EndComp
 $Comp
 L GND #PWR0205
 U 1 1 59BF965E
-P 3950 3500
-F 0 "#PWR0205" H 3950 3250 50  0001 C CNN
-F 1 "GND" H 3955 3327 50  0000 C CNN
-F 2 "" H 3950 3500 50  0001 C CNN
-F 3 "" H 3950 3500 50  0001 C CNN
-	1    3950 3500
+P 4200 3500
+F 0 "#PWR0205" H 4200 3250 50  0001 C CNN
+F 1 "GND" H 4205 3327 50  0000 C CNN
+F 2 "" H 4200 3500 50  0001 C CNN
+F 3 "" H 4200 3500 50  0001 C CNN
+	1    4200 3500
 	1    0    0    -1  
 $EndComp
-Text Notes 5150 3100 0    60   ~ 0
+Text Notes 5400 3100 0    60   ~ 0
 Max 5A / 25W
 $Comp
 L D D201
@@ -207,23 +207,23 @@ Text Notes 1950 2100 0    60   ~ 0
 $Comp
 L +3.3V #PWR0206
 U 1 1 59BFA80B
-P 4950 2500
-F 0 "#PWR0206" H 4950 2350 50  0001 C CNN
-F 1 "+3.3V" H 4965 2673 50  0000 C CNN
-F 2 "" H 4950 2500 50  0001 C CNN
-F 3 "" H 4950 2500 50  0001 C CNN
-	1    4950 2500
+P 5200 2500
+F 0 "#PWR0206" H 5200 2350 50  0001 C CNN
+F 1 "+3.3V" H 5215 2673 50  0000 C CNN
+F 2 "" H 5200 2500 50  0001 C CNN
+F 3 "" H 5200 2500 50  0001 C CNN
+	1    5200 2500
 	1    0    0    -1  
 $EndComp
 $Comp
 L +5V #PWR0207
 U 1 1 59BFA8BE
-P 4950 3200
-F 0 "#PWR0207" H 4950 3050 50  0001 C CNN
-F 1 "+5V" H 4965 3373 50  0000 C CNN
-F 2 "" H 4950 3200 50  0001 C CNN
-F 3 "" H 4950 3200 50  0001 C CNN
-	1    4950 3200
+P 5200 3200
+F 0 "#PWR0207" H 5200 3050 50  0001 C CNN
+F 1 "+5V" H 5215 3373 50  0000 C CNN
+F 2 "" H 5200 3200 50  0001 C CNN
+F 3 "" H 5200 3200 50  0001 C CNN
+	1    5200 3200
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -270,37 +270,6 @@ F 3 "" H 2100 1550 50  0001 C CNN
 	1    2100 1550
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2800 2800 4950 2800
-Wire Wire Line
-	3700 2500 4950 2500
-Connection ~ 3950 2500
-Connection ~ 4450 2500
-Connection ~ 3400 2800
-Connection ~ 3950 2800
-Connection ~ 4450 2800
-Connection ~ 4950 2500
-Wire Wire Line
-	3700 3200 4950 3200
-Connection ~ 4450 3500
-Connection ~ 4950 3200
-Connection ~ 2200 2500
-Connection ~ 2800 2500
-Connection ~ 2800 3200
-Wire Wire Line
-	1950 2500 2350 2500
-Wire Wire Line
-	2200 3200 2350 3200
-Connection ~ 4450 3200
-Connection ~ 3950 3200
-Connection ~ 3950 3500
-Wire Wire Line
-	2800 3500 4950 3500
-Connection ~ 3400 3500
-Wire Wire Line
-	2650 2500 3100 2500
-Wire Wire Line
-	2650 3200 3100 3200
 $Comp
 L PWR_FLAG #FLG0203
 U 1 1 59BFCA10
@@ -323,104 +292,16 @@ F 3 "" H 2800 3200 50  0001 C CNN
 	1    2800 3200
 	1    0    0    -1  
 $EndComp
-Text Label 4650 2500 0    60   ~ 0
+Text Label 4900 2500 0    60   ~ 0
 3.3V
-Text Label 4650 3200 0    60   ~ 0
+Text Label 4900 3200 0    60   ~ 0
 5.0V
 Text Label 2200 2850 1    60   ~ 0
 12V
-Text Label 4200 2800 0    60   ~ 0
+Text Label 4450 2800 0    60   ~ 0
 GND
-Text Label 4200 3500 0    60   ~ 0
+Text Label 4450 3500 0    60   ~ 0
 GND
-$Comp
-L Conn_01x09 J206
-U 1 1 59BFD755
-P 6600 6150
-F 0 "J206" V 6724 6146 50  0000 C CNN
-F 1 "Conn_01x09" V 6815 6146 50  0000 C CNN
-F 2 "LocalComponents:MOLEX_1x9_39544-3009" H 6600 6150 50  0001 C CNN
-F 3 "http://www.mouser.se/ProductDetail/Molex/39544-3009/?qs=sGAEpiMZZMvZTcaMAxB2ALD5K2s4Cmud0QE50Luvbic%3d" H 6600 6150 50  0001 C CNN
-	1    6600 6150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Conn_01x09 J205
-U 1 1 59BFDEFE
-P 6600 5200
-F 0 "J205" V 6724 5196 50  0000 C CNN
-F 1 "Conn_01x09" V 6815 5196 50  0000 C CNN
-F 2 "LocalComponents:MOLEX_1x9_39544-3009" H 6600 5200 50  0001 C CNN
-F 3 "http://www.mouser.se/ProductDetail/Molex/39544-3009/?qs=sGAEpiMZZMvZTcaMAxB2ALD5K2s4Cmud0QE50Luvbic%3d" H 6600 5200 50  0001 C CNN
-	1    6600 5200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Conn_01x09 J204
-U 1 1 59BFDF40
-P 6600 4250
-F 0 "J204" V 6724 4246 50  0000 C CNN
-F 1 "Conn_01x09" V 6815 4246 50  0000 C CNN
-F 2 "LocalComponents:MOLEX_1x9_39544-3009" H 6600 4250 50  0001 C CNN
-F 3 "http://www.mouser.se/ProductDetail/Molex/39544-3009/?qs=sGAEpiMZZMvZTcaMAxB2ALD5K2s4Cmud0QE50Luvbic%3d" H 6600 4250 50  0001 C CNN
-	1    6600 4250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Conn_01x09 J203
-U 1 1 59BFDF8C
-P 6600 3150
-F 0 "J203" V 6724 3146 50  0000 C CNN
-F 1 "Conn_01x09" V 6815 3146 50  0000 C CNN
-F 2 "LocalComponents:MOLEX_1x9_39544-3009" H 6600 3150 50  0001 C CNN
-F 3 "http://www.mouser.se/ProductDetail/Molex/39544-3009/?qs=sGAEpiMZZMvZTcaMAxB2ALD5K2s4Cmud0QE50Luvbic%3d" H 6600 3150 50  0001 C CNN
-	1    6600 3150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Conn_01x09 J202
-U 1 1 59BFE106
-P 6600 2200
-F 0 "J202" V 6724 2196 50  0000 C CNN
-F 1 "Conn_01x09" V 6815 2196 50  0000 C CNN
-F 2 "LocalComponents:MOLEX_1x9_39544-3009" H 6600 2200 50  0001 C CNN
-F 3 "http://www.mouser.se/ProductDetail/Molex/39544-3009/?qs=sGAEpiMZZMvZTcaMAxB2ALD5K2s4Cmud0QE50Luvbic%3d" H 6600 2200 50  0001 C CNN
-	1    6600 2200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Conn_01x09 J201
-U 1 1 59BFE146
-P 6600 1250
-F 0 "J201" V 6724 1246 50  0000 C CNN
-F 1 "Conn_01x09" V 6815 1246 50  0000 C CNN
-F 2 "LocalComponents:MOLEX_1x9_39544-3009" H 6600 1250 50  0001 C CNN
-F 3 "http://www.mouser.se/ProductDetail/Molex/39544-3009/?qs=sGAEpiMZZMvZTcaMAxB2ALD5K2s4Cmud0QE50Luvbic%3d" H 6600 1250 50  0001 C CNN
-	1    6600 1250
-	1    0    0    -1  
-$EndComp
-$Comp
-L +12V #PWR0209
-U 1 1 59BFF49D
-P 6400 950
-F 0 "#PWR0209" H 6400 800 50  0001 C CNN
-F 1 "+12V" V 6415 1078 50  0000 L CNN
-F 2 "" H 6400 950 50  0001 C CNN
-F 3 "" H 6400 950 50  0001 C CNN
-	1    6400 950 
-	0    -1   -1   0   
-$EndComp
-$Comp
-L GND #PWR0208
-U 1 1 59BFF54A
-P 6400 850
-F 0 "#PWR0208" H 6400 600 50  0001 C CNN
-F 1 "GND" V 6405 722 50  0000 R CNN
-F 2 "" H 6400 850 50  0001 C CNN
-F 3 "" H 6400 850 50  0001 C CNN
-	1    6400 850 
-	0    1    1    0   
-$EndComp
 $Comp
 L EMI_Filter_LCL FL201
 U 1 1 59C1AAEC
@@ -457,5 +338,58 @@ $EndComp
 Text Label 1350 2500 1    60   ~ 0
 12V_Source
 Wire Wire Line
+	2800 2800 5200 2800
+Wire Wire Line
+	4100 2500 5200 2500
+Connection ~ 4200 2500
+Connection ~ 4700 2500
+Connection ~ 3400 2800
+Connection ~ 4200 2800
+Connection ~ 4700 2800
+Connection ~ 5200 2500
+Wire Wire Line
+	4100 3200 5200 3200
+Connection ~ 4700 3500
+Connection ~ 5200 3200
+Connection ~ 2200 2500
+Connection ~ 2800 2500
+Connection ~ 2800 3200
+Wire Wire Line
+	1950 2500 2350 2500
+Wire Wire Line
+	2200 3200 2350 3200
+Connection ~ 4700 3200
+Connection ~ 4200 3200
+Connection ~ 4200 3500
+Wire Wire Line
+	2800 3500 5200 3500
+Connection ~ 3400 3500
+Wire Wire Line
+	2650 2500 3100 2500
+Wire Wire Line
+	2650 3200 3100 3200
+Wire Wire Line
 	2200 3200 2200 2500
+$Comp
+L GS2 J?
+U 1 1 59C6A7C3
+P 3900 2500
+F 0 "J?" V 3695 2500 50  0000 C CNN
+F 1 "GS2" V 3786 2500 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" V 3974 2500 50  0001 C CNN
+F 3 "" H 3900 2500 50  0001 C CNN
+	1    3900 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L GS2 J?
+U 1 1 59C6AA5F
+P 3900 3200
+F 0 "J?" V 3695 3200 50  0000 C CNN
+F 1 "GS2" V 3786 3200 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" V 3974 3200 50  0001 C CNN
+F 3 "" H 3900 3200 50  0001 C CNN
+	1    3900 3200
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
