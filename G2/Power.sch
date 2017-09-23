@@ -29,12 +29,17 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:diode
+LIBS:analog_devices
+LIBS:ADS1115IDGST
+LIBS:spark_esp32thing
+LIBS:sensors
+LIBS:Worldsemi
 LIBS:G2-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 6
+Sheet 2 7
 Title ""
 Date ""
 Rev ""

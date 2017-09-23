@@ -29,12 +29,17 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:diode
+LIBS:analog_devices
+LIBS:ADS1115IDGST
+LIBS:spark_esp32thing
+LIBS:sensors
+LIBS:Worldsemi
 LIBS:G2-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 6
+Sheet 1 7
 Title ""
 Date ""
 Rev ""
@@ -57,13 +62,13 @@ F0 "Connectors" 60
 F1 "Connectors.sch" 60
 $EndSheet
 $Sheet
-S 3600 1550 1100 350 
+S 3500 1500 1100 350 
 U 59C2CAC5
 F0 "DigitalIO" 60
 F1 "DigitalIO.sch" 60
 $EndSheet
 $Sheet
-S 4050 3100 1250 400 
+S 3500 2300 1250 400 
 U 59C69055
 F0 "MCU" 60
 F1 "MCU.sch" 60
@@ -73,5 +78,11 @@ S 1850 3100 1350 400
 U 59C692ED
 F0 "Analog Sense" 60
 F1 "AnalogSense.sch" 60
+$EndSheet
+$Sheet
+S 1850 3800 1300 300 
+U 59C9A55D
+F0 "Status" 60
+F1 "Status.sch" 60
 $EndSheet
 $EndSCHEMATC

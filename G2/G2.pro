@@ -1,4 +1,4 @@
-update=17/09/2017 17:47:56
+update=23/09/2017 17:01:47
 version=1
 last_client=kicad
 [general]
@@ -61,3 +61,8 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=diode
+LibName31=analog_devices
+LibName32=D:/code/G2/ADS1115/ADS1115IDGST
+LibName33=D:/code/G2/ESP32 Thing/spark_esp32thing
+LibName34=sensors
+LibName35=Worldsemi

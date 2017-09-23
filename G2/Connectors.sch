@@ -29,12 +29,17 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:diode
+LIBS:analog_devices
+LIBS:ADS1115IDGST
+LIBS:spark_esp32thing
+LIBS:sensors
+LIBS:Worldsemi
 LIBS:G2-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 6
+Sheet 3 7
 Title ""
 Date ""
 Rev ""
@@ -181,19 +186,135 @@ DO2_PWR
 Text GLabel 2250 2250 0    60   Input ~ 0
 DO1_PWR
 Text GLabel 2250 2350 0    60   Input ~ 0
-DO1_GND
+DO1_GND_CTRL
 Text GLabel 2250 2550 0    60   Input ~ 0
-DO2_GND
+DO2_GND_CTRL
 Text GLabel 2250 2750 0    60   Input ~ 0
-DO3_GND
+DO3_GND_CTRL
 Text GLabel 2250 3000 0    60   Input ~ 0
-DO4_GND
+DO4_GND_CTRL
 Text GLabel 2250 3200 0    60   Input ~ 0
-DO5_GND
+DO5_GND_CTRL
 Text GLabel 2250 3400 0    60   Input ~ 0
-DO6_GND
+DO6_GND_CTRL
 Text GLabel 2250 3600 0    60   Input ~ 0
-DO7_GND
+DO7_GND_CTRL
 Text GLabel 2250 3800 0    60   Input ~ 0
-DO8_GND
+DO8_GND_CTRL
+Text GLabel 2250 3950 0    60   Input ~ 0
+Sense1_DUT
+Text GLabel 2250 4150 0    60   Input ~ 0
+Sense2_DUT
+Text GLabel 3950 4800 0    60   Input ~ 0
+Sense3_DUT
+Text GLabel 3950 4600 0    60   Input ~ 0
+Sense4_DUT
+Text GLabel 3950 4200 0    60   Input ~ 0
+Sense6_DUT
+Text GLabel 3950 4000 0    60   Input ~ 0
+Sense7_DUT
+Text GLabel 3950 3750 0    60   Input ~ 0
+Sense8_DUT
+$Comp
+L GND #PWR070
+U 1 1 59C7AA8D
+P 3950 3850
+F 0 "#PWR070" H 3950 3600 50  0001 C CNN
+F 1 "GND" V 3955 3722 50  0000 R CNN
+F 2 "" H 3950 3850 50  0001 C CNN
+F 3 "" H 3950 3850 50  0001 C CNN
+	1    3950 3850
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR071
+U 1 1 59C7AAA4
+P 3950 4100
+F 0 "#PWR071" H 3950 3850 50  0001 C CNN
+F 1 "GND" V 3955 3972 50  0000 R CNN
+F 2 "" H 3950 4100 50  0001 C CNN
+F 3 "" H 3950 4100 50  0001 C CNN
+	1    3950 4100
+	0    1    1    0   
+$EndComp
+Text GLabel 3950 4400 0    60   Input ~ 0
+Sense5_DUT
+$Comp
+L GND #PWR072
+U 1 1 59C7AB8A
+P 3950 4300
+F 0 "#PWR072" H 3950 4050 50  0001 C CNN
+F 1 "GND" V 3955 4172 50  0000 R CNN
+F 2 "" H 3950 4300 50  0001 C CNN
+F 3 "" H 3950 4300 50  0001 C CNN
+	1    3950 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR073
+U 1 1 59C7ABA1
+P 3950 4500
+F 0 "#PWR073" H 3950 4250 50  0001 C CNN
+F 1 "GND" V 3955 4372 50  0000 R CNN
+F 2 "" H 3950 4500 50  0001 C CNN
+F 3 "" H 3950 4500 50  0001 C CNN
+	1    3950 4500
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR074
+U 1 1 59C7ABB8
+P 3950 4700
+F 0 "#PWR074" H 3950 4450 50  0001 C CNN
+F 1 "GND" V 3955 4572 50  0000 R CNN
+F 2 "" H 3950 4700 50  0001 C CNN
+F 3 "" H 3950 4700 50  0001 C CNN
+	1    3950 4700
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR075
+U 1 1 59C7ABCF
+P 2250 4050
+F 0 "#PWR075" H 2250 3800 50  0001 C CNN
+F 1 "GND" V 2255 3922 50  0000 R CNN
+F 2 "" H 2250 4050 50  0001 C CNN
+F 3 "" H 2250 4050 50  0001 C CNN
+	1    2250 4050
+	0    1    1    0   
+$EndComp
+Text GLabel 1500 4650 0    60   Input ~ 0
+Wiegand_D1
+Text GLabel 1500 4750 0    60   Input ~ 0
+Wiegand_D2
+$Comp
+L R R?
+U 1 1 59C908AC
+P 1850 4750
+F 0 "R?" V 1950 4750 50  0000 C CNN
+F 1 "100" V 1850 4750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 1780 4750 50  0001 C CNN
+F 3 "" H 1850 4750 50  0001 C CNN
+	1    1850 4750
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 59C93072
+P 1850 4650
+F 0 "R?" V 1750 4650 50  0000 C CNN
+F 1 "100" V 1850 4650 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 1780 4650 50  0001 C CNN
+F 3 "" H 1850 4650 50  0001 C CNN
+	1    1850 4650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1500 4650 1700 4650
+Wire Wire Line
+	1500 4750 1700 4750
+Wire Wire Line
+	2000 4750 2250 4750
+Wire Wire Line
+	2000 4650 2250 4650
 $EndSCHEMATC
