@@ -1,0 +1,33 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP +3V3_C
+D power-flag symbol +3.3V
+K Power Flag Symbol
+$ENDCMP
+#
+$CMP +3V3_S
+D power-flag symbol +3.3V
+K Power Flag Symbol
+$ENDCMP
+#
+$CMP +5V_C
+D power-flag symbol
+K Power Flag Symbol
+$ENDCMP
+#
+$CMP +5V_S
+D power-flag symbol
+K Power Flag Symbol
+$ENDCMP
+#
+$CMP GND_C
+D GROUND power-flag symbol
+K Power Flag Symbol
+$ENDCMP
+#
+$CMP GND_S
+D GROUND power-flag symbol
+K Power Flag Symbol
+$ENDCMP
+#
+#End Doc Library

@@ -34,12 +34,13 @@ LIBS:ADS1115IDGST
 LIBS:spark_esp32thing
 LIBS:sensors
 LIBS:Worldsemi
+LIBS:LocalPower
 LIBS:G2-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 7
+Sheet 2 6
 Title ""
 Date ""
 Rev ""
@@ -376,10 +377,10 @@ Wire Wire Line
 Wire Wire Line
 	2200 3200 2200 2500
 $Comp
-L GS2 J?
+L GS2 J201
 U 1 1 59C6A7C3
 P 3900 2500
-F 0 "J?" V 3695 2500 50  0000 C CNN
+F 0 "J201" V 3695 2500 50  0000 C CNN
 F 1 "GS2" V 3786 2500 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" V 3974 2500 50  0001 C CNN
 F 3 "" H 3900 2500 50  0001 C CNN
@@ -387,10 +388,10 @@ F 3 "" H 3900 2500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GS2 J?
+L GS2 J202
 U 1 1 59C6AA5F
 P 3900 3200
-F 0 "J?" V 3695 3200 50  0000 C CNN
+F 0 "J202" V 3695 3200 50  0000 C CNN
 F 1 "GS2" V 3786 3200 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" V 3974 3200 50  0001 C CNN
 F 3 "" H 3900 3200 50  0001 C CNN

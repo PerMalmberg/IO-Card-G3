@@ -1,4 +1,4 @@
-update=23/09/2017 17:01:47
+update=24/09/2017 17:08:59
 version=1
 last_client=kicad
 [general]
@@ -66,3 +66,4 @@ LibName32=D:/code/G2/ADS1115/ADS1115IDGST
 LibName33=D:/code/G2/ESP32 Thing/spark_esp32thing
 LibName34=sensors
 LibName35=Worldsemi
+LibName36=LocalPower
