@@ -1893,9 +1893,9 @@ Wiegand_D1
 Text GLabel 15350 2850 0    60   Input ~ 0
 Wiegand_D2
 Text GLabel 10300 1600 0    60   Input ~ 0
-ANALOG_RDY2
+ANALOG_RDY_2
 Text GLabel 10300 1700 0    60   Input ~ 0
-ANALOG_RDY1
+ANALOG_RDY_1
 Text GLabel 10300 1800 0    60   Input ~ 0
 DIA_Interrupt
 Text GLabel 10300 1900 0    60   Input ~ 0
