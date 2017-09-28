@@ -208,7 +208,7 @@ F 3 "http://www.mouser.se/ProductDetail/ROHM-Semiconductor/RBR3MM30ATR/?qs=sGAEp
 	1    2500 3200
 	-1   0    0    1   
 $EndComp
-Text Notes 1950 2100 0    60   ~ 0
+Text Notes 1450 2150 0    60   ~ 0
 3.5A / 41.5W
 $Comp
 L +3.3V #PWR0206
@@ -343,6 +343,30 @@ F 3 "" H 1350 2500 50  0001 C CNN
 $EndComp
 Text Label 1350 2500 1    60   ~ 0
 12V_Source
+$Comp
+L GS2 J201
+U 1 1 59C6A7C3
+P 3900 2500
+F 0 "J201" V 3695 2500 50  0000 C CNN
+F 1 "GS2" V 3786 2500 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" V 3974 2500 50  0001 C CNN
+F 3 "" H 3900 2500 50  0001 C CNN
+	1    3900 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L GS2 J202
+U 1 1 59C6AA5F
+P 3900 3200
+F 0 "J202" V 3695 3200 50  0000 C CNN
+F 1 "GS2" V 3786 3200 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" V 3974 3200 50  0001 C CNN
+F 3 "" H 3900 3200 50  0001 C CNN
+	1    3900 3200
+	0    1    1    0   
+$EndComp
+Text GLabel 2200 2400 1    60   Input ~ 0
++12V_Filtered
 Wire Wire Line
 	2800 2800 5200 2800
 Wire Wire Line
@@ -375,27 +399,5 @@ Wire Wire Line
 Wire Wire Line
 	2650 3200 3100 3200
 Wire Wire Line
-	2200 3200 2200 2500
-$Comp
-L GS2 J201
-U 1 1 59C6A7C3
-P 3900 2500
-F 0 "J201" V 3695 2500 50  0000 C CNN
-F 1 "GS2" V 3786 2500 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" V 3974 2500 50  0001 C CNN
-F 3 "" H 3900 2500 50  0001 C CNN
-	1    3900 2500
-	0    1    1    0   
-$EndComp
-$Comp
-L GS2 J202
-U 1 1 59C6AA5F
-P 3900 3200
-F 0 "J202" V 3695 3200 50  0000 C CNN
-F 1 "GS2" V 3786 3200 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" V 3974 3200 50  0001 C CNN
-F 3 "" H 3900 3200 50  0001 C CNN
-	1    3900 3200
-	0    1    1    0   
-$EndComp
+	2200 2400 2200 3200
 $EndSCHEMATC

@@ -1183,17 +1183,6 @@ F 3 "" H 6600 3000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +12V #PWR048
-U 1 1 59C4D2B1
-P 6600 3200
-F 0 "#PWR048" H 6600 3050 50  0001 C CNN
-F 1 "+12V" V 6615 3328 50  0000 L CNN
-F 2 "" H 6600 3200 50  0001 C CNN
-F 3 "" H 6600 3200 50  0001 C CNN
-	1    6600 3200
-	0    1    1    0   
-$EndComp
-$Comp
 L GS3 J302
 U 1 1 59C4EE29
 P 6450 3650
@@ -1203,28 +1192,6 @@ F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" V 6538 3576 50  0001 C CN
 F 3 "" H 6450 3650 50  0001 C CNN
 	1    6450 3650
 	-1   0    0    1   
-$EndComp
-$Comp
-L +5V #PWR049
-U 1 1 59C4EE30
-P 6600 3550
-F 0 "#PWR049" H 6600 3400 50  0001 C CNN
-F 1 "+5V" V 6615 3678 50  0000 L CNN
-F 2 "" H 6600 3550 50  0001 C CNN
-F 3 "" H 6600 3550 50  0001 C CNN
-	1    6600 3550
-	0    1    1    0   
-$EndComp
-$Comp
-L +12V #PWR050
-U 1 1 59C4EE36
-P 6600 3750
-F 0 "#PWR050" H 6600 3600 50  0001 C CNN
-F 1 "+12V" V 6615 3878 50  0000 L CNN
-F 2 "" H 6600 3750 50  0001 C CNN
-F 3 "" H 6600 3750 50  0001 C CNN
-	1    6600 3750
-	0    1    1    0   
 $EndComp
 $Comp
 L GS3 J303
@@ -1246,17 +1213,6 @@ F 1 "+5V" V 6615 4228 50  0000 L CNN
 F 2 "" H 6600 4100 50  0001 C CNN
 F 3 "" H 6600 4100 50  0001 C CNN
 	1    6600 4100
-	0    1    1    0   
-$EndComp
-$Comp
-L +12V #PWR052
-U 1 1 59C4EEC4
-P 6600 4300
-F 0 "#PWR052" H 6600 4150 50  0001 C CNN
-F 1 "+12V" V 6615 4428 50  0000 L CNN
-F 2 "" H 6600 4300 50  0001 C CNN
-F 3 "" H 6600 4300 50  0001 C CNN
-	1    6600 4300
 	0    1    1    0   
 $EndComp
 $Comp
@@ -1282,17 +1238,6 @@ F 3 "" H 6600 4650 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +12V #PWR054
-U 1 1 59C4F3A4
-P 6600 4850
-F 0 "#PWR054" H 6600 4700 50  0001 C CNN
-F 1 "+12V" V 6615 4978 50  0000 L CNN
-F 2 "" H 6600 4850 50  0001 C CNN
-F 3 "" H 6600 4850 50  0001 C CNN
-	1    6600 4850
-	0    1    1    0   
-$EndComp
-$Comp
 L GS3 J305
 U 1 1 59C4F41D
 P 6450 5300
@@ -1312,17 +1257,6 @@ F 1 "+5V" V 6615 5328 50  0000 L CNN
 F 2 "" H 6600 5200 50  0001 C CNN
 F 3 "" H 6600 5200 50  0001 C CNN
 	1    6600 5200
-	0    1    1    0   
-$EndComp
-$Comp
-L +12V #PWR056
-U 1 1 59C4F42A
-P 6600 5400
-F 0 "#PWR056" H 6600 5250 50  0001 C CNN
-F 1 "+12V" V 6615 5528 50  0000 L CNN
-F 2 "" H 6600 5400 50  0001 C CNN
-F 3 "" H 6600 5400 50  0001 C CNN
-	1    6600 5400
 	0    1    1    0   
 $EndComp
 $Comp
@@ -1348,17 +1282,6 @@ F 3 "" H 6600 5750 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +12V #PWR058
-U 1 1 59C4F856
-P 6600 5950
-F 0 "#PWR058" H 6600 5800 50  0001 C CNN
-F 1 "+12V" V 6615 6078 50  0000 L CNN
-F 2 "" H 6600 5950 50  0001 C CNN
-F 3 "" H 6600 5950 50  0001 C CNN
-	1    6600 5950
-	0    1    1    0   
-$EndComp
-$Comp
 L GS3 J307
 U 1 1 59C4F8D1
 P 6450 6400
@@ -1381,17 +1304,6 @@ F 3 "" H 6600 6300 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +12V #PWR060
-U 1 1 59C4F8DE
-P 6600 6500
-F 0 "#PWR060" H 6600 6350 50  0001 C CNN
-F 1 "+12V" V 6615 6628 50  0000 L CNN
-F 2 "" H 6600 6500 50  0001 C CNN
-F 3 "" H 6600 6500 50  0001 C CNN
-	1    6600 6500
-	0    1    1    0   
-$EndComp
-$Comp
 L GS3 J308
 U 1 1 59C4FF9D
 P 6450 6950
@@ -1411,17 +1323,6 @@ F 1 "+5V" V 6615 6978 50  0000 L CNN
 F 2 "" H 6600 6850 50  0001 C CNN
 F 3 "" H 6600 6850 50  0001 C CNN
 	1    6600 6850
-	0    1    1    0   
-$EndComp
-$Comp
-L +12V #PWR062
-U 1 1 59C4FFAA
-P 6600 7050
-F 0 "#PWR062" H 6600 6900 50  0001 C CNN
-F 1 "+12V" V 6615 7178 50  0000 L CNN
-F 2 "" H 6600 7050 50  0001 C CNN
-F 3 "" H 6600 7050 50  0001 C CNN
-	1    6600 7050
 	0    1    1    0   
 $EndComp
 Text GLabel 6300 3100 0    60   Input ~ 0
@@ -1558,34 +1459,23 @@ Text GLabel 13900 6600 2    60   Input ~ 0
 BELL
 Text GLabel 12950 6800 0    60   Input ~ 0
 BELL_CTRL
-Text GLabel 6950 7850 2    60   Input ~ 0
+Text GLabel 6400 7450 0    60   Input ~ 0
 DI1
-Text GLabel 6950 7950 2    60   Input ~ 0
+Text GLabel 6400 7550 0    60   Input ~ 0
 DI2
-Text GLabel 6950 8050 2    60   Input ~ 0
+Text GLabel 6400 7650 0    60   Input ~ 0
 DI3
-Text GLabel 6950 8150 2    60   Input ~ 0
+Text GLabel 6400 7750 0    60   Input ~ 0
 DI4
-Text GLabel 6950 8250 2    60   Input ~ 0
+Text GLabel 6900 7450 2    60   Input ~ 0
 DI5
-Text GLabel 6950 8350 2    60   Input ~ 0
+Text GLabel 6900 7550 2    60   Input ~ 0
 DI6
-Text GLabel 6950 8450 2    60   Input ~ 0
+Text GLabel 6900 7650 2    60   Input ~ 0
 DI7
-Text GLabel 6950 8550 2    60   Input ~ 0
+Text GLabel 6900 7750 2    60   Input ~ 0
 DI8
-$Comp
-L Conn_02x08_Counter_Clockwise J309
-U 1 1 59CDEA46
-P 6750 8150
-F 0 "J309" H 6800 8667 50  0000 C CNN
-F 1 "Conn_02x08_Counter_Clockwise" H 6800 8576 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x08_Pitch2.54mm" H 6750 8150 50  0001 C CNN
-F 3 "" H 6750 8150 50  0001 C CNN
-	1    6750 8150
-	-1   0    0    -1  
-$EndComp
-Text Notes 6900 8700 2    60   ~ 0
+Text Notes 7950 9500 2    60   ~ 0
 To status card
 $Comp
 L Q_NPN_BCE Q309
@@ -1622,80 +1512,8 @@ F 3 "" H 9600 2750 50  0001 C CNN
 $EndComp
 Text GLabel 9600 3150 3    60   Input ~ 0
 I2C_PWR
-$Comp
-L Conn_02x08_Counter_Clockwise J310
-U 1 1 59CFAC55
-P 10600 1600
-F 0 "J310" H 10650 2117 50  0000 C CNN
-F 1 "Conn_02x08_Counter_Clockwise" H 10650 2026 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x08_Pitch2.54mm" H 10600 1600 50  0001 C CNN
-F 3 "" H 10600 1600 50  0001 C CNN
-	1    10600 1600
-	-1   0    0    -1  
-$EndComp
-$Comp
-L GND #PWR022
-U 1 1 59CFAC5C
-P 10300 1300
-F 0 "#PWR022" H 10300 1050 50  0001 C CNN
-F 1 "GND" V 10305 1172 50  0000 R CNN
-F 2 "" H 10300 1300 50  0001 C CNN
-F 3 "" H 10300 1300 50  0001 C CNN
-	1    10300 1300
-	0    1    -1   0   
-$EndComp
-$Comp
-L GND #PWR023
-U 1 1 59CFAC62
-P 10800 1300
-F 0 "#PWR023" H 10800 1050 50  0001 C CNN
-F 1 "GND" V 10805 1172 50  0000 R CNN
-F 2 "" H 10800 1300 50  0001 C CNN
-F 3 "" H 10800 1300 50  0001 C CNN
-	1    10800 1300
-	0    -1   1    0   
-$EndComp
-$Comp
-L +3.3V #PWR024
-U 1 1 59CFAC68
-P 10800 1400
-F 0 "#PWR024" H 10800 1250 50  0001 C CNN
-F 1 "+3.3V" V 10815 1528 50  0000 L CNN
-F 2 "" H 10800 1400 50  0001 C CNN
-F 3 "" H 10800 1400 50  0001 C CNN
-	1    10800 1400
-	0    1    -1   0   
-$EndComp
-$Comp
-L +5V #PWR025
-U 1 1 59CFAC6E
-P 10800 1500
-F 0 "#PWR025" H 10800 1350 50  0001 C CNN
-F 1 "+5V" V 10815 1628 50  0000 L CNN
-F 2 "" H 10800 1500 50  0001 C CNN
-F 3 "" H 10800 1500 50  0001 C CNN
-	1    10800 1500
-	0    1    -1   0   
-$EndComp
-Text Notes 10400 2150 0    60   ~ 0
-To MCU
-NoConn ~ 10300 2000
-Text GLabel 10800 1700 2    60   Input ~ 0
-DIGITAL_I2C_SCL
-Text GLabel 10800 1800 2    60   Input ~ 0
-DIGITAL_I2C_SDA
 Text GLabel 10250 2950 2    60   Input ~ 0
 I2C_PWR_CTRL
-Text GLabel 10800 1600 2    60   Input ~ 0
-I2C_PWR_CTRL
-Text GLabel 10800 1900 2    60   Input ~ 0
-Wiegand_D1
-Text GLabel 10800 2000 2    60   Input ~ 0
-Wiegand_D2
-Text GLabel 10300 1400 0    60   Input ~ 0
-ANALOG_I2C_SCL
-Text GLabel 10300 1500 0    60   Input ~ 0
-ANALOG_I2C_SDA
 Text Notes 13350 6550 0    60   ~ 0
 QQQ Hög eller låg?
 $Comp
@@ -1892,14 +1710,6 @@ Text GLabel 15350 2750 0    60   Input ~ 0
 Wiegand_D1
 Text GLabel 15350 2850 0    60   Input ~ 0
 Wiegand_D2
-Text GLabel 10300 1600 0    60   Input ~ 0
-ANALOG_RDY_2
-Text GLabel 10300 1700 0    60   Input ~ 0
-ANALOG_RDY_1
-Text GLabel 10300 1800 0    60   Input ~ 0
-DIA_Interrupt
-Text GLabel 10300 1900 0    60   Input ~ 0
-BELL_CTRL
 Text GLabel 15350 3800 0    60   Input ~ 0
 BELL
 $Comp
@@ -1988,6 +1798,17 @@ Entry Wire Line
 	5150 5000 5250 4900
 Entry Wire Line
 	5150 6000 5250 5900
+$Comp
+L Conn_02x08_Odd_Even J309
+U 1 1 59CD4E2C
+P 6600 7750
+F 0 "J309" H 6650 8267 50  0000 C CNN
+F 1 "Conn_02x08_Odd_Even" H 6650 8176 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x08_Pitch2.54mm" H 6600 7750 50  0001 C CNN
+F 3 "" H 6600 7750 50  0001 C CNN
+	1    6600 7750
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	1450 2300 1350 2300
 Wire Wire Line
@@ -2184,7 +2005,7 @@ Wire Wire Line
 Wire Wire Line
 	9950 2950 9900 2950
 Wire Bus Line
-	7300 1650 7300 650 
+	7300 650  7300 1650
 Wire Bus Line
 	7300 650  5250 650 
 Wire Bus Line
@@ -2198,21 +2019,13 @@ Connection ~ 4900 5000
 Connection ~ 4900 6000
 Connection ~ 6950 800 
 Wire Wire Line
-	5350 7850 6450 7850
+	5350 7850 6400 7850
 Wire Wire Line
-	6450 7950 5350 7950
+	6400 7950 5350 7950
 Wire Wire Line
-	5350 8050 6450 8050
+	5350 8050 6400 8050
 Wire Wire Line
-	6450 8150 5350 8150
-Wire Wire Line
-	5350 8250 6450 8250
-Wire Wire Line
-	6450 8350 5350 8350
-Wire Wire Line
-	6450 8450 5350 8450
-Wire Wire Line
-	5350 8550 6450 8550
+	6400 8150 5350 8150
 Wire Wire Line
 	4600 2000 5150 2000
 Wire Wire Line
@@ -2231,4 +2044,144 @@ Wire Wire Line
 	4600 5000 5150 5000
 Wire Wire Line
 	4600 6000 5150 6000
+Wire Wire Line
+	5350 8250 6900 8250
+Wire Wire Line
+	6900 8250 6900 8150
+Wire Wire Line
+	5350 8350 6950 8350
+Wire Wire Line
+	6950 8350 6950 8050
+Wire Wire Line
+	6950 8050 6900 8050
+Wire Wire Line
+	5350 8450 7000 8450
+Wire Wire Line
+	7000 8450 7000 7950
+Wire Wire Line
+	7000 7950 6900 7950
+Wire Wire Line
+	5350 8550 7050 8550
+Wire Wire Line
+	7050 8550 7050 7850
+Wire Wire Line
+	7050 7850 6900 7850
+Text GLabel 6800 3200 2    60   Input ~ 0
++12V_Filtered
+$Comp
+L +5V #PWR049
+U 1 1 59C4EE30
+P 6600 3550
+F 0 "#PWR049" H 6600 3400 50  0001 C CNN
+F 1 "+5V" V 6615 3678 50  0000 L CNN
+F 2 "" H 6600 3550 50  0001 C CNN
+F 3 "" H 6600 3550 50  0001 C CNN
+	1    6600 3550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6800 3200 6600 3200
+Wire Wire Line
+	6750 3200 6750 7050
+Wire Wire Line
+	6750 3750 6600 3750
+Connection ~ 6750 3200
+Wire Wire Line
+	6750 4300 6600 4300
+Connection ~ 6750 3750
+Wire Wire Line
+	6750 4850 6600 4850
+Connection ~ 6750 4300
+Wire Wire Line
+	6750 5400 6600 5400
+Connection ~ 6750 4850
+Wire Wire Line
+	6750 5950 6600 5950
+Connection ~ 6750 5400
+Wire Wire Line
+	6750 6500 6600 6500
+Connection ~ 6750 5950
+Wire Wire Line
+	6750 7050 6600 7050
+Connection ~ 6750 6500
+$Comp
+L GND #PWR?
+U 1 1 59CEACB4
+P 11150 1750
+F 0 "#PWR?" H 11150 1500 50  0001 C CNN
+F 1 "GND" V 11155 1622 50  0000 R CNN
+F 2 "" H 11150 1750 50  0001 C CNN
+F 3 "" H 11150 1750 50  0001 C CNN
+	1    11150 1750
+	0    -1   1    0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 59CEACBA
+P 10650 1050
+F 0 "#PWR?" H 10650 800 50  0001 C CNN
+F 1 "GND" V 10655 922 50  0000 R CNN
+F 2 "" H 10650 1050 50  0001 C CNN
+F 3 "" H 10650 1050 50  0001 C CNN
+	1    10650 1050
+	0    1    -1   0   
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 59CEACC0
+P 11150 1050
+F 0 "#PWR?" H 11150 900 50  0001 C CNN
+F 1 "+3.3V" V 11165 1178 50  0000 L CNN
+F 2 "" H 11150 1050 50  0001 C CNN
+F 3 "" H 11150 1050 50  0001 C CNN
+	1    11150 1050
+	0    1    -1   0   
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 59CEACC6
+P 10650 1150
+F 0 "#PWR?" H 10650 1000 50  0001 C CNN
+F 1 "+5V" V 10665 1278 50  0000 L CNN
+F 2 "" H 10650 1150 50  0001 C CNN
+F 3 "" H 10650 1150 50  0001 C CNN
+	1    10650 1150
+	0    -1   1    0   
+$EndComp
+Text Notes 10750 1950 0    60   ~ 0
+To MCU
+Text GLabel 10650 1250 0    60   Input ~ 0
+DIGITAL_I2C_SCL
+Text GLabel 11150 1250 2    60   Input ~ 0
+DIGITAL_I2C_SDA
+Text GLabel 11150 1150 2    60   Input ~ 0
+I2C_PWR_CTRL
+Text GLabel 10650 1350 0    60   Input ~ 0
+Wiegand_D1
+Text GLabel 11150 1350 2    60   Input ~ 0
+Wiegand_D2
+Text GLabel 10650 1750 0    60   Input ~ 0
+ANALOG_I2C_SCL
+Text GLabel 11150 1650 2    60   Input ~ 0
+ANALOG_I2C_SDA
+Text GLabel 10650 1650 0    60   Input ~ 0
+ANALOG_RDY_2
+Text GLabel 11150 1550 2    60   Input ~ 0
+ANALOG_RDY_1
+Text GLabel 10650 1550 0    60   Input ~ 0
+DIA_Interrupt
+Text GLabel 11150 1450 2    60   Input ~ 0
+BELL_CTRL
+$Comp
+L Conn_02x08_Odd_Even J310
+U 1 1 59CEACD8
+P 10850 1350
+F 0 "J310" H 10900 1867 50  0000 C CNN
+F 1 "Conn_02x08_Odd_Even" H 10900 1776 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x08_Pitch2.54mm" H 10850 1350 50  0001 C CNN
+F 3 "" H 10850 1350 50  0001 C CNN
+	1    10850 1350
+	1    0    0    -1  
+$EndComp
+NoConn ~ 10650 1450
 $EndSCHEMATC
