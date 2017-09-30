@@ -1,4 +1,4 @@
-update=24/09/2017 17:08:59
+update=30/09/2017 09:47:33
 version=1
 last_client=kicad
 [general]
@@ -67,3 +67,4 @@ LibName33=D:/code/G2/ESP32 Thing/spark_esp32thing
 LibName34=sensors
 LibName35=Worldsemi
 LibName36=LocalPower
+LibName37=D:/code/G2/pogopins02x06_pitch5.08

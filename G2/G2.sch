@@ -35,6 +35,7 @@ LIBS:spark_esp32thing
 LIBS:sensors
 LIBS:Worldsemi
 LIBS:LocalPower
+LIBS:pogopins02x06_pitch5.08
 LIBS:G2-cache
 EELAYER 26 0
 EELAYER END

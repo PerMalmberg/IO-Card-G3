@@ -3,4 +3,5 @@
   (lib (name Panelization)(type Github)(uri https://github.com/madworm/Panelization.pretty)(options "")(descr ""))
   (lib (name ADS1115IDGST)(type Legacy)(uri D:/code/G2/ADS1115/ADS1115IDGST.mod)(options "")(descr ""))
   (lib (name spark_esp32thing)(type KiCad)(uri "D:/code/G2/ESP32 Thing/spark_esp32thing.pretty")(options "")(descr ""))
+  (lib (name PogoPins02x06_Pitch5)(type KiCad)(uri "$(KIPRJMOD)/PogoPins02x06_Pitch5.pretty")(options "")(descr ""))
 )
