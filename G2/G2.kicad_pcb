@@ -83,7 +83,7 @@
       (plotinvisibletext false)
       (padsonsilk false)
       (subtractmaskfromsilk false)
-      (outputformat 5)
+      (outputformat 1)
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
@@ -16151,7 +16151,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour not_allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 106.4338 142.64311) (xy 113.5458 142.64311) (xy 113.5458 116.98911) (xy 106.4338 116.98911)
@@ -16162,7 +16162,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour not_allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 106.4338 142.655047) (xy 113.5458 142.655047) (xy 113.5458 117.001047) (xy 106.4338 117.001047)
