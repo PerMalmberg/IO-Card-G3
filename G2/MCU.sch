@@ -276,7 +276,7 @@ Text Label 7950 4500 0    60   ~ 0
 LEVEL_SHIFTER_ENABLE
 Text Notes 2850 4350 0    60   ~ 0
 To Status
-Text Notes 3850 3500 0    60   ~ 0
+Text Notes 3600 3400 0    60   ~ 0
 To backplane
 Text Label 8100 2200 0    60   ~ 0
 ANALOG_I2C_SCL
