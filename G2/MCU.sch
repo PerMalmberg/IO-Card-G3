@@ -530,12 +530,12 @@ $EndComp
 $Comp
 L +3V3_C #PWR0118
 U 1 1 59CA6E19
-P 6100 3450
-F 0 "#PWR0118" H 6100 3300 50  0001 C CNN
-F 1 "+3V3_C" V 6100 3700 50  0000 C CNN
-F 2 "" H 6100 3450 50  0001 C CNN
-F 3 "" H 6100 3450 50  0001 C CNN
-	1    6100 3450
+P 6000 3450
+F 0 "#PWR0118" H 6000 3300 50  0001 C CNN
+F 1 "+3V3_C" V 6000 3700 50  0000 C CNN
+F 2 "" H 6000 3450 50  0001 C CNN
+F 3 "" H 6000 3450 50  0001 C CNN
+	1    6000 3450
 	0    1    1    0   
 $EndComp
 $Comp
@@ -762,17 +762,6 @@ $EndComp
 Text Notes 3300 6100 0    60   ~ 0
 To MCU
 $Comp
-L Conn_01x07 J401
-U 1 1 59D0F954
-P 8250 5900
-F 0 "J401" V 8123 6280 50  0000 L CNN
-F 1 "Conn_01x07" V 8214 6280 50  0000 L CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x07_Pitch2.54mm" H 8250 5900 50  0001 C CNN
-F 3 "" H 8250 5900 50  0001 C CNN
-	1    8250 5900
-	0    1    1    0   
-$EndComp
-$Comp
 L PWR_FLAG #FLG04
 U 1 1 59D3465E
 P 8500 3300
@@ -849,21 +838,13 @@ F 3 "" H 3850 1400 50  0001 C CNN
 	1    3850 1400
 	1    0    0    -1  
 $EndComp
-Entry Wire Line
-	7850 4700 7950 4600
-Entry Wire Line
-	7850 4800 7950 4700
-Entry Wire Line
-	7850 4900 7950 4800
-Entry Wire Line
-	7850 5000 7950 4900
-Text Label 8050 4600 0    60   ~ 0
+Text Label 8600 4600 0    60   ~ 0
 IO_1
-Text Label 8050 4700 0    60   ~ 0
+Text Label 8600 4700 0    60   ~ 0
 IO_2
-Text Label 8050 4800 0    60   ~ 0
+Text Label 8600 4800 0    60   ~ 0
 IO_3
-Text Label 8050 4900 0    60   ~ 0
+Text Label 8600 4900 0    60   ~ 0
 IO_4
 Text Label 8600 5000 0    60   ~ 0
 IO_5
@@ -873,6 +854,17 @@ Text Label 8600 5200 0    60   ~ 0
 IO_7
 Text Label 5600 4350 0    60   ~ 0
 LEVEL_SHIFTER_ENABLE
+$Comp
+L Conn_01x08 J404
+U 1 1 5A081331
+P 4200 4750
+F 0 "J404" H 4280 4742 50  0000 L CNN
+F 1 "Conn_01x08" H 4280 4651 50  0000 L CNN
+F 2 "LocalComponents:WE68710814022_8x0.50mm_SMT_ZIF_Horizontal_Top" H 4200 4750 50  0001 C CNN
+F 3 "https://www.mouser.se/Search/ProductDetail.aspx?qs=ZtY9WdtwX54hJHBraEAPJw%3d%3d" H 4200 4750 50  0001 C CNN
+	1    4200 4750
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	7500 4000 7500 3900
 Wire Wire Line
@@ -1063,19 +1055,11 @@ Wire Wire Line
 Wire Wire Line
 	4900 3150 4900 2150
 Wire Wire Line
-	7950 4600 8950 4600
-Wire Wire Line
 	8550 4600 8550 5700
-Wire Wire Line
-	7950 4700 8950 4700
 Wire Wire Line
 	8450 4700 8450 5700
 Wire Wire Line
-	7950 4800 8950 4800
-Wire Wire Line
 	8350 4800 8350 5700
-Wire Wire Line
-	7950 4900 8950 4900
 Wire Wire Line
 	8250 4900 8250 5700
 Wire Wire Line
@@ -1090,10 +1074,6 @@ Wire Wire Line
 	8950 5200 7950 5200
 Wire Wire Line
 	7950 5200 7950 5700
-Connection ~ 8550 4600
-Connection ~ 8450 4700
-Connection ~ 8350 4800
-Connection ~ 8250 4900
 Wire Wire Line
 	5350 1450 5350 1500
 Wire Wire Line
@@ -1128,17 +1108,36 @@ Wire Wire Line
 	6800 4100 6800 2850
 Wire Wire Line
 	6800 2850 6300 2850
-$Comp
-L Conn_01x08 J404
-U 1 1 5A081331
-P 4200 4750
-F 0 "J404" H 4280 4742 50  0000 L CNN
-F 1 "Conn_01x08" H 4280 4651 50  0000 L CNN
-F 2 "LocalComponents:WE68710814022_8x0.50mm_SMT_ZIF_Horizontal_Top" H 4200 4750 50  0001 C CNN
-F 3 "https://www.mouser.se/Search/ProductDetail.aspx?qs=ZtY9WdtwX54hJHBraEAPJw%3d%3d" H 4200 4750 50  0001 C CNN
-	1    4200 4750
-	1    0    0    -1  
-$EndComp
 Wire Bus Line
 	3400 5250 7850 5250
+Wire Wire Line
+	8950 4600 8550 4600
+Wire Wire Line
+	8950 4700 8450 4700
+Wire Wire Line
+	8950 4800 8350 4800
+Wire Wire Line
+	8950 4900 8250 4900
+$Comp
+L Conn_01x08 J401
+U 1 1 5A085B14
+P 8350 5900
+F 0 "J401" V 8474 5846 50  0000 C CNN
+F 1 "Conn_01x08" V 8565 5846 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x08_Pitch2.54mm" H 8350 5900 50  0001 C CNN
+F 3 "" H 8350 5900 50  0001 C CNN
+	1    8350 5900
+	0    1    1    0   
+$EndComp
+$Comp
+L GND_C #PWR?
+U 1 1 5A085C87
+P 8650 5700
+F 0 "#PWR?" H 8650 5450 50  0001 C CNN
+F 1 "GND_C" V 8655 5572 50  0000 R CNN
+F 2 "" H 8650 5700 50  0001 C CNN
+F 3 "" H 8650 5700 50  0001 C CNN
+	1    8650 5700
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
