@@ -1,0 +1,31 @@
+G04 Gerber job file with board parameters*
+%TF.FileFunction,JobInfo*%
+%TF.Part,SinglePCB*%
+G04 Single PCB fabrication instructions*
+%TF.GenerationSoftware,KiCad,Pcbnew,(2017-09-19 revision dddaa7e69)-makepkg*%
+%TF.CreationDate,2017-11-12T19:58:56+01:00*%
+%TF.ProjectId,G2,47322E6B696361645F70636200000000,rev?*%
+%MOMM*%
+G04 Overall board parameters*
+%TJ.B.Size.X,156.350*%
+%TJ.B.Size.Y,187.674*%
+%TJ.B.LayerNum,2*%
+%TJ.B.Overall.Thickness,1.600*%
+%TJ.B.Legend.Present,Both*%
+%TJ.B.SolderMask.Present,Both*%
+G04 board design rules*
+%TJ.D.PadToPad.Outer,0.200*%
+%TJ.D.PadToTrack.Outer,0.200*%
+%TJ.D.TrackToTrack.Outer,0.200*%
+%TJ.D.MinLineWidth.Outer,0.250*%
+%TJ.D.TrackToRegion.Outer,0.508*%
+%TJ.D.RegionToRegion.Outer,0.508*%
+G04 Layer Structure*
+%TJ.L."Copper,L1,Top",Positive,G2-F.Cu.gbr*%
+%TJ.L."Copper,L2,Bot",Positive,G2-B.Cu.gbr*%
+%TJ.L."Legend,Bot",Positive,G2-B.SilkS.gbr*%
+%TJ.L."Legend,Top",Positive,G2-F.SilkS.gbr*%
+%TJ.L."SolderMask,Bot",Negative,G2-B.Mask.gbr*%
+%TJ.L."SolderMask,Top",Negative,G2-F.Mask.gbr*%
+%TJ.L."Profile",Positive,G2-Edge.Cuts.gbr*%
+M02*
