@@ -30,12 +30,9 @@ LIBS:contrib
 LIBS:valves
 LIBS:diode
 LIBS:analog_devices
-LIBS:ADS1115IDGST
-LIBS:spark_esp32thing
 LIBS:sensors
 LIBS:Worldsemi
 LIBS:LocalPower
-LIBS:pogopins02x06_pitch5.08
 LIBS:G2-cache
 EELAYER 26 0
 EELAYER END
@@ -1321,7 +1318,7 @@ P 1000 1100
 F 0 "RV501" V 750 1150 50  0000 C CNN
 F 1 "B72510E250K62" V 850 1300 50  0000 C CNN
 F 2 "Capacitors_SMD:C_0805" V 930 1100 50  0001 C CNN
-F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=B72510E250K62virtualkey59250000virtualkey871-B72510E250K62" H 1000 1100 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/EPCOS-TDK/B72510E0250K062/?qs=%2fha2pyFadugVCK9yiqateTD%252bWTZyWxpU55VnsqI3B1Kd%2fbUd9GEicg%3d%3d" H 1000 1100 50  0001 C CNN
 	1    1000 1100
 	0    -1   1    0   
 $EndComp
