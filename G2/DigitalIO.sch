@@ -30,9 +30,12 @@ LIBS:contrib
 LIBS:valves
 LIBS:diode
 LIBS:analog_devices
+LIBS:ADS1115IDGST
+LIBS:spark_esp32thing
 LIBS:sensors
 LIBS:Worldsemi
 LIBS:LocalPower
+LIBS:pogopins02x06_pitch5.08
 LIBS:G2-cache
 EELAYER 26 0
 EELAYER END
@@ -1599,9 +1602,9 @@ F 3 "" H 13650 3050 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Text GLabel 15350 2750 0    60   Input ~ 0
-Wiegand_D1
+Wiegand_D0
 Text GLabel 15350 2850 0    60   Input ~ 0
-Wiegand_D2
+Wiegand_D1
 Text GLabel 15350 3800 0    60   Input ~ 0
 BELL
 $Comp
@@ -1991,9 +1994,9 @@ DIGITAL_I2C_SDA
 Text GLabel 11150 1150 2    60   Input ~ 0
 I2C_PWR_CTRL
 Text GLabel 10650 1350 0    60   Input ~ 0
-Wiegand_D1
+Wiegand_D0
 Text GLabel 11150 1350 2    60   Input ~ 0
-Wiegand_D2
+Wiegand_D1
 Text GLabel 10650 1750 0    60   Input ~ 0
 ANALOG_I2C_SCL
 Text GLabel 11150 1650 2    60   Input ~ 0

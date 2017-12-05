@@ -30,9 +30,12 @@ LIBS:contrib
 LIBS:valves
 LIBS:diode
 LIBS:analog_devices
+LIBS:ADS1115IDGST
+LIBS:spark_esp32thing
 LIBS:sensors
 LIBS:Worldsemi
 LIBS:LocalPower
+LIBS:pogopins02x06_pitch5.08
 LIBS:G2-cache
 EELAYER 26 0
 EELAYER END
@@ -330,9 +333,9 @@ F 3 "" H 5800 3600 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Text Label 4200 2850 0    60   ~ 0
-Wiegand_D2
-Text Label 3550 2850 2    60   ~ 0
 Wiegand_D1
+Text Label 3550 2850 2    60   ~ 0
+Wiegand_D0
 Text Label 4200 2750 0    60   ~ 0
 DIGITAL_I2C_SDA
 Text Label 3550 2750 2    60   ~ 0

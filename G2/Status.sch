@@ -30,9 +30,12 @@ LIBS:contrib
 LIBS:valves
 LIBS:diode
 LIBS:analog_devices
+LIBS:ADS1115IDGST
+LIBS:spark_esp32thing
 LIBS:sensors
 LIBS:Worldsemi
 LIBS:LocalPower
+LIBS:pogopins02x06_pitch5.08
 LIBS:G2-cache
 EELAYER 26 0
 EELAYER END
