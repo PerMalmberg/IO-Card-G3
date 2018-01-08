@@ -53,14 +53,6 @@ Comment4 ""
 $EndDescr
 Text Notes 7500 4650 1    60   ~ 0
 I2C address: 0x49
-Text GLabel 8000 2350 1    60   Input ~ 0
-I2C_PWR
-Text GLabel 8000 4300 1    60   Input ~ 0
-I2C_PWR
-Text GLabel 6350 3600 0    60   Input ~ 0
-I2C_PWR
-Text GLabel 6400 1650 0    60   Input ~ 0
-I2C_PWR
 Text GLabel 4350 2250 2    60   Input ~ 0
 Sense8
 Text GLabel 4350 1100 2    60   Input ~ 0
@@ -1381,4 +1373,48 @@ Text Label 5550 4800 0    60   ~ 0
 GND-Regular
 Text Label 5600 2850 0    60   ~ 0
 GND-Regular
+$Comp
+L +3.3V #PWR0166
+U 1 1 5A53E0D6
+P 8000 2350
+F 0 "#PWR0166" H 8000 2200 50  0001 C CNN
+F 1 "+3.3V" H 8015 2523 50  0000 C CNN
+F 2 "" H 8000 2350 50  0001 C CNN
+F 3 "" H 8000 2350 50  0001 C CNN
+	1    8000 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR0167
+U 1 1 5A53E39D
+P 8000 4300
+F 0 "#PWR0167" H 8000 4150 50  0001 C CNN
+F 1 "+3.3V" H 8015 4473 50  0000 C CNN
+F 2 "" H 8000 4300 50  0001 C CNN
+F 3 "" H 8000 4300 50  0001 C CNN
+	1    8000 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR0168
+U 1 1 5A53E47A
+P 6350 3600
+F 0 "#PWR0168" H 6350 3450 50  0001 C CNN
+F 1 "+3.3V" H 6365 3773 50  0000 C CNN
+F 2 "" H 6350 3600 50  0001 C CNN
+F 3 "" H 6350 3600 50  0001 C CNN
+	1    6350 3600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L +3.3V #PWR0169
+U 1 1 5A53E8E5
+P 6400 1650
+F 0 "#PWR0169" H 6400 1500 50  0001 C CNN
+F 1 "+3.3V" H 6415 1823 50  0000 C CNN
+F 2 "" H 6400 1650 50  0001 C CNN
+F 3 "" H 6400 1650 50  0001 C CNN
+	1    6400 1650
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC

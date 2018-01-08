@@ -198,8 +198,6 @@ NoConn ~ 8950 3600
 NoConn ~ 8950 3500
 NoConn ~ 8950 3200
 NoConn ~ 8950 3100
-Text Label 8100 2400 0    60   ~ 0
-I2C_PWR_CTRL
 Text Label 7750 4000 0    60   ~ 0
 DIGITAL_I2C_SDA
 Text Label 7750 3900 0    60   ~ 0
@@ -288,8 +286,6 @@ Text Label 8100 2100 0    60   ~ 0
 ANALOG_RDY_2
 Text Label 8100 1900 0    60   ~ 0
 DIA_Interrupt
-Text Label 4200 2650 0    60   ~ 0
-I2C_PWR_CTRL
 Text Label 4200 3150 0    60   ~ 0
 ANALOG_I2C_SDA
 Text Label 3550 3250 2    60   ~ 0
@@ -304,8 +300,6 @@ Entry Wire Line
 	6900 2050 7000 2150
 Entry Wire Line
 	6800 2050 6900 2150
-Entry Wire Line
-	7750 2050 7850 2150
 Text Label 8100 1800 0    60   ~ 0
 BELL_CTRL
 Text Label 4200 2950 0    60   ~ 0
@@ -698,8 +692,6 @@ F 3 "" H 5900 2920 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Entry Wire Line
-	4400 2050 4500 2150
-Entry Wire Line
 	4500 2050 4600 2150
 Entry Wire Line
 	4600 2050 4700 2150
@@ -974,10 +966,6 @@ Wire Wire Line
 Wire Wire Line
 	7550 1800 8950 1800
 Wire Wire Line
-	7850 2400 8950 2400
-Wire Wire Line
-	7850 2400 7850 2150
-Wire Wire Line
 	6800 4100 8950 4100
 Wire Wire Line
 	6750 4200 8950 4200
@@ -1031,10 +1019,6 @@ Wire Wire Line
 	2000 3050 3600 3050
 Wire Wire Line
 	3600 2750 2000 2750
-Wire Wire Line
-	4100 2650 4500 2650
-Wire Wire Line
-	4500 2650 4500 2150
 Wire Wire Line
 	4100 2750 4600 2750
 Wire Wire Line
@@ -1125,14 +1109,16 @@ F 3 "" H 8350 5900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND_C #PWR?
+L GND_C #PWR0165
 U 1 1 5A085C87
 P 8650 5700
-F 0 "#PWR?" H 8650 5450 50  0001 C CNN
+F 0 "#PWR0165" H 8650 5450 50  0001 C CNN
 F 1 "GND_C" V 8655 5572 50  0000 R CNN
 F 2 "" H 8650 5700 50  0001 C CNN
 F 3 "" H 8650 5700 50  0001 C CNN
 	1    8650 5700
 	-1   0    0    1   
 $EndComp
+NoConn ~ 8950 2400
+NoConn ~ 4100 2650
 $EndSCHEMATC
