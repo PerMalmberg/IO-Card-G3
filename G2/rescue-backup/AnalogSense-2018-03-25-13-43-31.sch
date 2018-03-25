@@ -1,4 +1,41 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:diode
+LIBS:analog_devices
+LIBS:ADS1115IDGST
+LIBS:spark_esp32thing
+LIBS:sensors
+LIBS:Worldsemi
+LIBS:LocalPower
+LIBS:pogopins02x06_pitch5.08
 LIBS:G2-cache
 EELAYER 26 0
 EELAYER END
@@ -21,7 +58,7 @@ Sense8
 Text GLabel 4350 1100 2    60   Input ~ 0
 Sense7
 $Comp
-L G2-rescue:+3.3V #PWR0115
+L +3.3V #PWR0115
 U 1 1 59C73F9C
 P 5550 3800
 F 0 "#PWR0115" H 5550 3650 50  0001 C CNN
@@ -32,7 +69,7 @@ F 3 "" H 5550 3800 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L G2-rescue:+3.3V #PWR0114
+L +3.3V #PWR0114
 U 1 1 59C73C46
 P 5700 1650
 F 0 "#PWR0114" H 5700 1500 50  0001 C CNN
@@ -48,7 +85,7 @@ Wire Wire Line
 Text GLabel 5550 1950 0    60   Input ~ 0
 ANALOG_RDY_1
 $Comp
-L G2-rescue:R R525
+L R R525
 U 1 1 59C73C3C
 P 5700 1800
 F 0 "R525" H 5770 1846 50  0000 L CNN
@@ -69,7 +106,7 @@ Wire Notes Line
 Wire Notes Line
 	7800 4900 8500 4900
 $Comp
-L G2-rescue:GND #PWR0112
+L GND #PWR0112
 U 1 1 59C72B0C
 P 8000 4600
 F 0 "#PWR0112" H 8000 4350 50  0001 C CNN
@@ -80,12 +117,12 @@ F 3 "" H 8000 4600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:C C510
+L C C510
 U 1 1 59C72B05
 P 8000 4450
 F 0 "C510" H 8115 4496 50  0000 L CNN
 F 1 "100n" H 8115 4405 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 8038 4300 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0805" H 8038 4300 50  0001 C CNN
 F 3 "" H 8000 4450 50  0001 C CNN
 	1    8000 4450
 	1    0    0    -1  
@@ -101,7 +138,7 @@ Wire Notes Line
 Wire Notes Line
 	7800 2950 8500 2950
 $Comp
-L G2-rescue:GND #PWR0110
+L GND #PWR0110
 U 1 1 59C720F6
 P 8000 2650
 F 0 "#PWR0110" H 8000 2400 50  0001 C CNN
@@ -112,18 +149,18 @@ F 3 "" H 8000 2650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:C C509
+L C C509
 U 1 1 59C71FCA
 P 8000 2500
 F 0 "C509" H 8115 2546 50  0000 L CNN
 F 1 "100n" H 8115 2455 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 8038 2350 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0805" H 8038 2350 50  0001 C CNN
 F 3 "" H 8000 2500 50  0001 C CNN
 	1    8000 2500
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:GND #PWR0109
+L GND #PWR0109
 U 1 1 59C7135C
 P 5450 2850
 F 0 "#PWR0109" H 5450 2600 50  0001 C CNN
@@ -134,7 +171,7 @@ F 3 "" H 5450 2850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:GND #PWR0108
+L GND #PWR0108
 U 1 1 59C70E9B
 P 5450 4800
 F 0 "#PWR0108" H 5450 4550 50  0001 C CNN
@@ -155,7 +192,7 @@ ANALOG_I2C_SDA
 Text Notes 7550 2750 1    60   ~ 0
 I2C address: 0x48
 $Comp
-L G2-rescue:GND #PWR0107
+L GND #PWR0107
 U 1 1 59C6F2E6
 P 6400 1850
 F 0 "#PWR0107" H 6400 1600 50  0001 C CNN
@@ -166,7 +203,7 @@ F 3 "" H 6400 1850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:+3.3V #PWR0106
+L +3.3V #PWR0106
 U 1 1 59C6D362
 P 4950 3600
 F 0 "#PWR0106" H 4950 3450 50  0001 C CNN
@@ -182,7 +219,7 @@ Wire Wire Line
 Text GLabel 4800 3900 0    60   Input ~ 0
 ANALOG_RDY_2
 $Comp
-L G2-rescue:R R526
+L R R526
 U 1 1 59C6CAF7
 P 4950 3750
 F 0 "R526" H 5020 3796 50  0000 L CNN
@@ -205,12 +242,12 @@ Sense2
 Text GLabel 6400 2150 0    60   Input ~ 0
 Sense1
 $Comp
-L ADS1115IDGST:ADS1115IDGST U502
+L ADS1115IDGST U502
 U 1 1 59C694AA
 P 7100 2150
 F 0 "U502" H 7100 3020 50  0000 C CNN
 F 1 "ADS1115IDGST" H 7100 2929 50  0000 C CNN
-F 2 "ADS1115IDGST:SOP50P490X110-10N" H 7100 2150 50  0001 L CNN
+F 2 "SOP50P490X110-10N" H 7100 2150 50  0001 L CNN
 F 3 "16-Bit ADC with Integrated MUX%2C PGA%2C Comparator%2C Oscillator%2C and Reference 10-VSSOP -40 to 125" H 7100 2150 50  0001 L CNN
 F 4 "ADS1115IDGST" H 7100 2150 50  0001 L CNN "MP"
 F 5 "Good" H 7100 2150 50  0001 L CNN "Availability"
@@ -221,12 +258,12 @@ F 8 "Texas Instruments" H 7100 2150 50  0001 L CNN "MF"
 	1    0    0    -1  
 $EndComp
 $Comp
-L ADS1115IDGST:ADS1115IDGST U501
+L ADS1115IDGST U501
 U 1 1 59C6928E
 P 7050 4100
 F 0 "U501" H 7050 4970 50  0000 C CNN
 F 1 "ADS1115IDGST" H 7050 4879 50  0000 C CNN
-F 2 "ADS1115IDGST:SOP50P490X110-10N" H 7050 4100 50  0001 L CNN
+F 2 "SOP50P490X110-10N" H 7050 4100 50  0001 L CNN
 F 3 "16-Bit ADC with Integrated MUX%2C PGA%2C Comparator%2C Oscillator%2C and Reference 10-VSSOP -40 to 125" H 7050 4100 50  0001 L CNN
 F 4 "ADS1115IDGST" H 7050 4100 50  0001 L CNN "MP"
 F 5 "Good" H 7050 4100 50  0001 L CNN "Availability"
@@ -241,7 +278,7 @@ Sense8_DUT
 Wire Wire Line
 	4050 2250 3750 2250
 $Comp
-L G2-rescue:D_Schottky D523
+L D_Schottky D523
 U 1 1 59C66D79
 P 4050 2100
 F 0 "D523" H 4000 2200 50  0000 L CNN
@@ -255,7 +292,7 @@ Text GLabel 6350 4400 0    60   Input ~ 0
 Sense8
 Connection ~ 3900 1950
 $Comp
-L G2-rescue:+5V #PWR0105
+L +5V #PWR0105
 U 1 1 59C66D71
 P 3900 1950
 F 0 "#PWR0105" H 3900 1800 50  0001 C CNN
@@ -268,7 +305,7 @@ $EndComp
 Wire Wire Line
 	3750 1950 4050 1950
 $Comp
-L G2-rescue:GND #PWR0104
+L GND #PWR0104
 U 1 1 59C66D6A
 P 3050 2250
 F 0 "#PWR0104" H 3050 2000 50  0001 C CNN
@@ -285,7 +322,7 @@ Connection ~ 3750 2550
 Wire Wire Line
 	3400 2550 4050 2550
 $Comp
-L G2-rescue:GND #PWR0103
+L GND #PWR0103
 U 1 1 59C66D60
 P 3750 2550
 F 0 "#PWR0103" H 3750 2300 50  0001 C CNN
@@ -296,7 +333,7 @@ F 3 "" H 3750 2550 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:D D520
+L D D520
 U 1 1 59C66D59
 P 3400 2400
 F 0 "D520" V 3400 2500 50  0000 L CNN
@@ -307,51 +344,51 @@ F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=CDBA3100-HFvirtualkey59960
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:C C508
+L C C508
 U 1 1 59C66D52
 P 3750 2400
 F 0 "C508" H 3865 2446 50  0000 L CNN
 F 1 "100n" H 3850 2350 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 3788 2250 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0805" H 3788 2250 50  0001 C CNN
 F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=08055C104JAT2Avirtualkey58110000virtualkey581-08055C104J" H 3750 2400 50  0001 C CNN
 	1    3750 2400
 	-1   0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:Varistor RV508
+L Varistor RV508
 U 1 1 59C66D4B
 P 3200 2250
 F 0 "RV508" V 2950 2300 50  0000 C CNN
 F 1 "B72510E250K062" V 3050 2450 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" V 3130 2250 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0805" V 3130 2250 50  0001 C CNN
 F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=B72510E250K62virtualkey59250000virtualkey871-B72510E250K62" H 3200 2250 50  0001 C CNN
 	1    3200 2250
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:R R522
+L R R522
 U 1 1 59C66D44
 P 3750 2100
 F 0 "R522" H 3820 2146 50  0000 L CNN
 F 1 "2k" V 3750 2050 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 3680 2100 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805" V 3680 2100 50  0001 C CNN
 F 3 "" H 3750 2100 50  0001 C CNN
 	1    3750 2100
 	-1   0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:R R520
+L R R520
 U 1 1 59C66D3D
 P 3600 2250
 F 0 "R520" V 3500 2250 50  0000 C CNN
 F 1 "1k" V 3600 2250 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 3530 2250 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805" V 3530 2250 50  0001 C CNN
 F 3 "" H 3600 2250 50  0001 C CNN
 	1    3600 2250
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:D_Schottky D524
+L D_Schottky D524
 U 1 1 59C66D36
 P 4050 2400
 F 0 "D524" H 4000 2500 50  0000 L CNN
@@ -362,12 +399,12 @@ F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=STPS0560Zvirtualkey5112000
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:R R524
+L R R524
 U 1 1 59C66D2F
 P 4200 2250
 F 0 "R524" V 4100 2200 50  0000 C CNN
 F 1 "100" V 4200 2250 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 4130 2250 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805" V 4130 2250 50  0001 C CNN
 F 3 "" H 4200 2250 50  0001 C CNN
 	1    4200 2250
 	0    -1   1    0   
@@ -377,7 +414,7 @@ Sense7_DUT
 Wire Wire Line
 	4050 1100 3750 1100
 $Comp
-L G2-rescue:D_Schottky D521
+L D_Schottky D521
 U 1 1 59C66C7E
 P 4050 950
 F 0 "D521" H 4000 1050 50  0000 L CNN
@@ -391,7 +428,7 @@ Text GLabel 6350 4300 0    60   Input ~ 0
 Sense7
 Connection ~ 3900 800 
 $Comp
-L G2-rescue:+5V #PWR0102
+L +5V #PWR0102
 U 1 1 59C66C76
 P 3900 800
 F 0 "#PWR0102" H 3900 650 50  0001 C CNN
@@ -404,7 +441,7 @@ $EndComp
 Wire Wire Line
 	3750 800  4050 800 
 $Comp
-L G2-rescue:GND #PWR0101
+L GND #PWR0101
 U 1 1 59C66C6F
 P 3050 1100
 F 0 "#PWR0101" H 3050 850 50  0001 C CNN
@@ -421,7 +458,7 @@ Connection ~ 3750 1400
 Wire Wire Line
 	3400 1400 4050 1400
 $Comp
-L G2-rescue:GND #PWR0100
+L GND #PWR0100
 U 1 1 59C66C65
 P 3750 1400
 F 0 "#PWR0100" H 3750 1150 50  0001 C CNN
@@ -432,7 +469,7 @@ F 3 "" H 3750 1400 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:D D519
+L D D519
 U 1 1 59C66C5E
 P 3400 1250
 F 0 "D519" V 3400 1350 50  0000 L CNN
@@ -443,51 +480,51 @@ F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=CDBA3100-HFvirtualkey59960
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:C C507
+L C C507
 U 1 1 59C66C57
 P 3750 1250
 F 0 "C507" H 3865 1296 50  0000 L CNN
 F 1 "100n" H 3850 1200 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 3788 1100 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0805" H 3788 1100 50  0001 C CNN
 F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=08055C104JAT2Avirtualkey58110000virtualkey581-08055C104J" H 3750 1250 50  0001 C CNN
 	1    3750 1250
 	-1   0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:Varistor RV507
+L Varistor RV507
 U 1 1 59C66C50
 P 3200 1100
 F 0 "RV507" V 2950 1150 50  0000 C CNN
 F 1 "B72510E250K062" V 3050 1300 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" V 3130 1100 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0805" V 3130 1100 50  0001 C CNN
 F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=B72510E250K62virtualkey59250000virtualkey871-B72510E250K62" H 3200 1100 50  0001 C CNN
 	1    3200 1100
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:R R521
+L R R521
 U 1 1 59C66C49
 P 3750 950
 F 0 "R521" H 3820 996 50  0000 L CNN
 F 1 "2k" V 3750 900 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 3680 950 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805" V 3680 950 50  0001 C CNN
 F 3 "" H 3750 950 50  0001 C CNN
 	1    3750 950 
 	-1   0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:R R519
+L R R519
 U 1 1 59C66C42
 P 3600 1100
 F 0 "R519" V 3500 1100 50  0000 C CNN
 F 1 "1k" V 3600 1100 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 3530 1100 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805" V 3530 1100 50  0001 C CNN
 F 3 "" H 3600 1100 50  0001 C CNN
 	1    3600 1100
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:D_Schottky D522
+L D_Schottky D522
 U 1 1 59C66C3B
 P 4050 1250
 F 0 "D522" H 4000 1350 50  0000 L CNN
@@ -498,12 +535,12 @@ F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=STPS0560Zvirtualkey5112000
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:R R523
+L R R523
 U 1 1 59C66C34
 P 4200 1100
 F 0 "R523" V 4100 1050 50  0000 C CNN
 F 1 "100" V 4200 1100 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 4130 1100 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805" V 4130 1100 50  0001 C CNN
 F 3 "" H 4200 1100 50  0001 C CNN
 	1    4200 1100
 	0    -1   1    0   
@@ -513,7 +550,7 @@ Sense6_DUT
 Wire Wire Line
 	1850 6800 1550 6800
 $Comp
-L G2-rescue:D_Schottky D517
+L D_Schottky D517
 U 1 1 59C6630B
 P 1850 6650
 F 0 "D517" H 1800 6750 50  0000 L CNN
@@ -527,7 +564,7 @@ Text GLabel 2150 6800 2    60   Input ~ 0
 Sense6
 Connection ~ 1700 6500
 $Comp
-L G2-rescue:+5V #PWR099
+L +5V #PWR099
 U 1 1 59C66303
 P 1700 6500
 F 0 "#PWR099" H 1700 6350 50  0001 C CNN
@@ -540,7 +577,7 @@ $EndComp
 Wire Wire Line
 	1550 6500 1850 6500
 $Comp
-L G2-rescue:GND #PWR098
+L GND #PWR098
 U 1 1 59C662FC
 P 850 6800
 F 0 "#PWR098" H 850 6550 50  0001 C CNN
@@ -557,7 +594,7 @@ Connection ~ 1550 7100
 Wire Wire Line
 	1200 7100 1850 7100
 $Comp
-L G2-rescue:GND #PWR097
+L GND #PWR097
 U 1 1 59C662F2
 P 1550 7100
 F 0 "#PWR097" H 1550 6850 50  0001 C CNN
@@ -568,7 +605,7 @@ F 3 "" H 1550 7100 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:D D506
+L D D506
 U 1 1 59C662EB
 P 1200 6950
 F 0 "D506" V 1200 7050 50  0000 L CNN
@@ -579,51 +616,51 @@ F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=CDBA3100-HFvirtualkey59960
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:C C506
+L C C506
 U 1 1 59C662E4
 P 1550 6950
 F 0 "C506" H 1665 6996 50  0000 L CNN
 F 1 "100n" H 1650 6900 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 1588 6800 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0805" H 1588 6800 50  0001 C CNN
 F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=08055C104JAT2Avirtualkey58110000virtualkey581-08055C104J" H 1550 6950 50  0001 C CNN
 	1    1550 6950
 	-1   0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:Varistor RV506
+L Varistor RV506
 U 1 1 59C662DD
 P 1000 6800
 F 0 "RV506" V 750 6850 50  0000 C CNN
 F 1 "B72510E250K062" V 850 7000 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" V 930 6800 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0805" V 930 6800 50  0001 C CNN
 F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=B72510E250K62virtualkey59250000virtualkey871-B72510E250K62" H 1000 6800 50  0001 C CNN
 	1    1000 6800
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:R R512
+L R R512
 U 1 1 59C662D6
 P 1550 6650
 F 0 "R512" H 1620 6696 50  0000 L CNN
 F 1 "2k" V 1550 6600 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 1480 6650 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805" V 1480 6650 50  0001 C CNN
 F 3 "" H 1550 6650 50  0001 C CNN
 	1    1550 6650
 	-1   0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:R R506
+L R R506
 U 1 1 59C662CF
 P 1400 6800
 F 0 "R506" V 1300 6800 50  0000 C CNN
 F 1 "1k" V 1400 6800 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 1330 6800 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805" V 1330 6800 50  0001 C CNN
 F 3 "" H 1400 6800 50  0001 C CNN
 	1    1400 6800
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:D_Schottky D518
+L D_Schottky D518
 U 1 1 59C662C8
 P 1850 6950
 F 0 "D518" H 1800 7050 50  0000 L CNN
@@ -634,12 +671,12 @@ F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=STPS0560Zvirtualkey5112000
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:R R518
+L R R518
 U 1 1 59C662C1
 P 2000 6800
 F 0 "R518" V 1900 6750 50  0000 C CNN
 F 1 "100" V 2000 6800 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 1930 6800 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805" V 1930 6800 50  0001 C CNN
 F 3 "" H 2000 6800 50  0001 C CNN
 	1    2000 6800
 	0    -1   1    0   
@@ -649,7 +686,7 @@ Sense5_DUT
 Wire Wire Line
 	1850 5650 1550 5650
 $Comp
-L G2-rescue:D_Schottky D515
+L D_Schottky D515
 U 1 1 59C66200
 P 1850 5500
 F 0 "D515" H 1800 5600 50  0000 L CNN
@@ -663,7 +700,7 @@ Text GLabel 2150 5650 2    60   Input ~ 0
 Sense5
 Connection ~ 1700 5350
 $Comp
-L G2-rescue:+5V #PWR096
+L +5V #PWR096
 U 1 1 59C661F8
 P 1700 5350
 F 0 "#PWR096" H 1700 5200 50  0001 C CNN
@@ -676,7 +713,7 @@ $EndComp
 Wire Wire Line
 	1550 5350 1850 5350
 $Comp
-L G2-rescue:GND #PWR095
+L GND #PWR095
 U 1 1 59C661F1
 P 850 5650
 F 0 "#PWR095" H 850 5400 50  0001 C CNN
@@ -693,7 +730,7 @@ Connection ~ 1550 5950
 Wire Wire Line
 	1200 5950 1850 5950
 $Comp
-L G2-rescue:GND #PWR094
+L GND #PWR094
 U 1 1 59C661E7
 P 1550 5950
 F 0 "#PWR094" H 1550 5700 50  0001 C CNN
@@ -704,7 +741,7 @@ F 3 "" H 1550 5950 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:D D505
+L D D505
 U 1 1 59C661E0
 P 1200 5800
 F 0 "D505" V 1200 5900 50  0000 L CNN
@@ -715,51 +752,51 @@ F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=CDBA3100-HFvirtualkey59960
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:C C505
+L C C505
 U 1 1 59C661D9
 P 1550 5800
 F 0 "C505" H 1665 5846 50  0000 L CNN
 F 1 "100n" H 1650 5750 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 1588 5650 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0805" H 1588 5650 50  0001 C CNN
 F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=08055C104JAT2Avirtualkey58110000virtualkey581-08055C104J" H 1550 5800 50  0001 C CNN
 	1    1550 5800
 	-1   0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:Varistor RV505
+L Varistor RV505
 U 1 1 59C661D2
 P 1000 5650
 F 0 "RV505" V 750 5700 50  0000 C CNN
 F 1 "B72510E250K062" V 850 5850 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" V 930 5650 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0805" V 930 5650 50  0001 C CNN
 F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=B72510E250K62virtualkey59250000virtualkey871-B72510E250K62" H 1000 5650 50  0001 C CNN
 	1    1000 5650
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:R R511
+L R R511
 U 1 1 59C661CB
 P 1550 5500
 F 0 "R511" H 1620 5546 50  0000 L CNN
 F 1 "2k" V 1550 5450 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 1480 5500 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805" V 1480 5500 50  0001 C CNN
 F 3 "" H 1550 5500 50  0001 C CNN
 	1    1550 5500
 	-1   0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:R R505
+L R R505
 U 1 1 59C661C4
 P 1400 5650
 F 0 "R505" V 1300 5650 50  0000 C CNN
 F 1 "1k" V 1400 5650 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 1330 5650 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805" V 1330 5650 50  0001 C CNN
 F 3 "" H 1400 5650 50  0001 C CNN
 	1    1400 5650
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:D_Schottky D516
+L D_Schottky D516
 U 1 1 59C661BD
 P 1850 5800
 F 0 "D516" H 1800 5900 50  0000 L CNN
@@ -770,12 +807,12 @@ F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=STPS0560Zvirtualkey5112000
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:R R517
+L R R517
 U 1 1 59C661B6
 P 2000 5650
 F 0 "R517" V 1900 5600 50  0000 C CNN
 F 1 "100" V 2000 5650 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 1930 5650 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805" V 1930 5650 50  0001 C CNN
 F 3 "" H 2000 5650 50  0001 C CNN
 	1    2000 5650
 	0    -1   1    0   
@@ -785,7 +822,7 @@ Sense4_DUT
 Wire Wire Line
 	1850 4500 1550 4500
 $Comp
-L G2-rescue:D_Schottky D513
+L D_Schottky D513
 U 1 1 59C65D0D
 P 1850 4350
 F 0 "D513" H 1800 4450 50  0000 L CNN
@@ -799,7 +836,7 @@ Text GLabel 2150 4500 2    60   Input ~ 0
 Sense4
 Connection ~ 1700 4200
 $Comp
-L G2-rescue:+5V #PWR093
+L +5V #PWR093
 U 1 1 59C65D05
 P 1700 4200
 F 0 "#PWR093" H 1700 4050 50  0001 C CNN
@@ -812,7 +849,7 @@ $EndComp
 Wire Wire Line
 	1550 4200 1850 4200
 $Comp
-L G2-rescue:GND #PWR092
+L GND #PWR092
 U 1 1 59C65CFE
 P 850 4500
 F 0 "#PWR092" H 850 4250 50  0001 C CNN
@@ -829,7 +866,7 @@ Connection ~ 1550 4800
 Wire Wire Line
 	1200 4800 1850 4800
 $Comp
-L G2-rescue:GND #PWR091
+L GND #PWR091
 U 1 1 59C65CF4
 P 1550 4800
 F 0 "#PWR091" H 1550 4550 50  0001 C CNN
@@ -840,7 +877,7 @@ F 3 "" H 1550 4800 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:D D504
+L D D504
 U 1 1 59C65CED
 P 1200 4650
 F 0 "D504" V 1200 4750 50  0000 L CNN
@@ -851,51 +888,51 @@ F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=CDBA3100-HFvirtualkey59960
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:C C504
+L C C504
 U 1 1 59C65CE6
 P 1550 4650
 F 0 "C504" H 1665 4696 50  0000 L CNN
 F 1 "100n" H 1650 4600 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 1588 4500 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0805" H 1588 4500 50  0001 C CNN
 F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=08055C104JAT2Avirtualkey58110000virtualkey581-08055C104J" H 1550 4650 50  0001 C CNN
 	1    1550 4650
 	-1   0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:Varistor RV504
+L Varistor RV504
 U 1 1 59C65CDF
 P 1000 4500
 F 0 "RV504" V 750 4550 50  0000 C CNN
 F 1 "B72510E250K62" V 850 4700 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" V 930 4500 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0805" V 930 4500 50  0001 C CNN
 F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=B72510E250K62virtualkey59250000virtualkey871-B72510E250K62" H 1000 4500 50  0001 C CNN
 	1    1000 4500
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:R R510
+L R R510
 U 1 1 59C65CD8
 P 1550 4350
 F 0 "R510" H 1620 4396 50  0000 L CNN
 F 1 "2k" V 1550 4300 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 1480 4350 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805" V 1480 4350 50  0001 C CNN
 F 3 "" H 1550 4350 50  0001 C CNN
 	1    1550 4350
 	-1   0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:R R504
+L R R504
 U 1 1 59C65CD1
 P 1400 4500
 F 0 "R504" V 1300 4500 50  0000 C CNN
 F 1 "1k" V 1400 4500 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 1330 4500 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805" V 1330 4500 50  0001 C CNN
 F 3 "" H 1400 4500 50  0001 C CNN
 	1    1400 4500
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:D_Schottky D514
+L D_Schottky D514
 U 1 1 59C65CCA
 P 1850 4650
 F 0 "D514" H 1800 4750 50  0000 L CNN
@@ -906,12 +943,12 @@ F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=STPS0560Zvirtualkey5112000
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:R R516
+L R R516
 U 1 1 59C65CC3
 P 2000 4500
 F 0 "R516" V 1900 4450 50  0000 C CNN
 F 1 "100" V 2000 4500 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 1930 4500 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805" V 1930 4500 50  0001 C CNN
 F 3 "" H 2000 4500 50  0001 C CNN
 	1    2000 4500
 	0    -1   1    0   
@@ -921,7 +958,7 @@ Sense3_DUT
 Wire Wire Line
 	1850 3350 1550 3350
 $Comp
-L G2-rescue:D_Schottky D511
+L D_Schottky D511
 U 1 1 59C65C42
 P 1850 3200
 F 0 "D511" H 1800 3300 50  0000 L CNN
@@ -935,7 +972,7 @@ Text GLabel 2150 3350 2    60   Input ~ 0
 Sense3
 Connection ~ 1700 3050
 $Comp
-L G2-rescue:+5V #PWR090
+L +5V #PWR090
 U 1 1 59C65C3A
 P 1700 3050
 F 0 "#PWR090" H 1700 2900 50  0001 C CNN
@@ -948,7 +985,7 @@ $EndComp
 Wire Wire Line
 	1550 3050 1850 3050
 $Comp
-L G2-rescue:GND #PWR089
+L GND #PWR089
 U 1 1 59C65C33
 P 850 3350
 F 0 "#PWR089" H 850 3100 50  0001 C CNN
@@ -965,7 +1002,7 @@ Connection ~ 1550 3650
 Wire Wire Line
 	1200 3650 1850 3650
 $Comp
-L G2-rescue:GND #PWR088
+L GND #PWR088
 U 1 1 59C65C29
 P 1550 3650
 F 0 "#PWR088" H 1550 3400 50  0001 C CNN
@@ -976,7 +1013,7 @@ F 3 "" H 1550 3650 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:D D503
+L D D503
 U 1 1 59C65C22
 P 1200 3500
 F 0 "D503" V 1200 3600 50  0000 L CNN
@@ -987,51 +1024,51 @@ F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=CDBA3100-HFvirtualkey59960
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:C C503
+L C C503
 U 1 1 59C65C1B
 P 1550 3500
 F 0 "C503" H 1665 3546 50  0000 L CNN
 F 1 "100n" H 1650 3450 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 1588 3350 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0805" H 1588 3350 50  0001 C CNN
 F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=08055C104JAT2Avirtualkey58110000virtualkey581-08055C104J" H 1550 3500 50  0001 C CNN
 	1    1550 3500
 	-1   0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:Varistor RV503
+L Varistor RV503
 U 1 1 59C65C14
 P 1000 3350
 F 0 "RV503" V 750 3400 50  0000 C CNN
 F 1 "B72510E250K062" V 850 3550 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" V 930 3350 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0805" V 930 3350 50  0001 C CNN
 F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=B72510E250K62virtualkey59250000virtualkey871-B72510E250K62" H 1000 3350 50  0001 C CNN
 	1    1000 3350
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:R R509
+L R R509
 U 1 1 59C65C0D
 P 1550 3200
 F 0 "R509" H 1620 3246 50  0000 L CNN
 F 1 "2k" V 1550 3150 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 1480 3200 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805" V 1480 3200 50  0001 C CNN
 F 3 "" H 1550 3200 50  0001 C CNN
 	1    1550 3200
 	-1   0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:R R503
+L R R503
 U 1 1 59C65C06
 P 1400 3350
 F 0 "R503" V 1300 3350 50  0000 C CNN
 F 1 "1k" V 1400 3350 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 1330 3350 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805" V 1330 3350 50  0001 C CNN
 F 3 "" H 1400 3350 50  0001 C CNN
 	1    1400 3350
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:D_Schottky D512
+L D_Schottky D512
 U 1 1 59C65BFF
 P 1850 3500
 F 0 "D512" H 1800 3600 50  0000 L CNN
@@ -1042,12 +1079,12 @@ F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=STPS0560Zvirtualkey5112000
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:R R515
+L R R515
 U 1 1 59C65BF8
 P 2000 3350
 F 0 "R515" V 1900 3300 50  0000 C CNN
 F 1 "100" V 2000 3350 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 1930 3350 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805" V 1930 3350 50  0001 C CNN
 F 3 "" H 2000 3350 50  0001 C CNN
 	1    2000 3350
 	0    -1   1    0   
@@ -1057,7 +1094,7 @@ Sense2_DUT
 Wire Wire Line
 	1850 2200 1550 2200
 $Comp
-L G2-rescue:D_Schottky D509
+L D_Schottky D509
 U 1 1 59C65A6F
 P 1850 2050
 F 0 "D509" H 1800 2150 50  0000 L CNN
@@ -1071,7 +1108,7 @@ Text GLabel 2150 2200 2    60   Input ~ 0
 Sense2
 Connection ~ 1700 1900
 $Comp
-L G2-rescue:+5V #PWR087
+L +5V #PWR087
 U 1 1 59C65A67
 P 1700 1900
 F 0 "#PWR087" H 1700 1750 50  0001 C CNN
@@ -1084,7 +1121,7 @@ $EndComp
 Wire Wire Line
 	1550 1900 1850 1900
 $Comp
-L G2-rescue:GND #PWR086
+L GND #PWR086
 U 1 1 59C65A60
 P 850 2200
 F 0 "#PWR086" H 850 1950 50  0001 C CNN
@@ -1101,7 +1138,7 @@ Connection ~ 1550 2500
 Wire Wire Line
 	1200 2500 1850 2500
 $Comp
-L G2-rescue:GND #PWR085
+L GND #PWR085
 U 1 1 59C65A56
 P 1550 2500
 F 0 "#PWR085" H 1550 2250 50  0001 C CNN
@@ -1112,7 +1149,7 @@ F 3 "" H 1550 2500 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:D D502
+L D D502
 U 1 1 59C65A4F
 P 1200 2350
 F 0 "D502" V 1200 2450 50  0000 L CNN
@@ -1123,51 +1160,51 @@ F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=CDBA3100-HFvirtualkey59960
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:C C502
+L C C502
 U 1 1 59C65A48
 P 1550 2350
 F 0 "C502" H 1665 2396 50  0000 L CNN
 F 1 "100n" H 1650 2300 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 1588 2200 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0805" H 1588 2200 50  0001 C CNN
 F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=08055C104JAT2Avirtualkey58110000virtualkey581-08055C104J" H 1550 2350 50  0001 C CNN
 	1    1550 2350
 	-1   0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:Varistor RV502
+L Varistor RV502
 U 1 1 59C65A41
 P 1000 2200
 F 0 "RV502" V 750 2250 50  0000 C CNN
 F 1 "B72510E250K062" V 850 2400 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" V 930 2200 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0805" V 930 2200 50  0001 C CNN
 F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=B72510E250K62virtualkey59250000virtualkey871-B72510E250K62" H 1000 2200 50  0001 C CNN
 	1    1000 2200
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:R R508
+L R R508
 U 1 1 59C65A3A
 P 1550 2050
 F 0 "R508" H 1620 2096 50  0000 L CNN
 F 1 "2k" V 1550 2000 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 1480 2050 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805" V 1480 2050 50  0001 C CNN
 F 3 "" H 1550 2050 50  0001 C CNN
 	1    1550 2050
 	-1   0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:R R502
+L R R502
 U 1 1 59C65A33
 P 1400 2200
 F 0 "R502" V 1300 2200 50  0000 C CNN
 F 1 "1k" V 1400 2200 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 1330 2200 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805" V 1330 2200 50  0001 C CNN
 F 3 "" H 1400 2200 50  0001 C CNN
 	1    1400 2200
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:D_Schottky D510
+L D_Schottky D510
 U 1 1 59C65A2C
 P 1850 2350
 F 0 "D510" H 1800 2450 50  0000 L CNN
@@ -1178,12 +1215,12 @@ F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=STPS0560Zvirtualkey5112000
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:R R514
+L R R514
 U 1 1 59C65A25
 P 2000 2200
 F 0 "R514" V 1900 2150 50  0000 C CNN
 F 1 "100" V 2000 2200 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 1930 2200 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805" V 1930 2200 50  0001 C CNN
 F 3 "" H 2000 2200 50  0001 C CNN
 	1    2000 2200
 	0    -1   1    0   
@@ -1193,7 +1230,7 @@ Sense1_DUT
 Wire Wire Line
 	1850 1100 1550 1100
 $Comp
-L G2-rescue:D_Schottky D507
+L D_Schottky D507
 U 1 1 59C69DB2
 P 1850 950
 F 0 "D507" H 1800 1050 50  0000 L CNN
@@ -1207,7 +1244,7 @@ Text GLabel 2150 1100 2    60   Input ~ 0
 Sense1
 Connection ~ 1700 800 
 $Comp
-L G2-rescue:+5V #PWR069
+L +5V #PWR069
 U 1 1 59C69AB2
 P 1700 800
 F 0 "#PWR069" H 1700 650 50  0001 C CNN
@@ -1220,7 +1257,7 @@ $EndComp
 Wire Wire Line
 	1550 800  1850 800 
 $Comp
-L G2-rescue:GND #PWR068
+L GND #PWR068
 U 1 1 59C699C4
 P 850 1100
 F 0 "#PWR068" H 850 850 50  0001 C CNN
@@ -1237,7 +1274,7 @@ Connection ~ 1550 1400
 Wire Wire Line
 	1200 1400 1850 1400
 $Comp
-L G2-rescue:GND #PWR067
+L GND #PWR067
 U 1 1 59C6995B
 P 1550 1400
 F 0 "#PWR067" H 1550 1150 50  0001 C CNN
@@ -1248,7 +1285,7 @@ F 3 "" H 1550 1400 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:D D501
+L D D501
 U 1 1 59C698B8
 P 1200 1250
 F 0 "D501" V 1200 1350 50  0000 L CNN
@@ -1259,51 +1296,51 @@ F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=CDBA3100-HFvirtualkey59960
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:C C501
+L C C501
 U 1 1 59C69779
 P 1550 1250
 F 0 "C501" H 1665 1296 50  0000 L CNN
 F 1 "100n" H 1650 1200 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 1588 1100 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0805" H 1588 1100 50  0001 C CNN
 F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=08055C104JAT2Avirtualkey58110000virtualkey581-08055C104J" H 1550 1250 50  0001 C CNN
 	1    1550 1250
 	-1   0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:Varistor RV501
+L Varistor RV501
 U 1 1 59C696C7
 P 1000 1100
 F 0 "RV501" V 750 1150 50  0000 C CNN
 F 1 "B72510E250K062" V 850 1300 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" V 930 1100 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0805" V 930 1100 50  0001 C CNN
 F 3 "https://www.mouser.se/ProductDetail/EPCOS-TDK/B72510E0250K062/?qs=%2fha2pyFadugVCK9yiqateTD%252bWTZyWxpU55VnsqI3B1Kd%2fbUd9GEicg%3d%3d" H 1000 1100 50  0001 C CNN
 	1    1000 1100
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:R R507
+L R R507
 U 1 1 59C6950D
 P 1550 950
 F 0 "R507" H 1620 996 50  0000 L CNN
 F 1 "2k" V 1550 900 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 1480 950 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805" V 1480 950 50  0001 C CNN
 F 3 "" H 1550 950 50  0001 C CNN
 	1    1550 950 
 	-1   0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:R R501
+L R R501
 U 1 1 59C694AB
 P 1400 1100
 F 0 "R501" V 1300 1100 50  0000 C CNN
 F 1 "1k" V 1400 1100 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 1330 1100 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805" V 1330 1100 50  0001 C CNN
 F 3 "" H 1400 1100 50  0001 C CNN
 	1    1400 1100
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:D_Schottky D508
+L D_Schottky D508
 U 1 1 59C693EA
 P 1850 1250
 F 0 "D508" H 1800 1350 50  0000 L CNN
@@ -1314,12 +1351,12 @@ F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=STPS0560Zvirtualkey5112000
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:R R513
+L R R513
 U 1 1 59C6930B
 P 2000 1100
 F 0 "R513" V 1900 1050 50  0000 C CNN
 F 1 "100" V 2000 1100 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 1930 1100 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805" V 1930 1100 50  0001 C CNN
 F 3 "" H 2000 1100 50  0001 C CNN
 	1    2000 1100
 	0    -1   1    0   
@@ -1337,7 +1374,7 @@ GND-Regular
 Text Label 5600 2850 0    60   ~ 0
 GND-Regular
 $Comp
-L G2-rescue:+3.3V #PWR0166
+L +3.3V #PWR0166
 U 1 1 5A53E0D6
 P 8000 2350
 F 0 "#PWR0166" H 8000 2200 50  0001 C CNN
@@ -1348,7 +1385,7 @@ F 3 "" H 8000 2350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:+3.3V #PWR0167
+L +3.3V #PWR0167
 U 1 1 5A53E39D
 P 8000 4300
 F 0 "#PWR0167" H 8000 4150 50  0001 C CNN
@@ -1359,7 +1396,7 @@ F 3 "" H 8000 4300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:+3.3V #PWR0168
+L +3.3V #PWR0168
 U 1 1 5A53E47A
 P 6350 3600
 F 0 "#PWR0168" H 6350 3450 50  0001 C CNN
@@ -1370,7 +1407,7 @@ F 3 "" H 6350 3600 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L G2-rescue:+3.3V #PWR0169
+L +3.3V #PWR0169
 U 1 1 5A53E8E5
 P 6400 1650
 F 0 "#PWR0169" H 6400 1500 50  0001 C CNN

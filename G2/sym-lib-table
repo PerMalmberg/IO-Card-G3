@@ -1,0 +1,7 @@
+(sym_lib_table
+  (lib (name G2-rescue)(type Legacy)(uri ${KIPRJMOD}/G2-rescue.lib)(options "")(descr ""))
+  (lib (name ADS1115IDGST)(type Legacy)(uri D:/code/G2/ADS1115/ADS1115IDGST.lib)(options "")(descr ""))
+  (lib (name spark_esp32thing)(type Legacy)(uri "D:/code/G2/ESP32 Thing/spark_esp32thing.lib")(options "")(descr ""))
+  (lib (name LocalPower)(type Legacy)(uri ${KIPRJMOD}/LocalPower.lib)(options "")(descr ""))
+  (lib (name pogopins02x06_pitch5.08)(type Legacy)(uri D:/code/G2/pogopins02x06_pitch5.08.lib)(options "")(descr ""))
+)
