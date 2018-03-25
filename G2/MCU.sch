@@ -75,7 +75,7 @@ U 1 1 59C8CC4C
 P 2500 6750
 F 0 "CON401" H 2474 7205 50  0000 C CNN
 F 1 "AVR-JTAG-10" H 2474 7114 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x05_Pitch2.54mm" V 1930 6770 50  0001 C CNN
+F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical" V 1930 6770 50  0001 C CNN
 F 3 "" H 2500 6750 50  0001 C CNN
 	1    2500 6750
 	1    0    0    -1  
@@ -88,7 +88,7 @@ Text GLabel 3300 6750 2    60   Input ~ 0
 JTAG_MTMS
 Text GLabel 3300 6950 2    60   Input ~ 0
 JTAG_MTDI
-Text GLabel 3850 6550 2    60   Input ~ 0
+Text GLabel 3300 6450 2    60   Input ~ 0
 ~RESET
 $Comp
 L Device:R R403
@@ -1068,27 +1068,9 @@ Wire Wire Line
 Wire Wire Line
 	7700 2300 8950 2300
 Wire Wire Line
-	3000 6950 3050 6950
-Wire Wire Line
 	3300 6850 3100 6850
 Wire Wire Line
-	3000 6750 3150 6750
-Wire Wire Line
-	3300 6650 3200 6650
-Wire Wire Line
-	3850 6550 3000 6550
-Wire Wire Line
-	3200 6300 3200 6650
-Connection ~ 3200 6650
-Wire Wire Line
-	3200 6650 3000 6650
-Wire Wire Line
 	3200 6100 3150 6100
-Wire Wire Line
-	3150 6100 3150 6750
-Connection ~ 3150 6750
-Wire Wire Line
-	3150 6750 3300 6750
 Wire Wire Line
 	3200 5900 3100 5900
 Wire Wire Line
@@ -1098,23 +1080,28 @@ Wire Wire Line
 	3100 6850 3000 6850
 Wire Wire Line
 	3200 5700 3050 5700
+NoConn ~ 2500 6150
+NoConn ~ 3000 6550
 Wire Wire Line
-	3050 5700 3050 6950
-Connection ~ 3050 6950
+	3300 6450 3000 6450
 Wire Wire Line
-	3050 6950 3300 6950
-$Comp
-L LocalPower:+3V3_C #PWR0170
-U 1 1 5ABEC3E0
-P 2500 6150
-F 0 "#PWR0170" H 2500 6000 50  0001 C CNN
-F 1 "+3V3_C" V 2500 6400 50  0000 C CNN
-F 2 "" H 2500 6150 50  0001 C CNN
-F 3 "" H 2500 6150 50  0001 C CNN
-	1    2500 6150
-	-1   0    0    -1  
-$EndComp
-NoConn ~ 3000 6450
+	3000 6950 3200 6950
+Wire Wire Line
+	3200 6300 3200 6950
+Connection ~ 3200 6950
+Wire Wire Line
+	3200 6950 3300 6950
+Wire Wire Line
+	3000 6750 3150 6750
+Wire Wire Line
+	3150 6100 3150 6750
+Connection ~ 3150 6750
+Wire Wire Line
+	3150 6750 3300 6750
+Wire Wire Line
+	3000 6650 3050 6650
+Wire Wire Line
+	3050 5700 3050 6650
 Wire Bus Line
 	5450 4050 5450 5250
 Wire Bus Line
@@ -1125,4 +1112,7 @@ Wire Bus Line
 	1900 2050 1900 3500
 Wire Bus Line
 	1900 2050 8000 2050
+Connection ~ 3050 6650
+Wire Wire Line
+	3050 6650 3300 6650
 $EndSCHEMATC
