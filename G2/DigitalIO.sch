@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L G2-rescue:MCP23017 U309
+L MCP23017:MCP23017 U309
 U 1 1 59C2CB37
 P 8050 5150
 F 0 "U309" H 7850 6300 50  0000 C CNN
@@ -26,7 +26,7 @@ F 3 "" H 8300 6150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:LTV-354T U302
+L Isolator:LTV-354T U302
 U 1 1 59C2CEDC
 P 1750 2400
 F 0 "U302" H 1750 2725 50  0000 C CNN
@@ -37,7 +37,7 @@ F 3 "" H 1775 2400 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:R R302
+L Device:R R302
 U 1 1 59C2CF5E
 P 1200 2300
 F 0 "R302" V 1100 2300 50  0000 C CNN
@@ -48,7 +48,7 @@ F 3 "" H 1200 2300 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:R R310
+L Device:R R310
 U 1 1 59C2CFB5
 P 2700 2500
 F 0 "R310" V 2600 2500 50  0000 C CNN
@@ -59,7 +59,7 @@ F 3 "" H 2700 2500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:CP C302
+L Device:CP C302
 U 1 1 59C2D025
 P 2300 2500
 F 0 "C302" V 2150 2500 50  0000 C CNN
@@ -70,7 +70,7 @@ F 3 "" H 2300 2500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:R R318
+L Device:R R318
 U 1 1 59C2D210
 P 3100 2300
 F 0 "R318" H 3250 2250 50  0000 C CNN
@@ -81,7 +81,7 @@ F 3 "" H 3100 2300 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:GND #PWR03
+L power:GND #PWR03
 U 1 1 59C2D5AF
 P 2100 2500
 F 0 "#PWR03" H 2100 2250 50  0001 C CNN
@@ -94,7 +94,7 @@ $EndComp
 Text GLabel 2850 2300 1    60   Input ~ 0
 DI2
 $Comp
-L G2-rescue:+3.3V #PWR04
+L power:+3.3V #PWR04
 U 1 1 59C2D687
 P 3250 2300
 F 0 "#PWR04" H 3250 2150 50  0001 C CNN
@@ -111,7 +111,7 @@ DI2_2
 Text Notes 1100 1350 0    60   ~ 0
 Select based on input voltage.\nMax 50mA.\n1k should allow for \nvoltages 3.3 - 48V\n2.4W
 $Comp
-L G2-rescue:LTV-354T U303
+L Isolator:LTV-354T U303
 U 1 1 59C2DC15
 P 1750 3100
 F 0 "U303" H 1750 3425 50  0000 C CNN
@@ -122,7 +122,7 @@ F 3 "" H 1775 3100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:R R303
+L Device:R R303
 U 1 1 59C2DC1B
 P 1200 3000
 F 0 "R303" V 1100 3000 50  0000 C CNN
@@ -133,7 +133,7 @@ F 3 "" H 1200 3000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:R R311
+L Device:R R311
 U 1 1 59C2DC21
 P 2700 3200
 F 0 "R311" V 2600 3200 50  0000 C CNN
@@ -144,7 +144,7 @@ F 3 "" H 2700 3200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:CP C303
+L Device:CP C303
 U 1 1 59C2DC27
 P 2300 3200
 F 0 "C303" V 2150 3200 50  0000 C CNN
@@ -155,7 +155,7 @@ F 3 "" H 2300 3200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:R R319
+L Device:R R319
 U 1 1 59C2DC2D
 P 3100 3000
 F 0 "R319" H 3250 2950 50  0000 C CNN
@@ -166,7 +166,7 @@ F 3 "" H 3100 3000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:GND #PWR05
+L power:GND #PWR05
 U 1 1 59C2DC3A
 P 2100 3200
 F 0 "#PWR05" H 2100 2950 50  0001 C CNN
@@ -179,7 +179,7 @@ $EndComp
 Text GLabel 2850 3000 1    60   Input ~ 0
 DI3
 $Comp
-L G2-rescue:+3.3V #PWR06
+L power:+3.3V #PWR06
 U 1 1 59C2DC43
 P 3250 3000
 F 0 "#PWR06" H 3250 2850 50  0001 C CNN
@@ -194,7 +194,7 @@ DI3_1
 Text GLabel 1450 3200 0    60   Input ~ 0
 DI3_2
 $Comp
-L G2-rescue:LTV-354T U304
+L Isolator:LTV-354T U304
 U 1 1 59C2DDCB
 P 1750 3850
 F 0 "U304" H 1750 4175 50  0000 C CNN
@@ -205,7 +205,7 @@ F 3 "" H 1775 3850 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:R R304
+L Device:R R304
 U 1 1 59C2DDD2
 P 1200 3750
 F 0 "R304" V 1100 3750 50  0000 C CNN
@@ -216,7 +216,7 @@ F 3 "" H 1200 3750 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:R R312
+L Device:R R312
 U 1 1 59C2DDD9
 P 2700 3950
 F 0 "R312" V 2600 3950 50  0000 C CNN
@@ -227,7 +227,7 @@ F 3 "" H 2700 3950 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:CP C304
+L Device:CP C304
 U 1 1 59C2DDE0
 P 2300 3950
 F 0 "C304" V 2150 3950 50  0000 C CNN
@@ -238,7 +238,7 @@ F 3 "" H 2300 3950 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:R R320
+L Device:R R320
 U 1 1 59C2DDE7
 P 3100 3750
 F 0 "R320" H 3250 3700 50  0000 C CNN
@@ -249,7 +249,7 @@ F 3 "" H 3100 3750 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:GND #PWR07
+L power:GND #PWR07
 U 1 1 59C2DDF5
 P 2100 3950
 F 0 "#PWR07" H 2100 3700 50  0001 C CNN
@@ -262,7 +262,7 @@ $EndComp
 Text GLabel 2850 3750 1    60   Input ~ 0
 DI4
 $Comp
-L G2-rescue:+3.3V #PWR08
+L power:+3.3V #PWR08
 U 1 1 59C2DDFE
 P 3250 3750
 F 0 "#PWR08" H 3250 3600 50  0001 C CNN
@@ -277,7 +277,7 @@ DI4_1
 Text GLabel 1450 3950 0    60   Input ~ 0
 DI4_2
 $Comp
-L G2-rescue:LTV-354T U305
+L Isolator:LTV-354T U305
 U 1 1 59C2E15C
 P 1750 4600
 F 0 "U305" H 1750 4925 50  0000 C CNN
@@ -288,7 +288,7 @@ F 3 "" H 1775 4600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:R R305
+L Device:R R305
 U 1 1 59C2E163
 P 1200 4500
 F 0 "R305" V 1100 4500 50  0000 C CNN
@@ -299,7 +299,7 @@ F 3 "" H 1200 4500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:R R313
+L Device:R R313
 U 1 1 59C2E16A
 P 2700 4700
 F 0 "R313" V 2600 4700 50  0000 C CNN
@@ -310,7 +310,7 @@ F 3 "" H 2700 4700 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:CP C305
+L Device:CP C305
 U 1 1 59C2E171
 P 2300 4700
 F 0 "C305" V 2150 4700 50  0000 C CNN
@@ -321,7 +321,7 @@ F 3 "" H 2300 4700 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:R R321
+L Device:R R321
 U 1 1 59C2E178
 P 3100 4500
 F 0 "R321" H 3250 4450 50  0000 C CNN
@@ -332,7 +332,7 @@ F 3 "" H 3100 4500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:GND #PWR09
+L power:GND #PWR09
 U 1 1 59C2E186
 P 2100 4700
 F 0 "#PWR09" H 2100 4450 50  0001 C CNN
@@ -345,7 +345,7 @@ $EndComp
 Text GLabel 2850 4500 1    60   Input ~ 0
 DI5
 $Comp
-L G2-rescue:+3.3V #PWR010
+L power:+3.3V #PWR010
 U 1 1 59C2E18F
 P 3250 4500
 F 0 "#PWR010" H 3250 4350 50  0001 C CNN
@@ -360,7 +360,7 @@ DI5_1
 Text GLabel 1450 4700 0    60   Input ~ 0
 DI5_2
 $Comp
-L G2-rescue:LTV-354T U306
+L Isolator:LTV-354T U306
 U 1 1 59C2E1F2
 P 1750 5350
 F 0 "U306" H 1750 5675 50  0000 C CNN
@@ -371,7 +371,7 @@ F 3 "" H 1775 5350 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:R R306
+L Device:R R306
 U 1 1 59C2E1F9
 P 1200 5250
 F 0 "R306" V 1100 5250 50  0000 C CNN
@@ -382,7 +382,7 @@ F 3 "" H 1200 5250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:R R314
+L Device:R R314
 U 1 1 59C2E200
 P 2700 5450
 F 0 "R314" V 2600 5450 50  0000 C CNN
@@ -393,7 +393,7 @@ F 3 "" H 2700 5450 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:CP C306
+L Device:CP C306
 U 1 1 59C2E207
 P 2300 5450
 F 0 "C306" V 2150 5450 50  0000 C CNN
@@ -404,7 +404,7 @@ F 3 "" H 2300 5450 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:R R322
+L Device:R R322
 U 1 1 59C2E20E
 P 3100 5250
 F 0 "R322" H 3250 5200 50  0000 C CNN
@@ -415,7 +415,7 @@ F 3 "" H 3100 5250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:GND #PWR011
+L power:GND #PWR011
 U 1 1 59C2E21C
 P 2100 5450
 F 0 "#PWR011" H 2100 5200 50  0001 C CNN
@@ -428,7 +428,7 @@ $EndComp
 Text GLabel 2850 5250 1    60   Input ~ 0
 DI6
 $Comp
-L G2-rescue:+3.3V #PWR012
+L power:+3.3V #PWR012
 U 1 1 59C2E225
 P 3250 5250
 F 0 "#PWR012" H 3250 5100 50  0001 C CNN
@@ -443,7 +443,7 @@ DI6_1
 Text GLabel 1450 5450 0    60   Input ~ 0
 DI6_2
 $Comp
-L G2-rescue:LTV-354T U307
+L Isolator:LTV-354T U307
 U 1 1 59C2E3F5
 P 1750 6050
 F 0 "U307" H 1750 6375 50  0000 C CNN
@@ -454,7 +454,7 @@ F 3 "" H 1775 6050 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:R R307
+L Device:R R307
 U 1 1 59C2E3FC
 P 1200 5950
 F 0 "R307" V 1100 5950 50  0000 C CNN
@@ -465,7 +465,7 @@ F 3 "" H 1200 5950 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:R R315
+L Device:R R315
 U 1 1 59C2E403
 P 2700 6150
 F 0 "R315" V 2600 6150 50  0000 C CNN
@@ -476,7 +476,7 @@ F 3 "" H 2700 6150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:CP C307
+L Device:CP C307
 U 1 1 59C2E40A
 P 2300 6150
 F 0 "C307" V 2150 6150 50  0000 C CNN
@@ -487,7 +487,7 @@ F 3 "" H 2300 6150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:R R323
+L Device:R R323
 U 1 1 59C2E411
 P 3100 5950
 F 0 "R323" H 3250 5900 50  0000 C CNN
@@ -498,7 +498,7 @@ F 3 "" H 3100 5950 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:GND #PWR013
+L power:GND #PWR013
 U 1 1 59C2E41F
 P 2100 6150
 F 0 "#PWR013" H 2100 5900 50  0001 C CNN
@@ -511,7 +511,7 @@ $EndComp
 Text GLabel 2850 5950 1    60   Input ~ 0
 DI7
 $Comp
-L G2-rescue:+3.3V #PWR014
+L power:+3.3V #PWR014
 U 1 1 59C2E428
 P 3250 5950
 F 0 "#PWR014" H 3250 5800 50  0001 C CNN
@@ -526,7 +526,7 @@ DI7_1
 Text GLabel 1450 6150 0    60   Input ~ 0
 DI7_2
 $Comp
-L G2-rescue:LTV-354T U308
+L Isolator:LTV-354T U308
 U 1 1 59C2E481
 P 1750 6800
 F 0 "U308" H 1750 7125 50  0000 C CNN
@@ -537,7 +537,7 @@ F 3 "" H 1775 6800 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:R R308
+L Device:R R308
 U 1 1 59C2E488
 P 1200 6700
 F 0 "R308" V 1100 6700 50  0000 C CNN
@@ -548,7 +548,7 @@ F 3 "" H 1200 6700 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:R R316
+L Device:R R316
 U 1 1 59C2E48F
 P 2700 6900
 F 0 "R316" V 2600 6900 50  0000 C CNN
@@ -559,7 +559,7 @@ F 3 "" H 2700 6900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:CP C308
+L Device:CP C308
 U 1 1 59C2E496
 P 2300 6900
 F 0 "C308" V 2150 6900 50  0000 C CNN
@@ -570,7 +570,7 @@ F 3 "" H 2300 6900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:R R324
+L Device:R R324
 U 1 1 59C2E49D
 P 3100 6700
 F 0 "R324" H 3250 6650 50  0000 C CNN
@@ -581,7 +581,7 @@ F 3 "" H 3100 6700 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:GND #PWR015
+L power:GND #PWR015
 U 1 1 59C2E4AB
 P 2100 6900
 F 0 "#PWR015" H 2100 6650 50  0001 C CNN
@@ -594,7 +594,7 @@ $EndComp
 Text GLabel 2850 6700 1    60   Input ~ 0
 DI8
 $Comp
-L G2-rescue:+3.3V #PWR016
+L power:+3.3V #PWR016
 U 1 1 59C2E4B4
 P 3250 6700
 F 0 "#PWR016" H 3250 6550 50  0001 C CNN
@@ -609,7 +609,7 @@ DI8_1
 Text GLabel 1450 6900 0    60   Input ~ 0
 DI8_2
 $Comp
-L G2-rescue:LTV-354T U301
+L Isolator:LTV-354T U301
 U 1 1 59C2E952
 P 1750 1700
 F 0 "U301" H 1750 2025 50  0000 C CNN
@@ -620,7 +620,7 @@ F 3 "" H 1775 1700 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:R R301
+L Device:R R301
 U 1 1 59C2E959
 P 1200 1600
 F 0 "R301" V 1100 1600 50  0000 C CNN
@@ -631,7 +631,7 @@ F 3 "" H 1200 1600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:R R309
+L Device:R R309
 U 1 1 59C2E960
 P 2700 1800
 F 0 "R309" V 2600 1800 50  0000 C CNN
@@ -642,7 +642,7 @@ F 3 "" H 2700 1800 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:CP C301
+L Device:CP C301
 U 1 1 59C2E967
 P 2300 1800
 F 0 "C301" V 2150 1800 50  0000 C CNN
@@ -653,7 +653,7 @@ F 3 "" H 2300 1800 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:R R317
+L Device:R R317
 U 1 1 59C2E96E
 P 3100 1600
 F 0 "R317" H 3250 1550 50  0000 C CNN
@@ -664,7 +664,7 @@ F 3 "" H 3100 1600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:GND #PWR017
+L power:GND #PWR017
 U 1 1 59C2E97C
 P 2100 1800
 F 0 "#PWR017" H 2100 1550 50  0001 C CNN
@@ -677,7 +677,7 @@ $EndComp
 Text GLabel 2850 1600 1    60   Input ~ 0
 DI1
 $Comp
-L G2-rescue:+3.3V #PWR018
+L power:+3.3V #PWR018
 U 1 1 59C2E985
 P 3250 1600
 F 0 "#PWR018" H 3250 1450 50  0001 C CNN
@@ -708,7 +708,7 @@ DI7
 Text GLabel 7550 5950 0    60   Input ~ 0
 DI8
 $Comp
-L G2-rescue:Q_NPN_BCE Q301
+L Device:Q_NPN_BCE Q301
 U 1 1 59C35510
 P 4500 1200
 F 0 "Q301" V 4700 1150 50  0000 L CNN
@@ -719,7 +719,7 @@ F 3 "" H 4500 1200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:GND #PWR027
+L power:GND #PWR027
 U 1 1 59C35866
 P 4600 1500
 F 0 "#PWR027" H 4600 1250 50  0001 C CNN
@@ -730,7 +730,7 @@ F 3 "" H 4600 1500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:R R325
+L Device:R R325
 U 1 1 59C35C82
 P 4100 1200
 F 0 "R325" V 4000 1200 50  0000 C CNN
@@ -743,7 +743,7 @@ $EndComp
 Text GLabel 3950 1200 0    60   Input ~ 0
 DO1
 $Comp
-L G2-rescue:Q_NPN_BCE Q302
+L Device:Q_NPN_BCE Q302
 U 1 1 59C3ACBF
 P 4500 2200
 F 0 "Q302" V 4700 2150 50  0000 L CNN
@@ -754,7 +754,7 @@ F 3 "" H 4500 2200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:GND #PWR029
+L power:GND #PWR029
 U 1 1 59C3ACCD
 P 4600 2500
 F 0 "#PWR029" H 4600 2250 50  0001 C CNN
@@ -765,7 +765,7 @@ F 3 "" H 4600 2500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:R R326
+L Device:R R326
 U 1 1 59C3ACD8
 P 4100 2200
 F 0 "R326" V 4000 2200 50  0000 C CNN
@@ -776,7 +776,7 @@ F 3 "" H 4100 2200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:Q_NPN_BCE Q303
+L Device:Q_NPN_BCE Q303
 U 1 1 59C3B120
 P 4500 3200
 F 0 "Q303" V 4700 3150 50  0000 L CNN
@@ -787,7 +787,7 @@ F 3 "" H 4500 3200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:GND #PWR031
+L power:GND #PWR031
 U 1 1 59C3B12E
 P 4600 3500
 F 0 "#PWR031" H 4600 3250 50  0001 C CNN
@@ -798,7 +798,7 @@ F 3 "" H 4600 3500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:R R327
+L Device:R R327
 U 1 1 59C3B139
 P 4100 3200
 F 0 "R327" V 4000 3200 50  0000 C CNN
@@ -809,7 +809,7 @@ F 3 "" H 4100 3200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:Q_NPN_BCE Q304
+L Device:Q_NPN_BCE Q304
 U 1 1 59C3B4D6
 P 4500 4200
 F 0 "Q304" V 4700 4150 50  0000 L CNN
@@ -820,7 +820,7 @@ F 3 "" H 4500 4200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:GND #PWR033
+L power:GND #PWR033
 U 1 1 59C3B4E4
 P 4600 4500
 F 0 "#PWR033" H 4600 4250 50  0001 C CNN
@@ -831,7 +831,7 @@ F 3 "" H 4600 4500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:R R328
+L Device:R R328
 U 1 1 59C3B4EF
 P 4100 4200
 F 0 "R328" V 4000 4200 50  0000 C CNN
@@ -842,7 +842,7 @@ F 3 "" H 4100 4200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:Q_NPN_BCE Q305
+L Device:Q_NPN_BCE Q305
 U 1 1 59C3B5AB
 P 4500 5200
 F 0 "Q305" V 4700 5150 50  0000 L CNN
@@ -853,7 +853,7 @@ F 3 "" H 4500 5200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:GND #PWR035
+L power:GND #PWR035
 U 1 1 59C3B5B9
 P 4600 5500
 F 0 "#PWR035" H 4600 5250 50  0001 C CNN
@@ -864,7 +864,7 @@ F 3 "" H 4600 5500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:R R329
+L Device:R R329
 U 1 1 59C3B5C4
 P 4100 5200
 F 0 "R329" V 4000 5200 50  0000 C CNN
@@ -875,7 +875,7 @@ F 3 "" H 4100 5200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:Q_NPN_BCE Q306
+L Device:Q_NPN_BCE Q306
 U 1 1 59C3BCC0
 P 4500 6200
 F 0 "Q306" V 4700 6150 50  0000 L CNN
@@ -886,7 +886,7 @@ F 3 "" H 4500 6200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:GND #PWR037
+L power:GND #PWR037
 U 1 1 59C3BCCE
 P 4600 6500
 F 0 "#PWR037" H 4600 6250 50  0001 C CNN
@@ -897,7 +897,7 @@ F 3 "" H 4600 6500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:R R330
+L Device:R R330
 U 1 1 59C3BCD9
 P 4100 6200
 F 0 "R330" V 4000 6200 50  0000 C CNN
@@ -908,7 +908,7 @@ F 3 "" H 4100 6200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:Q_NPN_BCE Q307
+L Device:Q_NPN_BCE Q307
 U 1 1 59C3C5D9
 P 6550 1000
 F 0 "Q307" V 6750 950 50  0000 L CNN
@@ -919,7 +919,7 @@ F 3 "" H 6550 1000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:GND #PWR039
+L power:GND #PWR039
 U 1 1 59C3C5E7
 P 6650 1300
 F 0 "#PWR039" H 6650 1050 50  0001 C CNN
@@ -930,7 +930,7 @@ F 3 "" H 6650 1300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:R R331
+L Device:R R331
 U 1 1 59C3C5F2
 P 6150 1000
 F 0 "R331" V 6050 1000 50  0000 C CNN
@@ -941,7 +941,7 @@ F 3 "" H 6150 1000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:Q_NPN_BCE Q308
+L Device:Q_NPN_BCE Q308
 U 1 1 59C3C6C7
 P 6550 2000
 F 0 "Q308" V 6750 1950 50  0000 L CNN
@@ -952,7 +952,7 @@ F 3 "" H 6550 2000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:GND #PWR041
+L power:GND #PWR041
 U 1 1 59C3C6D5
 P 6650 2300
 F 0 "#PWR041" H 6650 2050 50  0001 C CNN
@@ -963,7 +963,7 @@ F 3 "" H 6650 2300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:R R332
+L Device:R R332
 U 1 1 59C3C6E0
 P 6150 2000
 F 0 "R332" V 6050 2000 50  0000 C CNN
@@ -974,7 +974,7 @@ F 3 "" H 6150 2000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:C C309
+L Device:C C309
 U 1 1 59C4102A
 P 8050 3200
 F 0 "C309" H 8165 3246 50  0000 L CNN
@@ -985,7 +985,7 @@ F 3 "" H 8050 3200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:GND #PWR044
+L power:GND #PWR044
 U 1 1 59C42024
 P 8050 3350
 F 0 "#PWR044" H 8050 3100 50  0001 C CNN
@@ -996,7 +996,7 @@ F 3 "" H 8050 3350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:GND #PWR046
+L power:GND #PWR046
 U 1 1 59C42579
 P 8050 6150
 F 0 "#PWR046" H 8050 5900 50  0001 C CNN
@@ -1037,18 +1037,18 @@ DO7
 Text GLabel 6000 2000 0    60   Input ~ 0
 DO8
 $Comp
-L G2-rescue:GS3 J301
+L Connector_Generic:Conn_01x03 J301
 U 1 1 59C49117
-P 6450 3100
-F 0 "J301" H 6450 2775 50  0000 C CNN
-F 1 "GS3" H 6450 2866 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" V 6538 3026 50  0001 C CNN
-F 3 "" H 6450 3100 50  0001 C CNN
-	1    6450 3100
+P 6400 3100
+F 0 "J301" H 6400 2775 50  0000 C CNN
+F 1 "GS3" H 6400 2866 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" V 6488 3026 50  0001 C CNN
+F 3 "" H 6400 3100 50  0001 C CNN
+	1    6400 3100
 	-1   0    0    1   
 $EndComp
 $Comp
-L G2-rescue:+5V #PWR047
+L power:+5V #PWR047
 U 1 1 59C4CB21
 P 6600 3000
 F 0 "#PWR047" H 6600 2850 50  0001 C CNN
@@ -1059,29 +1059,29 @@ F 3 "" H 6600 3000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:GS3 J302
+L Connector_Generic:Conn_01x03 J302
 U 1 1 59C4EE29
-P 6450 3650
-F 0 "J302" H 6450 3325 50  0000 C CNN
-F 1 "GS3" H 6450 3416 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" V 6538 3576 50  0001 C CNN
-F 3 "" H 6450 3650 50  0001 C CNN
-	1    6450 3650
+P 6400 3650
+F 0 "J302" H 6400 3325 50  0000 C CNN
+F 1 "GS3" H 6400 3416 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" V 6488 3576 50  0001 C CNN
+F 3 "" H 6400 3650 50  0001 C CNN
+	1    6400 3650
 	-1   0    0    1   
 $EndComp
 $Comp
-L G2-rescue:GS3 J303
+L Connector_Generic:Conn_01x03 J303
 U 1 1 59C4EEB7
-P 6450 4200
-F 0 "J303" H 6450 3875 50  0000 C CNN
-F 1 "GS3" H 6450 3966 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" V 6538 4126 50  0001 C CNN
-F 3 "" H 6450 4200 50  0001 C CNN
-	1    6450 4200
+P 6400 4200
+F 0 "J303" H 6400 3875 50  0000 C CNN
+F 1 "GS3" H 6400 3966 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" V 6488 4126 50  0001 C CNN
+F 3 "" H 6400 4200 50  0001 C CNN
+	1    6400 4200
 	-1   0    0    1   
 $EndComp
 $Comp
-L G2-rescue:+5V #PWR051
+L power:+5V #PWR051
 U 1 1 59C4EEBE
 P 6600 4100
 F 0 "#PWR051" H 6600 3950 50  0001 C CNN
@@ -1092,18 +1092,18 @@ F 3 "" H 6600 4100 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:GS3 J304
+L Connector_Generic:Conn_01x03 J304
 U 1 1 59C4F397
-P 6450 4750
-F 0 "J304" H 6450 4425 50  0000 C CNN
-F 1 "GS3" H 6450 4516 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" V 6538 4676 50  0001 C CNN
-F 3 "" H 6450 4750 50  0001 C CNN
-	1    6450 4750
+P 6400 4750
+F 0 "J304" H 6400 4425 50  0000 C CNN
+F 1 "GS3" H 6400 4516 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" V 6488 4676 50  0001 C CNN
+F 3 "" H 6400 4750 50  0001 C CNN
+	1    6400 4750
 	-1   0    0    1   
 $EndComp
 $Comp
-L G2-rescue:+5V #PWR053
+L power:+5V #PWR053
 U 1 1 59C4F39E
 P 6600 4650
 F 0 "#PWR053" H 6600 4500 50  0001 C CNN
@@ -1114,18 +1114,18 @@ F 3 "" H 6600 4650 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:GS3 J305
+L Connector_Generic:Conn_01x03 J305
 U 1 1 59C4F41D
-P 6450 5300
-F 0 "J305" H 6450 4975 50  0000 C CNN
-F 1 "GS3" H 6450 5066 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" V 6538 5226 50  0001 C CNN
-F 3 "" H 6450 5300 50  0001 C CNN
-	1    6450 5300
+P 6400 5300
+F 0 "J305" H 6400 4975 50  0000 C CNN
+F 1 "GS3" H 6400 5066 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" V 6488 5226 50  0001 C CNN
+F 3 "" H 6400 5300 50  0001 C CNN
+	1    6400 5300
 	-1   0    0    1   
 $EndComp
 $Comp
-L G2-rescue:+5V #PWR055
+L power:+5V #PWR055
 U 1 1 59C4F424
 P 6600 5200
 F 0 "#PWR055" H 6600 5050 50  0001 C CNN
@@ -1136,18 +1136,18 @@ F 3 "" H 6600 5200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:GS3 J306
+L Connector_Generic:Conn_01x03 J306
 U 1 1 59C4F849
-P 6450 5850
-F 0 "J306" H 6450 5525 50  0000 C CNN
-F 1 "GS3" H 6450 5616 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" V 6538 5776 50  0001 C CNN
-F 3 "" H 6450 5850 50  0001 C CNN
-	1    6450 5850
+P 6400 5850
+F 0 "J306" H 6400 5525 50  0000 C CNN
+F 1 "GS3" H 6400 5616 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" V 6488 5776 50  0001 C CNN
+F 3 "" H 6400 5850 50  0001 C CNN
+	1    6400 5850
 	-1   0    0    1   
 $EndComp
 $Comp
-L G2-rescue:+5V #PWR057
+L power:+5V #PWR057
 U 1 1 59C4F850
 P 6600 5750
 F 0 "#PWR057" H 6600 5600 50  0001 C CNN
@@ -1158,18 +1158,18 @@ F 3 "" H 6600 5750 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:GS3 J307
+L Connector_Generic:Conn_01x03 J307
 U 1 1 59C4F8D1
-P 6450 6400
-F 0 "J307" H 6450 6075 50  0000 C CNN
-F 1 "GS3" H 6450 6166 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" V 6538 6326 50  0001 C CNN
-F 3 "" H 6450 6400 50  0001 C CNN
-	1    6450 6400
+P 6400 6400
+F 0 "J307" H 6400 6075 50  0000 C CNN
+F 1 "GS3" H 6400 6166 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" V 6488 6326 50  0001 C CNN
+F 3 "" H 6400 6400 50  0001 C CNN
+	1    6400 6400
 	-1   0    0    1   
 $EndComp
 $Comp
-L G2-rescue:+5V #PWR059
+L power:+5V #PWR059
 U 1 1 59C4F8D8
 P 6600 6300
 F 0 "#PWR059" H 6600 6150 50  0001 C CNN
@@ -1180,18 +1180,18 @@ F 3 "" H 6600 6300 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:GS3 J308
+L Connector_Generic:Conn_01x03 J308
 U 1 1 59C4FF9D
-P 6450 6950
-F 0 "J308" H 6450 6625 50  0000 C CNN
-F 1 "GS3" H 6450 6716 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" V 6538 6876 50  0001 C CNN
-F 3 "" H 6450 6950 50  0001 C CNN
-	1    6450 6950
+P 6400 6950
+F 0 "J308" H 6400 6625 50  0000 C CNN
+F 1 "GS3" H 6400 6716 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" V 6488 6876 50  0001 C CNN
+F 3 "" H 6400 6950 50  0001 C CNN
+	1    6400 6950
 	-1   0    0    1   
 $EndComp
 $Comp
-L G2-rescue:+5V #PWR061
+L power:+5V #PWR061
 U 1 1 59C4FFA4
 P 6600 6850
 F 0 "#PWR061" H 6600 6700 50  0001 C CNN
@@ -1201,24 +1201,24 @@ F 3 "" H 6600 6850 50  0001 C CNN
 	1    6600 6850
 	0    1    1    0   
 $EndComp
-Text GLabel 6300 3100 0    60   Input ~ 0
+Text GLabel 6600 3100 2    60   Input ~ 0
 DO1_PWR
-Text GLabel 6300 3650 0    60   Input ~ 0
+Text GLabel 6600 3650 2    60   Input ~ 0
 DO2_PWR
-Text GLabel 6300 4200 0    60   Input ~ 0
+Text GLabel 6600 4200 2    60   Input ~ 0
 DO3_PWR
-Text GLabel 6300 4750 0    60   Input ~ 0
+Text GLabel 6600 4750 2    60   Input ~ 0
 DO4_PWR
-Text GLabel 6300 5300 0    60   Input ~ 0
+Text GLabel 6600 5300 2    60   Input ~ 0
 DO5_PWR
-Text GLabel 6300 5850 0    60   Input ~ 0
+Text GLabel 6600 5850 2    60   Input ~ 0
 DO6_PWR
-Text GLabel 6300 6400 0    60   Input ~ 0
+Text GLabel 6600 6400 2    60   Input ~ 0
 DO7_PWR
-Text GLabel 6300 6950 0    60   Input ~ 0
+Text GLabel 6600 6950 2    60   Input ~ 0
 DO8_PWR
 $Comp
-L G2-rescue:GND #PWR063
+L power:GND #PWR063
 U 1 1 59C5AF84
 P 8550 5950
 F 0 "#PWR063" H 8550 5700 50  0001 C CNN
@@ -1229,7 +1229,7 @@ F 3 "" H 8550 5950 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L G2-rescue:GND #PWR064
+L power:GND #PWR064
 U 1 1 59C5B1A8
 P 8550 5850
 F 0 "#PWR064" H 8550 5600 50  0001 C CNN
@@ -1240,7 +1240,7 @@ F 3 "" H 8550 5850 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L G2-rescue:GND #PWR065
+L power:GND #PWR065
 U 1 1 59C5B287
 P 8550 5750
 F 0 "#PWR065" H 8550 5500 50  0001 C CNN
@@ -1260,7 +1260,7 @@ NoConn ~ 8550 4750
 Text Notes 9050 6100 2    60   ~ 0
 Adress 0x20
 $Comp
-L G2-rescue:R R333
+L Device:R R333
 U 1 1 59C5F580
 P 8650 4700
 F 0 "R333" H 8720 4746 50  0000 L CNN
@@ -1271,7 +1271,7 @@ F 3 "" H 8650 4700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:+3.3V #PWR066
+L power:+3.3V #PWR066
 U 1 1 59C5F699
 P 8650 4550
 F 0 "#PWR066" H 8650 4400 50  0001 C CNN
@@ -1284,7 +1284,7 @@ $EndComp
 Text Notes 8550 3550 1    60   ~ 0
 Near MCP23017
 $Comp
-L G2-rescue:+3.3V #PWR019
+L power:+3.3V #PWR019
 U 1 1 59CA4C36
 P 8550 4350
 F 0 "#PWR019" H 8550 4200 50  0001 C CNN
@@ -1295,7 +1295,7 @@ F 3 "" H 8550 4350 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:Q_NPN_BCE Q310
+L Device:Q_NPN_BCE Q310
 U 1 1 59CCBF12
 P 11500 4350
 F 0 "Q310" V 11700 4300 50  0000 L CNN
@@ -1306,7 +1306,7 @@ F 3 "" H 11500 4350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:GND #PWR020
+L power:GND #PWR020
 U 1 1 59CCBF1E
 P 11600 4650
 F 0 "#PWR020" H 11600 4400 50  0001 C CNN
@@ -1317,7 +1317,7 @@ F 3 "" H 11600 4650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:R R335
+L Device:R R335
 U 1 1 59CCBF29
 P 11100 4350
 F 0 "R335" V 11000 4350 50  0000 C CNN
@@ -1350,7 +1350,7 @@ DI8
 Text Notes 7950 9500 2    60   ~ 0
 To status card
 $Comp
-L G2-rescue:Conn_01x09 J316
+L Connector_Generic:Conn_01x09 J316
 U 1 1 59D10FB5
 P 15550 3400
 F 0 "J316" V 15674 3396 50  0000 C CNN
@@ -1361,7 +1361,7 @@ F 3 "http://www.mouser.se/ProductDetail/Molex/39544-3009/?qs=sGAEpiMZZMvZTcaMAxB
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:Conn_01x09 J315
+L Connector_Generic:Conn_01x09 J315
 U 1 1 59D10FBC
 P 15550 2450
 F 0 "J315" V 15674 2446 50  0000 C CNN
@@ -1372,7 +1372,7 @@ F 3 "http://www.mouser.se/ProductDetail/Molex/39544-3009/?qs=sGAEpiMZZMvZTcaMAxB
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:Conn_01x09 J314
+L Connector_Generic:Conn_01x09 J314
 U 1 1 59D10FC3
 P 15550 1500
 F 0 "J314" V 15674 1496 50  0000 C CNN
@@ -1383,7 +1383,7 @@ F 3 "http://www.mouser.se/ProductDetail/Molex/39544-3009/?qs=sGAEpiMZZMvZTcaMAxB
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:Conn_01x09 J313
+L Connector_Generic:Conn_01x09 J313
 U 1 1 59D10FCA
 P 13850 3350
 F 0 "J313" V 13974 3346 50  0000 C CNN
@@ -1394,7 +1394,7 @@ F 3 "http://www.mouser.se/ProductDetail/Molex/39544-3009/?qs=sGAEpiMZZMvZTcaMAxB
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:Conn_01x09 J312
+L Connector_Generic:Conn_01x09 J312
 U 1 1 59D10FD1
 P 13850 2400
 F 0 "J312" V 13974 2396 50  0000 C CNN
@@ -1405,7 +1405,7 @@ F 3 "http://www.mouser.se/ProductDetail/Molex/39544-3009/?qs=sGAEpiMZZMvZTcaMAxB
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:Conn_01x09 J311
+L Connector_Generic:Conn_01x09 J311
 U 1 1 59D10FD8
 P 13850 1450
 F 0 "J311" V 13974 1446 50  0000 C CNN
@@ -1416,7 +1416,7 @@ F 3 "http://www.mouser.se/ProductDetail/Molex/39544-3009/?qs=sGAEpiMZZMvZTcaMAxB
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:+12V #PWR026
+L power:+12V #PWR026
 U 1 1 59D10FDF
 P 13650 1150
 AR Path="/59D10FDF" Ref="#PWR026"  Part="1" 
@@ -1429,7 +1429,7 @@ F 3 "" H 13650 1150 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L G2-rescue:GND #PWR028
+L power:GND #PWR028
 U 1 1 59D10FE5
 P 13650 1050
 F 0 "#PWR028" H 13650 800 50  0001 C CNN
@@ -1504,7 +1504,7 @@ Sense8_DUT
 Text GLabel 13650 3550 0    60   Input ~ 0
 Sense5_DUT
 $Comp
-L G2-rescue:GND #PWR030
+L power:GND #PWR030
 U 1 1 59D1102B
 P 15350 3100
 F 0 "#PWR030" H 15350 2850 50  0001 C CNN
@@ -1515,7 +1515,7 @@ F 3 "" H 15350 3100 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:GND #PWR032
+L power:GND #PWR032
 U 1 1 59D11031
 P 13650 3050
 F 0 "#PWR032" H 13650 2800 50  0001 C CNN
@@ -1532,7 +1532,7 @@ Wiegand_D1
 Text GLabel 15350 3800 0    60   Input ~ 0
 BELL
 $Comp
-L G2-rescue:GND #PWR034
+L power:GND #PWR034
 U 1 1 59D24A3D
 P 13650 3350
 F 0 "#PWR034" H 13650 3100 50  0001 C CNN
@@ -1543,7 +1543,7 @@ F 3 "" H 13650 3350 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:GND #PWR036
+L power:GND #PWR036
 U 1 1 59D24D5B
 P 13650 3650
 F 0 "#PWR036" H 13650 3400 50  0001 C CNN
@@ -1618,7 +1618,7 @@ Entry Wire Line
 Entry Wire Line
 	5150 6000 5250 5900
 $Comp
-L G2-rescue:Conn_02x08_Odd_Even J309
+L Connector_Generic:Conn_02x08_Odd_Even J309
 U 1 1 59CD4E2C
 P 6600 7750
 F 0 "J309" H 6650 8267 50  0000 C CNN
@@ -1633,9 +1633,9 @@ Wire Wire Line
 Wire Wire Line
 	2850 2500 2850 2300
 Wire Wire Line
-	2050 2300 2950 2300
+	2050 2300 2850 2300
 Wire Wire Line
-	2050 2500 2150 2500
+	2050 2500 2100 2500
 Wire Wire Line
 	2450 2500 2550 2500
 Connection ~ 2100 2500
@@ -1645,9 +1645,9 @@ Wire Wire Line
 Wire Wire Line
 	2850 3200 2850 3000
 Wire Wire Line
-	2050 3000 2950 3000
+	2050 3000 2850 3000
 Wire Wire Line
-	2050 3200 2150 3200
+	2050 3200 2100 3200
 Wire Wire Line
 	2450 3200 2550 3200
 Connection ~ 2100 3200
@@ -1657,9 +1657,9 @@ Wire Wire Line
 Wire Wire Line
 	2850 3950 2850 3750
 Wire Wire Line
-	2050 3750 2950 3750
+	2050 3750 2850 3750
 Wire Wire Line
-	2050 3950 2150 3950
+	2050 3950 2100 3950
 Wire Wire Line
 	2450 3950 2550 3950
 Connection ~ 2100 3950
@@ -1669,9 +1669,9 @@ Wire Wire Line
 Wire Wire Line
 	2850 4700 2850 4500
 Wire Wire Line
-	2050 4500 2950 4500
+	2050 4500 2850 4500
 Wire Wire Line
-	2050 4700 2150 4700
+	2050 4700 2100 4700
 Wire Wire Line
 	2450 4700 2550 4700
 Connection ~ 2100 4700
@@ -1681,9 +1681,9 @@ Wire Wire Line
 Wire Wire Line
 	2850 5450 2850 5250
 Wire Wire Line
-	2050 5250 2950 5250
+	2050 5250 2850 5250
 Wire Wire Line
-	2050 5450 2150 5450
+	2050 5450 2100 5450
 Wire Wire Line
 	2450 5450 2550 5450
 Connection ~ 2100 5450
@@ -1693,9 +1693,9 @@ Wire Wire Line
 Wire Wire Line
 	2850 6150 2850 5950
 Wire Wire Line
-	2050 5950 2950 5950
+	2050 5950 2850 5950
 Wire Wire Line
-	2050 6150 2150 6150
+	2050 6150 2100 6150
 Wire Wire Line
 	2450 6150 2550 6150
 Connection ~ 2100 6150
@@ -1705,9 +1705,9 @@ Wire Wire Line
 Wire Wire Line
 	2850 6900 2850 6700
 Wire Wire Line
-	2050 6700 2950 6700
+	2050 6700 2850 6700
 Wire Wire Line
-	2050 6900 2150 6900
+	2050 6900 2100 6900
 Wire Wire Line
 	2450 6900 2550 6900
 Connection ~ 2100 6900
@@ -1717,9 +1717,9 @@ Wire Wire Line
 Wire Wire Line
 	2850 1800 2850 1600
 Wire Wire Line
-	2050 1600 2950 1600
+	2050 1600 2850 1600
 Wire Wire Line
-	2050 1800 2150 1800
+	2050 1800 2100 1800
 Wire Wire Line
 	2450 1800 2550 1800
 Connection ~ 2100 1800
@@ -1757,7 +1757,7 @@ Wire Wire Line
 Wire Wire Line
 	6300 2000 6350 2000
 Wire Wire Line
-	8550 4850 8700 4850
+	8550 4850 8650 4850
 Connection ~ 8650 4850
 Wire Notes Line
 	7750 3650 8800 3650
@@ -1774,11 +1774,7 @@ Wire Wire Line
 Wire Wire Line
 	11250 4350 11300 4350
 Wire Bus Line
-	7300 650  7300 1650
-Wire Bus Line
 	7300 650  5250 650 
-Wire Bus Line
-	5250 650  5250 8850
 Wire Wire Line
 	5350 7850 6400 7850
 Wire Wire Line
@@ -1828,7 +1824,7 @@ Wire Wire Line
 Text GLabel 6800 3200 2    60   Input ~ 0
 +12V_Filtered
 $Comp
-L G2-rescue:+5V #PWR049
+L power:+5V #PWR049
 U 1 1 59C4EE30
 P 6600 3550
 F 0 "#PWR049" H 6600 3400 50  0001 C CNN
@@ -1839,9 +1835,9 @@ F 3 "" H 6600 3550 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	6800 3200 6600 3200
+	6800 3200 6750 3200
 Wire Wire Line
-	6750 3200 6750 7050
+	6750 3200 6750 3750
 Wire Wire Line
 	6750 3750 6600 3750
 Connection ~ 6750 3200
@@ -1864,7 +1860,7 @@ Wire Wire Line
 	6750 7050 6600 7050
 Connection ~ 6750 6500
 $Comp
-L G2-rescue:GND #PWR022
+L power:GND #PWR022
 U 1 1 59CEACB4
 P 11150 1750
 F 0 "#PWR022" H 11150 1500 50  0001 C CNN
@@ -1875,7 +1871,7 @@ F 3 "" H 11150 1750 50  0001 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:GND #PWR023
+L power:GND #PWR023
 U 1 1 59CEACBA
 P 10650 1050
 F 0 "#PWR023" H 10650 800 50  0001 C CNN
@@ -1886,7 +1882,7 @@ F 3 "" H 10650 1050 50  0001 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L G2-rescue:+3.3V #PWR024
+L power:+3.3V #PWR024
 U 1 1 59CEACC0
 P 11150 1050
 F 0 "#PWR024" H 11150 900 50  0001 C CNN
@@ -1897,7 +1893,7 @@ F 3 "" H 11150 1050 50  0001 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L G2-rescue:+5V #PWR025
+L power:+5V #PWR025
 U 1 1 59CEACC6
 P 10650 1150
 F 0 "#PWR025" H 10650 1000 50  0001 C CNN
@@ -1930,7 +1926,7 @@ DIA_Interrupt
 Text GLabel 11150 1450 2    60   Input ~ 0
 BELL_CTRL
 $Comp
-L G2-rescue:Conn_02x08_Odd_Even J310
+L Connector_Generic:Conn_02x08_Odd_Even J310
 U 1 1 59CEACD8
 P 10850 1350
 F 0 "J310" H 10900 1867 50  0000 C CNN
@@ -1942,7 +1938,7 @@ F 3 "" H 10850 1350 50  0001 C CNN
 $EndComp
 NoConn ~ 10650 1450
 $Comp
-L G2-rescue:GND #PWR058
+L power:GND #PWR058
 U 1 1 59D14971
 P 15350 3300
 F 0 "#PWR058" H 15350 3050 50  0001 C CNN
@@ -1953,7 +1949,7 @@ F 3 "" H 15350 3300 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:GND #PWR060
+L power:GND #PWR060
 U 1 1 59D14A2A
 P 15350 3400
 F 0 "#PWR060" H 15350 3150 50  0001 C CNN
@@ -1964,7 +1960,7 @@ F 3 "" H 15350 3400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L G2-rescue:+5V #PWR062
+L power:+5V #PWR062
 U 1 1 59D15929
 P 15350 3500
 F 0 "#PWR062" H 15350 3350 50  0001 C CNN
@@ -1975,7 +1971,7 @@ F 3 "" H 15350 3500 50  0001 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:+5V #PWR072
+L power:+5V #PWR072
 U 1 1 59D1620A
 P 15350 3600
 F 0 "#PWR072" H 15350 3450 50  0001 C CNN
@@ -1986,7 +1982,7 @@ F 3 "" H 15350 3600 50  0001 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L G2-rescue:+5V #PWR073
+L power:+5V #PWR073
 U 1 1 59D162C3
 P 15350 3700
 F 0 "#PWR073" H 15350 3550 50  0001 C CNN
@@ -2015,7 +2011,7 @@ DO8_GND_CTRL
 Wire Wire Line
 	4600 2000 5150 2000
 $Comp
-L G2-rescue:+3.3V #PWR021
+L power:+3.3V #PWR021
 U 1 1 5A53CE41
 P 8050 4150
 F 0 "#PWR021" H 8050 4000 50  0001 C CNN
@@ -2026,7 +2022,7 @@ F 3 "" H 8050 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G2-rescue:+3.3V #PWR0162
+L power:+3.3V #PWR0162
 U 1 1 5A53D1F2
 P 8050 3050
 F 0 "#PWR0162" H 8050 2900 50  0001 C CNN
@@ -2037,4 +2033,56 @@ F 3 "" H 8050 3050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 11150 1150
+Wire Wire Line
+	2100 2500 2150 2500
+Wire Wire Line
+	2850 2300 2950 2300
+Wire Wire Line
+	2100 3200 2150 3200
+Wire Wire Line
+	2850 3000 2950 3000
+Wire Wire Line
+	2100 3950 2150 3950
+Wire Wire Line
+	2850 3750 2950 3750
+Wire Wire Line
+	2100 4700 2150 4700
+Wire Wire Line
+	2850 4500 2950 4500
+Wire Wire Line
+	2100 5450 2150 5450
+Wire Wire Line
+	2850 5250 2950 5250
+Wire Wire Line
+	2100 6150 2150 6150
+Wire Wire Line
+	2850 5950 2950 5950
+Wire Wire Line
+	2100 6900 2150 6900
+Wire Wire Line
+	2850 6700 2950 6700
+Wire Wire Line
+	2100 1800 2150 1800
+Wire Wire Line
+	2850 1600 2950 1600
+Wire Wire Line
+	8650 4850 8700 4850
+Wire Wire Line
+	6750 3200 6600 3200
+Wire Wire Line
+	6750 3750 6750 4300
+Wire Wire Line
+	6750 4300 6750 4850
+Wire Wire Line
+	6750 4850 6750 5400
+Wire Wire Line
+	6750 5400 6750 5950
+Wire Wire Line
+	6750 5950 6750 6500
+Wire Wire Line
+	6750 6500 6750 7050
+Wire Bus Line
+	7300 650  7300 1650
+Wire Bus Line
+	5250 650  5250 8850
 $EndSCHEMATC
