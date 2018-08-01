@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:G2-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -70,10 +69,10 @@ F 3 "" V 7751 3501 60  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector_Specialized:AVR-JTAG-10 CON401
+L Connector:AVR-JTAG-10 CON401
 U 1 1 59C8CC4C
 P 2500 6750
-F 0 "CON401" H 2474 7205 50  0000 C CNN
+F 0 "CON401" H 2700 7250 50  0000 C CNN
 F 1 "AVR-JTAG-10" H 2474 7114 50  0000 C CNN
 F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical" V 1930 6770 50  0001 C CNN
 F 3 "" H 2500 6750 50  0001 C CNN
@@ -1102,6 +1101,9 @@ Wire Wire Line
 	3000 6650 3050 6650
 Wire Wire Line
 	3050 5700 3050 6650
+Connection ~ 3050 6650
+Wire Wire Line
+	3050 6650 3300 6650
 Wire Bus Line
 	5450 4050 5450 5250
 Wire Bus Line
@@ -1112,7 +1114,4 @@ Wire Bus Line
 	1900 2050 1900 3500
 Wire Bus Line
 	1900 2050 8000 2050
-Connection ~ 3050 6650
-Wire Wire Line
-	3050 6650 3300 6650
 $EndSCHEMATC
