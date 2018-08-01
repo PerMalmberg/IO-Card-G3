@@ -1,2 +1,2 @@
-# IO-Card-G2
-I/O card, generation 2
+# IO-Card G3
+I/O card, generation 3
