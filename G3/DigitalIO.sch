@@ -373,7 +373,7 @@ F0 "DigitalInput1" 50
 F1 "DigitalInput.sch" 50
 F2 "In1" B L 1500 1100 50 
 F3 "In2" B L 1500 1200 50 
-F4 "O1" O R 2250 1150 50 
+F4 "~signal" O R 2250 1150 50 
 $EndSheet
 Text GLabel 1400 1200 0    60   Input ~ 0
 DI1_2
@@ -384,7 +384,7 @@ F0 "DigitalInput2" 50
 F1 "DigitalInput.sch" 50
 F2 "In1" B L 1500 1550 50 
 F3 "In2" B L 1500 1650 50 
-F4 "O1" O R 2250 1600 50 
+F4 "~signal" O R 2250 1600 50 
 $EndSheet
 Wire Wire Line
 	1500 1100 1400 1100
@@ -405,7 +405,7 @@ F0 "sheet5B685B5F" 50
 F1 "DigitalInput.sch" 50
 F2 "In1" B L 1500 2000 50 
 F3 "In2" B L 1500 2100 50 
-F4 "O1" O R 2250 2050 50 
+F4 "~signal" O R 2250 2050 50 
 $EndSheet
 $Sheet
 S 1500 2400 750  250 
@@ -414,7 +414,7 @@ F0 "sheet5B68725E" 50
 F1 "DigitalInput.sch" 50
 F2 "In1" B L 1500 2450 50 
 F3 "In2" B L 1500 2550 50 
-F4 "O1" O R 2250 2500 50 
+F4 "~signal" O R 2250 2500 50 
 $EndSheet
 $Sheet
 S 1500 2850 750  250 
@@ -423,7 +423,7 @@ F0 "sheet5B688B15" 50
 F1 "DigitalInput.sch" 50
 F2 "In1" B L 1500 2900 50 
 F3 "In2" B L 1500 3000 50 
-F4 "O1" O R 2250 2950 50 
+F4 "~signal" O R 2250 2950 50 
 $EndSheet
 $Sheet
 S 1500 3300 750  250 
@@ -432,7 +432,7 @@ F0 "sheet5B68A214" 50
 F1 "DigitalInput.sch" 50
 F2 "In1" B L 1500 3350 50 
 F3 "In2" B L 1500 3450 50 
-F4 "O1" O R 2250 3400 50 
+F4 "~signal" O R 2250 3400 50 
 $EndSheet
 $Sheet
 S 1500 3750 750  250 
@@ -441,7 +441,7 @@ F0 "sheet5B68BAA3" 50
 F1 "DigitalInput.sch" 50
 F2 "In1" B L 1500 3800 50 
 F3 "In2" B L 1500 3900 50 
-F4 "O1" O R 2250 3850 50 
+F4 "~signal" O R 2250 3850 50 
 $EndSheet
 $Sheet
 S 1500 4200 750  250 
@@ -450,7 +450,7 @@ F0 "sheet5B68D1A2" 50
 F1 "DigitalInput.sch" 50
 F2 "In1" B L 1500 4250 50 
 F3 "In2" B L 1500 4350 50 
-F4 "O1" O R 2250 4300 50 
+F4 "~signal" O R 2250 4300 50 
 $EndSheet
 Wire Wire Line
 	1400 2000 1500 2000
