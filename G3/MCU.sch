@@ -674,17 +674,6 @@ MTCK
 Text Label 3300 4450 1    50   ~ 0
 MTDO
 $Comp
-L Switch:SW_DIP_x03 SW303
-U 1 1 5B73292F
-P 9400 1450
-F 0 "SW303" H 9400 1917 50  0000 C CNN
-F 1 "Adress" H 9400 1826 50  0000 C CNN
-F 2 "Package_DIP:DIP-6_W8.89mm_SMDSocket_LongPads" H 9400 1450 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Apem/DMR03T?qs=sGAEpiMZZMv%2f%252b2JhlA6ysJSm%252bcOQqpSgWoOP1dvNuLA%3d" H 9400 1450 50  0001 C CNN
-	1    9400 1450
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R313
 U 1 1 5B732AFF
 P 8500 1700
@@ -732,27 +721,14 @@ Wire Wire Line
 $Comp
 L power:+3.3V #PWR0321
 U 1 1 5B73AAEB
-P 9850 1400
-F 0 "#PWR0321" H 9850 1250 50  0001 C CNN
-F 1 "+3.3V" H 9865 1573 50  0000 C CNN
-F 2 "" H 9850 1400 50  0001 C CNN
-F 3 "" H 9850 1400 50  0001 C CNN
-	1    9850 1400
+P 9750 1350
+F 0 "#PWR0321" H 9750 1200 50  0001 C CNN
+F 1 "+3.3V" H 9765 1523 50  0000 C CNN
+F 2 "" H 9750 1350 50  0001 C CNN
+F 3 "" H 9750 1350 50  0001 C CNN
+	1    9750 1350
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	9700 1250 9700 1350
-Connection ~ 9700 1350
-Wire Wire Line
-	9700 1350 9700 1400
-Connection ~ 9700 1450
-Wire Wire Line
-	9700 1450 9700 1550
-Wire Wire Line
-	9700 1400 9850 1400
-Connection ~ 9700 1400
-Wire Wire Line
-	9700 1400 9700 1450
 Text Label 8850 1250 0    50   ~ 0
 ADDR_0
 Text Label 8850 1350 0    50   ~ 0
@@ -814,4 +790,22 @@ F 3 "https://www.mouser.se/ProductDetail/CK/KXT331LHS?qs=sGAEpiMZZMsgGjVA3toVBIC
 $EndComp
 Wire Wire Line
 	3250 3400 1500 3400
+$Comp
+L Connector_Generic:Conn_02x03_Counter_Clockwise J?
+U 1 1 5B7B0A2D
+P 9300 1350
+F 0 "J?" H 9350 1667 50  0000 C CNN
+F 1 "Conn_02x03_Counter_Clockwise" H 9350 1576 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 9300 1350 50  0001 C CNN
+F 3 "~" H 9300 1350 50  0001 C CNN
+	1    9300 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 1250 9600 1350
+Connection ~ 9600 1350
+Wire Wire Line
+	9600 1350 9600 1450
+Wire Wire Line
+	9600 1350 9750 1350
 $EndSCHEMATC
