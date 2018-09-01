@@ -287,7 +287,7 @@ $EndComp
 $Sheet
 S 1300 900  550  200 
 U 5B7620B9
-F0 "AnalogSensCircuit" 50
+F0 "AnalogSensCircuit1" 50
 F1 "AnalogSensCircuit.sch" 50
 F2 "DUT" I L 1300 1000 50 
 F3 "Adc" O R 1850 1000 50 
@@ -297,7 +297,7 @@ Wire Wire Line
 $Sheet
 S 1300 1300 550  200 
 U 5B774401
-F0 "sheet5B7743FD" 50
+F0 "AnalogSensCircuit2" 50
 F1 "AnalogSensCircuit.sch" 50
 F2 "DUT" I L 1300 1400 50 
 F3 "Adc" O R 1850 1400 50 
@@ -307,7 +307,7 @@ Wire Wire Line
 $Sheet
 S 1300 1700 550  200 
 U 5B7744D6
-F0 "sheet5B7744D2" 50
+F0 "AnalogSensCircuit3" 50
 F1 "AnalogSensCircuit.sch" 50
 F2 "DUT" I L 1300 1800 50 
 F3 "Adc" O R 1850 1800 50 
@@ -317,7 +317,7 @@ Wire Wire Line
 $Sheet
 S 1300 2100 550  200 
 U 5B77465F
-F0 "sheet5B77465B" 50
+F0 "AnalogSensCircuit4" 50
 F1 "AnalogSensCircuit.sch" 50
 F2 "DUT" I L 1300 2200 50 
 F3 "Adc" O R 1850 2200 50 
@@ -327,7 +327,7 @@ Wire Wire Line
 $Sheet
 S 1300 2500 550  200 
 U 5B7747EB
-F0 "sheet5B7747E7" 50
+F0 "AnalogSensCircuit5" 50
 F1 "AnalogSensCircuit.sch" 50
 F2 "DUT" I L 1300 2600 50 
 F3 "Adc" O R 1850 2600 50 
@@ -337,7 +337,7 @@ Wire Wire Line
 $Sheet
 S 1300 2900 550  200 
 U 5B774A61
-F0 "sheet5B774A5D" 50
+F0 "AnalogSensCircuit6" 50
 F1 "AnalogSensCircuit.sch" 50
 F2 "DUT" I L 1300 3000 50 
 F3 "Adc" O R 1850 3000 50 
@@ -347,7 +347,7 @@ Wire Wire Line
 $Sheet
 S 1300 3300 550  200 
 U 5B774D4C
-F0 "sheet5B774D48" 50
+F0 "AnalogSensCircuit7" 50
 F1 "AnalogSensCircuit.sch" 50
 F2 "DUT" I L 1300 3400 50 
 F3 "Adc" O R 1850 3400 50 
@@ -357,7 +357,7 @@ Wire Wire Line
 $Sheet
 S 1300 3700 550  200 
 U 5B77572B
-F0 "sheet5B775727" 50
+F0 "AnalogSensCircuit8" 50
 F1 "AnalogSensCircuit.sch" 50
 F2 "DUT" I L 1300 3800 50 
 F3 "Adc" O R 1850 3800 50 

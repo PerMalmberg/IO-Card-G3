@@ -187,9 +187,9 @@ F 3 "" H 4200 1900 50  0001 C CNN
 	1    4200 1900
 	1    0    0    -1  
 $EndComp
-Text GLabel 6500 6450 2    60   Input ~ 0
+Text GLabel 6650 6250 2    60   Input ~ 0
 BELL_GND_BREAK
-Text GLabel 5700 6450 0    60   Input ~ 0
+Text GLabel 5550 6200 0    60   Input ~ 0
 BELL_CTRL
 Wire Wire Line
 	4100 2700 4200 2700
@@ -229,26 +229,26 @@ Wire Wire Line
 $Comp
 L Device:Buzzer BZ1301
 U 1 1 5B635F18
-P 6600 4900
-F 0 "BZ1301" H 6753 4929 50  0000 L CNN
-F 1 "SDC1610M5-01" H 6753 4838 50  0000 L CNN
-F 2 "PerMalmberg:SDC1610M5-01_Buzzer_16diam_5pitch" V 6575 5000 50  0001 C CNN
-F 3 "~" V 6575 5000 50  0001 C CNN
-	1    6600 4900
+P 6750 4700
+F 0 "BZ1301" H 6903 4729 50  0000 L CNN
+F 1 "SDC1610M5-01" H 6903 4638 50  0000 L CNN
+F 2 "PerMalmberg:SDC1610M5-01_Buzzer_16diam_5pitch" V 6725 4800 50  0001 C CNN
+F 3 "~" V 6725 4800 50  0001 C CNN
+	1    6750 4700
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+5V #PWR01310
 U 1 1 5B63AFA2
-P 6500 4800
-F 0 "#PWR01310" H 6500 4650 50  0001 C CNN
-F 1 "+5V" H 6515 4973 50  0000 C CNN
-F 2 "" H 6500 4800 50  0001 C CNN
-F 3 "" H 6500 4800 50  0001 C CNN
-	1    6500 4800
+P 6650 4600
+F 0 "#PWR01310" H 6650 4450 50  0001 C CNN
+F 1 "+5V" H 6665 4773 50  0000 C CNN
+F 2 "" H 6650 4600 50  0001 C CNN
+F 3 "" H 6650 4600 50  0001 C CNN
+	1    6650 4600
 	1    0    0    -1  
 $EndComp
-Text GLabel 5700 5000 0    60   Input ~ 0
+Text GLabel 5550 4750 0    60   Input ~ 0
 SIREN_CTRL
 Text GLabel 1400 4350 0    60   Input ~ 0
 DI8_2
@@ -327,7 +327,7 @@ Wire Wire Line
 $Sheet
 S 1500 1950 750  250 
 U 5B685B64
-F0 "sheet5B685B5F" 50
+F0 "DigitalInput3" 50
 F1 "DigitalInput.sch" 50
 F2 "In1" B L 1500 2000 50 
 F3 "In2" B L 1500 2100 50 
@@ -336,7 +336,7 @@ $EndSheet
 $Sheet
 S 1500 2400 750  250 
 U 5B687263
-F0 "sheet5B68725E" 50
+F0 "DigitalInput4" 50
 F1 "DigitalInput.sch" 50
 F2 "In1" B L 1500 2450 50 
 F3 "In2" B L 1500 2550 50 
@@ -345,7 +345,7 @@ $EndSheet
 $Sheet
 S 1500 2850 750  250 
 U 5B688B1A
-F0 "sheet5B688B15" 50
+F0 "DigitalInput5" 50
 F1 "DigitalInput.sch" 50
 F2 "In1" B L 1500 2900 50 
 F3 "In2" B L 1500 3000 50 
@@ -354,7 +354,7 @@ $EndSheet
 $Sheet
 S 1500 3300 750  250 
 U 5B68A219
-F0 "sheet5B68A214" 50
+F0 "DigitalInput6" 50
 F1 "DigitalInput.sch" 50
 F2 "In1" B L 1500 3350 50 
 F3 "In2" B L 1500 3450 50 
@@ -363,7 +363,7 @@ $EndSheet
 $Sheet
 S 1500 3750 750  250 
 U 5B68BAA8
-F0 "sheet5B68BAA3" 50
+F0 "DigitalInput7" 50
 F1 "DigitalInput.sch" 50
 F2 "In1" B L 1500 3800 50 
 F3 "In2" B L 1500 3900 50 
@@ -372,7 +372,7 @@ $EndSheet
 $Sheet
 S 1500 4200 750  250 
 U 5B68D1A7
-F0 "sheet5B68D1A2" 50
+F0 "DigitalInput8" 50
 F1 "DigitalInput.sch" 50
 F2 "In1" B L 1500 4250 50 
 F3 "In2" B L 1500 4350 50 
@@ -419,64 +419,8 @@ S 5550 1000 1100 200
 U 5B6C04D0
 F0 "DigitalOutput1" 50
 F1 "DigitalOutput.sch" 50
-F2 "output_control" I L 5550 1050 50 
-F3 "gnd_break" O R 6650 1050 50 
-$EndSheet
-$Sheet
-S 5550 1450 1100 200 
-U 5B6C94C6
-F0 "sheet5B6C94C2" 50
-F1 "DigitalOutput.sch" 50
-F2 "output_control" I L 5550 1500 50 
-F3 "gnd_break" O R 6650 1500 50 
-$EndSheet
-$Sheet
-S 5550 1900 1100 200 
-U 5B6CA292
-F0 "sheet5B6CA28E" 50
-F1 "DigitalOutput.sch" 50
-F2 "output_control" I L 5550 1950 50 
-F3 "gnd_break" O R 6650 1950 50 
-$EndSheet
-$Sheet
-S 5550 2350 1100 200 
-U 5B6CB22A
-F0 "sheet5B6CB226" 50
-F1 "DigitalOutput.sch" 50
-F2 "output_control" I L 5550 2400 50 
-F3 "gnd_break" O R 6650 2400 50 
-$EndSheet
-$Sheet
-S 5550 2800 1100 200 
-U 5B6CC0CE
-F0 "sheet5B6CC0CA" 50
-F1 "DigitalOutput.sch" 50
-F2 "output_control" I L 5550 2850 50 
-F3 "gnd_break" O R 6650 2850 50 
-$EndSheet
-$Sheet
-S 5550 3250 1100 200 
-U 5B6CCE9A
-F0 "sheet5B6CCE96" 50
-F1 "DigitalOutput.sch" 50
-F2 "output_control" I L 5550 3300 50 
-F3 "gnd_break" O R 6650 3300 50 
-$EndSheet
-$Sheet
-S 5550 3700 1100 200 
-U 5B6CDC66
-F0 "sheet5B6CDC62" 50
-F1 "DigitalOutput.sch" 50
-F2 "output_control" I L 5550 3750 50 
-F3 "gnd_break" O R 6650 3750 50 
-$EndSheet
-$Sheet
-S 5550 4150 1100 200 
-U 5B6CEB95
-F0 "sheet5B6CEB91" 50
-F1 "DigitalOutput.sch" 50
-F2 "output_control" I L 5550 4200 50 
-F3 "gnd_break" O R 6650 4200 50 
+F2 "CTRL" I L 5550 1050 50 
+F3 "~Out" I R 6650 1100 50 
 $EndSheet
 Wire Wire Line
 	5400 1050 5550 1050
@@ -512,199 +456,255 @@ Wire Wire Line
 Connection ~ 4200 2200
 Text GLabel 4450 2200 2    50   Input ~ 0
 I2C_Reset
-Text GLabel 6900 1050 2    50   Input ~ 0
+Text GLabel 6900 1100 2    50   Input ~ 0
 DO1_GND_BREAK
-Text GLabel 6900 1500 2    50   Input ~ 0
+Text GLabel 6900 1550 2    50   Input ~ 0
 DO2_GND_BREAK
-Text GLabel 6900 1950 2    50   Input ~ 0
+Text GLabel 6900 2000 2    50   Input ~ 0
 DO3_GND_BREAK
-Text GLabel 6900 2400 2    50   Input ~ 0
+Text GLabel 6900 2450 2    50   Input ~ 0
 DO4_GND_BREAK
-Text GLabel 6900 2850 2    50   Input ~ 0
+Text GLabel 6900 2900 2    50   Input ~ 0
 DO5_GND_BREAK
-Text GLabel 6900 3300 2    50   Input ~ 0
+Text GLabel 6900 3350 2    50   Input ~ 0
 DO6_GND_BREAK
-Text GLabel 6900 3750 2    50   Input ~ 0
+Text GLabel 6900 3800 2    50   Input ~ 0
 DO7_GND_BREAK
-Text GLabel 6900 4200 2    50   Input ~ 0
+Text GLabel 6900 4250 2    50   Input ~ 0
 DO8_GND_BREAK
 Wire Wire Line
-	6650 1050 6900 1050
+	6650 1100 6900 1100
 Wire Wire Line
-	6650 1500 6900 1500
+	6650 1550 6900 1550
 Wire Wire Line
-	6650 1950 6900 1950
+	6650 2000 6900 2000
 Wire Wire Line
-	6650 2400 6900 2400
+	6650 2450 6900 2450
 Wire Wire Line
-	6650 2850 6900 2850
+	6650 2900 6900 2900
 Wire Wire Line
-	6650 3300 6900 3300
+	6650 3350 6900 3350
 Wire Wire Line
-	6650 3750 6900 3750
+	6650 3800 6900 3800
 Wire Wire Line
-	6900 4200 6650 4200
-Text GLabel 5700 5450 0    60   Input ~ 0
+	6900 4250 6650 4250
+Text GLabel 5550 5200 0    60   Input ~ 0
 SIREN_CTRL
-Text GLabel 6500 5450 2    50   Input ~ 0
+Text GLabel 6650 5250 2    50   Input ~ 0
 SIREN_GND_BREAK
 $Sheet
-S 9800 1900 800  900 
+S 9000 1500 800  900 
 U 5B780EE8
 F0 "StatusIndication" 50
 F1 "StatusIndication.sch" 50
-F2 "Green1" I L 9800 2000 50 
-F3 "Green2" I L 9800 2100 50 
-F4 "Green3" I L 9800 2200 50 
-F5 "Green4" I L 9800 2300 50 
-F6 "Green5" I L 9800 2400 50 
-F7 "Green6" I L 9800 2500 50 
-F8 "Green7" I L 9800 2600 50 
-F9 "Green8" I L 9800 2700 50 
-F10 "Red1" I R 10600 2000 50 
-F11 "Red2" I R 10600 2100 50 
-F12 "Red3" I R 10600 2200 50 
-F13 "Red4" I R 10600 2300 50 
-F14 "Red5" I R 10600 2400 50 
-F15 "Red6" I R 10600 2500 50 
-F16 "Red7" I R 10600 2600 50 
-F17 "Red8" I R 10600 2700 50 
+F2 "Green1" I L 9000 1600 50 
+F3 "Green2" I L 9000 1700 50 
+F4 "Green3" I L 9000 1800 50 
+F5 "Green4" I L 9000 1900 50 
+F6 "Green5" I L 9000 2000 50 
+F7 "Green6" I L 9000 2100 50 
+F8 "Green7" I L 9000 2200 50 
+F9 "Green8" I L 9000 2300 50 
+F10 "Red1" I R 9800 1600 50 
+F11 "Red2" I R 9800 1700 50 
+F12 "Red3" I R 9800 1800 50 
+F13 "Red4" I R 9800 1900 50 
+F14 "Red5" I R 9800 2000 50 
+F15 "Red6" I R 9800 2100 50 
+F16 "Red7" I R 9800 2200 50 
+F17 "Red8" I R 9800 2300 50 
 $EndSheet
-Text GLabel 10750 2000 2    60   Input ~ 0
+Text GLabel 9950 1600 2    60   Input ~ 0
 DI1
-Text GLabel 10750 2700 2    60   Input ~ 0
+Text GLabel 9950 2300 2    60   Input ~ 0
 DI8
-Text GLabel 10750 2600 2    60   Input ~ 0
+Text GLabel 9950 2200 2    60   Input ~ 0
 DI7
-Text GLabel 10750 2500 2    60   Input ~ 0
+Text GLabel 9950 2100 2    60   Input ~ 0
 DI6
-Text GLabel 10750 2400 2    60   Input ~ 0
+Text GLabel 9950 2000 2    60   Input ~ 0
 DI5
-Text GLabel 10750 2300 2    60   Input ~ 0
+Text GLabel 9950 1900 2    60   Input ~ 0
 DI4
-Text GLabel 10750 2200 2    60   Input ~ 0
+Text GLabel 9950 1800 2    60   Input ~ 0
 DI3
-Text GLabel 10750 2100 2    60   Input ~ 0
+Text GLabel 9950 1700 2    60   Input ~ 0
 DI2
 Wire Wire Line
-	10600 2000 10750 2000
+	9800 1600 9950 1600
 Wire Wire Line
-	10750 2100 10600 2100
+	9950 1700 9800 1700
 Wire Wire Line
-	10600 2200 10750 2200
+	9800 1800 9950 1800
 Wire Wire Line
-	10750 2300 10600 2300
+	9950 1900 9800 1900
 Wire Wire Line
-	10600 2400 10750 2400
+	9800 2000 9950 2000
 Wire Wire Line
-	10750 2500 10600 2500
+	9950 2100 9800 2100
 Wire Wire Line
-	10600 2600 10750 2600
+	9800 2200 9950 2200
 Wire Wire Line
-	10750 2700 10600 2700
-Text GLabel 9650 2000 0    50   Input ~ 0
+	9950 2300 9800 2300
+Text GLabel 8850 1600 0    50   Input ~ 0
 DO1_GND_BREAK
-Text GLabel 9650 2100 0    50   Input ~ 0
+Text GLabel 8850 1700 0    50   Input ~ 0
 DO2_GND_BREAK
-Text GLabel 9650 2200 0    50   Input ~ 0
+Text GLabel 8850 1800 0    50   Input ~ 0
 DO3_GND_BREAK
-Text GLabel 9650 2300 0    50   Input ~ 0
+Text GLabel 8850 1900 0    50   Input ~ 0
 DO4_GND_BREAK
-Text GLabel 9650 2400 0    50   Input ~ 0
+Text GLabel 8850 2000 0    50   Input ~ 0
 DO5_GND_BREAK
-Text GLabel 9650 2500 0    50   Input ~ 0
+Text GLabel 8850 2100 0    50   Input ~ 0
 DO6_GND_BREAK
-Text GLabel 9650 2600 0    50   Input ~ 0
+Text GLabel 8850 2200 0    50   Input ~ 0
 DO7_GND_BREAK
-Text GLabel 9650 2700 0    50   Input ~ 0
+Text GLabel 8850 2300 0    50   Input ~ 0
 DO8_GND_BREAK
 Wire Wire Line
-	9650 2000 9800 2000
+	8850 1600 9000 1600
 Wire Wire Line
-	9650 2100 9800 2100
+	8850 1700 9000 1700
 Wire Wire Line
-	9800 2200 9650 2200
+	9000 1800 8850 1800
 Wire Wire Line
-	9650 2300 9800 2300
+	8850 1900 9000 1900
 Wire Wire Line
-	9800 2400 9650 2400
+	9000 2000 8850 2000
 Wire Wire Line
-	9650 2500 9800 2500
+	8850 2100 9000 2100
 Wire Wire Line
-	9800 2600 9650 2600
+	9000 2200 8850 2200
 Wire Wire Line
-	9650 2700 9800 2700
+	8850 2300 9000 2300
 $Comp
 L Device:LED D?
 U 1 1 5B8AAF3E
-P 6650 5950
+P 6800 5750
 AR Path="/5B62EDB8/5B780EE8/5B8AAF3E" Ref="D?"  Part="1" 
 AR Path="/5B62EDB8/5B8AAF3E" Ref="D1301"  Part="1" 
-F 0 "D1301" H 6642 5695 50  0000 C CNN
-F 1 "Red" H 6642 5786 50  0000 C CNN
-F 2 "LED_THT:LED_D5.0mm_Clear" H 6650 5950 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Lumex/SSL-LX55103ID-FL?qs=sGAEpiMZZMtmwHDZQCdlqUPJk6OnVfwF%252bWo7zgs2%252bqE%3d" H 6650 5950 50  0001 C CNN
-	1    6650 5950
+F 0 "D1301" H 6792 5495 50  0000 C CNN
+F 1 "Red" H 6792 5586 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm_Clear" H 6800 5750 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Lumex/SSL-LX55103ID-FL?qs=sGAEpiMZZMtmwHDZQCdlqUPJk6OnVfwF%252bWo7zgs2%252bqE%3d" H 6800 5750 50  0001 C CNN
+	1    6800 5750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6900 5950 6800 5950
+	7050 5750 6950 5750
 $Comp
 L Device:R R?
 U 1 1 5B8AAF47
-P 7050 5950
+P 7200 5750
 AR Path="/5B62EDB8/5B780EE8/5B8AAF47" Ref="R?"  Part="1" 
 AR Path="/5B62EDB8/5B8AAF47" Ref="R1303"  Part="1" 
-F 0 "R1303" V 6843 5950 50  0000 C CNN
-F 1 "165" V 6934 5950 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 6980 5950 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Bourns/CR0805-FX-1650ELF?qs=sGAEpiMZZMtlubZbdhIBIKn39ibjI6WbHbnDBzjqA1U%3d" H 7050 5950 50  0001 C CNN
-	1    7050 5950
+F 0 "R1303" V 6993 5750 50  0000 C CNN
+F 1 "165" V 7084 5750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7130 5750 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Bourns/CR0805-FX-1650ELF?qs=sGAEpiMZZMtlubZbdhIBIKn39ibjI6WbHbnDBzjqA1U%3d" H 7200 5750 50  0001 C CNN
+	1    7200 5750
 	0    -1   -1   0   
 $EndComp
 $Comp
 L power:+3.3V #PWR01311
 U 1 1 5B8B47B5
-P 7200 5950
-F 0 "#PWR01311" H 7200 5800 50  0001 C CNN
-F 1 "+3.3V" V 7215 6078 50  0000 L CNN
-F 2 "" H 7200 5950 50  0001 C CNN
-F 3 "" H 7200 5950 50  0001 C CNN
-	1    7200 5950
+P 7350 5750
+F 0 "#PWR01311" H 7350 5600 50  0001 C CNN
+F 1 "+3.3V" V 7365 5878 50  0000 L CNN
+F 2 "" H 7350 5750 50  0001 C CNN
+F 3 "" H 7350 5750 50  0001 C CNN
+	1    7350 5750
 	0    1    1    0   
 $EndComp
-Text GLabel 5700 5950 0    50   Input ~ 0
+Text GLabel 5550 5700 0    50   Input ~ 0
 StatusLED
 $Sheet
-S 5700 4900 800  200 
-U 5B8B425B
-F0 "SimpleOutput" 50
-F1 "SimpleOutput.sch" 50
-F2 "CTRL" I L 5700 5000 50 
-F3 "~Out" I R 6500 5000 50 
+S 5550 1450 1100 200 
+U 5B8D6A51
+F0 "DigitalOutput2" 50
+F1 "DigitalOutput.sch" 50
+F2 "CTRL" I L 5550 1500 50 
+F3 "~Out" I R 6650 1550 50 
 $EndSheet
 $Sheet
-S 5700 5350 800  200 
-U 5B8BDF9E
-F0 "sheet5B8BDF9A" 50
-F1 "SimpleOutput.sch" 50
-F2 "CTRL" I L 5700 5450 50 
-F3 "~Out" I R 6500 5450 50 
+S 5550 1900 1100 200 
+U 5B8D8275
+F0 "DigitalOutput3" 50
+F1 "DigitalOutput.sch" 50
+F2 "CTRL" I L 5550 1950 50 
+F3 "~Out" I R 6650 2000 50 
 $EndSheet
 $Sheet
-S 5700 5850 800  200 
-U 5B8CC011
-F0 "sheet5B8CC00D" 50
-F1 "SimpleOutput.sch" 50
-F2 "CTRL" I L 5700 5950 50 
-F3 "~Out" I R 6500 5950 50 
+S 5550 2350 1100 200 
+U 5B8D9A4C
+F0 "DigitalOutput4" 50
+F1 "DigitalOutput.sch" 50
+F2 "CTRL" I L 5550 2400 50 
+F3 "~Out" I R 6650 2450 50 
 $EndSheet
 $Sheet
-S 5700 6350 800  200 
-U 5B8CD7E8
-F0 "sheet5B8CD7E4" 50
-F1 "SimpleOutput.sch" 50
-F2 "CTRL" I L 5700 6450 50 
-F3 "~Out" I R 6500 6450 50 
+S 5550 2800 1100 200 
+U 5B8DB29A
+F0 "DigitalOutput5" 50
+F1 "DigitalOutput.sch" 50
+F2 "CTRL" I L 5550 2850 50 
+F3 "~Out" I R 6650 2900 50 
+$EndSheet
+$Sheet
+S 5550 3250 1100 200 
+U 5B8DCA71
+F0 "DigitalOutput6" 50
+F1 "DigitalOutput.sch" 50
+F2 "CTRL" I L 5550 3300 50 
+F3 "~Out" I R 6650 3350 50 
+$EndSheet
+$Sheet
+S 5550 3700 1100 200 
+U 5B8DE248
+F0 "DigitalOutput7" 50
+F1 "DigitalOutput.sch" 50
+F2 "CTRL" I L 5550 3750 50 
+F3 "~Out" I R 6650 3800 50 
+$EndSheet
+$Sheet
+S 5550 4150 1100 200 
+U 5B8DFA1F
+F0 "DigitalOutput8" 50
+F1 "DigitalOutput.sch" 50
+F2 "CTRL" I L 5550 4200 50 
+F3 "~Out" I R 6650 4250 50 
+$EndSheet
+$Sheet
+S 5550 4700 1100 200 
+U 5B8EE9B3
+F0 "InternalSirenOutput" 50
+F1 "DigitalOutput.sch" 50
+F2 "CTRL" I L 5550 4750 50 
+F3 "~Out" I R 6650 4800 50 
+$EndSheet
+$Sheet
+S 5550 5150 1100 200 
+U 5B8F19D7
+F0 "ExternalSirenOutput" 50
+F1 "DigitalOutput.sch" 50
+F2 "CTRL" I L 5550 5200 50 
+F3 "~Out" I R 6650 5250 50 
+$EndSheet
+$Sheet
+S 5550 5650 1100 200 
+U 5B8F31AE
+F0 "StatusLEDOutput" 50
+F1 "DigitalOutput.sch" 50
+F2 "CTRL" I L 5550 5700 50 
+F3 "~Out" I R 6650 5750 50 
+$EndSheet
+$Sheet
+S 5550 6150 1100 200 
+U 5B8F4985
+F0 "BellOutput" 50
+F1 "DigitalOutput.sch" 50
+F2 "CTRL" I L 5550 6200 50 
+F3 "~Out" I R 6650 6250 50 
 $EndSheet
 $EndSCHEMATC

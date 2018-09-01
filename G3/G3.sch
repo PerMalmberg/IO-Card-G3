@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 3600 1300 950  450 
+S 3600 1300 950  300 
 U 5B61ECB9
 F0 "Power" 50
 F1 "Power.sch" 50
@@ -23,25 +23,25 @@ F2 "+12V_IN" I L 3600 1400 50
 F3 "GND_IN" I L 3600 1500 50 
 $EndSheet
 $Sheet
-S 3600 2050 950  400 
+S 3600 1800 950  300 
 U 5B61FB63
 F0 "MCU" 50
 F1 "MCU.sch" 50
 $EndSheet
 $Sheet
-S 3600 2750 950  300 
+S 3600 2300 950  300 
 U 5B61F011
 F0 "AnalogInput" 50
 F1 "AnalogInput.sch" 50
 $EndSheet
 $Sheet
-S 3600 3300 950  400 
+S 3600 2800 950  300 
 U 5B62EDB8
 F0 "DigitalIO" 50
 F1 "DigitalIO.sch" 50
 $EndSheet
 $Sheet
-S 3600 3950 950  350 
+S 3600 3300 950  300 
 U 5B72552B
 F0 "Connectors" 50
 F1 "Connectors.sch" 50
