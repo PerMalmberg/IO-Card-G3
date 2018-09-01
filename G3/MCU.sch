@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 31
+Sheet 3 35
 Title ""
 Date ""
 Rev ""
@@ -228,9 +228,9 @@ Text GLabel 7550 3200 2    60   Input ~ 0
 ANALOG_I2C_SCL
 Text GLabel 7550 3300 2    60   Input ~ 0
 ANALOG_I2C_SDA
-Text GLabel 5500 2700 2    60   Input ~ 0
+Text GLabel 5250 2800 2    60   Input ~ 0
 ANALOG_RDY_2
-Text GLabel 5500 2800 2    60   Input ~ 0
+Text GLabel 5250 3600 2    60   Input ~ 0
 ANALOG_RDY_1
 Wire Wire Line
 	7550 3200 6550 3200
@@ -284,14 +284,8 @@ Wire Wire Line
 Connection ~ 6550 3200
 Wire Wire Line
 	6550 3200 5250 3200
-Wire Wire Line
-	5250 2800 5500 2800
-Wire Wire Line
-	5500 2700 5250 2700
-Text GLabel 5500 2600 2    60   Input ~ 0
+Text GLabel 5250 3700 2    60   Input ~ 0
 DIA_Interrupt
-Wire Wire Line
-	5500 2600 5250 2600
 $Comp
 L power:GND #PWR0309
 U 1 1 5B745E94
@@ -741,20 +735,12 @@ Wire Wire Line
 	8150 1850 8150 1950
 Wire Wire Line
 	8500 1950 8500 1850
-Text Label 5400 3700 0    50   ~ 0
+Text Label 5250 2700 0    50   ~ 0
 ADDR_0
-Text Label 5400 3600 0    50   ~ 0
+Text Label 5250 2600 0    50   ~ 0
 ADDR_1
-Text Label 5400 3500 0    50   ~ 0
+Text Label 5250 2500 0    50   ~ 0
 ADDR_2
-Wire Wire Line
-	5400 3400 5250 3400
-Wire Wire Line
-	5250 3500 5400 3500
-Wire Wire Line
-	5400 3600 5250 3600
-Wire Wire Line
-	5250 3700 5400 3700
 $Comp
 L power:GND #PWR0316
 U 1 1 5B75512D
@@ -774,8 +760,7 @@ Wire Wire Line
 Connection ~ 8350 1950
 Wire Wire Line
 	8350 1950 8500 1950
-NoConn ~ 5250 2500
-Text GLabel 5400 3400 2    50   Input ~ 0
+Text GLabel 5250 3500 2    50   Input ~ 0
 I2C_Reset
 $Comp
 L Switch:SW_Push SW301
@@ -791,10 +776,10 @@ $EndComp
 Wire Wire Line
 	3250 3400 1500 3400
 $Comp
-L Connector_Generic:Conn_02x03_Counter_Clockwise J?
+L Connector_Generic:Conn_02x03_Counter_Clockwise J302
 U 1 1 5B7B0A2D
 P 9300 1350
-F 0 "J?" H 9350 1667 50  0000 C CNN
+F 0 "J302" H 9350 1667 50  0000 C CNN
 F 1 "Conn_02x03_Counter_Clockwise" H 9350 1576 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 9300 1350 50  0001 C CNN
 F 3 "~" H 9300 1350 50  0001 C CNN
@@ -808,4 +793,6 @@ Wire Wire Line
 	9600 1350 9600 1450
 Wire Wire Line
 	9600 1350 9750 1350
+Text GLabel 5250 3400 2    50   Input ~ 0
+StatusLED
 $EndSCHEMATC
