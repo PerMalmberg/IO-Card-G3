@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 35
+Sheet 3 36
 Title ""
 Date ""
 Rev ""
@@ -14,40 +14,29 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L PerMalmberg:ESP32_WROVER U301
-U 1 1 5B61FB8F
-P 4250 4300
-F 0 "U301" H 4300 6500 50  0000 C CNN
-F 1 "ESP32_WROVER" H 4500 6400 50  0000 C CNN
-F 2 "PerMalmberg:ESP32_WROVER" H 4050 4200 50  0001 C CNN
-F 3 "https://www.mouser.se/datasheet/2/891/esp32-wrover_datasheet_en-1223875.pdf" H 4050 4200 50  0001 C CNN
-	1    4250 4300
-	1    0    0    -1  
-$EndComp
 Text GLabel 7550 3000 2    60   Input ~ 0
 DIGITAL_I2C_SCL
 Text GLabel 7550 3100 2    60   Input ~ 0
 DIGITAL_I2C_SDA
 $Comp
-L Device:R R310
+L Device:R R307
 U 1 1 5B73B18A
 P 7450 2800
-F 0 "R310" H 7520 2846 50  0000 L CNN
+F 0 "R307" H 7520 2846 50  0000 L CNN
 F 1 "10k" H 7520 2755 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 7380 2800 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Vishay-Draloric/CRCW080510K0FKEAHP?qs=%2fha2pyFadui6t5gBae62oU%2fZ%2fWugcOCNLdGlz%252bXqxsCBNl3qt1JobIx3jP49DsQC" H 7450 2800 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Panasonic-Industrial-Devices/ERJ-6ENF1002V?qs=sGAEpiMZZMu61qfTUdNhGzRxdwze5h8ZcGDx6geba20%3d" H 7450 2800 50  0001 C CNN
 	1    7450 2800
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R308
+L Device:R R305
 U 1 1 5B73B205
 P 7150 2800
-F 0 "R308" H 7220 2846 50  0000 L CNN
+F 0 "R305" H 7220 2846 50  0000 L CNN
 F 1 "10k" H 7220 2755 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 7080 2800 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Vishay-Draloric/CRCW080510K0FKEAHP?qs=%2fha2pyFadui6t5gBae62oU%2fZ%2fWugcOCNLdGlz%252bXqxsCBNl3qt1JobIx3jP49DsQC" H 7150 2800 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Panasonic-Industrial-Devices/ERJ-6ENF1002V?qs=sGAEpiMZZMu61qfTUdNhGzRxdwze5h8ZcGDx6geba20%3d" H 7150 2800 50  0001 C CNN
 	1    7150 2800
 	1    0    0    -1  
 $EndComp
@@ -66,10 +55,10 @@ Connection ~ 7150 3000
 Wire Wire Line
 	7150 3000 5250 3000
 $Comp
-L power:+3.3V #PWR0314
+L power:+3.3V #PWR0311
 U 1 1 5B73B348
 P 7300 2650
-F 0 "#PWR0314" H 7300 2500 50  0001 C CNN
+F 0 "#PWR0311" H 7300 2500 50  0001 C CNN
 F 1 "+3.3V" H 7315 2823 50  0000 C CNN
 F 2 "" H 7300 2650 50  0001 C CNN
 F 3 "" H 7300 2650 50  0001 C CNN
@@ -93,10 +82,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/txb0102.pdf" H 8500 4720 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR0320
+L power:+3.3V #PWR0316
 U 1 1 5B73B74B
 P 8400 4150
-F 0 "#PWR0320" H 8400 4000 50  0001 C CNN
+F 0 "#PWR0316" H 8400 4000 50  0001 C CNN
 F 1 "+3.3V" H 8415 4323 50  0000 C CNN
 F 2 "" H 8400 4150 50  0001 C CNN
 F 3 "" H 8400 4150 50  0001 C CNN
@@ -104,10 +93,10 @@ F 3 "" H 8400 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR0322
+L power:+5V #PWR0318
 U 1 1 5B73B784
 P 8600 4150
-F 0 "#PWR0322" H 8600 4000 50  0001 C CNN
+F 0 "#PWR0318" H 8600 4000 50  0001 C CNN
 F 1 "+5V" H 8615 4323 50  0000 C CNN
 F 2 "" H 8600 4150 50  0001 C CNN
 F 3 "" H 8600 4150 50  0001 C CNN
@@ -147,40 +136,23 @@ Connection ~ 8600 4200
 Wire Wire Line
 	8600 4200 8600 4250
 Wire Wire Line
-	5250 4000 7400 4000
-Wire Wire Line
-	7400 4000 7400 4650
-Wire Wire Line
-	7400 4650 8100 4650
-Wire Wire Line
-	5250 4100 7350 4100
-Wire Wire Line
-	7350 4100 7350 4850
-Wire Wire Line
-	7350 4850 8100 4850
-Wire Wire Line
-	5250 4200 7300 4200
-Wire Wire Line
-	7300 4200 7300 5050
-Wire Wire Line
 	7300 5050 8100 5050
 $Comp
-L Device:R R309
+L Device:R R306
 U 1 1 5B73C224
 P 7300 5200
-F 0 "R309" H 7370 5246 50  0000 L CNN
+F 0 "R306" H 7370 5246 50  0000 L CNN
 F 1 "10k" H 7370 5155 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 7230 5200 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Vishay-Draloric/CRCW080510K0FKEAHP?qs=%2fha2pyFadui6t5gBae62oU%2fZ%2fWugcOCNLdGlz%252bXqxsCBNl3qt1JobIx3jP49DsQC" H 7300 5200 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Panasonic-Industrial-Devices/ERJ-6ENF1002V?qs=sGAEpiMZZMu61qfTUdNhGzRxdwze5h8ZcGDx6geba20%3d" H 7300 5200 50  0001 C CNN
 	1    7300 5200
 	1    0    0    -1  
 $EndComp
-Connection ~ 7300 5050
 $Comp
-L power:GND #PWR0315
+L power:GND #PWR0312
 U 1 1 5B73C2A7
 P 7300 5350
-F 0 "#PWR0315" H 7300 5100 50  0001 C CNN
+F 0 "#PWR0312" H 7300 5100 50  0001 C CNN
 F 1 "GND" H 7305 5177 50  0000 C CNN
 F 2 "" H 7300 5350 50  0001 C CNN
 F 3 "" H 7300 5350 50  0001 C CNN
@@ -188,10 +160,10 @@ F 3 "" H 7300 5350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0318
+L power:GND #PWR0315
 U 1 1 5B73C2C7
 P 8100 4200
-F 0 "#PWR0318" H 8100 3950 50  0001 C CNN
+F 0 "#PWR0315" H 8100 3950 50  0001 C CNN
 F 1 "GND" V 8105 4072 50  0000 R CNN
 F 2 "" H 8100 4200 50  0001 C CNN
 F 3 "" H 8100 4200 50  0001 C CNN
@@ -199,10 +171,10 @@ F 3 "" H 8100 4200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR0323
+L power:GND #PWR0319
 U 1 1 5B73C2E7
 P 8900 4200
-F 0 "#PWR0323" H 8900 3950 50  0001 C CNN
+F 0 "#PWR0319" H 8900 3950 50  0001 C CNN
 F 1 "GND" V 8905 4072 50  0000 R CNN
 F 2 "" H 8900 4200 50  0001 C CNN
 F 3 "" H 8900 4200 50  0001 C CNN
@@ -214,10 +186,10 @@ Wiegand_D0
 Text GLabel 8900 4850 2    60   Input ~ 0
 Wiegand_D1
 $Comp
-L power:GND #PWR0321
+L power:GND #PWR0317
 U 1 1 5B73CB5F
 P 8500 5250
-F 0 "#PWR0321" H 8500 5000 50  0001 C CNN
+F 0 "#PWR0317" H 8500 5000 50  0001 C CNN
 F 1 "GND" H 8505 5077 50  0000 C CNN
 F 2 "" H 8500 5250 50  0001 C CNN
 F 3 "" H 8500 5250 50  0001 C CNN
@@ -228,41 +200,41 @@ Text GLabel 7550 3200 2    60   Input ~ 0
 ANALOG_I2C_SCL
 Text GLabel 7550 3300 2    60   Input ~ 0
 ANALOG_I2C_SDA
-Text GLabel 5750 2800 2    60   Input ~ 0
+Text GLabel 5750 2600 2    60   Input ~ 0
 ANALOG_RDY_2
-Text GLabel 5250 3600 2    60   Input ~ 0
+Text GLabel 5750 2500 2    60   Input ~ 0
 ANALOG_RDY_1
 Wire Wire Line
 	7550 3200 6550 3200
 Wire Wire Line
 	5250 3300 6850 3300
 $Comp
-L Device:R R307
+L Device:R R304
 U 1 1 5B741A0F
 P 6850 2800
-F 0 "R307" H 6920 2846 50  0000 L CNN
+F 0 "R304" H 6920 2846 50  0000 L CNN
 F 1 "10k" H 6920 2755 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 6780 2800 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Vishay-Draloric/CRCW080510K0FKEAHP?qs=%2fha2pyFadui6t5gBae62oU%2fZ%2fWugcOCNLdGlz%252bXqxsCBNl3qt1JobIx3jP49DsQC" H 6850 2800 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Panasonic-Industrial-Devices/ERJ-6ENF1002V?qs=sGAEpiMZZMu61qfTUdNhGzRxdwze5h8ZcGDx6geba20%3d" H 6850 2800 50  0001 C CNN
 	1    6850 2800
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R306
+L Device:R R303
 U 1 1 5B741A15
 P 6550 2800
-F 0 "R306" H 6620 2846 50  0000 L CNN
+F 0 "R303" H 6620 2846 50  0000 L CNN
 F 1 "10k" H 6620 2755 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 6480 2800 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Vishay-Draloric/CRCW080510K0FKEAHP?qs=%2fha2pyFadui6t5gBae62oU%2fZ%2fWugcOCNLdGlz%252bXqxsCBNl3qt1JobIx3jP49DsQC" H 6550 2800 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Panasonic-Industrial-Devices/ERJ-6ENF1002V?qs=sGAEpiMZZMu61qfTUdNhGzRxdwze5h8ZcGDx6geba20%3d" H 6550 2800 50  0001 C CNN
 	1    6550 2800
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR0313
+L power:+3.3V #PWR0309
 U 1 1 5B741A1B
 P 6700 2650
-F 0 "#PWR0313" H 6700 2500 50  0001 C CNN
+F 0 "#PWR0309" H 6700 2500 50  0001 C CNN
 F 1 "+3.3V" H 6715 2823 50  0000 C CNN
 F 2 "" H 6700 2650 50  0001 C CNN
 F 3 "" H 6700 2650 50  0001 C CNN
@@ -284,13 +256,13 @@ Wire Wire Line
 Connection ~ 6550 3200
 Wire Wire Line
 	6550 3200 5250 3200
-Text GLabel 5250 3700 2    60   Input ~ 0
+Text GLabel 5750 2700 2    60   Input ~ 0
 DIA_Interrupt
 $Comp
-L power:GND #PWR0309
+L power:GND #PWR0306
 U 1 1 5B745E94
 P 3650 1900
-F 0 "#PWR0309" H 3650 1650 50  0001 C CNN
+F 0 "#PWR0306" H 3650 1650 50  0001 C CNN
 F 1 "GND" V 3655 1772 50  0000 R CNN
 F 2 "" H 3650 1900 50  0001 C CNN
 F 3 "" H 3650 1900 50  0001 C CNN
@@ -331,10 +303,10 @@ Connection ~ 3650 1900
 Wire Wire Line
 	3650 1900 3650 2100
 $Comp
-L power:+3.3V #PWR0310
+L power:+3.3V #PWR0307
 U 1 1 5B74BC3F
 P 4100 1150
-F 0 "#PWR0310" H 4100 1000 50  0001 C CNN
+F 0 "#PWR0307" H 4100 1000 50  0001 C CNN
 F 1 "+3.3V" H 4115 1323 50  0000 C CNN
 F 2 "" H 4100 1150 50  0001 C CNN
 F 3 "" H 4100 1150 50  0001 C CNN
@@ -350,10 +322,10 @@ Wire Wire Line
 	3650 1450 3650 1900
 Connection ~ 2100 2650
 $Comp
-L power:GND #PWR0304
+L power:GND #PWR0305
 U 1 1 5B753F4C
 P 2100 2950
-F 0 "#PWR0304" H 2100 2700 50  0001 C CNN
+F 0 "#PWR0305" H 2100 2700 50  0001 C CNN
 F 1 "GND" H 2105 2777 50  0000 C CNN
 F 2 "" H 2100 2950 50  0001 C CNN
 F 3 "" H 2100 2950 50  0001 C CNN
@@ -361,10 +333,10 @@ F 3 "" H 2100 2950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR0303
+L power:+3.3V #PWR0304
 U 1 1 5B753F98
 P 2100 2350
-F 0 "#PWR0303" H 2100 2200 50  0001 C CNN
+F 0 "#PWR0304" H 2100 2200 50  0001 C CNN
 F 1 "+3.3V" H 2115 2523 50  0000 C CNN
 F 2 "" H 2100 2350 50  0001 C CNN
 F 3 "" H 2100 2350 50  0001 C CNN
@@ -389,10 +361,10 @@ Wire Wire Line
 Wire Wire Line
 	1950 2900 1950 2650
 $Comp
-L power:GND #PWR0302
+L power:GND #PWR0303
 U 1 1 5B75A1F9
 P 1550 2650
-F 0 "#PWR0302" H 1550 2400 50  0001 C CNN
+F 0 "#PWR0303" H 1550 2400 50  0001 C CNN
 F 1 "GND" V 1555 2522 50  0000 R CNN
 F 2 "" H 1550 2650 50  0001 C CNN
 F 3 "" H 1550 2650 50  0001 C CNN
@@ -428,7 +400,7 @@ P 2100 2500
 F 0 "R301" H 2170 2546 50  0000 L CNN
 F 1 "10k" H 2170 2455 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 2030 2500 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Vishay-Draloric/CRCW080510K0FKEAHP?qs=%2fha2pyFadui6t5gBae62oU%2fZ%2fWugcOCNLdGlz%252bXqxsCBNl3qt1JobIx3jP49DsQC" H 2100 2500 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Panasonic-Industrial-Devices/ERJ-6ENF1002V?qs=sGAEpiMZZMu61qfTUdNhGzRxdwze5h8ZcGDx6geba20%3d" H 2100 2500 50  0001 C CNN
 	1    2100 2500
 	1    0    0    -1  
 $EndComp
@@ -464,282 +436,75 @@ F 3 "" H 1100 3400 50  0001 C CNN
 	1    1100 3400
 	0    1    1    0   
 $EndComp
-Text GLabel 5250 3900 2    60   Input ~ 0
+Text GLabel 5250 3600 2    60   Input ~ 0
 BELL_CTRL
 Text GLabel 5250 3800 2    60   Input ~ 0
 SIREN_CTRL
 $Comp
 L Connector_Generic:Conn_02x05_Odd_Even J301
 U 1 1 5B6A5C70
-P 5650 5700
-F 0 "J301" H 5700 6100 50  0000 C CNN
-F 1 "Debug" H 5700 6000 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 5650 5700 50  0001 C CNN
-F 3 "~" H 5650 5700 50  0001 C CNN
-	1    5650 5700
+P 1700 5600
+F 0 "J301" H 1750 6000 50  0000 C CNN
+F 1 "Debug" H 1750 5900 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 1700 5600 50  0001 C CNN
+F 3 "~" H 1700 5600 50  0001 C CNN
+	1    1700 5600
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0311
+L power:GND #PWR0302
 U 1 1 5B6ACD51
-P 5450 5500
-F 0 "#PWR0311" H 5450 5250 50  0001 C CNN
-F 1 "GND" H 5400 5350 50  0000 C CNN
-F 2 "" H 5450 5500 50  0001 C CNN
-F 3 "" H 5450 5500 50  0001 C CNN
-	1    5450 5500
+P 1500 5400
+F 0 "#PWR0302" H 1500 5150 50  0001 C CNN
+F 1 "GND" H 1450 5250 50  0000 C CNN
+F 2 "" H 1500 5400 50  0001 C CNN
+F 3 "" H 1500 5400 50  0001 C CNN
+	1    1500 5400
 	0    1    1    0   
 $EndComp
-$Comp
-L power:+3.3V #PWR0305
-U 1 1 5B6BD02F
-P 2900 5450
-F 0 "#PWR0305" H 2900 5300 50  0001 C CNN
-F 1 "+3.3V" H 2915 5623 50  0000 C CNN
-F 2 "" H 2900 5450 50  0001 C CNN
-F 3 "" H 2900 5450 50  0001 C CNN
-	1    2900 5450
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R302
-U 1 1 5B6BD035
-P 2900 5300
-F 0 "R302" H 2970 5346 50  0000 L CNN
-F 1 "10k" H 2970 5255 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 2830 5300 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Vishay-Draloric/CRCW080510K0FKEAHP?qs=%2fha2pyFadui6t5gBae62oU%2fZ%2fWugcOCNLdGlz%252bXqxsCBNl3qt1JobIx3jP49DsQC" H 2900 5300 50  0001 C CNN
-	1    2900 5300
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:+3.3V #PWR0306
-U 1 1 5B6C640E
-P 3050 5950
-F 0 "#PWR0306" H 3050 5800 50  0001 C CNN
-F 1 "+3.3V" H 3065 6123 50  0000 C CNN
-F 2 "" H 3050 5950 50  0001 C CNN
-F 3 "" H 3050 5950 50  0001 C CNN
-	1    3050 5950
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R303
-U 1 1 5B6C6414
-P 3050 5800
-F 0 "R303" H 3120 5846 50  0000 L CNN
-F 1 "10k" H 3120 5755 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 2980 5800 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Vishay-Draloric/CRCW080510K0FKEAHP?qs=%2fha2pyFadui6t5gBae62oU%2fZ%2fWugcOCNLdGlz%252bXqxsCBNl3qt1JobIx3jP49DsQC" H 3050 5800 50  0001 C CNN
-	1    3050 5800
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:+3.3V #PWR0307
-U 1 1 5B6CF7CA
-P 3200 5450
-F 0 "#PWR0307" H 3200 5300 50  0001 C CNN
-F 1 "+3.3V" H 3215 5623 50  0000 C CNN
-F 2 "" H 3200 5450 50  0001 C CNN
-F 3 "" H 3200 5450 50  0001 C CNN
-	1    3200 5450
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R304
-U 1 1 5B6CF7D0
-P 3200 5300
-F 0 "R304" H 3270 5346 50  0000 L CNN
-F 1 "10k" H 3270 5255 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 3130 5300 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Vishay-Draloric/CRCW080510K0FKEAHP?qs=%2fha2pyFadui6t5gBae62oU%2fZ%2fWugcOCNLdGlz%252bXqxsCBNl3qt1JobIx3jP49DsQC" H 3200 5300 50  0001 C CNN
-	1    3200 5300
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:+3.3V #PWR0308
-U 1 1 5B6D1CB6
-P 3300 5950
-F 0 "#PWR0308" H 3300 5800 50  0001 C CNN
-F 1 "+3.3V" H 3315 6123 50  0000 C CNN
-F 2 "" H 3300 5950 50  0001 C CNN
-F 3 "" H 3300 5950 50  0001 C CNN
-	1    3300 5950
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R305
-U 1 1 5B6D1CBC
-P 3300 5800
-F 0 "R305" H 3370 5846 50  0000 L CNN
-F 1 "10k" H 3370 5755 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 3230 5800 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Vishay-Draloric/CRCW080510K0FKEAHP?qs=%2fha2pyFadui6t5gBae62oU%2fZ%2fWugcOCNLdGlz%252bXqxsCBNl3qt1JobIx3jP49DsQC" H 3300 5800 50  0001 C CNN
-	1    3300 5800
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
-	3300 5650 3300 4050
+	2700 3950 3250 3950
 Wire Wire Line
-	3300 4050 3200 4050
+	2700 3850 3250 3850
 Wire Wire Line
-	3200 4050 3200 3950
+	2700 3750 3250 3750
 Wire Wire Line
-	3200 3950 3250 3950
-Wire Wire Line
-	3200 5150 3200 4100
-Wire Wire Line
-	3200 4100 3100 4100
-Wire Wire Line
-	3100 4100 3100 3850
-Wire Wire Line
-	3100 3850 3250 3850
-Wire Wire Line
-	3050 5650 3050 3750
-Wire Wire Line
-	3050 3750 3250 3750
-Wire Wire Line
-	2900 3650 3250 3650
-Text Notes 2400 6250 0    50   ~ 0
-Optional, solder if not present on the JTAG debugger.
-Wire Notes Line
-	2350 6300 4550 6300
-Wire Notes Line
-	4550 6300 4550 5150
-Wire Notes Line
-	4550 5150 2350 5150
-Wire Notes Line
-	2350 5150 2350 6300
+	2700 3650 3250 3650
 Text Label 2650 2650 0    50   ~ 0
 CH_Enable
-Text Label 5950 5900 0    50   ~ 0
+Text Label 2000 5800 0    50   ~ 0
 MTMS
-Text Label 5950 5700 0    50   ~ 0
+Text Label 2000 5600 0    50   ~ 0
 MTDI
-Text Label 5950 5600 0    50   ~ 0
+Text Label 2000 5500 0    50   ~ 0
 MTCK
-Text Label 5950 5800 0    50   ~ 0
+Text Label 2000 5700 0    50   ~ 0
 MTDO
 Text Label 3000 3000 2    50   ~ 0
 TDX
 Text Label 3000 2900 2    50   ~ 0
 RDX
-Text Label 5950 5500 0    50   ~ 0
+Text Label 2000 5400 0    50   ~ 0
 Boot_option
-Text Label 5450 5700 2    50   ~ 0
+Text Label 1500 5600 2    50   ~ 0
 TDX
-Text Label 5450 5800 2    50   ~ 0
+Text Label 1500 5700 2    50   ~ 0
 RDX
-Text Label 5450 5600 2    50   ~ 0
+Text Label 1500 5500 2    50   ~ 0
 CH_Enable
 Text Label 2700 3400 0    50   ~ 0
 Boot_option
 Wire Wire Line
 	2100 2650 3250 2650
-NoConn ~ 5450 5900
-Wire Wire Line
-	2900 5150 2900 3650
-Text Label 2900 4450 1    50   ~ 0
+NoConn ~ 1500 5800
+Text Label 3150 3650 2    50   ~ 0
 MTMS
-Text Label 3050 4450 1    50   ~ 0
+Text Label 3150 3750 2    50   ~ 0
 MTDI
-Text Label 3200 4450 1    50   ~ 0
+Text Label 3150 3850 2    50   ~ 0
 MTCK
-Text Label 3300 4450 1    50   ~ 0
+Text Label 3150 3950 2    50   ~ 0
 MTDO
-$Comp
-L Device:R R313
-U 1 1 5B732AFF
-P 8500 1700
-F 0 "R313" H 8570 1746 50  0000 L CNN
-F 1 "10k" H 8570 1655 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 8430 1700 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Vishay-Draloric/CRCW080510K0FKEAHP?qs=%2fha2pyFadui6t5gBae62oU%2fZ%2fWugcOCNLdGlz%252bXqxsCBNl3qt1JobIx3jP49DsQC" H 8500 1700 50  0001 C CNN
-	1    8500 1700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R312
-U 1 1 5B732B45
-P 8150 1700
-F 0 "R312" H 8220 1746 50  0000 L CNN
-F 1 "10k" H 8220 1655 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 8080 1700 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Vishay-Draloric/CRCW080510K0FKEAHP?qs=%2fha2pyFadui6t5gBae62oU%2fZ%2fWugcOCNLdGlz%252bXqxsCBNl3qt1JobIx3jP49DsQC" H 8150 1700 50  0001 C CNN
-	1    8150 1700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R311
-U 1 1 5B732B8F
-P 7800 1700
-F 0 "R311" H 7870 1746 50  0000 L CNN
-F 1 "10k" H 7870 1655 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 7730 1700 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Vishay-Draloric/CRCW080510K0FKEAHP?qs=%2fha2pyFadui6t5gBae62oU%2fZ%2fWugcOCNLdGlz%252bXqxsCBNl3qt1JobIx3jP49DsQC" H 7800 1700 50  0001 C CNN
-	1    7800 1700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9100 1450 8500 1450
-Wire Wire Line
-	8500 1450 8500 1550
-Wire Wire Line
-	9100 1350 8150 1350
-Wire Wire Line
-	8150 1350 8150 1550
-Wire Wire Line
-	9100 1250 7800 1250
-Wire Wire Line
-	7800 1250 7800 1550
-$Comp
-L power:+3.3V #PWR0324
-U 1 1 5B73AAEB
-P 9750 1350
-F 0 "#PWR0324" H 9750 1200 50  0001 C CNN
-F 1 "+3.3V" H 9765 1523 50  0000 C CNN
-F 2 "" H 9750 1350 50  0001 C CNN
-F 3 "" H 9750 1350 50  0001 C CNN
-	1    9750 1350
-	0    1    1    0   
-$EndComp
-Text Label 8850 1250 0    50   ~ 0
-ADDR_0
-Text Label 8850 1350 0    50   ~ 0
-ADDR_1
-Text Label 8850 1450 0    50   ~ 0
-ADDR_2
-Wire Wire Line
-	7800 1950 7800 1850
-Wire Wire Line
-	8150 1850 8150 1950
-Wire Wire Line
-	8500 1950 8500 1850
-Text Label 5250 2700 0    50   ~ 0
-ADDR_0
-Text Label 5250 2600 0    50   ~ 0
-ADDR_1
-Text Label 5250 2500 0    50   ~ 0
-ADDR_2
-$Comp
-L power:GND #PWR0319
-U 1 1 5B75512D
-P 8350 1950
-F 0 "#PWR0319" H 8350 1700 50  0001 C CNN
-F 1 "GND" H 8355 1777 50  0000 C CNN
-F 2 "" H 8350 1950 50  0001 C CNN
-F 3 "" H 8350 1950 50  0001 C CNN
-	1    8350 1950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7800 1950 8150 1950
-Connection ~ 8150 1950
-Wire Wire Line
-	8150 1950 8350 1950
-Connection ~ 8350 1950
-Wire Wire Line
-	8350 1950 8500 1950
 Text GLabel 5250 3500 2    50   Input ~ 0
 I2C_Reset
 $Comp
@@ -755,24 +520,6 @@ F 3 "https://www.mouser.se/ProductDetail/CK/KXT331LHS?qs=sGAEpiMZZMsgGjVA3toVBIC
 $EndComp
 Wire Wire Line
 	3250 3400 1500 3400
-$Comp
-L Connector_Generic:Conn_02x03_Counter_Clockwise J303
-U 1 1 5B7B0A2D
-P 9300 1350
-F 0 "J303" H 9350 1667 50  0000 C CNN
-F 1 "Conn_02x03_Counter_Clockwise" H 9350 1576 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 9300 1350 50  0001 C CNN
-F 3 "~" H 9300 1350 50  0001 C CNN
-	1    9300 1350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9600 1250 9600 1350
-Connection ~ 9600 1350
-Wire Wire Line
-	9600 1350 9600 1450
-Wire Wire Line
-	9600 1350 9750 1350
 Text GLabel 5250 3400 2    50   Input ~ 0
 StatusLED
 $Comp
@@ -781,27 +528,16 @@ U 1 1 5B903FBD
 P 8300 3550
 F 0 "J302" H 8380 3542 50  0000 L CNN
 F 1 "BME280" H 8380 3451 50  0000 L CNN
-F 2 "" H 8300 3550 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 8300 3550 50  0001 C CNN
 F 3 "~" H 8300 3550 50  0001 C CNN
 	1    8300 3550
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR0316
-U 1 1 5B909304
-P 8100 3450
-F 0 "#PWR0316" H 8100 3300 50  0001 C CNN
-F 1 "+5V" V 8115 3578 50  0000 L CNN
-F 2 "" H 8100 3450 50  0001 C CNN
-F 3 "" H 8100 3450 50  0001 C CNN
-	1    8100 3450
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR0317
+L power:GND #PWR0314
 U 1 1 5B9093BD
 P 8100 3550
-F 0 "#PWR0317" H 8100 3300 50  0001 C CNN
+F 0 "#PWR0314" H 8100 3300 50  0001 C CNN
 F 1 "GND" V 8105 3422 50  0000 R CNN
 F 2 "" H 8100 3550 50  0001 C CNN
 F 3 "" H 8100 3550 50  0001 C CNN
@@ -819,32 +555,23 @@ Wire Wire Line
 $Comp
 L Switch:SW_Push SW303
 U 1 1 5B9494D5
-P 6000 2200
-F 0 "SW303" H 6000 2485 50  0000 C CNN
-F 1 "Factory reset" H 6000 2394 50  0000 C CNN
-F 2 "Button_Switch_SMD:SW_SPST_CK_KXT3" H 6000 2400 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/CK/KXT331LHS?qs=sGAEpiMZZMsgGjVA3toVBICuw%2fFQq%2fBnDsOBIRFitAg%3d" H 6000 2400 50  0001 C CNN
-	1    6000 2200
+P 6650 1900
+F 0 "SW303" H 6650 2185 50  0000 C CNN
+F 1 "Factory reset" H 6650 2094 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_CK_KXT3" H 6650 2100 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/CK/KXT331LHS?qs=sGAEpiMZZMsgGjVA3toVBICuw%2fFQq%2fBnDsOBIRFitAg%3d" H 6650 2100 50  0001 C CNN
+	1    6650 1900
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5250 2800 5650 2800
-Wire Wire Line
-	5800 2200 5650 2200
-Wire Wire Line
-	5650 2200 5650 2800
-Connection ~ 5650 2800
-Wire Wire Line
-	5650 2800 5750 2800
 $Comp
-L power:GND #PWR0312
+L power:GND #PWR0310
 U 1 1 5B953711
-P 6200 2200
-F 0 "#PWR0312" H 6200 1950 50  0001 C CNN
-F 1 "GND" H 6205 2027 50  0000 C CNN
-F 2 "" H 6200 2200 50  0001 C CNN
-F 3 "" H 6200 2200 50  0001 C CNN
-	1    6200 2200
+P 6850 1900
+F 0 "#PWR0310" H 6850 1650 50  0001 C CNN
+F 1 "GND" H 6855 1727 50  0000 C CNN
+F 2 "" H 6850 1900 50  0001 C CNN
+F 3 "" H 6850 1900 50  0001 C CNN
+	1    6850 1900
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
@@ -871,4 +598,105 @@ Wire Notes Line
 	4250 1550 3100 1550
 Text Notes 3150 1050 0    50   ~ 0
 Near Wrover module
+$Comp
+L PerMalmberg:ESP32_WROVER U301
+U 1 1 5B61FB8F
+P 4250 4300
+F 0 "U301" H 4300 6500 50  0000 C CNN
+F 1 "ESP32_WROVER" H 4500 6400 50  0000 C CNN
+F 2 "PerMalmberg:ESP32_WROVER" H 4050 4200 50  0001 C CNN
+F 3 "https://www.mouser.se/datasheet/2/891/esp32-wrover_datasheet_en-1223875.pdf" H 4050 4200 50  0001 C CNN
+	1    4250 4300
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 3400 4900 850  300 
+U 5B98DF5D
+F0 "SDCard" 50
+F1 "SDCard.sch" 50
+$EndSheet
+Text GLabel 2700 3650 0    50   Input ~ 0
+SD_CLK
+Text GLabel 2700 3750 0    50   Input ~ 0
+SD_DATA2
+Text GLabel 2700 3850 0    50   Input ~ 0
+SD_DATA3
+Text GLabel 2700 3950 0    50   Input ~ 0
+SD_CMD
+Text GLabel 5250 4100 2    50   Input ~ 0
+SD_DATA1
+Text GLabel 5250 4200 2    50   Input ~ 0
+SD_DATA0
+Text GLabel 5250 3700 2    50   Input ~ 0
+SD_CD
+Wire Notes Line
+	850  4800 850  6100
+Wire Notes Line
+	850  6100 2750 6100
+Wire Notes Line
+	2750 6100 2750 4800
+Wire Notes Line
+	2750 4800 850  4800
+Text Notes 1200 5000 0    50   ~ 0
+Pin layout according to\nESP32-Wrover-kit-debug-breakout
+Wire Wire Line
+	5750 2700 5250 2700
+Wire Wire Line
+	5250 2600 5750 2600
+Wire Wire Line
+	8100 4650 7150 4650
+Wire Wire Line
+	7150 4650 7150 3900
+Wire Wire Line
+	7150 3900 5250 3900
+Wire Wire Line
+	8100 4850 7100 4850
+Wire Wire Line
+	7100 4850 7100 4000
+Wire Wire Line
+	7100 4000 5250 4000
+Wire Wire Line
+	5250 2500 5750 2500
+Text Label 6450 1900 2    50   ~ 0
+Factory_reset
+$Comp
+L power:+3.3V #PWR0313
+U 1 1 5B9F39E1
+P 8100 3450
+F 0 "#PWR0313" H 8100 3300 50  0001 C CNN
+F 1 "+3.3V" V 8100 3700 50  0000 C CNN
+F 2 "" H 8100 3450 50  0001 C CNN
+F 3 "" H 8100 3450 50  0001 C CNN
+	1    8100 3450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R302
+U 1 1 5BA02E4B
+P 5550 1750
+F 0 "R302" H 5620 1796 50  0000 L CNN
+F 1 "10k" H 5620 1705 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5480 1750 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Panasonic-Industrial-Devices/ERJ-6ENF1002V?qs=sGAEpiMZZMu61qfTUdNhGzRxdwze5h8ZcGDx6geba20%3d" H 5550 1750 50  0001 C CNN
+	1    5550 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 1900 5550 1900
+Wire Wire Line
+	5550 1900 5550 2800
+Wire Wire Line
+	5550 2800 5250 2800
+Connection ~ 5550 1900
+$Comp
+L power:+3.3V #PWR0308
+U 1 1 5BA056E1
+P 5550 1600
+F 0 "#PWR0308" H 5550 1450 50  0001 C CNN
+F 1 "+3.3V" H 5565 1773 50  0000 C CNN
+F 2 "" H 5550 1600 50  0001 C CNN
+F 3 "" H 5550 1600 50  0001 C CNN
+	1    5550 1600
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
