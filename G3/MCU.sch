@@ -468,8 +468,6 @@ Text GLabel 5250 3900 2    60   Input ~ 0
 BELL_CTRL
 Text GLabel 5250 3800 2    60   Input ~ 0
 SIREN_CTRL
-Text Notes 5200 6250 0    50   ~ 0
-Check placement of pins so othey\nare easy to wire with flat cable
 $Comp
 L Connector_Generic:Conn_02x05_Odd_Even J301
 U 1 1 5B6A5C70
@@ -614,28 +612,24 @@ Wire Notes Line
 	2350 5150 2350 6300
 Text Label 2650 2650 0    50   ~ 0
 CH_Enable
-Text Label 5950 5600 0    50   ~ 0
+Text Label 5950 5900 0    50   ~ 0
 MTMS
 Text Label 5950 5700 0    50   ~ 0
 MTDI
-Text Label 5950 5900 0    50   ~ 0
+Text Label 5950 5600 0    50   ~ 0
 MTCK
 Text Label 5950 5800 0    50   ~ 0
 MTDO
-Text Label 2950 2900 0    50   ~ 0
-TDX0
-Text Label 2950 3000 0    50   ~ 0
-RDX0
+Text Label 3000 3000 2    50   ~ 0
+TDX
+Text Label 3000 2900 2    50   ~ 0
+RDX
 Text Label 5950 5500 0    50   ~ 0
 Boot_option
 Text Label 5450 5700 2    50   ~ 0
-TDX0
+TDX
 Text Label 5450 5800 2    50   ~ 0
-RDX0
-Wire Wire Line
-	3250 2900 2950 2900
-Wire Wire Line
-	3250 3000 2950 3000
+RDX
 Text Label 5450 5600 2    50   ~ 0
 CH_Enable
 Text Label 2700 3400 0    50   ~ 0
@@ -853,4 +847,28 @@ F 3 "" H 6200 2200 50  0001 C CNN
 	1    6200 2200
 	0    -1   -1   0   
 $EndComp
+Wire Wire Line
+	3000 2900 3250 2900
+Wire Wire Line
+	3000 3000 3250 3000
+Text Notes 2600 3100 0    50   ~ 0
+Note: RX<->TX
+Wire Notes Line
+	2500 2750 3250 2750
+Wire Notes Line
+	3250 2750 3250 3150
+Wire Notes Line
+	3250 3150 2500 3150
+Wire Notes Line
+	2500 3150 2500 2750
+Wire Notes Line
+	3100 1550 3100 900 
+Wire Notes Line
+	3100 900  4250 900 
+Wire Notes Line
+	4250 900  4250 1550
+Wire Notes Line
+	4250 1550 3100 1550
+Text Notes 3150 1050 0    50   ~ 0
+Near Wrover module
 $EndSCHEMATC
