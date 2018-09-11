@@ -17,62 +17,60 @@ $EndDescr
 $Comp
 L Connector:Micro_SD_Card_Det J?
 U 1 1 5B98DFAA
-P 5400 2650
+P 7400 2650
 AR Path="/5B61FB63/5B98DFAA" Ref="J?"  Part="1" 
 AR Path="/5B61FB63/5B98DF5D/5B98DFAA" Ref="J401"  Part="1" 
-F 0 "J401" H 5350 3467 50  0000 C CNN
-F 1 "Micro_SD_Card_Det" H 5350 3376 50  0000 C CNN
-F 2 "Connector_Card:microSD_HC_Hirose_DM3AT-SF-PEJM5" H 7450 3350 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Hirose-Connector/DM3AT-SF-PEJM5?qs=sGAEpiMZZMuJakaoiLiBpvjg2IzEXJkOoUNaxaL8lrc%3d" H 5400 2750 50  0001 C CNN
-	1    5400 2650
+F 0 "J401" H 7350 3467 50  0000 C CNN
+F 1 "Micro_SD_Card_Det" H 7350 3376 50  0000 C CNN
+F 2 "Connector_Card:microSD_HC_Hirose_DM3AT-SF-PEJM5" H 9450 3350 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Hirose-Connector/DM3AT-SF-PEJM5?qs=sGAEpiMZZMuJakaoiLiBpvjg2IzEXJkOoUNaxaL8lrc%3d" H 7400 2750 50  0001 C CNN
+	1    7400 2650
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+3.3V #PWR0413
 U 1 1 5B98DFF9
-P 6300 1300
-F 0 "#PWR0413" H 6300 1150 50  0001 C CNN
-F 1 "+3.3V" V 6315 1428 50  0000 L CNN
-F 2 "" H 6300 1300 50  0001 C CNN
-F 3 "" H 6300 1300 50  0001 C CNN
-	1    6300 1300
+P 7150 3750
+F 0 "#PWR0413" H 7150 3600 50  0001 C CNN
+F 1 "+3.3V" V 7165 3878 50  0000 L CNN
+F 2 "" H 7150 3750 50  0001 C CNN
+F 3 "" H 7150 3750 50  0001 C CNN
+	1    7150 3750
 	0    -1   -1   0   
 $EndComp
 $Comp
 L power:GND #PWR0414
 U 1 1 5B98E165
-P 6300 1600
-F 0 "#PWR0414" H 6300 1350 50  0001 C CNN
-F 1 "GND" H 6305 1427 50  0000 C CNN
-F 2 "" H 6300 1600 50  0001 C CNN
-F 3 "" H 6300 1600 50  0001 C CNN
-	1    6300 1600
+P 7150 4050
+F 0 "#PWR0414" H 7150 3800 50  0001 C CNN
+F 1 "GND" H 7155 3877 50  0000 C CNN
+F 2 "" H 7150 4050 50  0001 C CNN
+F 3 "" H 7150 4050 50  0001 C CNN
+	1    7150 4050
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0412
 U 1 1 5B98E18D
-P 5650 3150
-F 0 "#PWR0412" H 5650 2900 50  0001 C CNN
-F 1 "GND" V 5655 3022 50  0000 R CNN
-F 2 "" H 5650 3150 50  0001 C CNN
-F 3 "" H 5650 3150 50  0001 C CNN
-	1    5650 3150
+P 8200 3150
+F 0 "#PWR0412" H 8200 2900 50  0001 C CNN
+F 1 "GND" V 8205 3022 50  0000 R CNN
+F 2 "" H 8200 3150 50  0001 C CNN
+F 3 "" H 8200 3150 50  0001 C CNN
+	1    8200 3150
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	6200 3150 5650 3150
 $Comp
 L Device:C C?
 U 1 1 5B98E455
-P 6750 1450
+P 7600 3900
 AR Path="/5B61FB63/5B98E455" Ref="C?"  Part="1" 
 AR Path="/5B61FB63/5B98DF5D/5B98E455" Ref="C402"  Part="1" 
-F 0 "C402" H 6635 1404 50  0000 R CNN
-F 1 "100n" H 6635 1495 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 6788 1300 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/AVX/08055C104JAZ2A?qs=%2fha2pyFaduhAZO93RAy6IIlm7PKA7PN%2fjITVSPkVEftSFjliFvU6%2fw%3d%3d" H 6750 1450 50  0001 C CNN
-	1    6750 1450
+F 0 "C402" H 7485 3854 50  0000 R CNN
+F 1 "100n" H 7485 3945 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7638 3750 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/AVX/08055C104JAZ2A?qs=%2fha2pyFaduhAZO93RAy6IIlm7PKA7PN%2fjITVSPkVEftSFjliFvU6%2fw%3d%3d" H 7600 3900 50  0001 C CNN
+	1    7600 3900
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -242,62 +240,62 @@ Wire Notes Line
 Wire Notes Line
 	3800 1650 3250 1650
 Wire Wire Line
-	6300 1300 6750 1300
+	7150 3750 7600 3750
 Wire Wire Line
-	6750 1600 6300 1600
+	7600 4050 7150 4050
 $Comp
 L power:GND #PWR0410
 U 1 1 5B99005F
-P 4500 2750
-F 0 "#PWR0410" H 4500 2500 50  0001 C CNN
-F 1 "GND" V 4505 2622 50  0000 R CNN
-F 2 "" H 4500 2750 50  0001 C CNN
-F 3 "" H 4500 2750 50  0001 C CNN
-	1    4500 2750
+P 6500 2750
+F 0 "#PWR0410" H 6500 2500 50  0001 C CNN
+F 1 "GND" V 6505 2622 50  0000 R CNN
+F 2 "" H 6500 2750 50  0001 C CNN
+F 3 "" H 6500 2750 50  0001 C CNN
+	1    6500 2750
 	0    1    1    0   
 $EndComp
 $Comp
 L power:+3.3V #PWR?
 U 1 1 5B9C2CD4
-P 4100 3350
+P 5050 3350
 AR Path="/5B61FB63/5B9C2CD4" Ref="#PWR?"  Part="1" 
 AR Path="/5B61FB63/5B98DF5D/5B9C2CD4" Ref="#PWR0408"  Part="1" 
-F 0 "#PWR0408" H 4100 3200 50  0001 C CNN
-F 1 "+3.3V" H 4115 3523 50  0000 C CNN
-F 2 "" H 4100 3350 50  0001 C CNN
-F 3 "" H 4100 3350 50  0001 C CNN
-	1    4100 3350
+F 0 "#PWR0408" H 5050 3200 50  0001 C CNN
+F 1 "+3.3V" H 5065 3523 50  0000 C CNN
+F 2 "" H 5050 3350 50  0001 C CNN
+F 3 "" H 5050 3350 50  0001 C CNN
+	1    5050 3350
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R R?
 U 1 1 5B9C2CDA
-P 4100 3200
+P 5050 3200
 AR Path="/5B61FB63/5B9C2CDA" Ref="R?"  Part="1" 
 AR Path="/5B61FB63/5B98DF5D/5B9C2CDA" Ref="R407"  Part="1" 
-F 0 "R407" H 4170 3246 50  0000 L CNN
-F 1 "10k" H 4170 3155 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 4030 3200 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Panasonic-Industrial-Devices/ERJ-6ENF1002V?qs=sGAEpiMZZMu61qfTUdNhGzRxdwze5h8ZcGDx6geba20%3d" H 4100 3200 50  0001 C CNN
-	1    4100 3200
+F 0 "R407" H 5120 3246 50  0000 L CNN
+F 1 "10k" H 5120 3155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4980 3200 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Panasonic-Industrial-Devices/ERJ-6ENF1002V?qs=sGAEpiMZZMu61qfTUdNhGzRxdwze5h8ZcGDx6geba20%3d" H 5050 3200 50  0001 C CNN
+	1    5050 3200
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR0411
 U 1 1 5B9C4260
-P 4500 3150
-F 0 "#PWR0411" H 4500 2900 50  0001 C CNN
-F 1 "GND" V 4505 3022 50  0000 R CNN
-F 2 "" H 4500 3150 50  0001 C CNN
-F 3 "" H 4500 3150 50  0001 C CNN
-	1    4500 3150
+P 6500 3150
+F 0 "#PWR0411" H 6500 2900 50  0001 C CNN
+F 1 "GND" V 6505 3022 50  0000 R CNN
+F 2 "" H 6500 3150 50  0001 C CNN
+F 3 "" H 6500 3150 50  0001 C CNN
+	1    6500 3150
 	0    1    1    0   
 $EndComp
-Text GLabel 1200 2950 0    50   Input ~ 0
+Text GLabel 1200 2750 0    50   Input ~ 0
 SD_DATA1
-Text GLabel 1200 2850 0    50   Input ~ 0
-SD_DATA0
 Text GLabel 1200 2650 0    50   Input ~ 0
+SD_DATA0
+Text GLabel 1200 2550 0    50   Input ~ 0
 SD_CLK
 Text GLabel 1200 2250 0    50   Input ~ 0
 SD_DATA2
@@ -305,12 +303,12 @@ Text GLabel 1200 2350 0    50   Input ~ 0
 SD_DATA3
 Text GLabel 1200 2450 0    50   Input ~ 0
 SD_CMD
-Text GLabel 3950 3050 0    50   Input ~ 0
+Text GLabel 4900 3050 0    50   Input ~ 0
 SD_CD
 $Comp
 L Device:CP C?
 U 1 1 5B9D6414
-P 6300 1450
+P 7150 3900
 AR Path="/5B62EDB8/5B9D6414" Ref="C?"  Part="1" 
 AR Path="/5B62EDB8/5B66E27E/5B9D6414" Ref="C?"  Part="1" 
 AR Path="/5B62EDB8/5B66FC5D/5B9D6414" Ref="C?"  Part="1" 
@@ -321,39 +319,39 @@ AR Path="/5B62EDB8/5B68A219/5B9D6414" Ref="C?"  Part="1"
 AR Path="/5B62EDB8/5B68BAA8/5B9D6414" Ref="C?"  Part="1" 
 AR Path="/5B62EDB8/5B68D1A7/5B9D6414" Ref="C?"  Part="1" 
 AR Path="/5B61FB63/5B98DF5D/5B9D6414" Ref="C401"  Part="1" 
-F 0 "C401" V 6150 1450 50  0000 C CNN
-F 1 "10u" H 6400 1550 50  0000 C CNN
-F 2 "Capacitor_SMD:CP_Elec_5x4.5" H 6338 1300 50  0001 C CNN
-F 3 "" H 6300 1450 50  0001 C CNN
-	1    6300 1450
+F 0 "C401" V 7000 3900 50  0000 C CNN
+F 1 "10u" H 7250 4000 50  0000 C CNN
+F 2 "Capacitor_SMD:CP_Elec_5x4.5" H 7188 3750 50  0001 C CNN
+F 3 "" H 7150 3900 50  0001 C CNN
+	1    7150 3900
 	1    0    0    -1  
 $EndComp
-Connection ~ 6300 1300
-Connection ~ 6300 1600
-Text Notes 4250 3450 0    50   ~ 0
+Connection ~ 7150 3750
+Connection ~ 7150 4050
+Text Notes 5200 3450 0    50   ~ 0
 Card present = SD_CD low
 $Comp
 L power:+3.3V #PWR0409
 U 1 1 5B9DC236
-P 4500 2550
-F 0 "#PWR0409" H 4500 2400 50  0001 C CNN
-F 1 "+3.3V" V 4515 2678 50  0000 L CNN
-F 2 "" H 4500 2550 50  0001 C CNN
-F 3 "" H 4500 2550 50  0001 C CNN
-	1    4500 2550
+P 6500 2550
+F 0 "#PWR0409" H 6500 2400 50  0001 C CNN
+F 1 "+3.3V" V 6515 2678 50  0000 L CNN
+F 2 "" H 6500 2550 50  0001 C CNN
+F 3 "" H 6500 2550 50  0001 C CNN
+	1    6500 2550
 	0    -1   -1   0   
 $EndComp
 Wire Notes Line
-	5850 1900 5850 1050
+	6700 4350 6700 3500
 Wire Notes Line
-	5850 1050 7150 1050
+	6700 3500 8000 3500
 Wire Notes Line
-	7150 1050 7150 1900
+	8000 3500 8000 4350
 Wire Notes Line
-	7150 1900 5850 1900
-Text Notes 6150 1200 0    50   ~ 0
+	8000 4350 6700 4350
+Text Notes 7000 3650 0    50   ~ 0
 Place near SD Card
-Text Notes 6350 2600 0    50   ~ 0
+Text Notes 7150 1650 0    50   ~ 0
 Place card slot as near the MCU\nas possible. Leave room to insert\nthe card.
 $Comp
 L Device:D_TVS D401
@@ -444,46 +442,12 @@ Connection ~ 2300 3550
 Wire Wire Line
 	2300 3550 2200 3550
 Wire Wire Line
-	4500 2250 3350 2250
-Wire Wire Line
 	1200 2350 3000 2350
 Wire Wire Line
-	4500 2450 2550 2450
-Wire Wire Line
-	4500 2650 2200 2650
-Wire Wire Line
-	1200 2850 1850 2850
-Wire Wire Line
-	4500 2950 1500 2950
-Wire Wire Line
-	4100 3050 4500 3050
-Connection ~ 4100 3050
-Wire Wire Line
-	3950 3050 4100 3050
+	4900 3050 5050 3050
 Connection ~ 3000 3550
 Wire Wire Line
-	1500 1950 1500 2950
-Wire Wire Line
 	2300 3550 2550 3550
-Connection ~ 1500 2950
-Wire Wire Line
-	1500 2950 1200 2950
-Wire Wire Line
-	1500 2950 1500 3250
-Wire Wire Line
-	1850 1950 1850 2850
-Connection ~ 1850 2850
-Wire Wire Line
-	1850 2850 4500 2850
-Wire Wire Line
-	1850 3250 1850 2850
-Wire Wire Line
-	2200 3250 2200 2650
-Connection ~ 2200 2650
-Wire Wire Line
-	2200 2650 1200 2650
-Wire Wire Line
-	2200 1950 2200 2650
 Wire Wire Line
 	2550 1950 2550 2450
 Connection ~ 2550 2450
@@ -498,7 +462,7 @@ Wire Wire Line
 	3000 3250 3000 2350
 Connection ~ 3000 2350
 Wire Wire Line
-	3000 2350 4500 2350
+	3000 2350 4800 2350
 Wire Wire Line
 	3000 2350 3000 1950
 Wire Wire Line
@@ -508,4 +472,120 @@ Wire Wire Line
 	3350 2250 1200 2250
 Wire Wire Line
 	3350 2250 3350 3250
+$Comp
+L Connector_Generic:Conn_02x06_Odd_Even J402
+U 1 1 5B985204
+P 5000 2450
+F 0 "J402" H 5050 2867 50  0000 C CNN
+F 1 "SDCard MMC mode" H 5050 2776 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical" H 5000 2450 50  0001 C CNN
+F 3 "~" H 5000 2450 50  0001 C CNN
+	1    5000 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 2250 3350 2250
+Wire Wire Line
+	4800 2450 2550 2450
+Wire Wire Line
+	5300 2250 6500 2250
+Wire Wire Line
+	2200 1950 2200 2550
+Wire Wire Line
+	1200 2550 2200 2550
+Connection ~ 2200 2550
+Wire Wire Line
+	2200 2550 2200 3250
+Wire Wire Line
+	2200 2550 4800 2550
+Wire Wire Line
+	5300 2550 5500 2550
+Wire Wire Line
+	5500 2550 5500 2650
+Wire Wire Line
+	1850 1950 1850 2650
+Wire Wire Line
+	1500 1950 1500 2750
+Wire Wire Line
+	1200 2650 1850 2650
+Connection ~ 1850 2650
+Wire Wire Line
+	1850 2650 1850 3250
+Wire Wire Line
+	1850 2650 4800 2650
+Wire Wire Line
+	5300 2650 5450 2650
+Wire Wire Line
+	5450 2650 5450 2850
+Wire Wire Line
+	1200 2750 1500 2750
+Connection ~ 1500 2750
+Wire Wire Line
+	1500 2750 1500 3250
+Wire Wire Line
+	1500 2750 4800 2750
+Wire Wire Line
+	5300 2750 5300 2950
+Wire Wire Line
+	5300 2950 6500 2950
+Wire Wire Line
+	5050 3050 6500 3050
+Connection ~ 5050 3050
+Text Label 5900 2200 1    50   ~ 0
+SD_SPI_MOSI
+Text Label 6100 2200 1    50   ~ 0
+SD_SPI_MISO
+Text Label 5800 2200 1    50   ~ 0
+SD_SPI_CS
+Wire Wire Line
+	5800 2350 5800 1700
+Text Label 6000 2200 1    50   ~ 0
+SD_SPI_CLK
+Wire Wire Line
+	6000 2650 6000 1700
+Wire Wire Line
+	5900 2450 5900 1700
+Wire Wire Line
+	6100 2850 6100 1700
+Connection ~ 5900 2450
+Wire Wire Line
+	5900 2450 6500 2450
+Connection ~ 6000 2650
+Wire Wire Line
+	6000 2650 6500 2650
+Connection ~ 6100 2850
+Wire Wire Line
+	6100 2850 6500 2850
+Wire Wire Line
+	5300 2450 5900 2450
+Wire Wire Line
+	5500 2650 6000 2650
+Wire Wire Line
+	5450 2850 6100 2850
+Connection ~ 5800 2350
+Wire Wire Line
+	5800 2350 6500 2350
+Wire Wire Line
+	5300 2350 5800 2350
+Text Notes 7900 1800 0    50   ~ 0
+http://www.interfacebus.com/MicroSD_Card_Pinout.html
+Text GLabel 5800 1200 1    50   Input ~ 0
+SD_SPI_CS
+Text GLabel 5900 1200 1    50   Input ~ 0
+SD_SPI_MOSI
+Text GLabel 6000 1200 1    50   Input ~ 0
+SD_SPI_CLK
+Text GLabel 6100 1200 1    50   Input ~ 0
+SD_SPI_MISO
+$Comp
+L Connector_Generic:Conn_02x04_Odd_Even J403
+U 1 1 5B99DF45
+P 6000 1400
+F 0 "J403" V 6004 1580 50  0000 L CNN
+F 1 "SDCard SPI mode" V 6095 1580 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 6000 1400 50  0001 C CNN
+F 3 "~" H 6000 1400 50  0001 C CNN
+	1    6000 1400
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
