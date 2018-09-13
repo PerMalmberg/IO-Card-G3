@@ -15,14 +15,14 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text GLabel 7550 3000 2    60   Input ~ 0
-DIGITAL_I2C_SCL
+I2C_SCL
 Text GLabel 7550 3100 2    60   Input ~ 0
-DIGITAL_I2C_SDA
+I2C_SDA
 $Comp
-L Device:R R307
+L Device:R R305
 U 1 1 5B73B18A
 P 7450 2800
-F 0 "R307" H 7520 2846 50  0000 L CNN
+F 0 "R305" H 7520 2846 50  0000 L CNN
 F 1 "10k" H 7520 2755 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 7380 2800 50  0001 C CNN
 F 3 "https://www.mouser.se/ProductDetail/Panasonic-Industrial-Devices/ERJ-6ENF1002V?qs=sGAEpiMZZMu61qfTUdNhGzRxdwze5h8ZcGDx6geba20%3d" H 7450 2800 50  0001 C CNN
@@ -30,10 +30,10 @@ F 3 "https://www.mouser.se/ProductDetail/Panasonic-Industrial-Devices/ERJ-6ENF10
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R305
+L Device:R R303
 U 1 1 5B73B205
 P 7150 2800
-F 0 "R305" H 7220 2846 50  0000 L CNN
+F 0 "R303" H 7220 2846 50  0000 L CNN
 F 1 "10k" H 7220 2755 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 7080 2800 50  0001 C CNN
 F 3 "https://www.mouser.se/ProductDetail/Panasonic-Industrial-Devices/ERJ-6ENF1002V?qs=sGAEpiMZZMu61qfTUdNhGzRxdwze5h8ZcGDx6geba20%3d" H 7150 2800 50  0001 C CNN
@@ -55,10 +55,10 @@ Connection ~ 7150 3000
 Wire Wire Line
 	7150 3000 5250 3000
 $Comp
-L power:+3.3V #PWR0311
+L power:+3.3V #PWR0309
 U 1 1 5B73B348
 P 7300 2650
-F 0 "#PWR0311" H 7300 2500 50  0001 C CNN
+F 0 "#PWR0309" H 7300 2500 50  0001 C CNN
 F 1 "+3.3V" H 7315 2823 50  0000 C CNN
 F 2 "" H 7300 2650 50  0001 C CNN
 F 3 "" H 7300 2650 50  0001 C CNN
@@ -82,10 +82,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/txb0102.pdf" H 8500 4720 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR0316
+L power:+3.3V #PWR0317
 U 1 1 5B73B74B
 P 8400 4150
-F 0 "#PWR0316" H 8400 4000 50  0001 C CNN
+F 0 "#PWR0317" H 8400 4000 50  0001 C CNN
 F 1 "+3.3V" H 8415 4323 50  0000 C CNN
 F 2 "" H 8400 4150 50  0001 C CNN
 F 3 "" H 8400 4150 50  0001 C CNN
@@ -93,10 +93,10 @@ F 3 "" H 8400 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR0318
+L power:+5V #PWR0319
 U 1 1 5B73B784
 P 8600 4150
-F 0 "#PWR0318" H 8600 4000 50  0001 C CNN
+F 0 "#PWR0319" H 8600 4000 50  0001 C CNN
 F 1 "+5V" H 8615 4323 50  0000 C CNN
 F 2 "" H 8600 4150 50  0001 C CNN
 F 3 "" H 8600 4150 50  0001 C CNN
@@ -138,10 +138,10 @@ Wire Wire Line
 Wire Wire Line
 	7300 5050 8100 5050
 $Comp
-L Device:R R306
+L Device:R R304
 U 1 1 5B73C224
 P 7300 5200
-F 0 "R306" H 7370 5246 50  0000 L CNN
+F 0 "R304" H 7370 5246 50  0000 L CNN
 F 1 "10k" H 7370 5155 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 7230 5200 50  0001 C CNN
 F 3 "https://www.mouser.se/ProductDetail/Panasonic-Industrial-Devices/ERJ-6ENF1002V?qs=sGAEpiMZZMu61qfTUdNhGzRxdwze5h8ZcGDx6geba20%3d" H 7300 5200 50  0001 C CNN
@@ -149,10 +149,10 @@ F 3 "https://www.mouser.se/ProductDetail/Panasonic-Industrial-Devices/ERJ-6ENF10
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0312
+L power:GND #PWR0310
 U 1 1 5B73C2A7
 P 7300 5350
-F 0 "#PWR0312" H 7300 5100 50  0001 C CNN
+F 0 "#PWR0310" H 7300 5100 50  0001 C CNN
 F 1 "GND" H 7305 5177 50  0000 C CNN
 F 2 "" H 7300 5350 50  0001 C CNN
 F 3 "" H 7300 5350 50  0001 C CNN
@@ -160,10 +160,10 @@ F 3 "" H 7300 5350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0315
+L power:GND #PWR0314
 U 1 1 5B73C2C7
 P 8100 4200
-F 0 "#PWR0315" H 8100 3950 50  0001 C CNN
+F 0 "#PWR0314" H 8100 3950 50  0001 C CNN
 F 1 "GND" V 8105 4072 50  0000 R CNN
 F 2 "" H 8100 4200 50  0001 C CNN
 F 3 "" H 8100 4200 50  0001 C CNN
@@ -171,10 +171,10 @@ F 3 "" H 8100 4200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR0319
+L power:GND #PWR0320
 U 1 1 5B73C2E7
 P 8900 4200
-F 0 "#PWR0319" H 8900 3950 50  0001 C CNN
+F 0 "#PWR0320" H 8900 3950 50  0001 C CNN
 F 1 "GND" V 8905 4072 50  0000 R CNN
 F 2 "" H 8900 4200 50  0001 C CNN
 F 3 "" H 8900 4200 50  0001 C CNN
@@ -186,76 +186,20 @@ Wiegand_D0
 Text GLabel 8900 4850 2    60   Input ~ 0
 Wiegand_D1
 $Comp
-L power:GND #PWR0317
+L power:GND #PWR0318
 U 1 1 5B73CB5F
 P 8500 5250
-F 0 "#PWR0317" H 8500 5000 50  0001 C CNN
+F 0 "#PWR0318" H 8500 5000 50  0001 C CNN
 F 1 "GND" H 8505 5077 50  0000 C CNN
 F 2 "" H 8500 5250 50  0001 C CNN
 F 3 "" H 8500 5250 50  0001 C CNN
 	1    8500 5250
 	1    0    0    -1  
 $EndComp
-Text GLabel 7550 3200 2    60   Input ~ 0
-ANALOG_I2C_SCL
-Text GLabel 7550 3300 2    60   Input ~ 0
-ANALOG_I2C_SDA
 Text GLabel 5750 2600 2    60   Input ~ 0
 ANALOG_RDY_2
 Text GLabel 5750 2500 2    60   Input ~ 0
 ANALOG_RDY_1
-Wire Wire Line
-	7550 3200 6550 3200
-Wire Wire Line
-	5250 3300 6850 3300
-$Comp
-L Device:R R304
-U 1 1 5B741A0F
-P 6850 2800
-F 0 "R304" H 6920 2846 50  0000 L CNN
-F 1 "10k" H 6920 2755 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 6780 2800 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Panasonic-Industrial-Devices/ERJ-6ENF1002V?qs=sGAEpiMZZMu61qfTUdNhGzRxdwze5h8ZcGDx6geba20%3d" H 6850 2800 50  0001 C CNN
-	1    6850 2800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R303
-U 1 1 5B741A15
-P 6550 2800
-F 0 "R303" H 6620 2846 50  0000 L CNN
-F 1 "10k" H 6620 2755 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 6480 2800 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Panasonic-Industrial-Devices/ERJ-6ENF1002V?qs=sGAEpiMZZMu61qfTUdNhGzRxdwze5h8ZcGDx6geba20%3d" H 6550 2800 50  0001 C CNN
-	1    6550 2800
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR0309
-U 1 1 5B741A1B
-P 6700 2650
-F 0 "#PWR0309" H 6700 2500 50  0001 C CNN
-F 1 "+3.3V" H 6715 2823 50  0000 C CNN
-F 2 "" H 6700 2650 50  0001 C CNN
-F 3 "" H 6700 2650 50  0001 C CNN
-	1    6700 2650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6550 2650 6700 2650
-Connection ~ 6700 2650
-Wire Wire Line
-	6700 2650 6850 2650
-Wire Wire Line
-	6850 2950 6850 3300
-Connection ~ 6850 3300
-Wire Wire Line
-	6850 3300 7550 3300
-Wire Wire Line
-	6550 2950 6550 3200
-Connection ~ 6550 3200
-Wire Wire Line
-	6550 3200 5250 3200
 Text GLabel 5750 2700 2    60   Input ~ 0
 DIA_Interrupt
 $Comp
@@ -436,10 +380,6 @@ F 3 "" H 1100 3400 50  0001 C CNN
 	1    1100 3400
 	0    1    1    0   
 $EndComp
-Text GLabel 5250 3600 2    60   Input ~ 0
-BELL_CTRL
-Text GLabel 5250 3800 2    60   Input ~ 0
-SIREN_CTRL
 $Comp
 L Connector_Generic:Conn_02x05_Odd_Even J301
 U 1 1 5B6A5C70
@@ -505,7 +445,7 @@ Text Label 3150 3850 2    50   ~ 0
 MTCK
 Text Label 3150 3950 2    50   ~ 0
 MTDO
-Text GLabel 5250 3500 2    50   Input ~ 0
+Text GLabel 5250 3400 2    50   Input ~ 0
 I2C_Reset
 $Comp
 L Switch:SW_Push SW301
@@ -520,8 +460,6 @@ F 3 "https://www.mouser.se/ProductDetail/CK/KXT331LHS?qs=sGAEpiMZZMsgGjVA3toVBIC
 $EndComp
 Wire Wire Line
 	3250 3400 1500 3400
-Text GLabel 5250 3400 2    50   Input ~ 0
-StatusLED
 $Comp
 L Connector_Generic:Conn_01x04 J302
 U 1 1 5B903FBD
@@ -534,10 +472,10 @@ F 3 "~" H 8300 3550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0314
+L power:GND #PWR0313
 U 1 1 5B9093BD
 P 8100 3550
-F 0 "#PWR0314" H 8100 3300 50  0001 C CNN
+F 0 "#PWR0313" H 8100 3300 50  0001 C CNN
 F 1 "GND" V 8105 3422 50  0000 R CNN
 F 2 "" H 8100 3550 50  0001 C CNN
 F 3 "" H 8100 3550 50  0001 C CNN
@@ -555,23 +493,23 @@ Wire Wire Line
 $Comp
 L Switch:SW_Push SW303
 U 1 1 5B9494D5
-P 6650 1900
-F 0 "SW303" H 6650 2185 50  0000 C CNN
-F 1 "Factory reset" H 6650 2094 50  0000 C CNN
-F 2 "Button_Switch_SMD:SW_SPST_CK_KXT3" H 6650 2100 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/CK/KXT331LHS?qs=sGAEpiMZZMsgGjVA3toVBICuw%2fFQq%2fBnDsOBIRFitAg%3d" H 6650 2100 50  0001 C CNN
-	1    6650 1900
+P 7650 1850
+F 0 "SW303" H 7650 2135 50  0000 C CNN
+F 1 "Factory reset" H 7650 2044 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_CK_KXT3" H 7650 2050 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/CK/KXT331LHS?qs=sGAEpiMZZMsgGjVA3toVBICuw%2fFQq%2fBnDsOBIRFitAg%3d" H 7650 2050 50  0001 C CNN
+	1    7650 1850
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0310
+L power:GND #PWR0311
 U 1 1 5B953711
-P 6850 1900
-F 0 "#PWR0310" H 6850 1650 50  0001 C CNN
-F 1 "GND" H 6855 1727 50  0000 C CNN
-F 2 "" H 6850 1900 50  0001 C CNN
-F 3 "" H 6850 1900 50  0001 C CNN
-	1    6850 1900
+P 7850 1850
+F 0 "#PWR0311" H 7850 1600 50  0001 C CNN
+F 1 "GND" H 7855 1677 50  0000 C CNN
+F 2 "" H 7850 1850 50  0001 C CNN
+F 3 "" H 7850 1850 50  0001 C CNN
+	1    7850 1850
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
@@ -644,26 +582,14 @@ Wire Wire Line
 Wire Wire Line
 	5250 2600 5750 2600
 Wire Wire Line
-	8100 4650 7150 4650
-Wire Wire Line
-	7150 4650 7150 3900
-Wire Wire Line
-	7150 3900 5250 3900
-Wire Wire Line
-	8100 4850 7100 4850
-Wire Wire Line
-	7100 4850 7100 4000
-Wire Wire Line
-	7100 4000 5250 4000
-Wire Wire Line
 	5250 2500 5750 2500
-Text Label 6450 1900 2    50   ~ 0
+Text Label 7450 1850 2    50   ~ 0
 Factory_reset
 $Comp
-L power:+3.3V #PWR0313
+L power:+3.3V #PWR0312
 U 1 1 5B9F39E1
 P 8100 3450
-F 0 "#PWR0313" H 8100 3300 50  0001 C CNN
+F 0 "#PWR0312" H 8100 3300 50  0001 C CNN
 F 1 "+3.3V" V 8100 3700 50  0000 C CNN
 F 2 "" H 8100 3450 50  0001 C CNN
 F 3 "" H 8100 3450 50  0001 C CNN
@@ -673,30 +599,108 @@ $EndComp
 $Comp
 L Device:R R302
 U 1 1 5BA02E4B
-P 5550 1750
-F 0 "R302" H 5620 1796 50  0000 L CNN
-F 1 "10k" H 5620 1705 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 5480 1750 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Panasonic-Industrial-Devices/ERJ-6ENF1002V?qs=sGAEpiMZZMu61qfTUdNhGzRxdwze5h8ZcGDx6geba20%3d" H 5550 1750 50  0001 C CNN
-	1    5550 1750
+P 6550 1700
+F 0 "R302" H 6620 1746 50  0000 L CNN
+F 1 "10k" H 6620 1655 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6480 1700 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Panasonic-Industrial-Devices/ERJ-6ENF1002V?qs=sGAEpiMZZMu61qfTUdNhGzRxdwze5h8ZcGDx6geba20%3d" H 6550 1700 50  0001 C CNN
+	1    6550 1700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6450 1900 5550 1900
-Wire Wire Line
-	5550 1900 5550 2800
-Wire Wire Line
-	5550 2800 5250 2800
-Connection ~ 5550 1900
+	7450 1850 6550 1850
 $Comp
 L power:+3.3V #PWR0308
 U 1 1 5BA056E1
-P 5550 1600
-F 0 "#PWR0308" H 5550 1450 50  0001 C CNN
-F 1 "+3.3V" H 5565 1773 50  0000 C CNN
-F 2 "" H 5550 1600 50  0001 C CNN
-F 3 "" H 5550 1600 50  0001 C CNN
-	1    5550 1600
+P 6550 1550
+F 0 "#PWR0308" H 6550 1400 50  0001 C CNN
+F 1 "+3.3V" H 6565 1723 50  0000 C CNN
+F 2 "" H 6550 1550 50  0001 C CNN
+F 3 "" H 6550 1550 50  0001 C CNN
+	1    6550 1550
 	1    0    0    -1  
 $EndComp
+Text GLabel 5250 4000 2    50   Input ~ 0
+SD_SPI_CS
+Text GLabel 5250 3500 2    50   Input ~ 0
+SD_SPI_MOSI
+Text GLabel 5250 3900 2    50   Input ~ 0
+SD_SPI_CLK
+Text GLabel 5250 3800 2    50   Input ~ 0
+SD_SPI_MISO
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5B9B753B
+P 8250 950
+AR Path="/5B62EDB8/5B9B753B" Ref="#PWR?"  Part="1" 
+AR Path="/5B61FB63/5B9B753B" Ref="#PWR0315"  Part="1" 
+F 0 "#PWR0315" H 8250 800 50  0001 C CNN
+F 1 "+3.3V" V 8200 1150 50  0000 C CNN
+F 2 "" H 8250 950 50  0001 C CNN
+F 3 "" H 8250 950 50  0001 C CNN
+	1    8250 950 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5B9B7541
+P 8400 950
+AR Path="/5B62EDB8/5B9B7541" Ref="R?"  Part="1" 
+AR Path="/5B61FB63/5B9B7541" Ref="R306"  Part="1" 
+F 0 "R306" H 8470 996 50  0000 L CNN
+F 1 "10k" H 8470 905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 8330 950 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Panasonic-Industrial-Devices/ERJ-6ENF1002V?qs=sGAEpiMZZMu61qfTUdNhGzRxdwze5h8ZcGDx6geba20%3d" H 8400 950 50  0001 C CNN
+	1    8400 950 
+	0    -1   -1   0   
+$EndComp
+Text GLabel 8550 950  2    50   Input ~ 0
+I2C_Reset
+$Comp
+L Device:R R?
+U 1 1 5B9D0BA1
+P 8400 1350
+AR Path="/5B62EDB8/5B9D0BA1" Ref="R?"  Part="1" 
+AR Path="/5B61FB63/5B9D0BA1" Ref="R307"  Part="1" 
+F 0 "R307" H 8470 1396 50  0000 L CNN
+F 1 "10k" H 8470 1305 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 8330 1350 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Panasonic-Industrial-Devices/ERJ-6ENF1002V?qs=sGAEpiMZZMu61qfTUdNhGzRxdwze5h8ZcGDx6geba20%3d" H 8400 1350 50  0001 C CNN
+	1    8400 1350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5B9D0BA8
+P 8250 1350
+AR Path="/5B62EDB8/5B9D0BA8" Ref="#PWR?"  Part="1" 
+AR Path="/5B61FB63/5B9D0BA8" Ref="#PWR0316"  Part="1" 
+F 0 "#PWR0316" H 8250 1200 50  0001 C CNN
+F 1 "+3.3V" V 8350 1450 50  0000 C CNN
+F 2 "" H 8250 1350 50  0001 C CNN
+F 3 "" H 8250 1350 50  0001 C CNN
+	1    8250 1350
+	0    -1   -1   0   
+$EndComp
+Text GLabel 8550 1350 2    60   Input ~ 0
+DIA_Interrupt
+Wire Wire Line
+	8100 4650 7000 4650
+Wire Wire Line
+	7000 4650 7000 3200
+Wire Wire Line
+	7000 3200 5250 3200
+Wire Wire Line
+	5250 3300 6900 3300
+Wire Wire Line
+	6900 3300 6900 4850
+Wire Wire Line
+	6900 4850 8100 4850
+Wire Wire Line
+	5250 2800 6550 2800
+Wire Wire Line
+	6550 2800 6550 1850
+Connection ~ 6550 1850
+Text GLabel 5250 3600 2    50   Input ~ 0
+StatusLED
 $EndSCHEMATC

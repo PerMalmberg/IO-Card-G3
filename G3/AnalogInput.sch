@@ -126,14 +126,6 @@ F 3 "" H 3650 3750 50  0001 C CNN
 	1    3650 3750
 	1    0    0    -1  
 $EndComp
-Text GLabel 4050 1550 2    60   Input ~ 0
-ANALOG_I2C_SCL
-Text GLabel 4050 3350 2    60   Input ~ 0
-ANALOG_I2C_SCL
-Text GLabel 4050 3450 2    60   Input ~ 0
-ANALOG_I2C_SDA
-Text GLabel 4050 1650 2    60   Input ~ 0
-ANALOG_I2C_SDA
 Text Notes 4700 2000 2    60   ~ 0
 I2C address: 0x48
 $Comp
@@ -412,4 +404,12 @@ Wire Wire Line
 	2950 3550 2950 3800
 Wire Wire Line
 	2950 3800 1850 3800
+Text GLabel 4050 1550 2    60   Input ~ 0
+I2C_SCL
+Text GLabel 4050 1650 2    60   Input ~ 0
+I2C_SDA
+Text GLabel 4050 3350 2    60   Input ~ 0
+I2C_SCL
+Text GLabel 4050 3450 2    60   Input ~ 0
+I2C_SDA
 $EndSCHEMATC

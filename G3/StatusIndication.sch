@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 30 36
+Sheet 24 36
 Title ""
 Date ""
 Rev ""
@@ -183,84 +183,6 @@ Wire Wire Line
 	3150 3600 3250 3600
 Wire Wire Line
 	3550 3600 3750 3600
-$Comp
-L Device:R R2406
-U 1 1 5B78269C
-P 3000 4050
-F 0 "R2406" V 2793 4050 50  0000 C CNN
-F 1 "165" V 2884 4050 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 2930 4050 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Bourns/CR0805-FX-1650ELF?qs=sGAEpiMZZMtlubZbdhIBIKn39ibjI6WbHbnDBzjqA1U%3d" H 3000 4050 50  0001 C CNN
-	1    3000 4050
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:LED D2406
-U 1 1 5B7826A3
-P 3400 4050
-F 0 "D2406" H 3392 3795 50  0000 C CNN
-F 1 "Green" H 3392 3886 50  0000 C CNN
-F 2 "LED_THT:LED_D5.0mm_Clear" H 3400 4050 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Lumex/SSL-LX55103GD-FL?qs=sGAEpiMZZMtmwHDZQCdlqVsz6Sp3LtaXcNplsbJfBSw%3d" H 3400 4050 50  0001 C CNN
-	1    3400 4050
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	3150 4050 3250 4050
-Wire Wire Line
-	3550 4050 3750 4050
-$Comp
-L Device:R R2407
-U 1 1 5B78285C
-P 3000 4500
-F 0 "R2407" V 2793 4500 50  0000 C CNN
-F 1 "165" V 2884 4500 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 2930 4500 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Bourns/CR0805-FX-1650ELF?qs=sGAEpiMZZMtlubZbdhIBIKn39ibjI6WbHbnDBzjqA1U%3d" H 3000 4500 50  0001 C CNN
-	1    3000 4500
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:LED D2407
-U 1 1 5B782863
-P 3400 4500
-F 0 "D2407" H 3392 4245 50  0000 C CNN
-F 1 "Green" H 3392 4336 50  0000 C CNN
-F 2 "LED_THT:LED_D5.0mm_Clear" H 3400 4500 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Lumex/SSL-LX55103GD-FL?qs=sGAEpiMZZMtmwHDZQCdlqVsz6Sp3LtaXcNplsbJfBSw%3d" H 3400 4500 50  0001 C CNN
-	1    3400 4500
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	3150 4500 3250 4500
-Wire Wire Line
-	3550 4500 3750 4500
-$Comp
-L Device:R R2408
-U 1 1 5B782A93
-P 3000 4950
-F 0 "R2408" V 2793 4950 50  0000 C CNN
-F 1 "165" V 2884 4950 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 2930 4950 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Bourns/CR0805-FX-1650ELF?qs=sGAEpiMZZMtlubZbdhIBIKn39ibjI6WbHbnDBzjqA1U%3d" H 3000 4950 50  0001 C CNN
-	1    3000 4950
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:LED D2408
-U 1 1 5B782A9A
-P 3400 4950
-F 0 "D2408" H 3392 4695 50  0000 C CNN
-F 1 "Green" H 3392 4786 50  0000 C CNN
-F 2 "LED_THT:LED_D5.0mm_Clear" H 3400 4950 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Lumex/SSL-LX55103GD-FL?qs=sGAEpiMZZMtmwHDZQCdlqVsz6Sp3LtaXcNplsbJfBSw%3d" H 3400 4950 50  0001 C CNN
-	1    3400 4950
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	3150 4950 3250 4950
-Wire Wire Line
-	3550 4950 3750 4950
 $Comp
 L Device:LED D2410
 U 1 1 5B782D8A
@@ -451,12 +373,6 @@ Text HLabel 3750 3150 2    50   Input ~ 0
 Green4
 Text HLabel 3750 3600 2    50   Input ~ 0
 Green5
-Text HLabel 3750 4050 2    50   Input ~ 0
-Green6
-Text HLabel 3750 4500 2    50   Input ~ 0
-Green7
-Text HLabel 3750 4950 2    50   Input ~ 0
-Green8
 Text HLabel 5850 1800 2    50   Input ~ 0
 Red1
 Text HLabel 5850 2200 2    50   Input ~ 0
@@ -485,15 +401,6 @@ Wire Wire Line
 Connection ~ 2850 3150
 Wire Wire Line
 	2850 3150 2850 3600
-Connection ~ 2850 3600
-Wire Wire Line
-	2850 3600 2850 4050
-Connection ~ 2850 4050
-Wire Wire Line
-	2850 4050 2850 4500
-Connection ~ 2850 4500
-Wire Wire Line
-	2850 4500 2850 4950
 $Comp
 L power:+3V3 #PWR02402
 U 1 1 5B787261
@@ -526,4 +433,97 @@ Wire Wire Line
 Connection ~ 4950 4500
 Wire Wire Line
 	4950 4500 4950 5000
+$Comp
+L Device:R R2406
+U 1 1 5BA06C46
+P 3000 4050
+F 0 "R2406" V 2793 4050 50  0000 C CNN
+F 1 "165" V 2884 4050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2930 4050 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Bourns/CR0805-FX-1650ELF?qs=sGAEpiMZZMtlubZbdhIBIKn39ibjI6WbHbnDBzjqA1U%3d" H 3000 4050 50  0001 C CNN
+	1    3000 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D2406
+U 1 1 5BA06C4D
+P 3400 4050
+F 0 "D2406" H 3392 3795 50  0000 C CNN
+F 1 "Green" H 3392 3886 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm_Clear" H 3400 4050 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Lumex/SSL-LX55103GD-FL?qs=sGAEpiMZZMtmwHDZQCdlqVsz6Sp3LtaXcNplsbJfBSw%3d" H 3400 4050 50  0001 C CNN
+	1    3400 4050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3150 4050 3250 4050
+Wire Wire Line
+	3550 4050 3750 4050
+Text HLabel 3750 4050 2    50   Input ~ 0
+Green6
+Wire Wire Line
+	2850 3600 2850 4050
+Connection ~ 2850 3600
+$Comp
+L Device:R R2407
+U 1 1 5B9E7959
+P 3000 4500
+F 0 "R2407" V 2793 4500 50  0000 C CNN
+F 1 "165" V 2884 4500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2930 4500 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Bourns/CR0805-FX-1650ELF?qs=sGAEpiMZZMtlubZbdhIBIKn39ibjI6WbHbnDBzjqA1U%3d" H 3000 4500 50  0001 C CNN
+	1    3000 4500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D2407
+U 1 1 5B9E7960
+P 3400 4500
+F 0 "D2407" H 3392 4245 50  0000 C CNN
+F 1 "Green" H 3392 4336 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm_Clear" H 3400 4500 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Lumex/SSL-LX55103GD-FL?qs=sGAEpiMZZMtmwHDZQCdlqVsz6Sp3LtaXcNplsbJfBSw%3d" H 3400 4500 50  0001 C CNN
+	1    3400 4500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3150 4500 3250 4500
+Wire Wire Line
+	3550 4500 3750 4500
+Text HLabel 3750 4500 2    50   Input ~ 0
+Green7
+Wire Wire Line
+	2850 4050 2850 4500
+$Comp
+L Device:R R2408
+U 1 1 5B9E796B
+P 3000 4950
+F 0 "R2408" V 2793 4950 50  0000 C CNN
+F 1 "165" V 2884 4950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2930 4950 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Bourns/CR0805-FX-1650ELF?qs=sGAEpiMZZMtlubZbdhIBIKn39ibjI6WbHbnDBzjqA1U%3d" H 3000 4950 50  0001 C CNN
+	1    3000 4950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D2408
+U 1 1 5B9E7972
+P 3400 4950
+F 0 "D2408" H 3392 4695 50  0000 C CNN
+F 1 "Green" H 3392 4786 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm_Clear" H 3400 4950 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Lumex/SSL-LX55103GD-FL?qs=sGAEpiMZZMtmwHDZQCdlqVsz6Sp3LtaXcNplsbJfBSw%3d" H 3400 4950 50  0001 C CNN
+	1    3400 4950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3150 4950 3250 4950
+Wire Wire Line
+	3550 4950 3750 4950
+Text HLabel 3750 4950 2    50   Input ~ 0
+Green8
+Wire Wire Line
+	2850 4500 2850 4950
+Connection ~ 2850 4500
+Connection ~ 2850 4050
 $EndSCHEMATC

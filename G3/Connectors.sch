@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 35 36
+Sheet 36 36
 Title ""
 Date ""
 Rev ""
@@ -199,10 +199,6 @@ Text GLabel 7800 3700 0    50   Input ~ 0
 DO5_GND_BREAK
 Text GLabel 7800 3900 0    50   Input ~ 0
 DO6_GND_BREAK
-Text GLabel 7800 4100 0    50   Input ~ 0
-DO7_GND_BREAK
-Text GLabel 7800 4300 0    50   Input ~ 0
-DO8_GND_BREAK
 Text GLabel 1600 4500 0    50   Input ~ 0
 SIREN_GND_BREAK
 $Comp
@@ -212,7 +208,7 @@ P 6100 1050
 AR Path="/5B62EDB8/5B7CD677" Ref="J?"  Part="1" 
 AR Path="/5B72552B/5B7CD677" Ref="J3606"  Part="1" 
 F 0 "J3606" H 6100 725 50  0000 C CNN
-F 1 "GS3" H 6100 816 50  0000 C CNN
+F 1 "DO1_PWR" H 6100 816 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" V 6188 976 50  0001 C CNN
 F 3 "" H 6100 1050 50  0001 C CNN
 	1    6100 1050
@@ -365,7 +361,7 @@ P 6100 1600
 AR Path="/5B62EDB8/5B755D38" Ref="J?"  Part="1" 
 AR Path="/5B72552B/5B755D38" Ref="J3607"  Part="1" 
 F 0 "J3607" H 6100 1275 50  0000 C CNN
-F 1 "GS3" H 6100 1366 50  0000 C CNN
+F 1 "DO2_PWR" H 6100 1366 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" V 6188 1526 50  0001 C CNN
 F 3 "" H 6100 1600 50  0001 C CNN
 	1    6100 1600
@@ -408,7 +404,7 @@ P 6100 2150
 AR Path="/5B62EDB8/5B755D91" Ref="J?"  Part="1" 
 AR Path="/5B72552B/5B755D91" Ref="J3608"  Part="1" 
 F 0 "J3608" H 6100 1825 50  0000 C CNN
-F 1 "GS3" H 6100 1916 50  0000 C CNN
+F 1 "DO3_PWR" H 6100 1916 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" V 6188 2076 50  0001 C CNN
 F 3 "" H 6100 2150 50  0001 C CNN
 	1    6100 2150
@@ -451,7 +447,7 @@ P 6100 2700
 AR Path="/5B62EDB8/5B755DDE" Ref="J?"  Part="1" 
 AR Path="/5B72552B/5B755DDE" Ref="J3609"  Part="1" 
 F 0 "J3609" H 6100 2375 50  0000 C CNN
-F 1 "GS3" H 6100 2466 50  0000 C CNN
+F 1 "DO4_PWR" H 6100 2466 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" V 6188 2626 50  0001 C CNN
 F 3 "" H 6100 2700 50  0001 C CNN
 	1    6100 2700
@@ -494,7 +490,7 @@ P 6100 3250
 AR Path="/5B62EDB8/5B755FA6" Ref="J?"  Part="1" 
 AR Path="/5B72552B/5B755FA6" Ref="J3610"  Part="1" 
 F 0 "J3610" H 6100 2925 50  0000 C CNN
-F 1 "GS3" H 6100 3016 50  0000 C CNN
+F 1 "DO5_PWR" H 6100 3016 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" V 6188 3176 50  0001 C CNN
 F 3 "" H 6100 3250 50  0001 C CNN
 	1    6100 3250
@@ -537,7 +533,7 @@ P 6100 3800
 AR Path="/5B62EDB8/5B756008" Ref="J?"  Part="1" 
 AR Path="/5B72552B/5B756008" Ref="J3611"  Part="1" 
 F 0 "J3611" H 6100 3475 50  0000 C CNN
-F 1 "GS3" H 6100 3566 50  0000 C CNN
+F 1 "DO6_PWR" H 6100 3566 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" V 6188 3726 50  0001 C CNN
 F 3 "" H 6100 3800 50  0001 C CNN
 	1    6100 3800
@@ -573,92 +569,6 @@ F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3
 $EndComp
 Wire Wire Line
 	6550 3800 6300 3800
-$Comp
-L Connector_Generic:Conn_01x03 J?
-U 1 1 5B7561A3
-P 6100 4350
-AR Path="/5B62EDB8/5B7561A3" Ref="J?"  Part="1" 
-AR Path="/5B72552B/5B7561A3" Ref="J3612"  Part="1" 
-F 0 "J3612" H 6100 4025 50  0000 C CNN
-F 1 "GS3" H 6100 4116 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" V 6188 4276 50  0001 C CNN
-F 3 "" H 6100 4350 50  0001 C CNN
-	1    6100 4350
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:+5V #PWR?
-U 1 1 5B7561AA
-P 6300 4250
-AR Path="/5B62EDB8/5B7561AA" Ref="#PWR?"  Part="1" 
-AR Path="/5B72552B/5B7561AA" Ref="#PWR03623"  Part="1" 
-F 0 "#PWR03623" H 6300 4100 50  0001 C CNN
-F 1 "+5V" V 6315 4378 50  0000 L CNN
-F 2 "" H 6300 4250 50  0001 C CNN
-F 3 "" H 6300 4250 50  0001 C CNN
-	1    6300 4250
-	0    1    1    0   
-$EndComp
-Text GLabel 6300 4450 2    50   Input ~ 0
-12V_PWR
-$Comp
-L Device:Fuse F?
-U 1 1 5B7561B1
-P 6700 4350
-AR Path="/5B61ECB9/5B7561B1" Ref="F?"  Part="1" 
-AR Path="/5B72552B/5B7561B1" Ref="F3616"  Part="1" 
-F 0 "F3616" V 6503 4350 50  0000 C CNN
-F 1 "xA" V 6594 4350 50  0000 C CNN
-F 2 "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open" V 6630 4350 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 6700 4350 50  0001 C CNN
-	1    6700 4350
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6550 4350 6300 4350
-$Comp
-L Connector_Generic:Conn_01x03 J?
-U 1 1 5B75622A
-P 6100 4900
-AR Path="/5B62EDB8/5B75622A" Ref="J?"  Part="1" 
-AR Path="/5B72552B/5B75622A" Ref="J3613"  Part="1" 
-F 0 "J3613" H 6100 4575 50  0000 C CNN
-F 1 "GS3" H 6100 4666 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" V 6188 4826 50  0001 C CNN
-F 3 "" H 6100 4900 50  0001 C CNN
-	1    6100 4900
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:+5V #PWR?
-U 1 1 5B756231
-P 6300 4800
-AR Path="/5B62EDB8/5B756231" Ref="#PWR?"  Part="1" 
-AR Path="/5B72552B/5B756231" Ref="#PWR03624"  Part="1" 
-F 0 "#PWR03624" H 6300 4650 50  0001 C CNN
-F 1 "+5V" V 6315 4928 50  0000 L CNN
-F 2 "" H 6300 4800 50  0001 C CNN
-F 3 "" H 6300 4800 50  0001 C CNN
-	1    6300 4800
-	0    1    1    0   
-$EndComp
-Text GLabel 6300 5000 2    50   Input ~ 0
-12V_PWR
-$Comp
-L Device:Fuse F?
-U 1 1 5B756238
-P 6700 4900
-AR Path="/5B61ECB9/5B756238" Ref="F?"  Part="1" 
-AR Path="/5B72552B/5B756238" Ref="F3617"  Part="1" 
-F 0 "F3617" V 6503 4900 50  0000 C CNN
-F 1 "xA" V 6594 4900 50  0000 C CNN
-F 2 "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open" V 6630 4900 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 6700 4900 50  0001 C CNN
-	1    6700 4900
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6550 4900 6300 4900
 $Comp
 L Device:Fuse F?
 U 1 1 5B75939B
@@ -910,14 +820,106 @@ Wire Wire Line
 	7800 3250 7800 2550
 Wire Wire Line
 	7800 3800 6850 3800
+Text GLabel 7800 4100 0    50   Input ~ 0
+DO7_GND_BREAK
+Text GLabel 7800 4300 0    50   Input ~ 0
+DO8_GND_BREAK
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 5BA24D87
+P 6100 4350
+AR Path="/5B62EDB8/5BA24D87" Ref="J?"  Part="1" 
+AR Path="/5B72552B/5BA24D87" Ref="J3612"  Part="1" 
+F 0 "J3612" H 6100 4025 50  0000 C CNN
+F 1 "DO7_PWR" H 6100 4116 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" V 6188 4276 50  0001 C CNN
+F 3 "" H 6100 4350 50  0001 C CNN
+	1    6100 4350
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5BA24D8E
+P 6300 4250
+AR Path="/5B62EDB8/5BA24D8E" Ref="#PWR?"  Part="1" 
+AR Path="/5B72552B/5BA24D8E" Ref="#PWR03623"  Part="1" 
+F 0 "#PWR03623" H 6300 4100 50  0001 C CNN
+F 1 "+5V" V 6315 4378 50  0000 L CNN
+F 2 "" H 6300 4250 50  0001 C CNN
+F 3 "" H 6300 4250 50  0001 C CNN
+	1    6300 4250
+	0    1    1    0   
+$EndComp
+Text GLabel 6300 4450 2    50   Input ~ 0
+12V_PWR
+$Comp
+L Device:Fuse F?
+U 1 1 5BA24D95
+P 6700 4350
+AR Path="/5B61ECB9/5BA24D95" Ref="F?"  Part="1" 
+AR Path="/5B72552B/5BA24D95" Ref="F3616"  Part="1" 
+F 0 "F3616" V 6503 4350 50  0000 C CNN
+F 1 "xA" V 6594 4350 50  0000 C CNN
+F 2 "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open" V 6630 4350 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 6700 4350 50  0001 C CNN
+	1    6700 4350
+	0    1    1    0   
+$EndComp
 Wire Wire Line
-	6850 4350 6850 4000
+	6550 4350 6300 4350
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 5BA25430
+P 6100 4900
+AR Path="/5B62EDB8/5BA25430" Ref="J?"  Part="1" 
+AR Path="/5B72552B/5BA25430" Ref="J3613"  Part="1" 
+F 0 "J3613" H 6100 4575 50  0000 C CNN
+F 1 "DO8_PWR" H 6100 4666 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" V 6188 4826 50  0001 C CNN
+F 3 "" H 6100 4900 50  0001 C CNN
+	1    6100 4900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5BA25437
+P 6300 4800
+AR Path="/5B62EDB8/5BA25437" Ref="#PWR?"  Part="1" 
+AR Path="/5B72552B/5BA25437" Ref="#PWR03624"  Part="1" 
+F 0 "#PWR03624" H 6300 4650 50  0001 C CNN
+F 1 "+5V" V 6315 4928 50  0000 L CNN
+F 2 "" H 6300 4800 50  0001 C CNN
+F 3 "" H 6300 4800 50  0001 C CNN
+	1    6300 4800
+	0    1    1    0   
+$EndComp
+Text GLabel 6300 5000 2    50   Input ~ 0
+12V_PWR
+$Comp
+L Device:Fuse F?
+U 1 1 5BA2543E
+P 6700 4900
+AR Path="/5B61ECB9/5BA2543E" Ref="F?"  Part="1" 
+AR Path="/5B72552B/5BA2543E" Ref="F3617"  Part="1" 
+F 0 "F3617" V 6503 4900 50  0000 C CNN
+F 1 "xA" V 6594 4900 50  0000 C CNN
+F 2 "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open" V 6630 4900 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 6700 4900 50  0001 C CNN
+	1    6700 4900
+	0    1    1    0   
+$EndComp
 Wire Wire Line
-	6850 4000 7800 4000
+	6550 4900 6300 4900
 Wire Wire Line
-	7800 4200 7000 4200
+	6850 4350 6900 4350
 Wire Wire Line
-	7000 4200 7000 4900
+	6900 4350 6900 4000
 Wire Wire Line
-	7000 4900 6850 4900
+	6900 4000 7800 4000
+Wire Wire Line
+	6850 4900 7000 4900
+Wire Wire Line
+	7000 4900 7000 4200
+Wire Wire Line
+	7000 4200 7800 4200
 $EndSCHEMATC
