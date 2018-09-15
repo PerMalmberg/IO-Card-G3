@@ -347,7 +347,7 @@ AR Path="/5B61ECB9/5B7549B6" Ref="F?"  Part="1"
 AR Path="/5B72552B/5B7549B6" Ref="F3610"  Part="1" 
 F 0 "F3610" V 6503 1050 50  0000 C CNN
 F 1 "xA" V 6594 1050 50  0000 C CNN
-F 2 "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open" V 6630 1050 50  0001 C CNN
+F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 6630 1050 50  0001 C CNN
 F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 6700 1050 50  0001 C CNN
 	1    6700 1050
 	0    1    1    0   
@@ -390,7 +390,7 @@ AR Path="/5B61ECB9/5B755D46" Ref="F?"  Part="1"
 AR Path="/5B72552B/5B755D46" Ref="F3611"  Part="1" 
 F 0 "F3611" V 6503 1600 50  0000 C CNN
 F 1 "xA" V 6594 1600 50  0000 C CNN
-F 2 "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open" V 6630 1600 50  0001 C CNN
+F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 6630 1600 50  0001 C CNN
 F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 6700 1600 50  0001 C CNN
 	1    6700 1600
 	0    1    1    0   
@@ -433,7 +433,7 @@ AR Path="/5B61ECB9/5B755D9F" Ref="F?"  Part="1"
 AR Path="/5B72552B/5B755D9F" Ref="F3612"  Part="1" 
 F 0 "F3612" V 6503 2150 50  0000 C CNN
 F 1 "xA" V 6594 2150 50  0000 C CNN
-F 2 "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open" V 6630 2150 50  0001 C CNN
+F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 6630 2150 50  0001 C CNN
 F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 6700 2150 50  0001 C CNN
 	1    6700 2150
 	0    1    1    0   
@@ -476,7 +476,7 @@ AR Path="/5B61ECB9/5B755DEC" Ref="F?"  Part="1"
 AR Path="/5B72552B/5B755DEC" Ref="F3613"  Part="1" 
 F 0 "F3613" V 6503 2700 50  0000 C CNN
 F 1 "xA" V 6594 2700 50  0000 C CNN
-F 2 "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open" V 6630 2700 50  0001 C CNN
+F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 6630 2700 50  0001 C CNN
 F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 6700 2700 50  0001 C CNN
 	1    6700 2700
 	0    1    1    0   
@@ -519,7 +519,7 @@ AR Path="/5B61ECB9/5B755FB4" Ref="F?"  Part="1"
 AR Path="/5B72552B/5B755FB4" Ref="F3614"  Part="1" 
 F 0 "F3614" V 6503 3250 50  0000 C CNN
 F 1 "xA" V 6594 3250 50  0000 C CNN
-F 2 "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open" V 6630 3250 50  0001 C CNN
+F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 6630 3250 50  0001 C CNN
 F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 6700 3250 50  0001 C CNN
 	1    6700 3250
 	0    1    1    0   
@@ -562,7 +562,7 @@ AR Path="/5B61ECB9/5B756016" Ref="F?"  Part="1"
 AR Path="/5B72552B/5B756016" Ref="F3615"  Part="1" 
 F 0 "F3615" V 6503 3800 50  0000 C CNN
 F 1 "xA" V 6594 3800 50  0000 C CNN
-F 2 "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open" V 6630 3800 50  0001 C CNN
+F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 6630 3800 50  0001 C CNN
 F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 6700 3800 50  0001 C CNN
 	1    6700 3800
 	0    1    1    0   
@@ -577,7 +577,7 @@ AR Path="/5B61ECB9/5B75939B" Ref="F?"  Part="1"
 AR Path="/5B72552B/5B75939B" Ref="F3604"  Part="1" 
 F 0 "F3604" V 3503 2100 50  0000 C CNN
 F 1 "xA" V 3594 2100 50  0000 C CNN
-F 2 "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open" V 3630 2100 50  0001 C CNN
+F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 3630 2100 50  0001 C CNN
 F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 3700 2100 50  0001 C CNN
 	1    3700 2100
 	1    0    0    -1  
@@ -590,7 +590,7 @@ AR Path="/5B61ECB9/5B75A322" Ref="F?"  Part="1"
 AR Path="/5B72552B/5B75A322" Ref="F3605"  Part="1" 
 F 0 "F3605" V 3803 2100 50  0000 C CNN
 F 1 "xA" V 3894 2100 50  0000 C CNN
-F 2 "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open" V 3930 2100 50  0001 C CNN
+F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 3930 2100 50  0001 C CNN
 F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 4000 2100 50  0001 C CNN
 	1    4000 2100
 	1    0    0    -1  
@@ -603,7 +603,7 @@ AR Path="/5B61ECB9/5B75A3AB" Ref="F?"  Part="1"
 AR Path="/5B72552B/5B75A3AB" Ref="F3606"  Part="1" 
 F 0 "F3606" V 4103 2100 50  0000 C CNN
 F 1 "xA" V 4194 2100 50  0000 C CNN
-F 2 "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open" V 4230 2100 50  0001 C CNN
+F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 4230 2100 50  0001 C CNN
 F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 4300 2100 50  0001 C CNN
 	1    4300 2100
 	1    0    0    -1  
@@ -616,7 +616,7 @@ AR Path="/5B61ECB9/5B75A435" Ref="F?"  Part="1"
 AR Path="/5B72552B/5B75A435" Ref="F3607"  Part="1" 
 F 0 "F3607" V 4403 2100 50  0000 C CNN
 F 1 "xA" V 4494 2100 50  0000 C CNN
-F 2 "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open" V 4530 2100 50  0001 C CNN
+F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 4530 2100 50  0001 C CNN
 F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 4600 2100 50  0001 C CNN
 	1    4600 2100
 	1    0    0    -1  
@@ -629,7 +629,7 @@ AR Path="/5B61ECB9/5B75A4BA" Ref="F?"  Part="1"
 AR Path="/5B72552B/5B75A4BA" Ref="F3608"  Part="1" 
 F 0 "F3608" V 4703 2100 50  0000 C CNN
 F 1 "xA" V 4794 2100 50  0000 C CNN
-F 2 "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open" V 4830 2100 50  0001 C CNN
+F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 4830 2100 50  0001 C CNN
 F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 4900 2100 50  0001 C CNN
 	1    4900 2100
 	1    0    0    -1  
@@ -642,7 +642,7 @@ AR Path="/5B61ECB9/5B75A542" Ref="F?"  Part="1"
 AR Path="/5B72552B/5B75A542" Ref="F3609"  Part="1" 
 F 0 "F3609" V 5003 2100 50  0000 C CNN
 F 1 "xA" V 5094 2100 50  0000 C CNN
-F 2 "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open" V 5130 2100 50  0001 C CNN
+F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 5130 2100 50  0001 C CNN
 F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 5200 2100 50  0001 C CNN
 	1    5200 2100
 	1    0    0    -1  
@@ -655,7 +655,7 @@ AR Path="/5B61ECB9/5B75A707" Ref="F?"  Part="1"
 AR Path="/5B72552B/5B75A707" Ref="F3603"  Part="1" 
 F 0 "F3603" V 3203 2100 50  0000 C CNN
 F 1 "xA" V 3294 2100 50  0000 C CNN
-F 2 "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open" V 3330 2100 50  0001 C CNN
+F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 3330 2100 50  0001 C CNN
 F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 3400 2100 50  0001 C CNN
 	1    3400 2100
 	1    0    0    -1  
@@ -668,7 +668,7 @@ AR Path="/5B61ECB9/5B75A795" Ref="F?"  Part="1"
 AR Path="/5B72552B/5B75A795" Ref="F3602"  Part="1" 
 F 0 "F3602" V 2903 2100 50  0000 C CNN
 F 1 "xA" V 2994 2100 50  0000 C CNN
-F 2 "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open" V 3030 2100 50  0001 C CNN
+F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 3030 2100 50  0001 C CNN
 F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 3100 2100 50  0001 C CNN
 	1    3100 2100
 	1    0    0    -1  
@@ -681,7 +681,7 @@ AR Path="/5B61ECB9/5B75A822" Ref="F?"  Part="1"
 AR Path="/5B72552B/5B75A822" Ref="F3601"  Part="1" 
 F 0 "F3601" V 2603 2100 50  0000 C CNN
 F 1 "xA" V 2694 2100 50  0000 C CNN
-F 2 "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open" V 2730 2100 50  0001 C CNN
+F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 2730 2100 50  0001 C CNN
 F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 2800 2100 50  0001 C CNN
 	1    2800 2100
 	1    0    0    -1  
@@ -860,7 +860,7 @@ AR Path="/5B61ECB9/5BA24D95" Ref="F?"  Part="1"
 AR Path="/5B72552B/5BA24D95" Ref="F3616"  Part="1" 
 F 0 "F3616" V 6503 4350 50  0000 C CNN
 F 1 "xA" V 6594 4350 50  0000 C CNN
-F 2 "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open" V 6630 4350 50  0001 C CNN
+F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 6630 4350 50  0001 C CNN
 F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 6700 4350 50  0001 C CNN
 	1    6700 4350
 	0    1    1    0   
@@ -903,7 +903,7 @@ AR Path="/5B61ECB9/5BA2543E" Ref="F?"  Part="1"
 AR Path="/5B72552B/5BA2543E" Ref="F3617"  Part="1" 
 F 0 "F3617" V 6503 4900 50  0000 C CNN
 F 1 "xA" V 6594 4900 50  0000 C CNN
-F 2 "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open" V 6630 4900 50  0001 C CNN
+F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 6630 4900 50  0001 C CNN
 F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 6700 4900 50  0001 C CNN
 	1    6700 4900
 	0    1    1    0   

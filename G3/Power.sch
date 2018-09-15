@@ -47,7 +47,7 @@ F 3 "http://www.mouser.se/Search/ProductDetail.aspx?R=ULD1C101MED1TDvirtualkey64
 	1    6200 2650
 	1    0    0    -1  
 $EndComp
-Text Notes 6450 2200 0    60   ~ 0
+Text Notes 6450 2150 0    60   ~ 0
 Max 5A / 16.5 W
 $Comp
 L Device:D_Zener D205
@@ -463,7 +463,7 @@ U 1 1 5B395A79
 P 1600 2500
 F 0 "F201" V 1403 2500 50  0000 C CNN
 F 1 "3.5A" V 1494 2500 50  0000 C CNN
-F 2 "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open" V 1530 2500 50  0001 C CNN
+F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 1530 2500 50  0001 C CNN
 F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 1600 2500 50  0001 C CNN
 	1    1600 2500
 	0    1    1    0   
@@ -474,7 +474,7 @@ U 1 1 5B395AE2
 P 4900 2500
 F 0 "F202" V 4703 2500 50  0000 C CNN
 F 1 "5A" V 4794 2500 50  0000 C CNN
-F 2 "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open" V 4830 2500 50  0001 C CNN
+F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 4830 2500 50  0001 C CNN
 F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 4900 2500 50  0001 C CNN
 	1    4900 2500
 	0    1    1    0   
@@ -485,7 +485,7 @@ U 1 1 5B395E69
 P 4900 3200
 F 0 "F203" V 4703 3200 50  0000 C CNN
 F 1 "5A" V 4794 3200 50  0000 C CNN
-F 2 "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open" V 4830 3200 50  0001 C CNN
+F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 4830 3200 50  0001 C CNN
 F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 4900 3200 50  0001 C CNN
 	1    4900 3200
 	0    1    1    0   
