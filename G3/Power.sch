@@ -362,8 +362,6 @@ F 3 "~" H 5500 1350 50  0001 C CNN
 	1    5500 1350
 	-1   0    0    1   
 $EndComp
-Text Label 2850 3150 1    50   ~ 0
-12V_filtered
 $Comp
 L power:+12V #PWR?
 U 1 1 5B2CC821
@@ -640,4 +638,8 @@ Wire Wire Line
 	6200 3200 7350 3200
 Wire Wire Line
 	6200 2500 7300 2500
+Text Label 4650 3200 3    50   ~ 0
+5V_PWR_after_switch
+Text Label 4700 2500 1    50   ~ 0
+3.3V_PWR_after_switch
 $EndSCHEMATC
