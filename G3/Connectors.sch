@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 36 36
+Sheet 35 35
 Title ""
 Date ""
 Rev ""
@@ -17,909 +17,681 @@ $EndDescr
 $Comp
 L Connector_Generic:Conn_01x09 J?
 U 1 1 5B725588
-P 4000 1300
+P 4250 1400
 AR Path="/5B62EDB8/5B725588" Ref="J?"  Part="1" 
-AR Path="/5B72552B/5B725588" Ref="J3605"  Part="1" 
-F 0 "J3605" V 4124 1296 50  0000 C CNN
-F 1 "Conn_01x09" V 4215 1296 50  0000 C CNN
-F 2 "PerMalmberg:MOLEX_1x9_39544-3009" H 4000 1300 50  0001 C CNN
-F 3 "http://www.mouser.se/ProductDetail/Molex/39544-3009/?qs=sGAEpiMZZMvZTcaMAxB2ALD5K2s4Cmud0QE50Luvbic%3d" H 4000 1300 50  0001 C CNN
-	1    4000 1300
+AR Path="/5B72552B/5B725588" Ref="J3505"  Part="1" 
+F 0 "J3505" V 4374 1396 50  0000 C CNN
+F 1 "Power 12/5/3" V 4465 1396 50  0000 C CNN
+F 2 "PerMalmberg:MOLEX_1x9_39544-3009" H 4250 1400 50  0001 C CNN
+F 3 "http://www.mouser.se/ProductDetail/Molex/39544-3009/?qs=sGAEpiMZZMvZTcaMAxB2ALD5K2s4Cmud0QE50Luvbic%3d" H 4250 1400 50  0001 C CNN
+	1    4250 1400
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Connector_Generic:Conn_01x09 J?
 U 1 1 5B72558F
-P 1800 4200
+P 3400 3250
 AR Path="/5B62EDB8/5B72558F" Ref="J?"  Part="1" 
-AR Path="/5B72552B/5B72558F" Ref="J3604"  Part="1" 
-F 0 "J3604" V 1924 4196 50  0000 C CNN
-F 1 "Conn_01x09" V 2015 4196 50  0000 C CNN
-F 2 "PerMalmberg:MOLEX_1x9_39544-3009" H 1800 4200 50  0001 C CNN
-F 3 "http://www.mouser.se/ProductDetail/Molex/39544-3009/?qs=sGAEpiMZZMvZTcaMAxB2ALD5K2s4Cmud0QE50Luvbic%3d" H 1800 4200 50  0001 C CNN
-	1    1800 4200
-	1    0    0    -1  
+AR Path="/5B72552B/5B72558F" Ref="J3504"  Part="1" 
+F 0 "J3504" V 3524 3246 50  0000 C CNN
+F 1 "Digital input" V 3615 3246 50  0000 C CNN
+F 2 "PerMalmberg:MOLEX_1x9_39544-3009" H 3400 3250 50  0001 C CNN
+F 3 "http://www.mouser.se/ProductDetail/Molex/39544-3009/?qs=sGAEpiMZZMvZTcaMAxB2ALD5K2s4Cmud0QE50Luvbic%3d" H 3400 3250 50  0001 C CNN
+	1    3400 3250
+	0    -1   -1   0   
 $EndComp
 $Comp
 L Connector_Generic:Conn_01x09 J?
 U 1 1 5B725596
-P 1800 3250
+P 2450 3250
 AR Path="/5B62EDB8/5B725596" Ref="J?"  Part="1" 
-AR Path="/5B72552B/5B725596" Ref="J3603"  Part="1" 
-F 0 "J3603" V 1924 3246 50  0000 C CNN
-F 1 "Conn_01x09" V 2015 3246 50  0000 C CNN
-F 2 "PerMalmberg:MOLEX_1x9_39544-3009" H 1800 3250 50  0001 C CNN
-F 3 "http://www.mouser.se/ProductDetail/Molex/39544-3009/?qs=sGAEpiMZZMvZTcaMAxB2ALD5K2s4Cmud0QE50Luvbic%3d" H 1800 3250 50  0001 C CNN
-	1    1800 3250
-	1    0    0    -1  
+AR Path="/5B72552B/5B725596" Ref="J3502"  Part="1" 
+F 0 "J3502" V 2574 3246 50  0000 C CNN
+F 1 "Digital Input" V 2665 3246 50  0000 C CNN
+F 2 "PerMalmberg:MOLEX_1x9_39544-3009" H 2450 3250 50  0001 C CNN
+F 3 "http://www.mouser.se/ProductDetail/Molex/39544-3009/?qs=sGAEpiMZZMvZTcaMAxB2ALD5K2s4Cmud0QE50Luvbic%3d" H 2450 3250 50  0001 C CNN
+	1    2450 3250
+	0    -1   -1   0   
 $EndComp
 $Comp
 L Connector_Generic:Conn_01x09 J?
 U 1 1 5B72559D
-P 1800 1250
+P 1550 1300
 AR Path="/5B62EDB8/5B72559D" Ref="J?"  Part="1" 
-AR Path="/5B72552B/5B72559D" Ref="J3601"  Part="1" 
-F 0 "J3601" V 1924 1246 50  0000 C CNN
-F 1 "Conn_01x09" V 2015 1246 50  0000 C CNN
-F 2 "PerMalmberg:MOLEX_1x9_39544-3009" H 1800 1250 50  0001 C CNN
-F 3 "http://www.mouser.se/ProductDetail/Molex/39544-3009/?qs=sGAEpiMZZMvZTcaMAxB2ALD5K2s4Cmud0QE50Luvbic%3d" H 1800 1250 50  0001 C CNN
-	1    1800 1250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x09 J?
-U 1 1 5B7255A4
-P 8000 4100
-AR Path="/5B62EDB8/5B7255A4" Ref="J?"  Part="1" 
-AR Path="/5B72552B/5B7255A4" Ref="J3615"  Part="1" 
-F 0 "J3615" V 8124 4096 50  0000 C CNN
-F 1 "Conn_01x09" V 8215 4096 50  0000 C CNN
-F 2 "PerMalmberg:MOLEX_1x9_39544-3009" H 8000 4100 50  0001 C CNN
-F 3 "http://www.mouser.se/ProductDetail/Molex/39544-3009/?qs=sGAEpiMZZMvZTcaMAxB2ALD5K2s4Cmud0QE50Luvbic%3d" H 8000 4100 50  0001 C CNN
-	1    8000 4100
-	1    0    0    -1  
+AR Path="/5B72552B/5B72559D" Ref="J3501"  Part="1" 
+F 0 "J3501" V 1674 1296 50  0000 C CNN
+F 1 "Sense" V 1765 1296 50  0000 C CNN
+F 2 "PerMalmberg:MOLEX_1x9_39544-3009" H 1550 1300 50  0001 C CNN
+F 3 "http://www.mouser.se/ProductDetail/Molex/39544-3009/?qs=sGAEpiMZZMvZTcaMAxB2ALD5K2s4Cmud0QE50Luvbic%3d" H 1550 1300 50  0001 C CNN
+	1    1550 1300
+	0    -1   -1   0   
 $EndComp
 $Comp
 L Connector_Generic:Conn_01x09 J?
 U 1 1 5B7255AB
-P 8000 2150
+P 6000 1400
 AR Path="/5B62EDB8/5B7255AB" Ref="J?"  Part="1" 
-AR Path="/5B72552B/5B7255AB" Ref="J3614"  Part="1" 
-F 0 "J3614" V 8124 2146 50  0000 C CNN
-F 1 "Conn_01x09" V 8215 2146 50  0000 C CNN
-F 2 "PerMalmberg:MOLEX_1x9_39544-3009" H 8000 2150 50  0001 C CNN
-F 3 "http://www.mouser.se/ProductDetail/Molex/39544-3009/?qs=sGAEpiMZZMvZTcaMAxB2ALD5K2s4Cmud0QE50Luvbic%3d" H 8000 2150 50  0001 C CNN
-	1    8000 2150
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+12V #PWR?
-U 1 1 5B7255B2
-P 1600 950
-AR Path="/5B7255B2" Ref="#PWR?"  Part="1" 
-AR Path="/59C2CAC5/5B7255B2" Ref="#PWR?"  Part="1" 
-AR Path="/5B62EDB8/5B7255B2" Ref="#PWR?"  Part="1" 
-AR Path="/5B72552B/5B7255B2" Ref="#PWR03602"  Part="1" 
-F 0 "#PWR03602" H 1600 800 50  0001 C CNN
-F 1 "+12V" V 1615 1078 50  0000 L CNN
-F 2 "" H 1600 950 50  0001 C CNN
-F 3 "" H 1600 950 50  0001 C CNN
-	1    1600 950 
+AR Path="/5B72552B/5B7255AB" Ref="J3507"  Part="1" 
+F 0 "J3507" V 6124 1396 50  0000 C CNN
+F 1 "Digital Output" V 6215 1396 50  0000 C CNN
+F 2 "PerMalmberg:MOLEX_1x9_39544-3009" H 6000 1400 50  0001 C CNN
+F 3 "http://www.mouser.se/ProductDetail/Molex/39544-3009/?qs=sGAEpiMZZMvZTcaMAxB2ALD5K2s4Cmud0QE50Luvbic%3d" H 6000 1400 50  0001 C CNN
+	1    6000 1400
 	0    -1   -1   0   
 $EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5B7255B8
-P 1600 850
-AR Path="/5B62EDB8/5B7255B8" Ref="#PWR?"  Part="1" 
-AR Path="/5B72552B/5B7255B8" Ref="#PWR03601"  Part="1" 
-F 0 "#PWR03601" H 1600 600 50  0001 C CNN
-F 1 "GND" V 1605 722 50  0000 R CNN
-F 2 "" H 1600 850 50  0001 C CNN
-F 3 "" H 1600 850 50  0001 C CNN
-	1    1600 850 
-	0    1    1    0   
-$EndComp
-Text GLabel 1600 3050 0    60   Input ~ 0
+Text GLabel 2450 3450 3    60   Input ~ 0
 DI2_1
-Text GLabel 1600 3150 0    60   Input ~ 0
+Text GLabel 2550 3450 3    60   Input ~ 0
 DI2_2
-Text GLabel 1600 2850 0    60   Input ~ 0
+Text GLabel 2150 3450 3    60   Input ~ 0
 DI1_1
-Text GLabel 1600 2950 0    60   Input ~ 0
+Text GLabel 2250 3450 3    60   Input ~ 0
 DI1_2
-Text GLabel 1600 3250 0    60   Input ~ 0
+Text GLabel 2750 3450 3    60   Input ~ 0
 DI3_1
-Text GLabel 1600 3350 0    60   Input ~ 0
+Text GLabel 2850 3450 3    60   Input ~ 0
 DI3_2
-Text GLabel 1600 3450 0    60   Input ~ 0
+Text GLabel 3100 3450 3    60   Input ~ 0
 DI4_1
-Text GLabel 1600 3550 0    60   Input ~ 0
+Text GLabel 3200 3450 3    60   Input ~ 0
 DI4_2
-Text GLabel 1600 3650 0    60   Input ~ 0
+Text GLabel 3400 3450 3    60   Input ~ 0
 DI5_1
-Text GLabel 1600 3800 0    60   Input ~ 0
+Text GLabel 3500 3450 3    60   Input ~ 0
 DI5_2
-Text GLabel 1600 3900 0    60   Input ~ 0
+Text GLabel 3700 3450 3    60   Input ~ 0
 DI6_1
-Text GLabel 1600 4000 0    60   Input ~ 0
+Text GLabel 3800 3450 3    60   Input ~ 0
 DI6_2
-Text GLabel 1600 4100 0    60   Input ~ 0
+Text GLabel 4000 3450 3    60   Input ~ 0
 DI7_1
-Text GLabel 1600 4200 0    60   Input ~ 0
+Text GLabel 4100 3450 3    60   Input ~ 0
 DI7_2
-Text GLabel 1600 4300 0    60   Input ~ 0
+Text GLabel 4300 3450 3    60   Input ~ 0
 DI8_1
-Text GLabel 1600 4400 0    60   Input ~ 0
+Text GLabel 4400 3450 3    60   Input ~ 0
 DI8_2
-Text GLabel 1600 1050 0    60   Input ~ 0
+Text GLabel 1250 1500 3    60   Input ~ 0
 Sense1_DUT
-Text GLabel 1600 1250 0    60   Input ~ 0
+Text GLabel 1450 1500 3    60   Input ~ 0
 Sense2_DUT
-Text GLabel 1600 1450 0    60   Input ~ 0
+Text GLabel 1650 1500 3    60   Input ~ 0
 Sense3_DUT
-Text GLabel 1600 1650 0    60   Input ~ 0
+Text GLabel 1850 1500 3    60   Input ~ 0
 Sense4_DUT
-Text GLabel 1600 2100 0    60   Input ~ 0
+Text GLabel 2300 1500 3    60   Input ~ 0
 Sense6_DUT
-Text GLabel 1600 2300 0    60   Input ~ 0
+Text GLabel 2500 1500 3    60   Input ~ 0
 Sense7_DUT
-Text GLabel 1600 2500 0    60   Input ~ 0
+Text GLabel 2700 1500 3    60   Input ~ 0
 Sense8_DUT
-Text GLabel 1600 1900 0    60   Input ~ 0
+Text GLabel 2100 1500 3    60   Input ~ 0
 Sense5_DUT
 $Comp
 L power:GND #PWR?
 U 1 1 5B7255E4
-P 1600 1350
+P 1350 1500
 AR Path="/5B62EDB8/5B7255E4" Ref="#PWR?"  Part="1" 
-AR Path="/5B72552B/5B7255E4" Ref="#PWR03604"  Part="1" 
-F 0 "#PWR03604" H 1600 1100 50  0001 C CNN
-F 1 "GND" V 1605 1222 50  0000 R CNN
-F 2 "" H 1600 1350 50  0001 C CNN
-F 3 "" H 1600 1350 50  0001 C CNN
-	1    1600 1350
-	0    1    1    0   
+AR Path="/5B72552B/5B7255E4" Ref="#PWR03502"  Part="1" 
+F 0 "#PWR03502" H 1350 1250 50  0001 C CNN
+F 1 "GND" V 1355 1372 50  0000 R CNN
+F 2 "" H 1350 1500 50  0001 C CNN
+F 3 "" H 1350 1500 50  0001 C CNN
+	1    1350 1500
+	1    0    0    -1  
 $EndComp
-Text GLabel 7800 4400 0    60   Input ~ 0
+Text GLabel 4600 3450 3    60   Input ~ 0
 Wiegand_D0
-Text GLabel 7800 4500 0    60   Input ~ 0
+Text GLabel 4700 3450 3    60   Input ~ 0
 Wiegand_D1
-Text GLabel 1600 4600 0    60   Input ~ 0
-BELL_GND_BREAK
-Text GLabel 7800 1850 0    50   Input ~ 0
-DO1_GND_BREAK
-Text GLabel 7800 2050 0    50   Input ~ 0
-DO2_GND_BREAK
-Text GLabel 7800 2250 0    50   Input ~ 0
-DO3_GND_BREAK
-Text GLabel 7800 2450 0    50   Input ~ 0
-DO4_GND_BREAK
-Text GLabel 7800 3700 0    50   Input ~ 0
-DO5_GND_BREAK
-Text GLabel 7800 3900 0    50   Input ~ 0
-DO6_GND_BREAK
-Text GLabel 1600 4500 0    50   Input ~ 0
-SIREN_GND_BREAK
-$Comp
-L Connector_Generic:Conn_01x03 J?
-U 1 1 5B7CD677
-P 6100 1050
-AR Path="/5B62EDB8/5B7CD677" Ref="J?"  Part="1" 
-AR Path="/5B72552B/5B7CD677" Ref="J3606"  Part="1" 
-F 0 "J3606" H 6100 725 50  0000 C CNN
-F 1 "DO1_PWR" H 6100 816 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" V 6188 976 50  0001 C CNN
-F 3 "" H 6100 1050 50  0001 C CNN
-	1    6100 1050
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:+5V #PWR?
-U 1 1 5B7CD67E
-P 6300 950
-AR Path="/5B62EDB8/5B7CD67E" Ref="#PWR?"  Part="1" 
-AR Path="/5B72552B/5B7CD67E" Ref="#PWR03617"  Part="1" 
-F 0 "#PWR03617" H 6300 800 50  0001 C CNN
-F 1 "+5V" V 6315 1078 50  0000 L CNN
-F 2 "" H 6300 950 50  0001 C CNN
-F 3 "" H 6300 950 50  0001 C CNN
-	1    6300 950 
-	0    1    1    0   
-$EndComp
 $Comp
 L Connector_Generic:Conn_01x09 J?
 U 1 1 5B7CF88C
-P 1800 2200
+P 2500 1300
 AR Path="/5B62EDB8/5B7CF88C" Ref="J?"  Part="1" 
-AR Path="/5B72552B/5B7CF88C" Ref="J3602"  Part="1" 
-F 0 "J3602" V 1924 2196 50  0000 C CNN
-F 1 "Conn_01x09" V 2015 2196 50  0000 C CNN
-F 2 "PerMalmberg:MOLEX_1x9_39544-3009" H 1800 2200 50  0001 C CNN
-F 3 "http://www.mouser.se/ProductDetail/Molex/39544-3009/?qs=sGAEpiMZZMvZTcaMAxB2ALD5K2s4Cmud0QE50Luvbic%3d" H 1800 2200 50  0001 C CNN
-	1    1800 2200
-	1    0    0    -1  
+AR Path="/5B72552B/5B7CF88C" Ref="J3503"  Part="1" 
+F 0 "J3503" V 2624 1296 50  0000 C CNN
+F 1 "Sense" V 2715 1296 50  0000 C CNN
+F 2 "PerMalmberg:MOLEX_1x9_39544-3009" H 2500 1300 50  0001 C CNN
+F 3 "http://www.mouser.se/ProductDetail/Molex/39544-3009/?qs=sGAEpiMZZMvZTcaMAxB2ALD5K2s4Cmud0QE50Luvbic%3d" H 2500 1300 50  0001 C CNN
+	1    2500 1300
+	0    -1   -1   0   
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5B7D0659
-P 1600 1150
+P 1150 1500
 AR Path="/5B62EDB8/5B7D0659" Ref="#PWR?"  Part="1" 
-AR Path="/5B72552B/5B7D0659" Ref="#PWR03603"  Part="1" 
-F 0 "#PWR03603" H 1600 900 50  0001 C CNN
-F 1 "GND" V 1605 1022 50  0000 R CNN
-F 2 "" H 1600 1150 50  0001 C CNN
-F 3 "" H 1600 1150 50  0001 C CNN
-	1    1600 1150
-	0    1    1    0   
+AR Path="/5B72552B/5B7D0659" Ref="#PWR03501"  Part="1" 
+F 0 "#PWR03501" H 1150 1250 50  0001 C CNN
+F 1 "GND" V 1155 1372 50  0000 R CNN
+F 2 "" H 1150 1500 50  0001 C CNN
+F 3 "" H 1150 1500 50  0001 C CNN
+	1    1150 1500
+	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5B7D0CB6
-P 1600 1550
+P 1550 1500
 AR Path="/5B62EDB8/5B7D0CB6" Ref="#PWR?"  Part="1" 
-AR Path="/5B72552B/5B7D0CB6" Ref="#PWR03605"  Part="1" 
-F 0 "#PWR03605" H 1600 1300 50  0001 C CNN
-F 1 "GND" V 1605 1422 50  0000 R CNN
-F 2 "" H 1600 1550 50  0001 C CNN
-F 3 "" H 1600 1550 50  0001 C CNN
-	1    1600 1550
-	0    1    1    0   
+AR Path="/5B72552B/5B7D0CB6" Ref="#PWR03503"  Part="1" 
+F 0 "#PWR03503" H 1550 1250 50  0001 C CNN
+F 1 "GND" V 1555 1372 50  0000 R CNN
+F 2 "" H 1550 1500 50  0001 C CNN
+F 3 "" H 1550 1500 50  0001 C CNN
+	1    1550 1500
+	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5B7D0CE1
-P 1600 1800
+P 1750 1500
 AR Path="/5B62EDB8/5B7D0CE1" Ref="#PWR?"  Part="1" 
-AR Path="/5B72552B/5B7D0CE1" Ref="#PWR03606"  Part="1" 
-F 0 "#PWR03606" H 1600 1550 50  0001 C CNN
-F 1 "GND" V 1605 1672 50  0000 R CNN
-F 2 "" H 1600 1800 50  0001 C CNN
-F 3 "" H 1600 1800 50  0001 C CNN
-	1    1600 1800
-	0    1    1    0   
+AR Path="/5B72552B/5B7D0CE1" Ref="#PWR03504"  Part="1" 
+F 0 "#PWR03504" H 1750 1250 50  0001 C CNN
+F 1 "GND" V 1755 1372 50  0000 R CNN
+F 2 "" H 1750 1500 50  0001 C CNN
+F 3 "" H 1750 1500 50  0001 C CNN
+	1    1750 1500
+	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5B7D0D0C
-P 1600 2000
+P 1950 1500
 AR Path="/5B62EDB8/5B7D0D0C" Ref="#PWR?"  Part="1" 
-AR Path="/5B72552B/5B7D0D0C" Ref="#PWR03607"  Part="1" 
-F 0 "#PWR03607" H 1600 1750 50  0001 C CNN
-F 1 "GND" V 1605 1872 50  0000 R CNN
-F 2 "" H 1600 2000 50  0001 C CNN
-F 3 "" H 1600 2000 50  0001 C CNN
-	1    1600 2000
-	0    1    1    0   
+AR Path="/5B72552B/5B7D0D0C" Ref="#PWR03505"  Part="1" 
+F 0 "#PWR03505" H 1950 1250 50  0001 C CNN
+F 1 "GND" V 1955 1372 50  0000 R CNN
+F 2 "" H 1950 1500 50  0001 C CNN
+F 3 "" H 1950 1500 50  0001 C CNN
+	1    1950 1500
+	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5B7D0D37
-P 1600 2200
+P 2200 1500
 AR Path="/5B62EDB8/5B7D0D37" Ref="#PWR?"  Part="1" 
-AR Path="/5B72552B/5B7D0D37" Ref="#PWR03608"  Part="1" 
-F 0 "#PWR03608" H 1600 1950 50  0001 C CNN
-F 1 "GND" V 1605 2072 50  0000 R CNN
-F 2 "" H 1600 2200 50  0001 C CNN
-F 3 "" H 1600 2200 50  0001 C CNN
-	1    1600 2200
-	0    1    1    0   
+AR Path="/5B72552B/5B7D0D37" Ref="#PWR03506"  Part="1" 
+F 0 "#PWR03506" H 2200 1250 50  0001 C CNN
+F 1 "GND" V 2205 1372 50  0000 R CNN
+F 2 "" H 2200 1500 50  0001 C CNN
+F 3 "" H 2200 1500 50  0001 C CNN
+	1    2200 1500
+	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5B7D0D62
-P 1600 2400
+P 2400 1500
 AR Path="/5B62EDB8/5B7D0D62" Ref="#PWR?"  Part="1" 
-AR Path="/5B72552B/5B7D0D62" Ref="#PWR03609"  Part="1" 
-F 0 "#PWR03609" H 1600 2150 50  0001 C CNN
-F 1 "GND" V 1605 2272 50  0000 R CNN
-F 2 "" H 1600 2400 50  0001 C CNN
-F 3 "" H 1600 2400 50  0001 C CNN
-	1    1600 2400
-	0    1    1    0   
+AR Path="/5B72552B/5B7D0D62" Ref="#PWR03507"  Part="1" 
+F 0 "#PWR03507" H 2400 1250 50  0001 C CNN
+F 1 "GND" V 2405 1372 50  0000 R CNN
+F 2 "" H 2400 1500 50  0001 C CNN
+F 3 "" H 2400 1500 50  0001 C CNN
+	1    2400 1500
+	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5B7D0D8D
-P 1600 2600
+P 2600 1500
 AR Path="/5B62EDB8/5B7D0D8D" Ref="#PWR?"  Part="1" 
-AR Path="/5B72552B/5B7D0D8D" Ref="#PWR03610"  Part="1" 
-F 0 "#PWR03610" H 1600 2350 50  0001 C CNN
-F 1 "GND" V 1605 2472 50  0000 R CNN
-F 2 "" H 1600 2600 50  0001 C CNN
-F 3 "" H 1600 2600 50  0001 C CNN
-	1    1600 2600
-	0    1    1    0   
+AR Path="/5B72552B/5B7D0D8D" Ref="#PWR03508"  Part="1" 
+F 0 "#PWR03508" H 2600 1250 50  0001 C CNN
+F 1 "GND" V 2605 1372 50  0000 R CNN
+F 2 "" H 2600 1500 50  0001 C CNN
+F 3 "" H 2600 1500 50  0001 C CNN
+	1    2600 1500
+	1    0    0    -1  
 $EndComp
-Text GLabel 2800 2250 3    50   Input ~ 0
+Text GLabel 3350 2350 3    50   Input ~ 0
 12V_PWR
-Text GLabel 3100 2250 3    50   Input ~ 0
+Text GLabel 3650 2350 3    50   Input ~ 0
 12V_PWR
-Text GLabel 3400 2250 3    50   Input ~ 0
-12V_PWR
-Text GLabel 6300 1150 2    50   Input ~ 0
-12V_PWR
-$Comp
-L Device:Fuse F?
-U 1 1 5B7549B6
-P 6700 1050
-AR Path="/5B61ECB9/5B7549B6" Ref="F?"  Part="1" 
-AR Path="/5B72552B/5B7549B6" Ref="F3610"  Part="1" 
-F 0 "F3610" V 6503 1050 50  0000 C CNN
-F 1 "xA" V 6594 1050 50  0000 C CNN
-F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 6630 1050 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 6700 1050 50  0001 C CNN
-	1    6700 1050
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6550 1050 6300 1050
-$Comp
-L Connector_Generic:Conn_01x03 J?
-U 1 1 5B755D38
-P 6100 1600
-AR Path="/5B62EDB8/5B755D38" Ref="J?"  Part="1" 
-AR Path="/5B72552B/5B755D38" Ref="J3607"  Part="1" 
-F 0 "J3607" H 6100 1275 50  0000 C CNN
-F 1 "DO2_PWR" H 6100 1366 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" V 6188 1526 50  0001 C CNN
-F 3 "" H 6100 1600 50  0001 C CNN
-	1    6100 1600
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:+5V #PWR?
-U 1 1 5B755D3F
-P 6300 1500
-AR Path="/5B62EDB8/5B755D3F" Ref="#PWR?"  Part="1" 
-AR Path="/5B72552B/5B755D3F" Ref="#PWR03618"  Part="1" 
-F 0 "#PWR03618" H 6300 1350 50  0001 C CNN
-F 1 "+5V" V 6315 1628 50  0000 L CNN
-F 2 "" H 6300 1500 50  0001 C CNN
-F 3 "" H 6300 1500 50  0001 C CNN
-	1    6300 1500
-	0    1    1    0   
-$EndComp
-Text GLabel 6300 1700 2    50   Input ~ 0
-12V_PWR
-$Comp
-L Device:Fuse F?
-U 1 1 5B755D46
-P 6700 1600
-AR Path="/5B61ECB9/5B755D46" Ref="F?"  Part="1" 
-AR Path="/5B72552B/5B755D46" Ref="F3611"  Part="1" 
-F 0 "F3611" V 6503 1600 50  0000 C CNN
-F 1 "xA" V 6594 1600 50  0000 C CNN
-F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 6630 1600 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 6700 1600 50  0001 C CNN
-	1    6700 1600
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6550 1600 6300 1600
-$Comp
-L Connector_Generic:Conn_01x03 J?
-U 1 1 5B755D91
-P 6100 2150
-AR Path="/5B62EDB8/5B755D91" Ref="J?"  Part="1" 
-AR Path="/5B72552B/5B755D91" Ref="J3608"  Part="1" 
-F 0 "J3608" H 6100 1825 50  0000 C CNN
-F 1 "DO3_PWR" H 6100 1916 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" V 6188 2076 50  0001 C CNN
-F 3 "" H 6100 2150 50  0001 C CNN
-	1    6100 2150
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:+5V #PWR?
-U 1 1 5B755D98
-P 6300 2050
-AR Path="/5B62EDB8/5B755D98" Ref="#PWR?"  Part="1" 
-AR Path="/5B72552B/5B755D98" Ref="#PWR03619"  Part="1" 
-F 0 "#PWR03619" H 6300 1900 50  0001 C CNN
-F 1 "+5V" V 6315 2178 50  0000 L CNN
-F 2 "" H 6300 2050 50  0001 C CNN
-F 3 "" H 6300 2050 50  0001 C CNN
-	1    6300 2050
-	0    1    1    0   
-$EndComp
-Text GLabel 6300 2250 2    50   Input ~ 0
-12V_PWR
-$Comp
-L Device:Fuse F?
-U 1 1 5B755D9F
-P 6700 2150
-AR Path="/5B61ECB9/5B755D9F" Ref="F?"  Part="1" 
-AR Path="/5B72552B/5B755D9F" Ref="F3612"  Part="1" 
-F 0 "F3612" V 6503 2150 50  0000 C CNN
-F 1 "xA" V 6594 2150 50  0000 C CNN
-F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 6630 2150 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 6700 2150 50  0001 C CNN
-	1    6700 2150
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6550 2150 6300 2150
-$Comp
-L Connector_Generic:Conn_01x03 J?
-U 1 1 5B755DDE
-P 6100 2700
-AR Path="/5B62EDB8/5B755DDE" Ref="J?"  Part="1" 
-AR Path="/5B72552B/5B755DDE" Ref="J3609"  Part="1" 
-F 0 "J3609" H 6100 2375 50  0000 C CNN
-F 1 "DO4_PWR" H 6100 2466 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" V 6188 2626 50  0001 C CNN
-F 3 "" H 6100 2700 50  0001 C CNN
-	1    6100 2700
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:+5V #PWR?
-U 1 1 5B755DE5
-P 6300 2600
-AR Path="/5B62EDB8/5B755DE5" Ref="#PWR?"  Part="1" 
-AR Path="/5B72552B/5B755DE5" Ref="#PWR03620"  Part="1" 
-F 0 "#PWR03620" H 6300 2450 50  0001 C CNN
-F 1 "+5V" V 6315 2728 50  0000 L CNN
-F 2 "" H 6300 2600 50  0001 C CNN
-F 3 "" H 6300 2600 50  0001 C CNN
-	1    6300 2600
-	0    1    1    0   
-$EndComp
-Text GLabel 6300 2800 2    50   Input ~ 0
-12V_PWR
-$Comp
-L Device:Fuse F?
-U 1 1 5B755DEC
-P 6700 2700
-AR Path="/5B61ECB9/5B755DEC" Ref="F?"  Part="1" 
-AR Path="/5B72552B/5B755DEC" Ref="F3613"  Part="1" 
-F 0 "F3613" V 6503 2700 50  0000 C CNN
-F 1 "xA" V 6594 2700 50  0000 C CNN
-F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 6630 2700 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 6700 2700 50  0001 C CNN
-	1    6700 2700
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6550 2700 6300 2700
-$Comp
-L Connector_Generic:Conn_01x03 J?
-U 1 1 5B755FA6
-P 6100 3250
-AR Path="/5B62EDB8/5B755FA6" Ref="J?"  Part="1" 
-AR Path="/5B72552B/5B755FA6" Ref="J3610"  Part="1" 
-F 0 "J3610" H 6100 2925 50  0000 C CNN
-F 1 "DO5_PWR" H 6100 3016 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" V 6188 3176 50  0001 C CNN
-F 3 "" H 6100 3250 50  0001 C CNN
-	1    6100 3250
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:+5V #PWR?
-U 1 1 5B755FAD
-P 6300 3150
-AR Path="/5B62EDB8/5B755FAD" Ref="#PWR?"  Part="1" 
-AR Path="/5B72552B/5B755FAD" Ref="#PWR03621"  Part="1" 
-F 0 "#PWR03621" H 6300 3000 50  0001 C CNN
-F 1 "+5V" V 6315 3278 50  0000 L CNN
-F 2 "" H 6300 3150 50  0001 C CNN
-F 3 "" H 6300 3150 50  0001 C CNN
-	1    6300 3150
-	0    1    1    0   
-$EndComp
-Text GLabel 6300 3350 2    50   Input ~ 0
-12V_PWR
-$Comp
-L Device:Fuse F?
-U 1 1 5B755FB4
-P 6700 3250
-AR Path="/5B61ECB9/5B755FB4" Ref="F?"  Part="1" 
-AR Path="/5B72552B/5B755FB4" Ref="F3614"  Part="1" 
-F 0 "F3614" V 6503 3250 50  0000 C CNN
-F 1 "xA" V 6594 3250 50  0000 C CNN
-F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 6630 3250 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 6700 3250 50  0001 C CNN
-	1    6700 3250
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6550 3250 6300 3250
-$Comp
-L Connector_Generic:Conn_01x03 J?
-U 1 1 5B756008
-P 6100 3800
-AR Path="/5B62EDB8/5B756008" Ref="J?"  Part="1" 
-AR Path="/5B72552B/5B756008" Ref="J3611"  Part="1" 
-F 0 "J3611" H 6100 3475 50  0000 C CNN
-F 1 "DO6_PWR" H 6100 3566 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" V 6188 3726 50  0001 C CNN
-F 3 "" H 6100 3800 50  0001 C CNN
-	1    6100 3800
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:+5V #PWR?
-U 1 1 5B75600F
-P 6300 3700
-AR Path="/5B62EDB8/5B75600F" Ref="#PWR?"  Part="1" 
-AR Path="/5B72552B/5B75600F" Ref="#PWR03622"  Part="1" 
-F 0 "#PWR03622" H 6300 3550 50  0001 C CNN
-F 1 "+5V" V 6315 3828 50  0000 L CNN
-F 2 "" H 6300 3700 50  0001 C CNN
-F 3 "" H 6300 3700 50  0001 C CNN
-	1    6300 3700
-	0    1    1    0   
-$EndComp
-Text GLabel 6300 3900 2    50   Input ~ 0
-12V_PWR
-$Comp
-L Device:Fuse F?
-U 1 1 5B756016
-P 6700 3800
-AR Path="/5B61ECB9/5B756016" Ref="F?"  Part="1" 
-AR Path="/5B72552B/5B756016" Ref="F3615"  Part="1" 
-F 0 "F3615" V 6503 3800 50  0000 C CNN
-F 1 "xA" V 6594 3800 50  0000 C CNN
-F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 6630 3800 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 6700 3800 50  0001 C CNN
-	1    6700 3800
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6550 3800 6300 3800
 $Comp
 L Device:Fuse F?
 U 1 1 5B75939B
-P 3700 2100
+P 3950 2200
 AR Path="/5B61ECB9/5B75939B" Ref="F?"  Part="1" 
-AR Path="/5B72552B/5B75939B" Ref="F3604"  Part="1" 
-F 0 "F3604" V 3503 2100 50  0000 C CNN
-F 1 "xA" V 3594 2100 50  0000 C CNN
-F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 3630 2100 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 3700 2100 50  0001 C CNN
-	1    3700 2100
+AR Path="/5B72552B/5B75939B" Ref="F3503"  Part="1" 
+F 0 "F3503" V 3753 2200 50  0000 C CNN
+F 1 "xA" V 3844 2200 50  0000 C CNN
+F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 3880 2200 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 3950 2200 50  0001 C CNN
+	1    3950 2200
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:Fuse F?
 U 1 1 5B75A322
-P 4000 2100
+P 4250 2200
 AR Path="/5B61ECB9/5B75A322" Ref="F?"  Part="1" 
-AR Path="/5B72552B/5B75A322" Ref="F3605"  Part="1" 
-F 0 "F3605" V 3803 2100 50  0000 C CNN
-F 1 "xA" V 3894 2100 50  0000 C CNN
-F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 3930 2100 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 4000 2100 50  0001 C CNN
-	1    4000 2100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Fuse F?
-U 1 1 5B75A3AB
-P 4300 2100
-AR Path="/5B61ECB9/5B75A3AB" Ref="F?"  Part="1" 
-AR Path="/5B72552B/5B75A3AB" Ref="F3606"  Part="1" 
-F 0 "F3606" V 4103 2100 50  0000 C CNN
-F 1 "xA" V 4194 2100 50  0000 C CNN
-F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 4230 2100 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 4300 2100 50  0001 C CNN
-	1    4300 2100
+AR Path="/5B72552B/5B75A322" Ref="F3504"  Part="1" 
+F 0 "F3504" V 4053 2200 50  0000 C CNN
+F 1 "xA" V 4144 2200 50  0000 C CNN
+F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 4180 2200 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 4250 2200 50  0001 C CNN
+	1    4250 2200
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:Fuse F?
 U 1 1 5B75A435
-P 4600 2100
+P 4550 2200
 AR Path="/5B61ECB9/5B75A435" Ref="F?"  Part="1" 
-AR Path="/5B72552B/5B75A435" Ref="F3607"  Part="1" 
-F 0 "F3607" V 4403 2100 50  0000 C CNN
-F 1 "xA" V 4494 2100 50  0000 C CNN
-F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 4530 2100 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 4600 2100 50  0001 C CNN
-	1    4600 2100
+AR Path="/5B72552B/5B75A435" Ref="F3505"  Part="1" 
+F 0 "F3505" V 4353 2200 50  0000 C CNN
+F 1 "xA" V 4444 2200 50  0000 C CNN
+F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 4480 2200 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 4550 2200 50  0001 C CNN
+	1    4550 2200
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:Fuse F?
 U 1 1 5B75A4BA
-P 4900 2100
+P 4850 2200
 AR Path="/5B61ECB9/5B75A4BA" Ref="F?"  Part="1" 
-AR Path="/5B72552B/5B75A4BA" Ref="F3608"  Part="1" 
-F 0 "F3608" V 4703 2100 50  0000 C CNN
-F 1 "xA" V 4794 2100 50  0000 C CNN
-F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 4830 2100 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 4900 2100 50  0001 C CNN
-	1    4900 2100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Fuse F?
-U 1 1 5B75A542
-P 5200 2100
-AR Path="/5B61ECB9/5B75A542" Ref="F?"  Part="1" 
-AR Path="/5B72552B/5B75A542" Ref="F3609"  Part="1" 
-F 0 "F3609" V 5003 2100 50  0000 C CNN
-F 1 "xA" V 5094 2100 50  0000 C CNN
-F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 5130 2100 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 5200 2100 50  0001 C CNN
-	1    5200 2100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Fuse F?
-U 1 1 5B75A707
-P 3400 2100
-AR Path="/5B61ECB9/5B75A707" Ref="F?"  Part="1" 
-AR Path="/5B72552B/5B75A707" Ref="F3603"  Part="1" 
-F 0 "F3603" V 3203 2100 50  0000 C CNN
-F 1 "xA" V 3294 2100 50  0000 C CNN
-F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 3330 2100 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 3400 2100 50  0001 C CNN
-	1    3400 2100
+AR Path="/5B72552B/5B75A4BA" Ref="F3506"  Part="1" 
+F 0 "F3506" V 4653 2200 50  0000 C CNN
+F 1 "xA" V 4744 2200 50  0000 C CNN
+F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 4780 2200 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 4850 2200 50  0001 C CNN
+	1    4850 2200
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:Fuse F?
 U 1 1 5B75A795
-P 3100 2100
+P 3650 2200
 AR Path="/5B61ECB9/5B75A795" Ref="F?"  Part="1" 
-AR Path="/5B72552B/5B75A795" Ref="F3602"  Part="1" 
-F 0 "F3602" V 2903 2100 50  0000 C CNN
-F 1 "xA" V 2994 2100 50  0000 C CNN
-F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 3030 2100 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 3100 2100 50  0001 C CNN
-	1    3100 2100
+AR Path="/5B72552B/5B75A795" Ref="F3502"  Part="1" 
+F 0 "F3502" V 3453 2200 50  0000 C CNN
+F 1 "xA" V 3544 2200 50  0000 C CNN
+F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 3580 2200 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 3650 2200 50  0001 C CNN
+	1    3650 2200
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:Fuse F?
 U 1 1 5B75A822
-P 2800 2100
+P 3350 2200
 AR Path="/5B61ECB9/5B75A822" Ref="F?"  Part="1" 
-AR Path="/5B72552B/5B75A822" Ref="F3601"  Part="1" 
-F 0 "F3601" V 2603 2100 50  0000 C CNN
-F 1 "xA" V 2694 2100 50  0000 C CNN
-F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 2730 2100 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 2800 2100 50  0001 C CNN
-	1    2800 2100
+AR Path="/5B72552B/5B75A822" Ref="F3501"  Part="1" 
+F 0 "F3501" V 3153 2200 50  0000 C CNN
+F 1 "xA" V 3244 2200 50  0000 C CNN
+F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 3280 2200 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 3350 2200 50  0001 C CNN
+	1    3350 2200
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR03611
+L power:+5V #PWR03511
 U 1 1 5B75AF36
-P 3700 2250
-F 0 "#PWR03611" H 3700 2100 50  0001 C CNN
-F 1 "+5V" V 3715 2378 50  0000 L CNN
-F 2 "" H 3700 2250 50  0001 C CNN
-F 3 "" H 3700 2250 50  0001 C CNN
-	1    3700 2250
+P 3950 2350
+F 0 "#PWR03511" H 3950 2200 50  0001 C CNN
+F 1 "+5V" V 3965 2478 50  0000 L CNN
+F 2 "" H 3950 2350 50  0001 C CNN
+F 3 "" H 3950 2350 50  0001 C CNN
+	1    3950 2350
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:+5V #PWR03612
+L power:+5V #PWR03513
 U 1 1 5B75AF87
-P 4000 2250
-F 0 "#PWR03612" H 4000 2100 50  0001 C CNN
-F 1 "+5V" V 4015 2378 50  0000 L CNN
-F 2 "" H 4000 2250 50  0001 C CNN
-F 3 "" H 4000 2250 50  0001 C CNN
-	1    4000 2250
+P 4250 2350
+F 0 "#PWR03513" H 4250 2200 50  0001 C CNN
+F 1 "+5V" V 4265 2478 50  0000 L CNN
+F 2 "" H 4250 2350 50  0001 C CNN
+F 3 "" H 4250 2350 50  0001 C CNN
+	1    4250 2350
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:+5V #PWR03613
-U 1 1 5B75AFD8
-P 4300 2250
-F 0 "#PWR03613" H 4300 2100 50  0001 C CNN
-F 1 "+5V" V 4315 2378 50  0000 L CNN
-F 2 "" H 4300 2250 50  0001 C CNN
-F 3 "" H 4300 2250 50  0001 C CNN
-	1    4300 2250
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:+3V3 #PWR03614
+L power:+3V3 #PWR03515
 U 1 1 5B75B029
-P 4600 2250
-F 0 "#PWR03614" H 4600 2100 50  0001 C CNN
-F 1 "+3V3" V 4615 2378 50  0000 L CNN
-F 2 "" H 4600 2250 50  0001 C CNN
-F 3 "" H 4600 2250 50  0001 C CNN
-	1    4600 2250
+P 4550 2350
+F 0 "#PWR03515" H 4550 2200 50  0001 C CNN
+F 1 "+3V3" V 4565 2478 50  0000 L CNN
+F 2 "" H 4550 2350 50  0001 C CNN
+F 3 "" H 4550 2350 50  0001 C CNN
+	1    4550 2350
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:+3V3 #PWR03615
+L power:+3V3 #PWR03516
 U 1 1 5B75B07A
-P 4900 2250
-F 0 "#PWR03615" H 4900 2100 50  0001 C CNN
-F 1 "+3V3" V 4915 2378 50  0000 L CNN
-F 2 "" H 4900 2250 50  0001 C CNN
-F 3 "" H 4900 2250 50  0001 C CNN
-	1    4900 2250
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:+3V3 #PWR03616
-U 1 1 5B75B0CB
-P 5200 2250
-F 0 "#PWR03616" H 5200 2100 50  0001 C CNN
-F 1 "+3V3" V 5215 2378 50  0000 L CNN
-F 2 "" H 5200 2250 50  0001 C CNN
-F 3 "" H 5200 2250 50  0001 C CNN
-	1    5200 2250
+P 4850 2350
+F 0 "#PWR03516" H 4850 2200 50  0001 C CNN
+F 1 "+3V3" V 4865 2478 50  0000 L CNN
+F 2 "" H 4850 2350 50  0001 C CNN
+F 3 "" H 4850 2350 50  0001 C CNN
+	1    4850 2350
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	4000 1500 4000 1950
+	4550 1600 4550 2050
 Wire Wire Line
-	3900 1500 3900 1950
+	4450 1600 4450 2050
 Wire Wire Line
-	3900 1950 3700 1950
+	4450 2050 4250 2050
 Wire Wire Line
-	4100 1500 4100 1950
+	4650 1600 4650 2050
 Wire Wire Line
-	4100 1950 4300 1950
+	4650 2050 4850 2050
 Wire Wire Line
-	4200 1500 4200 1900
+	4350 1600 4350 2000
 Wire Wire Line
-	4200 1900 4600 1900
+	4350 2000 3950 2000
 Wire Wire Line
-	4600 1900 4600 1950
+	3950 2000 3950 2050
 Wire Wire Line
-	3800 1500 3800 1900
+	4250 1600 4250 1950
 Wire Wire Line
-	3800 1900 3400 1900
+	4250 1950 3650 1950
 Wire Wire Line
-	3400 1900 3400 1950
+	3650 1950 3650 2050
 Wire Wire Line
-	3700 1500 3700 1850
+	4150 1600 4150 1900
 Wire Wire Line
-	3700 1850 3100 1850
+	4150 1900 3350 1900
 Wire Wire Line
-	3100 1850 3100 1950
-Wire Wire Line
-	3600 1500 3600 1800
-Wire Wire Line
-	3600 1800 2800 1800
-Wire Wire Line
-	2800 1800 2800 1950
-Wire Wire Line
-	4300 1500 4300 1850
-Wire Wire Line
-	4300 1850 4900 1850
-Wire Wire Line
-	4900 1850 4900 1950
-Wire Wire Line
-	4400 1500 4400 1800
-Wire Wire Line
-	4400 1800 5200 1800
-Wire Wire Line
-	5200 1800 5200 1950
-Wire Wire Line
-	6850 1050 7800 1050
-Wire Wire Line
-	7800 1050 7800 1750
-Wire Wire Line
-	6850 1600 7100 1600
-Wire Wire Line
-	7100 1600 7100 1950
-Wire Wire Line
-	7100 1950 7800 1950
-Wire Wire Line
-	6850 2150 7800 2150
-Wire Wire Line
-	6850 2700 6850 2350
-Wire Wire Line
-	6850 2350 7800 2350
-Wire Wire Line
-	6850 3250 7800 3250
-Wire Wire Line
-	7800 3250 7800 2550
-Wire Wire Line
-	7800 3800 6850 3800
-Text GLabel 7800 4100 0    50   Input ~ 0
-DO7_GND_BREAK
-Text GLabel 7800 4300 0    50   Input ~ 0
-DO8_GND_BREAK
+	3350 1900 3350 2050
 $Comp
-L Connector_Generic:Conn_01x03 J?
-U 1 1 5BA24D87
-P 6100 4350
-AR Path="/5B62EDB8/5BA24D87" Ref="J?"  Part="1" 
-AR Path="/5B72552B/5BA24D87" Ref="J3612"  Part="1" 
-F 0 "J3612" H 6100 4025 50  0000 C CNN
-F 1 "DO7_PWR" H 6100 4116 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" V 6188 4276 50  0001 C CNN
-F 3 "" H 6100 4350 50  0001 C CNN
-	1    6100 4350
-	-1   0    0    1   
+L power:GND #PWR03509
+U 1 1 5BA10B19
+P 3850 1600
+F 0 "#PWR03509" H 3850 1350 50  0001 C CNN
+F 1 "GND" H 3855 1427 50  0000 C CNN
+F 2 "" H 3850 1600 50  0001 C CNN
+F 3 "" H 3850 1600 50  0001 C CNN
+	1    3850 1600
+	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR?
-U 1 1 5BA24D8E
-P 6300 4250
-AR Path="/5B62EDB8/5BA24D8E" Ref="#PWR?"  Part="1" 
-AR Path="/5B72552B/5BA24D8E" Ref="#PWR03623"  Part="1" 
-F 0 "#PWR03623" H 6300 4100 50  0001 C CNN
-F 1 "+5V" V 6315 4378 50  0000 L CNN
-F 2 "" H 6300 4250 50  0001 C CNN
-F 3 "" H 6300 4250 50  0001 C CNN
-	1    6300 4250
-	0    1    1    0   
-$EndComp
-Text GLabel 6300 4450 2    50   Input ~ 0
-12V_PWR
-$Comp
-L Device:Fuse F?
-U 1 1 5BA24D95
-P 6700 4350
-AR Path="/5B61ECB9/5BA24D95" Ref="F?"  Part="1" 
-AR Path="/5B72552B/5BA24D95" Ref="F3616"  Part="1" 
-F 0 "F3616" V 6503 4350 50  0000 C CNN
-F 1 "xA" V 6594 4350 50  0000 C CNN
-F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 6630 4350 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 6700 4350 50  0001 C CNN
-	1    6700 4350
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6550 4350 6300 4350
-$Comp
-L Connector_Generic:Conn_01x03 J?
-U 1 1 5BA25430
-P 6100 4900
-AR Path="/5B62EDB8/5BA25430" Ref="J?"  Part="1" 
-AR Path="/5B72552B/5BA25430" Ref="J3613"  Part="1" 
-F 0 "J3613" H 6100 4575 50  0000 C CNN
-F 1 "DO8_PWR" H 6100 4666 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" V 6188 4826 50  0001 C CNN
-F 3 "" H 6100 4900 50  0001 C CNN
-	1    6100 4900
-	-1   0    0    1   
+L power:GND #PWR03510
+U 1 1 5BA116DF
+P 3950 1600
+F 0 "#PWR03510" H 3950 1350 50  0001 C CNN
+F 1 "GND" H 3955 1427 50  0000 C CNN
+F 2 "" H 3950 1600 50  0001 C CNN
+F 3 "" H 3950 1600 50  0001 C CNN
+	1    3950 1600
+	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR?
-U 1 1 5BA25437
-P 6300 4800
-AR Path="/5B62EDB8/5BA25437" Ref="#PWR?"  Part="1" 
-AR Path="/5B72552B/5BA25437" Ref="#PWR03624"  Part="1" 
-F 0 "#PWR03624" H 6300 4650 50  0001 C CNN
-F 1 "+5V" V 6315 4928 50  0000 L CNN
-F 2 "" H 6300 4800 50  0001 C CNN
-F 3 "" H 6300 4800 50  0001 C CNN
-	1    6300 4800
-	0    1    1    0   
+L power:GND #PWR03512
+U 1 1 5BA11728
+P 4050 1600
+F 0 "#PWR03512" H 4050 1350 50  0001 C CNN
+F 1 "GND" H 4055 1427 50  0000 C CNN
+F 2 "" H 4050 1600 50  0001 C CNN
+F 3 "" H 4050 1600 50  0001 C CNN
+	1    4050 1600
+	1    0    0    -1  
 $EndComp
-Text GLabel 6300 5000 2    50   Input ~ 0
-12V_PWR
+Text GLabel 5700 1600 3    50   Input ~ 0
+DO1_PWR
+Text GLabel 5900 1600 3    50   Input ~ 0
+DO2_PWR
+Text GLabel 6100 1600 3    50   Input ~ 0
+DO3_PWR
+Text GLabel 6300 1600 3    50   Input ~ 0
+DO4_PWR
+Text GLabel 6550 1600 3    50   Input ~ 0
+DO5_PWR
+Text GLabel 6750 1600 3    50   Input ~ 0
+DO6_PWR
+Text GLabel 6950 1600 3    50   Input ~ 0
+DO7_PWR
+Text GLabel 7150 1600 3    50   Input ~ 0
+DO8_PWR
 $Comp
-L Device:Fuse F?
-U 1 1 5BA2543E
-P 6700 4900
-AR Path="/5B61ECB9/5BA2543E" Ref="F?"  Part="1" 
-AR Path="/5B72552B/5BA2543E" Ref="F3617"  Part="1" 
-F 0 "F3617" V 6503 4900 50  0000 C CNN
-F 1 "xA" V 6594 4900 50  0000 C CNN
-F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 6630 4900 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 6700 4900 50  0001 C CNN
-	1    6700 4900
-	0    1    1    0   
+L power:GND #PWR03524
+U 1 1 5BA2702C
+P 7050 1600
+F 0 "#PWR03524" H 7050 1350 50  0001 C CNN
+F 1 "GND" V 7055 1472 50  0000 R CNN
+F 2 "" H 7050 1600 50  0001 C CNN
+F 3 "" H 7050 1600 50  0001 C CNN
+	1    7050 1600
+	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6550 4900 6300 4900
-Wire Wire Line
-	6850 4350 6900 4350
-Wire Wire Line
-	6900 4350 6900 4000
-Wire Wire Line
-	6900 4000 7800 4000
-Wire Wire Line
-	6850 4900 7000 4900
-Wire Wire Line
-	7000 4900 7000 4200
-Wire Wire Line
-	7000 4200 7800 4200
+$Comp
+L power:GND #PWR03523
+U 1 1 5BA2709B
+P 6850 1600
+F 0 "#PWR03523" H 6850 1350 50  0001 C CNN
+F 1 "GND" V 6855 1472 50  0000 R CNN
+F 2 "" H 6850 1600 50  0001 C CNN
+F 3 "" H 6850 1600 50  0001 C CNN
+	1    6850 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03522
+U 1 1 5BA270E4
+P 6650 1600
+F 0 "#PWR03522" H 6650 1350 50  0001 C CNN
+F 1 "GND" V 6655 1472 50  0000 R CNN
+F 2 "" H 6650 1600 50  0001 C CNN
+F 3 "" H 6650 1600 50  0001 C CNN
+	1    6650 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03521
+U 1 1 5BA2712D
+P 6400 1600
+F 0 "#PWR03521" H 6400 1350 50  0001 C CNN
+F 1 "GND" V 6405 1472 50  0000 R CNN
+F 2 "" H 6400 1600 50  0001 C CNN
+F 3 "" H 6400 1600 50  0001 C CNN
+	1    6400 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03520
+U 1 1 5BA2728D
+P 6200 1600
+F 0 "#PWR03520" H 6200 1350 50  0001 C CNN
+F 1 "GND" V 6205 1472 50  0000 R CNN
+F 2 "" H 6200 1600 50  0001 C CNN
+F 3 "" H 6200 1600 50  0001 C CNN
+	1    6200 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03519
+U 1 1 5BA272D6
+P 6000 1600
+F 0 "#PWR03519" H 6000 1350 50  0001 C CNN
+F 1 "GND" V 6005 1472 50  0000 R CNN
+F 2 "" H 6000 1600 50  0001 C CNN
+F 3 "" H 6000 1600 50  0001 C CNN
+	1    6000 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03518
+U 1 1 5BA2731F
+P 5800 1600
+F 0 "#PWR03518" H 5800 1350 50  0001 C CNN
+F 1 "GND" V 5805 1472 50  0000 R CNN
+F 2 "" H 5800 1600 50  0001 C CNN
+F 3 "" H 5800 1600 50  0001 C CNN
+	1    5800 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03517
+U 1 1 5BA274BD
+P 5600 1600
+F 0 "#PWR03517" H 5600 1350 50  0001 C CNN
+F 1 "GND" V 5605 1472 50  0000 R CNN
+F 2 "" H 5600 1600 50  0001 C CNN
+F 3 "" H 5600 1600 50  0001 C CNN
+	1    5600 1600
+	1    0    0    -1  
+$EndComp
+Text GLabel 7350 1600 3    50   Input ~ 0
+BELL_PWR
+Text GLabel 7800 1600 3    50   Input ~ 0
+SIREN_PWR
+Text Notes 1250 2250 0    50   ~ 0
+Analog sensors sense voltage level based on\n resistance between SenseN_DUT and GND
+$Comp
+L Connector_Generic:Conn_01x09 J?
+U 1 1 5B7255A4
+P 6950 1400
+AR Path="/5B62EDB8/5B7255A4" Ref="J?"  Part="1" 
+AR Path="/5B72552B/5B7255A4" Ref="J3508"  Part="1" 
+F 0 "J3508" V 7074 1396 50  0000 C CNN
+F 1 "Digital output" V 7165 1396 50  0000 C CNN
+F 2 "PerMalmberg:MOLEX_1x9_39544-3009" H 6950 1400 50  0001 C CNN
+F 3 "http://www.mouser.se/ProductDetail/Molex/39544-3009/?qs=sGAEpiMZZMvZTcaMAxB2ALD5K2s4Cmud0QE50Luvbic%3d" H 6950 1400 50  0001 C CNN
+	1    6950 1400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR03525
+U 1 1 5BA40182
+P 7250 1600
+F 0 "#PWR03525" H 7250 1350 50  0001 C CNN
+F 1 "GND" V 7255 1472 50  0000 R CNN
+F 2 "" H 7250 1600 50  0001 C CNN
+F 3 "" H 7250 1600 50  0001 C CNN
+	1    7250 1600
+	1    0    0    -1  
+$EndComp
+Text GLabel 4200 3450 3    50   Input ~ 0
+DI8_PWR
+Text GLabel 3900 3450 3    50   Input ~ 0
+DI7_PWR
+Text GLabel 3600 3450 3    50   Input ~ 0
+DI6_PWR
+Text GLabel 3300 3450 3    50   Input ~ 0
+DI5_PWR
+Text GLabel 3000 3450 3    50   Input ~ 0
+DI4_PWR
+Text GLabel 2650 3450 3    50   Input ~ 0
+DI3_PWR
+Text GLabel 2350 3450 3    50   Input ~ 0
+DI2_PWR
+Text GLabel 2050 3450 3    50   Input ~ 0
+DI1_PWR
+$Comp
+L Connector_Generic:Conn_01x09 J?
+U 1 1 5BA569BF
+P 4300 3250
+AR Path="/5B62EDB8/5BA569BF" Ref="J?"  Part="1" 
+AR Path="/5B72552B/5BA569BF" Ref="J3506"  Part="1" 
+F 0 "J3506" V 4424 3246 50  0000 C CNN
+F 1 "Digital input" V 4515 3246 50  0000 C CNN
+F 2 "PerMalmberg:MOLEX_1x9_39544-3009" H 4300 3250 50  0001 C CNN
+F 3 "http://www.mouser.se/ProductDetail/Molex/39544-3009/?qs=sGAEpiMZZMvZTcaMAxB2ALD5K2s4Cmud0QE50Luvbic%3d" H 4300 3250 50  0001 C CNN
+	1    4300 3250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR03528
+U 1 1 5BA434CC
+P 7900 1600
+F 0 "#PWR03528" H 7900 1350 50  0001 C CNN
+F 1 "GND" H 7905 1427 50  0000 C CNN
+F 2 "" H 7900 1600 50  0001 C CNN
+F 3 "" H 7900 1600 50  0001 C CNN
+	1    7900 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x09 J?
+U 1 1 5BA42F05
+P 7900 1400
+AR Path="/5B62EDB8/5BA42F05" Ref="J?"  Part="1" 
+AR Path="/5B72552B/5BA42F05" Ref="J3509"  Part="1" 
+F 0 "J3509" V 8024 1396 50  0000 C CNN
+F 1 "Digital output" V 8115 1396 50  0000 C CNN
+F 2 "PerMalmberg:MOLEX_1x9_39544-3009" H 7900 1400 50  0001 C CNN
+F 3 "http://www.mouser.se/ProductDetail/Molex/39544-3009/?qs=sGAEpiMZZMvZTcaMAxB2ALD5K2s4Cmud0QE50Luvbic%3d" H 7900 1400 50  0001 C CNN
+	1    7900 1400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR03526
+U 1 1 5BA573FC
+P 7500 1600
+F 0 "#PWR03526" H 7500 1350 50  0001 C CNN
+F 1 "GND" H 7505 1427 50  0000 C CNN
+F 2 "" H 7500 1600 50  0001 C CNN
+F 3 "" H 7500 1600 50  0001 C CNN
+	1    7500 1600
+	1    0    0    -1  
+$EndComp
+Text GLabel 8000 1600 3    50   Input ~ 0
+SIREN_PWR
+$Comp
+L power:GND #PWR03529
+U 1 1 5BA57E83
+P 8100 1600
+F 0 "#PWR03529" H 8100 1350 50  0001 C CNN
+F 1 "GND" H 8105 1427 50  0000 C CNN
+F 2 "" H 8100 1600 50  0001 C CNN
+F 3 "" H 8100 1600 50  0001 C CNN
+	1    8100 1600
+	1    0    0    -1  
+$EndComp
+Text GLabel 7600 1600 3    50   Input ~ 0
+BELL_PWR
+$Comp
+L power:GND #PWR03527
+U 1 1 5BA57FB0
+P 7700 1600
+F 0 "#PWR03527" H 7700 1350 50  0001 C CNN
+F 1 "GND" H 7705 1427 50  0000 C CNN
+F 2 "" H 7700 1600 50  0001 C CNN
+F 3 "" H 7700 1600 50  0001 C CNN
+	1    7700 1600
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2900 1500
+NoConn ~ 2800 1500
+$Comp
+L power:GND #PWR03530
+U 1 1 5BA58F3C
+P 8200 1600
+F 0 "#PWR03530" H 8200 1350 50  0001 C CNN
+F 1 "GND" H 8205 1427 50  0000 C CNN
+F 2 "" H 8200 1600 50  0001 C CNN
+F 3 "" H 8200 1600 50  0001 C CNN
+	1    8200 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03531
+U 1 1 5BA58F65
+P 8300 1600
+F 0 "#PWR03531" H 8300 1350 50  0001 C CNN
+F 1 "GND" H 8305 1427 50  0000 C CNN
+F 2 "" H 8300 1600 50  0001 C CNN
+F 3 "" H 8300 1600 50  0001 C CNN
+	1    8300 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03514
+U 1 1 5BA59123
+P 4500 3450
+F 0 "#PWR03514" H 4500 3200 50  0001 C CNN
+F 1 "GND" H 4505 3277 50  0000 C CNN
+F 2 "" H 4500 3450 50  0001 C CNN
+F 3 "" H 4500 3450 50  0001 C CNN
+	1    4500 3450
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
