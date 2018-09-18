@@ -432,14 +432,14 @@ F 3 "" H 5700 4200 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6750 3000 6900 3000
-Text Label 7100 2400 2    50   ~ 0
-SD_SPI_MOSI
-Text Label 7100 2800 2    50   ~ 0
-SD_SPI_MISO
-Text Label 7100 2300 2    50   ~ 0
-SD_SPI_CS
-Text Label 7100 2600 2    50   ~ 0
-SD_SPI_CLK
+Text Label 7300 2400 2    50   ~ 0
+SD_SPI_MOSI_CARD
+Text Label 7300 2800 2    50   ~ 0
+SD_SPI_MISO_CARD
+Text Label 7300 2300 2    50   ~ 0
+SD_SPI_CS_CARD
+Text Label 7300 2600 2    50   ~ 0
+SD_SPI_CLK_CARD
 Text Notes 8050 3800 0    50   ~ 0
 http://www.interfacebus.com/MicroSD_Card_Pinout.html
 Text GLabel 3200 3650 2    50   Input ~ 0
@@ -532,7 +532,7 @@ Wire Wire Line
 Text Label 2050 4150 2    50   ~ 0
 SD_MMC_Data2
 Text Label 2050 3550 2    50   ~ 0
-SD_DATA0
+SD_MMC_DATA0
 Text Label 3200 3750 0    50   ~ 0
 SD_MMC_Data3
 Text Label 2050 3850 2    50   ~ 0
@@ -644,11 +644,11 @@ NoConn ~ 2050 4250
 Wire Notes Line
 	6600 2000 6600 2850
 Wire Notes Line
-	6600 2850 7150 2850
+	6600 2850 7300 2850
 Wire Notes Line
-	7150 2850 7150 2000
+	7300 2850 7300 2000
 Wire Notes Line
-	7150 2000 6600 2000
+	7300 2000 6600 2000
 Text Notes 6650 2100 0    50   ~ 0
 SPI signals
 Text Notes 5950 2100 0    50   ~ 0
@@ -752,4 +752,6 @@ Wire Notes Line
 	1200 5750 1200 4600
 Text Notes 1400 5600 1    50   ~ 0
 Place near MAX4948
+Text Notes 8050 3950 0    50   ~ 0
+https://www.acmesystems.it/pcb_microsd
 $EndSCHEMATC
