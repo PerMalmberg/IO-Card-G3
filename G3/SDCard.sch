@@ -442,13 +442,13 @@ Text Label 7300 2600 2    50   ~ 0
 SD_SPI_CLK_CARD
 Text Notes 8050 3800 0    50   ~ 0
 http://www.interfacebus.com/MicroSD_Card_Pinout.html
-Text GLabel 3200 3650 2    50   Input ~ 0
+Text GLabel 2050 4250 0    50   Input ~ 0
 SD_SPI_CS
 Text GLabel 3200 4250 2    50   Input ~ 0
 SD_SPI_MOSI
-Text GLabel 3200 3950 2    50   Input ~ 0
+Text GLabel 2050 3950 0    50   Input ~ 0
 SD_SPI_CLK
-Text GLabel 2050 3650 0    50   Input ~ 0
+Text GLabel 3200 3950 2    50   Input ~ 0
 SD_SPI_MISO
 Wire Wire Line
 	6900 3000 7400 3000
@@ -529,29 +529,29 @@ Wire Wire Line
 	6050 2800 7400 2800
 Wire Wire Line
 	5900 2600 7400 2600
-Text Label 2050 4150 2    50   ~ 0
-SD_MMC_Data2
-Text Label 2050 3550 2    50   ~ 0
-SD_MMC_DATA0
 Text Label 3200 3750 0    50   ~ 0
-SD_MMC_Data3
-Text Label 2050 3850 2    50   ~ 0
-SD_MMC_DATA1
+SD_MMC_Data2
 Text Label 3200 4050 0    50   ~ 0
+SD_MMC_DATA0
+Text Label 2050 4150 2    50   ~ 0
+SD_MMC_Data3
+Text Label 2050 3550 2    50   ~ 0
+SD_MMC_DATA1
+Text Label 2050 3850 2    50   ~ 0
 SD_MMC_CLK
 Text Label 3200 4350 0    50   ~ 0
 SD_MMC_CMD
-Text GLabel 2050 4050 0    50   Input ~ 0
-SD_DATA1
 Text GLabel 2050 3750 0    50   Input ~ 0
-SD_DATA0
+SD_DATA1
 Text GLabel 3200 3850 2    50   Input ~ 0
+SD_DATA0
+Text GLabel 2050 4050 0    50   Input ~ 0
 SD_CLK
 Text GLabel 3200 4150 2    50   Input ~ 0
 SD_CMD
-Text GLabel 3200 3550 2    50   Input ~ 0
-SD_DATA3
 Text GLabel 2050 4350 0    50   Input ~ 0
+SD_DATA3
+Text GLabel 3200 3550 2    50   Input ~ 0
 SD_DATA2
 $Comp
 L power:GND #PWR0410
@@ -639,8 +639,6 @@ SD_ENABLE
 Text GLabel 3000 2600 1    50   Input ~ 0
 SD_MODE
 Connection ~ 3000 2600
-NoConn ~ 2050 3950
-NoConn ~ 2050 4250
 Wire Notes Line
 	6600 2000 6600 2850
 Wire Notes Line
@@ -754,4 +752,6 @@ Text Notes 1400 5600 1    50   ~ 0
 Place near MAX4948
 Text Notes 8050 3950 0    50   ~ 0
 https://www.acmesystems.it/pcb_microsd
+NoConn ~ 3200 3650
+NoConn ~ 2050 3650
 $EndSCHEMATC

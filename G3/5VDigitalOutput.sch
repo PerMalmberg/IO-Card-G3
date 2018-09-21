@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 31 34
+Sheet 24 34
 Title ""
 Date ""
 Rev ""
@@ -220,28 +220,6 @@ F 3 "https://www.mouser.se/ProductDetail/Bourns/CR0805-FX-1650ELF?qs=sGAEpiMZZMt
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:LED D?
-U 1 1 5BA36D6F
-P 3650 3350
-AR Path="/5B62EDB8/5B780EE8/5BA36D6F" Ref="D?"  Part="1" 
-AR Path="/5B62EDB8/5B6C04D0/5BA36D6F" Ref="D?"  Part="1" 
-AR Path="/5B62EDB8/5B8EE9B3/5BA36D6F" Ref="D?"  Part="1" 
-AR Path="/5B62EDB8/5BA1CD69/5BA36D6F" Ref="D?"  Part="1" 
-AR Path="/5B62EDB8/5BA1DF84/5BA36D6F" Ref="D?"  Part="1" 
-AR Path="/5B62EDB8/5BA1E7D8/5BA36D6F" Ref="D?"  Part="1" 
-AR Path="/5B62EDB8/5BA1F02C/5BA36D6F" Ref="D?"  Part="1" 
-AR Path="/5B62EDB8/5BA1F880/5BA36D6F" Ref="D?"  Part="1" 
-AR Path="/5B62EDB8/5BA200D4/5BA36D6F" Ref="D?"  Part="1" 
-AR Path="/5B62EDB8/5BA20928/5BA36D6F" Ref="D?"  Part="1" 
-AR Path="/5B62EDB8/5BA2F275/5BA36D6F" Ref="D2401"  Part="1" 
-F 0 "D2401" H 3642 3095 50  0000 C CNN
-F 1 "Green" H 3642 3186 50  0000 C CNN
-F 2 "LED_THT:LED_D5.0mm_Clear" H 3650 3350 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Lumex/SSL-LX55103GD-FL?qs=sGAEpiMZZMtmwHDZQCdlqVsz6Sp3LtaXcNplsbJfBSw%3d" H 3650 3350 50  0001 C CNN
-	1    3650 3350
-	0    -1   -1   0   
-$EndComp
-$Comp
 L power:GND #PWR?
 U 1 1 5BA36D71
 P 3650 3500
@@ -335,4 +313,33 @@ Wire Wire Line
 Connection ~ 3300 2250
 Wire Wire Line
 	3300 2250 3300 2700
+$Comp
+L Device:LED D?
+U 1 1 5BA56AB0
+P 3650 3350
+AR Path="/5B62EDB8/5B780EE8/5BA56AB0" Ref="D?"  Part="1" 
+AR Path="/5B62EDB8/5B66E27E/5BA56AB0" Ref="D?"  Part="1" 
+AR Path="/5B62EDB8/5B66FC5D/5BA56AB0" Ref="D?"  Part="1" 
+AR Path="/5B62EDB8/5B685B64/5BA56AB0" Ref="D?"  Part="1" 
+AR Path="/5B62EDB8/5B687263/5BA56AB0" Ref="D?"  Part="1" 
+AR Path="/5B62EDB8/5B688B1A/5BA56AB0" Ref="D?"  Part="1" 
+AR Path="/5B62EDB8/5B68A219/5BA56AB0" Ref="D?"  Part="1" 
+AR Path="/5B62EDB8/5B68BAA8/5BA56AB0" Ref="D?"  Part="1" 
+AR Path="/5B62EDB8/5B68D1A7/5BA56AB0" Ref="D?"  Part="1" 
+AR Path="/5B62EDB8/5BA53A47/5BA56AB0" Ref="D?"  Part="1" 
+AR Path="/5B62EDB8/5BA53BAF/5BA56AB0" Ref="D?"  Part="1" 
+AR Path="/5B62EDB8/5BA53CC3/5BA56AB0" Ref="D?"  Part="1" 
+AR Path="/5B62EDB8/5BA53E16/5BA56AB0" Ref="D?"  Part="1" 
+AR Path="/5B62EDB8/5BA53F23/5BA56AB0" Ref="D?"  Part="1" 
+AR Path="/5B62EDB8/5BA54030/5BA56AB0" Ref="D?"  Part="1" 
+AR Path="/5B62EDB8/5BA5413D/5BA56AB0" Ref="D?"  Part="1" 
+AR Path="/5B62EDB8/5BA56AB0" Ref="D?"  Part="1" 
+AR Path="/5B62EDB8/5BA2F275/5BA56AB0" Ref="D2401"  Part="1" 
+F 0 "D2401" H 3642 3095 50  0000 C CNN
+F 1 "Siren active" H 3550 3200 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm_Clear" H 3650 3350 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Lumex/SSL-LX55103ID-FL?qs=sGAEpiMZZMtmwHDZQCdlqUPJk6OnVfwF%252bWo7zgs2%252bqE%3d" H 3650 3350 50  0001 C CNN
+	1    3650 3350
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
