@@ -440,17 +440,6 @@ F 3 "~" H 4950 1300 50  0001 C CNN
 	1    4950 1300
 	-1   0    0    1   
 $EndComp
-$Comp
-L power:GND #PWR0202
-U 1 1 5B3933C3
-P 2000 2550
-F 0 "#PWR0202" H 2000 2300 50  0001 C CNN
-F 1 "GND" H 2005 2377 50  0000 C CNN
-F 2 "" H 2000 2550 50  0001 C CNN
-F 3 "" H 2000 2550 50  0001 C CNN
-	1    2000 2550
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2000 2450 2200 2450
 Wire Wire Line
@@ -620,20 +609,6 @@ Text Label 5400 3150 3    50   ~ 0
 5V_PWR_after_switch
 Text Label 5450 2450 1    50   ~ 0
 3.3V_PWR_after_switch
-$Comp
-L Connector_Generic:Conn_02x02_Top_Bottom J?
-U 1 1 5BA02922
-P 1800 2550
-AR Path="/5BA02922" Ref="J?"  Part="1" 
-AR Path="/5B61ECB9/5BA02922" Ref="J201"  Part="1" 
-F 0 "J201" H 1850 2225 50  0000 C CNN
-F 1 "Conn_02x02_Top_Bottom" H 1850 2316 50  0000 C CNN
-F 2 "Connector_Molex:Molex_Mega-Fit_76825-0004_2x02_P5.70mm_Horizontal" H 1800 2550 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Molex/76825-0002?qs=%2fha2pyFadug9gwVXW%252b6PjoTJPsbwjZb7D5oQ430PjGyxKDLr9emXmA%3d%3d" H 1800 2550 50  0001 C CNN
-	1    1800 2550
-	-1   0    0    1   
-$EndComp
-NoConn ~ 1500 2450
-NoConn ~ 1500 2550
-Connection ~ 2000 2450
+Text GLabel 2000 2450 0    50   Input ~ 0
+POWER_SUPPLY_12V
 $EndSCHEMATC

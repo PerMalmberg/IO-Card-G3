@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 35 34
+Sheet 34 34
 Title ""
 Date ""
 Rev ""
@@ -414,17 +414,6 @@ F 3 "" H 3850 1600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR03510
-U 1 1 5BA116DF
-P 3950 1600
-F 0 "#PWR03510" H 3950 1350 50  0001 C CNN
-F 1 "GND" H 3955 1427 50  0000 C CNN
-F 2 "" H 3950 1600 50  0001 C CNN
-F 3 "" H 3950 1600 50  0001 C CNN
-	1    3950 1600
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR03512
 U 1 1 5BA11728
 P 4050 1600
@@ -694,4 +683,12 @@ F 3 "" H 4500 3450 50  0001 C CNN
 	1    4500 3450
 	1    0    0    -1  
 $EndComp
+Text GLabel 3600 1550 1    50   Input ~ 0
+POWER_SUPPLY_12V
+Wire Wire Line
+	3600 1550 3600 1850
+Wire Wire Line
+	3600 1850 3950 1850
+Wire Wire Line
+	3950 1850 3950 1600
 $EndSCHEMATC
