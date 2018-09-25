@@ -88,4 +88,15 @@ F 3 "~" H 4750 1500 50  0001 C CNN
 	1    4750 1500
 	1    0    0    -1  
 $EndComp
+$Comp
+L Graphic:Logo_Open_Hardware_Small LOGO101
+U 1 1 5BAAC245
+P 5800 1150
+F 0 "LOGO101" H 5800 1425 50  0001 C CNN
+F 1 "Logo_Open_Hardware_Small" H 5800 925 50  0001 C CNN
+F 2 "Symbol:OSHW-Logo2_7.3x6mm_SilkScreen" H 5800 1150 50  0001 C CNN
+F 3 "~" H 5800 1150 50  0001 C CNN
+	1    5800 1150
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
