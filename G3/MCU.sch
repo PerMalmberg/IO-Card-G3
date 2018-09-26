@@ -77,7 +77,7 @@ P 8500 4750
 F 0 "U302" H 8700 4250 50  0000 C CNN
 F 1 "TXB0102DCU" H 8900 4150 50  0000 C CNN
 F 2 "Package_SO:VSSOP-8_2.4x2.1mm_P0.5mm" H 8500 4200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/txb0102.pdf" H 8500 4720 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Texas-Instruments/TXB0102DCUR?qs=sGAEpiMZZMsty6Jaj0%252bBBsMF3VbNM0929UnYQvFKVv0%3d" H 8500 4720 50  0001 C CNN
 	1    8500 4750
 	1    0    0    -1  
 $EndComp
@@ -110,7 +110,7 @@ P 8750 4200
 F 0 "C306" V 8498 4200 50  0000 C CNN
 F 1 "100n" V 8589 4200 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 8788 4050 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/AVX/08055C104JAZ2A?qs=%2fha2pyFaduhAZO93RAy6IIlm7PKA7PN%2fjITVSPkVEftSFjliFvU6%2fw%3d%3d" H 8750 4200 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/KEMET/C0805C104J5RACTU?qs=sGAEpiMZZMs0AnBnWHyRQFCCI5cSbRT%2fIwsdZoDYv9I%3d" H 8750 4200 50  0001 C CNN
 	1    8750 4200
 	0    1    1    0   
 $EndComp
@@ -121,7 +121,7 @@ P 8250 4200
 F 0 "C305" V 8502 4200 50  0000 C CNN
 F 1 "100n" V 8411 4200 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 8288 4050 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/AVX/08055C104JAZ2A?qs=%2fha2pyFaduhAZO93RAy6IIlm7PKA7PN%2fjITVSPkVEftSFjliFvU6%2fw%3d%3d" H 8250 4200 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/KEMET/C0805C104J5RACTU?qs=sGAEpiMZZMs0AnBnWHyRQFCCI5cSbRT%2fIwsdZoDYv9I%3d" H 8250 4200 50  0001 C CNN
 	1    8250 4200
 	0    -1   -1   0   
 $EndComp
@@ -322,7 +322,7 @@ P 2100 2800
 F 0 "C302" H 1985 2754 50  0000 R CNN
 F 1 "100n" H 1985 2845 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 2138 2650 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/AVX/08055C104JAZ2A?qs=%2fha2pyFaduhAZO93RAy6IIlm7PKA7PN%2fjITVSPkVEftSFjliFvU6%2fw%3d%3d" H 2100 2800 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/KEMET/C0805C104J5RACTU?qs=sGAEpiMZZMs0AnBnWHyRQFCCI5cSbRT%2fIwsdZoDYv9I%3d" H 2100 2800 50  0001 C CNN
 	1    2100 2800
 	-1   0    0    1   
 $EndComp
@@ -333,7 +333,7 @@ P 1700 2900
 F 0 "C301" V 1850 2900 50  0000 C CNN
 F 1 "100n" V 1950 2900 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 1738 2750 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/AVX/08055C104JAZ2A?qs=%2fha2pyFaduhAZO93RAy6IIlm7PKA7PN%2fjITVSPkVEftSFjliFvU6%2fw%3d%3d" H 1700 2900 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/KEMET/C0805C104J5RACTU?qs=sGAEpiMZZMs0AnBnWHyRQFCCI5cSbRT%2fIwsdZoDYv9I%3d" H 1700 2900 50  0001 C CNN
 	1    1700 2900
 	0    1    1    0   
 $EndComp
@@ -359,7 +359,7 @@ P 3650 1300
 F 0 "C304" H 3535 1254 50  0000 R CNN
 F 1 "100n" H 3535 1345 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 3688 1150 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/AVX/08055C104JAZ2A?qs=%2fha2pyFaduhAZO93RAy6IIlm7PKA7PN%2fjITVSPkVEftSFjliFvU6%2fw%3d%3d" H 3650 1300 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/KEMET/C0805C104J5RACTU?qs=sGAEpiMZZMs0AnBnWHyRQFCCI5cSbRT%2fIwsdZoDYv9I%3d" H 3650 1300 50  0001 C CNN
 	1    3650 1300
 	-1   0    0    1   
 $EndComp
@@ -387,7 +387,7 @@ P 1700 5600
 F 0 "J301" H 1750 6000 50  0000 C CNN
 F 1 "Debug" H 1750 5900 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 1700 5600 50  0001 C CNN
-F 3 "~" H 1700 5600 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Amphenol-FCI/68001-205?qs=sGAEpiMZZMs%252bGHln7q6pm44kDepmYTI8mxSN5WASQ8Q%3d" H 1700 5600 50  0001 C CNN
 	1    1700 5600
 	1    0    0    -1  
 $EndComp
@@ -467,7 +467,7 @@ P 8300 3550
 F 0 "J302" H 8380 3542 50  0000 L CNN
 F 1 "BME280" H 8380 3451 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 8300 3550 50  0001 C CNN
-F 3 "~" H 8300 3550 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Molex/22-28-4040?qs=sGAEpiMZZMs%252bGHln7q6pm%252bS0pk2Wo0XxEhQQIKgiuds%3d" H 8300 3550 50  0001 C CNN
 	1    8300 3550
 	1    0    0    -1  
 $EndComp
@@ -543,7 +543,7 @@ P 4250 4300
 F 0 "U301" H 4300 6500 50  0000 C CNN
 F 1 "ESP32_WROVER" H 4500 6400 50  0000 C CNN
 F 2 "PerMalmberg:ESP32_WROVER" H 4050 4200 50  0001 C CNN
-F 3 "https://www.mouser.se/datasheet/2/891/esp32-wrover_datasheet_en-1223875.pdf" H 4050 4200 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Espressif-Systems/ESP32-WROVER-B?qs=sGAEpiMZZMve4%2fbfQkoj%252bBDxS94OrcPySM%2fkn8O1Rp4%3d" H 4050 4200 50  0001 C CNN
 	1    4250 4300
 	1    0    0    -1  
 $EndComp

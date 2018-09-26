@@ -32,7 +32,7 @@ P 6450 2600
 F 0 "C203" H 6565 2646 50  0000 L CNN
 F 1 "100n" H 6565 2555 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 6488 2450 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/77-VJ0805Y104JXARBC" H 6450 2600 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/KEMET/C0805C104J5RACTU?qs=sGAEpiMZZMs0AnBnWHyRQFCCI5cSbRT%2fIwsdZoDYv9I%3d" H 6450 2600 50  0001 C CNN
 	1    6450 2600
 	1    0    0    -1  
 $EndComp
@@ -67,7 +67,7 @@ P 6450 3300
 F 0 "C204" H 6565 3346 50  0000 L CNN
 F 1 "100n" H 6565 3255 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 6488 3150 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/77-VJ0805Y104JXARBC" H 6450 3300 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/KEMET/C0805C104J5RACTU?qs=sGAEpiMZZMs0AnBnWHyRQFCCI5cSbRT%2fIwsdZoDYv9I%3d" H 6450 3300 50  0001 C CNN
 	1    6450 3300
 	1    0    0    -1  
 $EndComp
@@ -111,7 +111,7 @@ P 4200 3300
 F 0 "C202" H 4315 3346 50  0000 L CNN
 F 1 "100n" H 4315 3255 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 4238 3150 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/77-VJ0805Y104JXARBC" H 4200 3300 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/KEMET/C0805C104J5RACTU?qs=sGAEpiMZZMs0AnBnWHyRQFCCI5cSbRT%2fIwsdZoDYv9I%3d" H 4200 3300 50  0001 C CNN
 	1    4200 3300
 	1    0    0    -1  
 $EndComp
@@ -122,7 +122,7 @@ P 4200 2600
 F 0 "C201" H 4315 2646 50  0000 L CNN
 F 1 "100n" H 4315 2555 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 4238 2450 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/77-VJ0805Y104JXARBC" H 4200 2600 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/KEMET/C0805C104J5RACTU?qs=sGAEpiMZZMs0AnBnWHyRQFCCI5cSbRT%2fIwsdZoDYv9I%3d" H 4200 2600 50  0001 C CNN
 	1    4200 2600
 	1    0    0    -1  
 $EndComp
@@ -449,9 +449,9 @@ L Device:Fuse F201
 U 1 1 5B395A79
 P 2350 2450
 F 0 "F201" V 2153 2450 50  0000 C CNN
-F 1 "3.5A" V 2244 2450 50  0000 C CNN
+F 1 "xA" V 2244 2450 50  0000 C CNN
 F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 2280 2450 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 2350 2450 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Littelfuse/56000001019?qs=sGAEpiMZZMtRmoYvq3OwzKEcK5xXAR8uiSqvDZfRA1w%3d" H 2350 2450 50  0001 C CNN
 	1    2350 2450
 	0    1    1    0   
 $EndComp
@@ -460,9 +460,9 @@ L Device:Fuse F202
 U 1 1 5B395AE2
 P 5650 2450
 F 0 "F202" V 5453 2450 50  0000 C CNN
-F 1 "5A" V 5544 2450 50  0000 C CNN
+F 1 "xA" V 5544 2450 50  0000 C CNN
 F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 5580 2450 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 5650 2450 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Littelfuse/56000001019?qs=sGAEpiMZZMtRmoYvq3OwzKEcK5xXAR8uiSqvDZfRA1w%3d" H 5650 2450 50  0001 C CNN
 	1    5650 2450
 	0    1    1    0   
 $EndComp
@@ -471,9 +471,9 @@ L Device:Fuse F203
 U 1 1 5B395E69
 P 5650 3150
 F 0 "F203" V 5453 3150 50  0000 C CNN
-F 1 "5A" V 5544 3150 50  0000 C CNN
+F 1 "xA" V 5544 3150 50  0000 C CNN
 F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 5580 3150 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 5650 3150 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Littelfuse/56000001019?qs=sGAEpiMZZMtRmoYvq3OwzKEcK5xXAR8uiSqvDZfRA1w%3d" H 5650 3150 50  0001 C CNN
 	1    5650 3150
 	0    1    1    0   
 $EndComp
@@ -509,7 +509,7 @@ L Device:LED D201
 U 1 1 5B6300FB
 P 3750 1850
 F 0 "D201" H 3742 1595 50  0000 C CNN
-F 1 "Power" H 3742 1686 50  0000 C CNN
+F 1 "Red" H 3742 1686 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm" H 3750 1850 50  0001 C CNN
 F 3 "https://www.mouser.se/ProductDetail/Lite-On/LTL2R3KGD-EM?qs=sGAEpiMZZMtmwHDZQCdlqY3QuPVQdrfivxVgVo2hFbg%3d" H 3750 1850 50  0001 C CNN
 	1    3750 1850
@@ -533,7 +533,7 @@ L Device:LED D206
 U 1 1 5B631962
 P 8500 2450
 F 0 "D206" H 8492 2195 50  0000 C CNN
-F 1 "Power3V3" H 8492 2286 50  0000 C CNN
+F 1 "Red" H 8492 2286 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm" H 8500 2450 50  0001 C CNN
 F 3 "https://www.mouser.se/ProductDetail/Lite-On/LTL2R3KGD-EM?qs=sGAEpiMZZMtmwHDZQCdlqY3QuPVQdrfivxVgVo2hFbg%3d" H 8500 2450 50  0001 C CNN
 	1    8500 2450
@@ -555,7 +555,7 @@ L Device:LED D207
 U 1 1 5B632E4D
 P 8550 3150
 F 0 "D207" H 8542 2895 50  0000 C CNN
-F 1 "Power5V" H 8542 2986 50  0000 C CNN
+F 1 "Red" H 8542 2986 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm" H 8550 3150 50  0001 C CNN
 F 3 "https://www.mouser.se/ProductDetail/Lite-On/LTL2R3KGD-EM?qs=sGAEpiMZZMtmwHDZQCdlqY3QuPVQdrfivxVgVo2hFbg%3d" H 8550 3150 50  0001 C CNN
 	1    8550 3150

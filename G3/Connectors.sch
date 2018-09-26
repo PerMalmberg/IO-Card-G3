@@ -261,7 +261,7 @@ AR Path="/5B72552B/5B75939B" Ref="F3503"  Part="1"
 F 0 "F3503" V 3753 2200 50  0000 C CNN
 F 1 "xA" V 3844 2200 50  0000 C CNN
 F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 3880 2200 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 3950 2200 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Littelfuse/56000001019?qs=sGAEpiMZZMtRmoYvq3OwzKEcK5xXAR8uiSqvDZfRA1w%3d" H 3950 2200 50  0001 C CNN
 	1    3950 2200
 	1    0    0    -1  
 $EndComp
@@ -274,7 +274,7 @@ AR Path="/5B72552B/5B75A322" Ref="F3504"  Part="1"
 F 0 "F3504" V 4053 2200 50  0000 C CNN
 F 1 "xA" V 4144 2200 50  0000 C CNN
 F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 4180 2200 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 4250 2200 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Littelfuse/56000001019?qs=sGAEpiMZZMtRmoYvq3OwzKEcK5xXAR8uiSqvDZfRA1w%3d" H 4250 2200 50  0001 C CNN
 	1    4250 2200
 	1    0    0    -1  
 $EndComp
@@ -287,7 +287,7 @@ AR Path="/5B72552B/5B75A435" Ref="F3505"  Part="1"
 F 0 "F3505" V 4353 2200 50  0000 C CNN
 F 1 "xA" V 4444 2200 50  0000 C CNN
 F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 4480 2200 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 4550 2200 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Littelfuse/56000001019?qs=sGAEpiMZZMtRmoYvq3OwzKEcK5xXAR8uiSqvDZfRA1w%3d" H 4550 2200 50  0001 C CNN
 	1    4550 2200
 	1    0    0    -1  
 $EndComp
@@ -300,7 +300,7 @@ AR Path="/5B72552B/5B75A4BA" Ref="F3506"  Part="1"
 F 0 "F3506" V 4653 2200 50  0000 C CNN
 F 1 "xA" V 4744 2200 50  0000 C CNN
 F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 4780 2200 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 4850 2200 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Littelfuse/56000001019?qs=sGAEpiMZZMtRmoYvq3OwzKEcK5xXAR8uiSqvDZfRA1w%3d" H 4850 2200 50  0001 C CNN
 	1    4850 2200
 	1    0    0    -1  
 $EndComp
@@ -313,7 +313,7 @@ AR Path="/5B72552B/5B75A795" Ref="F3502"  Part="1"
 F 0 "F3502" V 3453 2200 50  0000 C CNN
 F 1 "xA" V 3544 2200 50  0000 C CNN
 F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 3580 2200 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 3650 2200 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Littelfuse/56000001019?qs=sGAEpiMZZMtRmoYvq3OwzKEcK5xXAR8uiSqvDZfRA1w%3d" H 3650 2200 50  0001 C CNN
 	1    3650 2200
 	1    0    0    -1  
 $EndComp
@@ -326,7 +326,7 @@ AR Path="/5B72552B/5B75A822" Ref="F3501"  Part="1"
 F 0 "F3501" V 3153 2200 50  0000 C CNN
 F 1 "xA" V 3244 2200 50  0000 C CNN
 F 2 "Fuse:Fuseholder_TR5_Littlefuse_No560_No460" V 3280 2200 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Schurter/00318201?qs=sGAEpiMZZMtRmoYvq3OwzLrTj1%252b%252bxBWBiZ2DdJg9oKI%3d" H 3350 2200 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Littelfuse/56000001019?qs=sGAEpiMZZMtRmoYvq3OwzKEcK5xXAR8uiSqvDZfRA1w%3d" H 3350 2200 50  0001 C CNN
 	1    3350 2200
 	1    0    0    -1  
 $EndComp

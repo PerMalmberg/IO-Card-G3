@@ -21,7 +21,7 @@ P 3750 4150
 F 0 "U1401" H 3750 4900 50  0000 C CNN
 F 1 "MCP23017" H 3800 5200 50  0000 C CNN
 F 2 "Package_SO:SOIC-28W_7.5x17.9mm_P1.27mm" H 3800 3200 50  0001 L CNN
-F 3 "" H 4000 5150 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/579-MCP23017T-E-SO" H 4000 5150 50  0001 C CNN
 	1    3750 4150
 	1    0    0    -1  
 $EndComp
@@ -54,7 +54,7 @@ P 3600 1050
 F 0 "C1402" H 3715 1096 50  0000 L CNN
 F 1 "100n" H 3715 1005 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 3638 900 50  0001 C CNN
-F 3 "" H 3600 1050 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/KEMET/C0805C104J5RACTU?qs=sGAEpiMZZMs0AnBnWHyRQFCCI5cSbRT%2fIwsdZoDYv9I%3d" H 3600 1050 50  0001 C CNN
 	1    3600 1050
 	1    0    0    -1  
 $EndComp
@@ -288,7 +288,7 @@ P 3500 7700
 F 0 "C1401" H 3615 7746 50  0000 L CNN
 F 1 "100n" H 3615 7655 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 3538 7550 50  0001 C CNN
-F 3 "" H 3500 7700 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/KEMET/C0805C104J5RACTU?qs=sGAEpiMZZMs0AnBnWHyRQFCCI5cSbRT%2fIwsdZoDYv9I%3d" H 3500 7700 50  0001 C CNN
 	1    3500 7700
 	1    0    0    -1  
 $EndComp
@@ -396,7 +396,7 @@ P 3750 7000
 F 0 "U1402" H 3750 7750 50  0000 C CNN
 F 1 "MCP23017" H 3800 8050 50  0000 C CNN
 F 2 "Package_SO:SOIC-28W_7.5x17.9mm_P1.27mm" H 3800 6050 50  0001 L CNN
-F 3 "" H 4000 8000 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/579-MCP23017T-E-SO" H 4000 8000 50  0001 C CNN
 	1    3750 7000
 	1    0    0    -1  
 $EndComp
@@ -659,9 +659,9 @@ AR Path="/5B62EDB8/5BA54030/5BA5B3F8" Ref="D?"  Part="1"
 AR Path="/5B62EDB8/5BA5413D/5BA5B3F8" Ref="D?"  Part="1" 
 AR Path="/5B62EDB8/5BA5B3F8" Ref="D1401"  Part="1" 
 F 0 "D1401" H 1442 4895 50  0000 C CNN
-F 1 "Armed" H 1442 4986 50  0000 C CNN
-F 2 "LED_THT:LED_D5.0mm_Clear" H 1450 5150 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Lumex/SSL-LX55103ID-FL?qs=sGAEpiMZZMtmwHDZQCdlqUPJk6OnVfwF%252bWo7zgs2%252bqE%3d" H 1450 5150 50  0001 C CNN
+F 1 "Red" H 1442 4986 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 1450 5150 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Lite-On/LTL2R3KGD-EM?qs=sGAEpiMZZMtmwHDZQCdlqY3QuPVQdrfivxVgVo2hFbg%3d" H 1450 5150 50  0001 C CNN
 	1    1450 5150
 	1    0    0    -1  
 $EndComp
@@ -687,9 +687,9 @@ AR Path="/5B62EDB8/5BA54030/5BA5B3FF" Ref="R?"  Part="1"
 AR Path="/5B62EDB8/5BA5413D/5BA5B3FF" Ref="R?"  Part="1" 
 AR Path="/5B62EDB8/5BA5B3FF" Ref="R1401"  Part="1" 
 F 0 "R1401" V 1543 5150 50  0000 C CNN
-F 1 "165" V 1634 5150 50  0000 C CNN
+F 1 "1.65k" V 1634 5150 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 1680 5150 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Bourns/CR0805-FX-1650ELF?qs=sGAEpiMZZMtlubZbdhIBIKn39ibjI6WbHbnDBzjqA1U%3d" H 1750 5150 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Vishay/CRCW08051K65FKEA?qs=sGAEpiMZZMtlubZbdhIBIFvv2%252blmU1cYk%2fKBbkOVYDU%3d" H 1750 5150 50  0001 C CNN
 	1    1750 5150
 	0    -1   -1   0   
 $EndComp
@@ -726,9 +726,9 @@ AR Path="/5B62EDB8/5BA54030/5BA5B774" Ref="D?"  Part="1"
 AR Path="/5B62EDB8/5BA5413D/5BA5B774" Ref="D?"  Part="1" 
 AR Path="/5B62EDB8/5BA5B774" Ref="D1402"  Part="1" 
 F 0 "D1402" H 1442 5245 50  0000 C CNN
-F 1 "Wifi" H 1442 5336 50  0000 C CNN
-F 2 "LED_THT:LED_D5.0mm_Clear" H 1450 5500 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Lumex/SSL-LX55103ID-FL?qs=sGAEpiMZZMtmwHDZQCdlqUPJk6OnVfwF%252bWo7zgs2%252bqE%3d" H 1450 5500 50  0001 C CNN
+F 1 "Red" H 1442 5336 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 1450 5500 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Lite-On/LTL2R3KGD-EM?qs=sGAEpiMZZMtmwHDZQCdlqY3QuPVQdrfivxVgVo2hFbg%3d" H 1450 5500 50  0001 C CNN
 	1    1450 5500
 	1    0    0    -1  
 $EndComp
@@ -754,9 +754,9 @@ AR Path="/5B62EDB8/5BA54030/5BA5B77B" Ref="R?"  Part="1"
 AR Path="/5B62EDB8/5BA5413D/5BA5B77B" Ref="R?"  Part="1" 
 AR Path="/5B62EDB8/5BA5B77B" Ref="R1403"  Part="1" 
 F 0 "R1403" V 1543 5500 50  0000 C CNN
-F 1 "165" V 1634 5500 50  0000 C CNN
+F 1 "1.65k" V 1634 5500 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 1680 5500 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Bourns/CR0805-FX-1650ELF?qs=sGAEpiMZZMtlubZbdhIBIKn39ibjI6WbHbnDBzjqA1U%3d" H 1750 5500 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Vishay/CRCW08051K65FKEA?qs=sGAEpiMZZMtlubZbdhIBIFvv2%252blmU1cYk%2fKBbkOVYDU%3d" H 1750 5500 50  0001 C CNN
 	1    1750 5500
 	0    -1   -1   0   
 $EndComp
@@ -793,9 +793,9 @@ AR Path="/5B62EDB8/5BA54030/5BA5B879" Ref="D?"  Part="1"
 AR Path="/5B62EDB8/5BA5413D/5BA5B879" Ref="D?"  Part="1" 
 AR Path="/5B62EDB8/5BA5B879" Ref="D1403"  Part="1" 
 F 0 "D1403" H 1442 5595 50  0000 C CNN
-F 1 "MQTT" H 1442 5686 50  0000 C CNN
-F 2 "LED_THT:LED_D5.0mm_Clear" H 1450 5850 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Lumex/SSL-LX55103ID-FL?qs=sGAEpiMZZMtmwHDZQCdlqUPJk6OnVfwF%252bWo7zgs2%252bqE%3d" H 1450 5850 50  0001 C CNN
+F 1 "Red" H 1442 5686 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 1450 5850 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Lite-On/LTL2R3KGD-EM?qs=sGAEpiMZZMtmwHDZQCdlqY3QuPVQdrfivxVgVo2hFbg%3d" H 1450 5850 50  0001 C CNN
 	1    1450 5850
 	1    0    0    -1  
 $EndComp
@@ -821,9 +821,9 @@ AR Path="/5B62EDB8/5BA54030/5BA5B880" Ref="R?"  Part="1"
 AR Path="/5B62EDB8/5BA5413D/5BA5B880" Ref="R?"  Part="1" 
 AR Path="/5B62EDB8/5BA5B880" Ref="R1404"  Part="1" 
 F 0 "R1404" V 1543 5850 50  0000 C CNN
-F 1 "165" V 1634 5850 50  0000 C CNN
+F 1 "1.65k" V 1634 5850 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 1680 5850 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Bourns/CR0805-FX-1650ELF?qs=sGAEpiMZZMtlubZbdhIBIKn39ibjI6WbHbnDBzjqA1U%3d" H 1750 5850 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Vishay/CRCW08051K65FKEA?qs=sGAEpiMZZMtlubZbdhIBIFvv2%252blmU1cYk%2fKBbkOVYDU%3d" H 1750 5850 50  0001 C CNN
 	1    1750 5850
 	0    -1   -1   0   
 $EndComp
@@ -861,8 +861,8 @@ AR Path="/5B62EDB8/5BA5413D/5BA5BA0A" Ref="D?"  Part="1"
 AR Path="/5B62EDB8/5BA5BA0A" Ref="D1404"  Part="1" 
 F 0 "D1404" H 1442 5995 50  0000 C CNN
 F 1 "Red" H 1442 6086 50  0000 C CNN
-F 2 "LED_THT:LED_D5.0mm_Clear" H 1450 6250 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Lumex/SSL-LX55103ID-FL?qs=sGAEpiMZZMtmwHDZQCdlqUPJk6OnVfwF%252bWo7zgs2%252bqE%3d" H 1450 6250 50  0001 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 1450 6250 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Lite-On/LTL2R3KGD-EM?qs=sGAEpiMZZMtmwHDZQCdlqY3QuPVQdrfivxVgVo2hFbg%3d" H 1450 6250 50  0001 C CNN
 	1    1450 6250
 	1    0    0    -1  
 $EndComp
@@ -888,9 +888,9 @@ AR Path="/5B62EDB8/5BA54030/5BA5BA11" Ref="R?"  Part="1"
 AR Path="/5B62EDB8/5BA5413D/5BA5BA11" Ref="R?"  Part="1" 
 AR Path="/5B62EDB8/5BA5BA11" Ref="R1405"  Part="1" 
 F 0 "R1405" V 1543 6250 50  0000 C CNN
-F 1 "165" V 1634 6250 50  0000 C CNN
+F 1 "1.65k" V 1634 6250 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 1680 6250 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Bourns/CR0805-FX-1650ELF?qs=sGAEpiMZZMtlubZbdhIBIKn39ibjI6WbHbnDBzjqA1U%3d" H 1750 6250 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Vishay/CRCW08051K65FKEA?qs=sGAEpiMZZMtlubZbdhIBIFvv2%252blmU1cYk%2fKBbkOVYDU%3d" H 1750 6250 50  0001 C CNN
 	1    1750 6250
 	0    -1   -1   0   
 $EndComp
@@ -928,8 +928,8 @@ AR Path="/5B62EDB8/5BA5413D/5BA5BDA3" Ref="D?"  Part="1"
 AR Path="/5B62EDB8/5BA5BDA3" Ref="D1405"  Part="1" 
 F 0 "D1405" H 1442 6395 50  0000 C CNN
 F 1 "Red" H 1442 6486 50  0000 C CNN
-F 2 "LED_THT:LED_D5.0mm_Clear" H 1450 6650 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Lumex/SSL-LX55103ID-FL?qs=sGAEpiMZZMtmwHDZQCdlqUPJk6OnVfwF%252bWo7zgs2%252bqE%3d" H 1450 6650 50  0001 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 1450 6650 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Lite-On/LTL2R3KGD-EM?qs=sGAEpiMZZMtmwHDZQCdlqY3QuPVQdrfivxVgVo2hFbg%3d" H 1450 6650 50  0001 C CNN
 	1    1450 6650
 	1    0    0    -1  
 $EndComp
@@ -955,9 +955,9 @@ AR Path="/5B62EDB8/5BA54030/5BA5BDAA" Ref="R?"  Part="1"
 AR Path="/5B62EDB8/5BA5413D/5BA5BDAA" Ref="R?"  Part="1" 
 AR Path="/5B62EDB8/5BA5BDAA" Ref="R1406"  Part="1" 
 F 0 "R1406" V 1543 6650 50  0000 C CNN
-F 1 "165" V 1634 6650 50  0000 C CNN
+F 1 "1.65k" V 1634 6650 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 1680 6650 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Bourns/CR0805-FX-1650ELF?qs=sGAEpiMZZMtlubZbdhIBIKn39ibjI6WbHbnDBzjqA1U%3d" H 1750 6650 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Vishay/CRCW08051K65FKEA?qs=sGAEpiMZZMtlubZbdhIBIFvv2%252blmU1cYk%2fKBbkOVYDU%3d" H 1750 6650 50  0001 C CNN
 	1    1750 6650
 	0    -1   -1   0   
 $EndComp
@@ -995,8 +995,8 @@ AR Path="/5B62EDB8/5BA5413D/5BA5D5BE" Ref="D?"  Part="1"
 AR Path="/5B62EDB8/5BA5D5BE" Ref="D1406"  Part="1" 
 F 0 "D1406" H 1442 6795 50  0000 C CNN
 F 1 "Red" H 1442 6886 50  0000 C CNN
-F 2 "LED_THT:LED_D5.0mm_Clear" H 1450 7050 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Lumex/SSL-LX55103ID-FL?qs=sGAEpiMZZMtmwHDZQCdlqUPJk6OnVfwF%252bWo7zgs2%252bqE%3d" H 1450 7050 50  0001 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 1450 7050 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Lite-On/LTL2R3KGD-EM?qs=sGAEpiMZZMtmwHDZQCdlqY3QuPVQdrfivxVgVo2hFbg%3d" H 1450 7050 50  0001 C CNN
 	1    1450 7050
 	1    0    0    -1  
 $EndComp
@@ -1022,9 +1022,9 @@ AR Path="/5B62EDB8/5BA54030/5BA5D5C5" Ref="R?"  Part="1"
 AR Path="/5B62EDB8/5BA5413D/5BA5D5C5" Ref="R?"  Part="1" 
 AR Path="/5B62EDB8/5BA5D5C5" Ref="R1407"  Part="1" 
 F 0 "R1407" V 1543 7050 50  0000 C CNN
-F 1 "165" V 1634 7050 50  0000 C CNN
+F 1 "1.65k" V 1634 7050 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 1680 7050 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Bourns/CR0805-FX-1650ELF?qs=sGAEpiMZZMtlubZbdhIBIKn39ibjI6WbHbnDBzjqA1U%3d" H 1750 7050 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Vishay/CRCW08051K65FKEA?qs=sGAEpiMZZMtlubZbdhIBIFvv2%252blmU1cYk%2fKBbkOVYDU%3d" H 1750 7050 50  0001 C CNN
 	1    1750 7050
 	0    -1   -1   0   
 $EndComp
