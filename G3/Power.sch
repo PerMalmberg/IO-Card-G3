@@ -248,7 +248,7 @@ U 1 1 59C6A7C3
 P 5300 2250
 F 0 "J202" V 5400 2200 50  0000 C CNN
 F 1 "GS2" V 5300 2400 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical_SMD_Pin1Left" V 5374 2250 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" V 5374 2250 50  0001 C CNN
 F 3 "" H 5300 2250 50  0001 C CNN
 	1    5300 2250
 	0    1    -1   0   
@@ -259,7 +259,7 @@ U 1 1 59C6AA5F
 P 5300 2950
 F 0 "J203" V 5400 2900 50  0000 C CNN
 F 1 "GS2" V 5250 3100 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical_SMD_Pin1Left" V 5374 2950 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" V 5374 2950 50  0001 C CNN
 F 3 "" H 5300 2950 50  0001 C CNN
 	1    5300 2950
 	0    1    -1   0   
