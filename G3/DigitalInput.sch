@@ -393,7 +393,7 @@ AR Path="/5B62EDB8/5BA5413D/5BA4B9C4" Ref="J3401"  Part="1"
 F 0 "J1501" V 1566 1112 50  0000 R CNN
 F 1 "Digital input supply" V 1475 1112 50  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1600 1300 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Molex/22-28-0030?qs=sGAEpiMZZMs%252bGHln7q6pmxD%2f5kNJnZVeZCYy0rFr0qA%3d" H 1600 1300 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/538-22-28-4031" H 1600 1300 50  0001 C CNN
 	1    1600 1300
 	0    -1   -1   0   
 $EndComp
