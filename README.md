@@ -21,3 +21,9 @@ This is my custom I/O card, third generation. Main purpose is to serve as an ala
 
 - Web interface for configuration and status monitoring.
 - MQTT for control and monitoring.
+
+## Rendering of the PCG
+
+(sorry, no 3D models for some components)
+
+![PCB Rendering](hardware/pcb-rendering-2018-10-17.png)
