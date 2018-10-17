@@ -154,7 +154,7 @@ This is my custom I/O card, third generation. Main purpose is to serve as an ala
 }
 ```
 
-## Rendering of the PCG
+## Rendering of the PCB
 
 (sorry, no 3D models for some components)
 
