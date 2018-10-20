@@ -1,0 +1,3 @@
+[submodule "software/externals/smooth"]
+	path = software/externals/smooth
+	url = https://github.com/PerMalmberg/Smooth.git

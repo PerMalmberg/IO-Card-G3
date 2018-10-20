@@ -2,3 +2,5 @@
 *.bak
 _*autosave*
 *.bck
+cmake-build-*
+build
