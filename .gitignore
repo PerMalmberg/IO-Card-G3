@@ -4,3 +4,4 @@ _*autosave*
 *.bck
 cmake-build-*
 build
+sdkconfig.old
