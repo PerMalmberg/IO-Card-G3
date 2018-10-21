@@ -8,7 +8,7 @@ extern "C"
 class App : public smooth::core::Application
 {
 public:
-    App() : Application(5, std::chrono::milliseconds{100})
+    App() : Application(5, std::chrono::milliseconds{1000})
     {}
 
     void tick() override
@@ -18,20 +18,17 @@ public:
 
 };
 
+#ifdef ESP_PLATFORM
 int app_main()
+#else
+int main(int argc, const char** argv)
+#endif
 {
-    std::cout << "Hello, ESP32!" << std::endl;
+    std::cout << "Hello!" << std::endl;
     App a;
     a.start();
     return 0;
 }
 
-int main(int argc, const char** argv)
-{
-    std::cout << "Hello, Linux!" << std::endl;
-    App a;
-    a.start();
-    return 0;
-}
 
 }
