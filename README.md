@@ -18,30 +18,12 @@ This is my custom I/O card, third generation. Main purpose is to serve as an ala
 - MCU: ESP32 Wrover Module
 - Powered by 12V DC.
 
-## Software features
+## Software
 
 - Web interface for configuration and status monitoring.
 - MQTT for control and monitoring.
 
 ### Software overview
-
-#### Startup procedure
-
-- Initialize I2C Bus.
-  - 2x MCP23017
-  - 2x ADS1115IDGST
-  - Optional BME280.
-- Read `SD_ENABLE` to determine the mode for the SD Card.
-  - Initialize SD Card.
-    - If initialization fails, pause for a short amount of time and retry X times.
-    - If initialization fails Y times, power cycle SD Card and try again.
-- Read device `ID` from configuration.
-  - If not set, generate a random number and set `ID` to `IOG3_<number>`.
-- Start Wifi
-- Start MQTT worker
-- Start I2C worker
-- Start Wiegand worker
-- Start Alarm worker
 
 #### Feature specification / task list
 
@@ -86,6 +68,24 @@ This is my custom I/O card, third generation. Main purpose is to serve as an ala
     - Whenever an input or zone is armed/disarmed, play a distict sound using the buzzer to signify the event.
     - Whenever the last input has its `armed` mark removed, play a distict sound to signify that the alarm now is 'off'.
     - Inputs with `active` set to `false` are never considered for any operation.
+
+#### Startup procedure
+
+- Initialize I2C Bus.
+  - 2x MCP23017
+  - 2x ADS1115IDGST
+  - Optional BME280.
+- Read `SD_ENABLE` to determine the mode for the SD Card.
+  - Initialize SD Card.
+    - If initialization fails, pause for a short amount of time and retry X times.
+    - If initialization fails Y times, power cycle SD Card and try again.
+- Read device `ID` from configuration.
+  - If not set, generate a random number and set `ID` to `IOG3_<number>`.
+- Start Wifi
+- Start MQTT worker
+- Start I2C worker
+- Start Wiegand worker
+- Start Alarm worker
 
 ## Configuration structure/example
 
