@@ -44,8 +44,8 @@ void I2CTask::init()
     std::this_thread::sleep_for(chrono::milliseconds(50));
     i2c_reset.clr();
 
-    auto u1401 = init_MCP23017(0x20, "u1401");
-    auto u1402 = init_MCP23017(0x21, "u1402");
+    auto u1401 = init_MCP23017_U1401();
+    auto u1402 = init_MCP23017_U1402();
 
     if (std::get<0>(u1401) && std::get<1>(u1402))
     {
@@ -139,14 +139,9 @@ void I2CTask::publish_digital(uint8_t pins)
 
 void I2CTask::publish_digital_status(uint8_t pins)
 {
-    for (uint8_t i = 0;
-         i < 8;
-         ++i)
-    {
-        DigitalStatusValue dv(i, static_cast<bool>(pins & 1));
-        Publisher<DigitalStatusValue>::publish(dv);
-        pins >>= 1;
-    }
+    // Only GPA7 (bit 7, port A) is an input
+    DigitalStatusValue dv(7, static_cast<bool>(pins & 0x8));
+    Publisher<DigitalStatusValue>::publish(dv);
 }
 
 void I2CTask::event(const I2CSetOutput& ev)
@@ -179,9 +174,9 @@ void I2CTask::read_digital()
 }
 
 std::tuple<bool, std::unique_ptr<smooth::application::io::MCP23017>>
-I2CTask::init_MCP23017(uint8_t address, const std::string& name)
+I2CTask::init_MCP23017_U1401()
 {
-    std::unique_ptr<smooth::application::io::MCP23017> device = i2c_master.create_device<MCP23017>(address);
+    std::unique_ptr<smooth::application::io::MCP23017> device = i2c_master.create_device<MCP23017>(0x20);
 
     bool res = device->is_present();
 
@@ -200,28 +195,78 @@ I2CTask::init_MCP23017(uint8_t address, const std::string& name)
                 0x00  // interrupt_default_val_b
         );
 
-        Log::info(name, Format("Configure {1}: {2}", Str(name), Bool(res)));
+        Log::info(name, Format("Configure U1401: {1}", Bool(res)));
 
         if (res)
         {
             res = device->configure_ports(
-                    // Port A are all inputs
-                    0xFF,
-                    0x00,
-                    0x00,
-                    // Port B are all outputs
-                    0x00,
-                    0x00,
-                    0x00);
+                    // Port A
+                    0xFF,  // direction
+                    0x00,  // pullup
+                    0x00,  // polarity
+                    // Port B
+                    0x00,  // direction
+                    0x00,  // pullup
+                    0x00); // polarity
 
-            Log::info(name, Format("Configure ports {1}: {2}", Str(name), Bool(res)));
+            Log::info(name, Format("Configure ports U1401: {1}", Bool(res)));
 
             device->set_output(MCP23017::Port::B, 0);
         }
     }
     else
     {
-        Log::error(name, Format("{1} not present", Str(name)));
+        Log::error(name, "U1401 not present");
+    }
+
+    return std::make_tuple(res, std::move(device));
+}
+
+std::tuple<bool, std::unique_ptr<smooth::application::io::MCP23017>>
+I2CTask::init_MCP23017_U1402()
+{
+    std::unique_ptr<smooth::application::io::MCP23017> device = i2c_master.create_device<MCP23017>(0x21);
+
+    bool res = device->is_present();
+
+    if (res)
+    {
+        // Port A are all outputs, except GPA7
+        // Port B are all outputs
+
+        res = device->configure_device(
+                false,// mirror_change_interrupt
+                false, // interrupt_polarity_active_high
+                0xFF, // interrupt_on_change_enable_a
+                0x00, // interrupt_control_register_a
+                0x00, // interrupt_default_val_a
+                0x00, // interrupt_on_change_enable_b,
+                0x00, // interrupt_control_register_b,
+                0x00  // interrupt_default_val_b
+        );
+
+        Log::info(name, Format("Configure U1402: {1}", Bool(res)));
+
+        if (res)
+        {
+            res = device->configure_ports(
+                    // Port A
+                    0x80,
+                    0x00,
+                    0x00,
+                    // Port B
+                    0x00,
+                    0x00,
+                    0x00);
+
+            Log::info(name, Format("Configure ports U1402: {1}", Bool(res)));
+
+            device->set_output(MCP23017::Port::B, 0);
+        }
+    }
+    else
+    {
+        Log::error(name, "U1402 not present");
     }
 
     return std::make_tuple(res, std::move(device));

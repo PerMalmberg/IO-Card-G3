@@ -42,7 +42,7 @@ namespace g3
 
     void App::event(const DigitalStatusValue& event)
     {
-        if (event.get_name() == "s0")
+        if (event.get_name() == "s7")
         {
             use_sd_spi = event.get_value();
             Log::info(name, Format("Using SPI for SD Card: {1}", Bool(use_sd_spi)));

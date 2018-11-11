@@ -1,7 +1,6 @@
 #pragma once
 
 #include <memory>
-#include <atomic>
 #include <tuple>
 #include <smooth/core/Application.h>
 #include <smooth/core/network/Wifi.h>
@@ -56,6 +55,7 @@ class I2CTask
         void publish_digital(uint8_t pins);
         void publish_digital_status(uint8_t pins);
 
-        std::tuple<bool,std::unique_ptr<smooth::application::io::MCP23017>> init_MCP23017(uint8_t address, const std::string& name);
+        std::tuple<bool,std::unique_ptr<smooth::application::io::MCP23017>> init_MCP23017_U1401();
+        std::tuple<bool,std::unique_ptr<smooth::application::io::MCP23017>> init_MCP23017_U1402();
 };
 

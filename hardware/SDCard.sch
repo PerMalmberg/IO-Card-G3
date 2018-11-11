@@ -418,8 +418,6 @@ F 3 "" H 2350 1300 50  0001 C CNN
 	1    2350 1300
 	1    0    0    -1  
 $EndComp
-Text GLabel 2100 1800 1    50   Input ~ 0
-SD_ENABLE
 Text GLabel 2350 1000 1    50   Input ~ 0
 SD_MODE
 Connection ~ 2350 1000
@@ -793,7 +791,18 @@ F 3 "https://www.mouser.se/ProductDetail/653-A6S-2101-PH" H 4600 1000 50  0001 C
 	-1   0    0    1   
 $EndComp
 Text GLabel 4300 1100 0    50   Input ~ 0
-BootOption
+Boot_option
 Text GLabel 4900 1100 2    50   Input ~ 0
 SD_DATA0
+$Comp
+L power:GND #PWR01
+U 1 1 5BF07627
+P 2100 1800
+F 0 "#PWR01" H 2100 1550 50  0001 C CNN
+F 1 "GND" H 2105 1627 50  0000 C CNN
+F 2 "" H 2100 1800 50  0001 C CNN
+F 3 "" H 2100 1800 50  0001 C CNN
+	1    2100 1800
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
