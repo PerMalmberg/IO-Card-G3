@@ -989,4 +989,212 @@ Wire Wire Line
 	9150 1250 9300 1250
 Text GLabel 8600 1250 0    50   Input ~ 0
 SD_CARD_PWR_CTRL
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5BF8579D
+P 850 5350
+F 0 "TP1" V 800 5750 50  0000 R CNN
+F 1 "COM1" V 900 5900 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 1050 5350 50  0001 C CNN
+F 3 "~" H 1050 5350 50  0001 C CNN
+	1    850  5350
+	-1   0    0    1   
+$EndComp
+Text Label 850  5350 1    50   ~ 0
+SD_MMC_DATA1
+Text GLabel 1050 5350 1    50   Input ~ 0
+SD_DATA1
+Text GLabel 1450 5350 1    50   Input ~ 0
+SD_SPI_CLK
+Text Label 1250 5350 1    50   ~ 0
+SD_MMC_CLK
+Text GLabel 1650 5350 1    50   Input ~ 0
+SD_CLK
+$Comp
+L Connector:TestPoint TP3
+U 1 1 5BF93E2D
+P 1050 5350
+F 0 "TP3" V 1000 5750 50  0000 R CNN
+F 1 "NC1" V 1100 5900 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 1250 5350 50  0001 C CNN
+F 3 "~" H 1250 5350 50  0001 C CNN
+	1    1050 5350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:TestPoint TP4
+U 1 1 5BF94693
+P 1250 5350
+F 0 "TP4" V 1200 5750 50  0000 R CNN
+F 1 "COM2" V 1300 5900 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 1450 5350 50  0001 C CNN
+F 3 "~" H 1450 5350 50  0001 C CNN
+	1    1250 5350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:TestPoint TP5
+U 1 1 5BF94EFB
+P 1450 5350
+F 0 "TP5" V 1400 5750 50  0000 R CNN
+F 1 "NO2" V 1500 5900 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 1650 5350 50  0001 C CNN
+F 3 "~" H 1650 5350 50  0001 C CNN
+	1    1450 5350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:TestPoint TP6
+U 1 1 5BF95765
+P 1650 5350
+F 0 "TP6" V 1600 5750 50  0000 R CNN
+F 1 "NC2" V 1700 5900 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 1850 5350 50  0001 C CNN
+F 3 "~" H 1850 5350 50  0001 C CNN
+	1    1650 5350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:TestPoint TP7
+U 1 1 5BF960E6
+P 1800 5350
+F 0 "TP7" V 1750 5750 50  0000 R CNN
+F 1 "COM3" V 1850 5900 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 2000 5350 50  0001 C CNN
+F 3 "~" H 2000 5350 50  0001 C CNN
+	1    1800 5350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:TestPoint TP8
+U 1 1 5BF960ED
+P 2000 5350
+F 0 "TP8" V 1950 5750 50  0000 R CNN
+F 1 "NO3" V 2050 5900 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 2200 5350 50  0001 C CNN
+F 3 "~" H 2200 5350 50  0001 C CNN
+	1    2000 5350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:TestPoint TP9
+U 1 1 5BF960F4
+P 2200 5350
+F 0 "TP9" V 2150 5750 50  0000 R CNN
+F 1 "NC3" V 2250 5900 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 2400 5350 50  0001 C CNN
+F 3 "~" H 2400 5350 50  0001 C CNN
+	1    2200 5350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:TestPoint TP10
+U 1 1 5BF960FB
+P 2400 5350
+F 0 "TP10" V 2350 5750 50  0000 R CNN
+F 1 "COM4" V 2450 5900 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 2600 5350 50  0001 C CNN
+F 3 "~" H 2600 5350 50  0001 C CNN
+	1    2400 5350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:TestPoint TP12
+U 1 1 5BF96102
+P 2550 5350
+F 0 "TP12" V 2500 5750 50  0000 R CNN
+F 1 "NC4" V 2600 5900 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 2750 5350 50  0001 C CNN
+F 3 "~" H 2750 5350 50  0001 C CNN
+	1    2550 5350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:TestPoint TP13
+U 1 1 5BF96A3D
+P 2750 5350
+F 0 "TP13" V 2700 5750 50  0000 R CNN
+F 1 "COM5" V 2800 5900 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 2950 5350 50  0001 C CNN
+F 3 "~" H 2950 5350 50  0001 C CNN
+	1    2750 5350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:TestPoint TP14
+U 1 1 5BF96A44
+P 2950 5350
+F 0 "TP14" V 2900 5750 50  0000 R CNN
+F 1 "NO5" V 3000 5900 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 3150 5350 50  0001 C CNN
+F 3 "~" H 3150 5350 50  0001 C CNN
+	1    2950 5350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:TestPoint TP15
+U 1 1 5BF96A4B
+P 3150 5350
+F 0 "TP15" V 3100 5750 50  0000 R CNN
+F 1 "NC5" V 3200 5900 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 3350 5350 50  0001 C CNN
+F 3 "~" H 3350 5350 50  0001 C CNN
+	1    3150 5350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:TestPoint TP16
+U 1 1 5BF96A52
+P 3350 5350
+F 0 "TP16" V 3300 5750 50  0000 R CNN
+F 1 "COM6" V 3400 5900 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 3550 5350 50  0001 C CNN
+F 3 "~" H 3550 5350 50  0001 C CNN
+	1    3350 5350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:TestPoint TP17
+U 1 1 5BF972C8
+P 3550 5350
+F 0 "TP17" V 3500 5750 50  0000 R CNN
+F 1 "NO6" V 3600 5900 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 3750 5350 50  0001 C CNN
+F 3 "~" H 3750 5350 50  0001 C CNN
+	1    3550 5350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:TestPoint TP18
+U 1 1 5BF97336
+P 3750 5350
+F 0 "TP18" V 3700 5750 50  0000 R CNN
+F 1 "NC6" V 3800 5900 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 3950 5350 50  0001 C CNN
+F 3 "~" H 3950 5350 50  0001 C CNN
+	1    3750 5350
+	-1   0    0    1   
+$EndComp
+Text GLabel 2000 5350 1    50   Input ~ 0
+SD_SPI_CS
+Text Label 1800 5350 1    50   ~ 0
+SD_MMC_Data3
+Text GLabel 2200 5350 1    50   Input ~ 0
+SD_DATA3
+Text GLabel 2550 5350 1    50   Input ~ 0
+SD_DATA2
+Text Label 2400 5350 1    50   ~ 0
+SD_MMC_Data2
+Text GLabel 2950 5350 1    50   Input ~ 0
+SD_SPI_MISO
+Text Label 2750 5350 1    50   ~ 0
+SD_MMC_DATA0
+Text GLabel 3150 5350 1    50   Input ~ 0
+SD_DATA0
+Text GLabel 3550 5350 1    50   Input ~ 0
+SD_SPI_MOSI
+Text Label 3350 5350 1    50   ~ 0
+SD_MMC_CMD
+Text GLabel 3750 5350 1    50   Input ~ 0
+SD_CMD
 $EndSCHEMATC
