@@ -682,10 +682,10 @@ EXTERNAL_SIREN_CTRL
 Text GLabel 2100 3400 3    50   Input ~ 0
 Boot_option
 $Comp
-L Device:C C1
+L Device:C C307
 U 1 1 5BF315B3
 P 1100 3650
-F 0 "C1" V 1250 3650 50  0000 C CNN
+F 0 "C307" V 1250 3650 50  0000 C CNN
 F 1 "100n" V 1350 3650 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 1138 3500 50  0001 C CNN
 F 3 "https://www.mouser.se/ProductDetail/KEMET/C0805C104J5RACTU?qs=sGAEpiMZZMs0AnBnWHyRQFCCI5cSbRT%2fIwsdZoDYv9I%3d" H 1100 3650 50  0001 C CNN
@@ -714,10 +714,10 @@ F 3 "" H 1500 3050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R9
+L Device:R R304
 U 1 1 5BF393A3
 P 1500 3200
-F 0 "R9" H 1570 3246 50  0000 L CNN
+F 0 "R304" H 1570 3246 50  0000 L CNN
 F 1 "10k" H 1570 3155 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 1430 3200 50  0001 C CNN
 F 3 "https://www.mouser.se/ProductDetail/Panasonic-Industrial-Devices/ERJ-6ENF1002V?qs=sGAEpiMZZMu61qfTUdNhGzRxdwze5h8ZcGDx6geba20%3d" H 1500 3200 50  0001 C CNN
