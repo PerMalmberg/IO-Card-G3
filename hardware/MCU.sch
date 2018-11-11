@@ -135,30 +135,6 @@ Wire Wire Line
 Connection ~ 8800 4200
 Wire Wire Line
 	8800 4200 8800 4250
-Wire Wire Line
-	7500 5050 8300 5050
-$Comp
-L Device:R R304
-U 1 1 5B73C224
-P 7500 5200
-F 0 "R304" H 7570 5246 50  0000 L CNN
-F 1 "10k" H 7570 5155 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 7430 5200 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Panasonic-Industrial-Devices/ERJ-6ENF1002V?qs=sGAEpiMZZMu61qfTUdNhGzRxdwze5h8ZcGDx6geba20%3d" H 7500 5200 50  0001 C CNN
-	1    7500 5200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0310
-U 1 1 5B73C2A7
-P 7500 5350
-F 0 "#PWR0310" H 7500 5100 50  0001 C CNN
-F 1 "GND" H 7505 5177 50  0000 C CNN
-F 2 "" H 7500 5350 50  0001 C CNN
-F 3 "" H 7500 5350 50  0001 C CNN
-	1    7500 5350
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR0314
 U 1 1 5B73C2C7
@@ -753,4 +729,15 @@ Wire Wire Line
 Connection ~ 1500 3400
 Wire Wire Line
 	1500 3400 1300 3400
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5BF7E862
+P 8300 5050
+F 0 "#PWR?" H 8300 4900 50  0001 C CNN
+F 1 "+3.3V" H 8315 5223 50  0000 C CNN
+F 2 "" H 8300 5050 50  0001 C CNN
+F 3 "" H 8300 5050 50  0001 C CNN
+	1    8300 5050
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
