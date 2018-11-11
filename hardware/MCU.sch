@@ -703,4 +703,6 @@ Wire Wire Line
 Connection ~ 6550 1850
 Text GLabel 5250 3600 2    60   Input ~ 0
 SIREN_CTRL
+Text GLabel 1950 3400 3    50   Input ~ 0
+BootOption
 $EndSCHEMATC
