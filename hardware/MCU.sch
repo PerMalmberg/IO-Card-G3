@@ -622,7 +622,7 @@ F 3 "" H 6750 1550 50  0001 C CNN
 $EndComp
 Text GLabel 5450 4000 2    50   Input ~ 0
 SD_SPI_CS
-Text GLabel 5450 3500 2    50   Input ~ 0
+Text GLabel 5450 3600 2    50   Input ~ 0
 SD_SPI_MOSI
 Text GLabel 5450 3900 2    50   Input ~ 0
 SD_SPI_CLK
@@ -701,7 +701,7 @@ Wire Wire Line
 Wire Wire Line
 	6750 2800 6750 1850
 Connection ~ 6750 1850
-Text GLabel 5450 3600 2    60   Input ~ 0
+Text GLabel 5450 3500 2    60   Input ~ 0
 EXTERNAL_SIREN_CTRL
 Text GLabel 2100 3400 3    50   Input ~ 0
 Boot_option
