@@ -796,7 +796,7 @@ F 3 "" H 2100 1800 50  0001 C CNN
 $EndComp
 Text GLabel 9250 4800 0    50   Input ~ 0
 SD_CARD_PWR
-Text GLabel 9600 1450 3    50   Input ~ 0
+Text GLabel 9600 1650 3    50   Input ~ 0
 SD_CARD_PWR
 $Comp
 L Device:Q_NPN_BCE Q?
@@ -976,4 +976,20 @@ F 3 "" H 9600 1050 50  0001 C CNN
 	1    9600 1050
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5BF0BE02
+P 9600 1550
+F 0 "#FLG0101" H 9600 1625 50  0001 C CNN
+F 1 "PWR_FLAG" V 9600 1678 50  0000 L CNN
+F 2 "" H 9600 1550 50  0001 C CNN
+F 3 "~" H 9600 1550 50  0001 C CNN
+	1    9600 1550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9600 1450 9600 1550
+Connection ~ 9600 1550
+Wire Wire Line
+	9600 1550 9600 1650
 $EndSCHEMATC
