@@ -12,6 +12,7 @@
 #include <smooth/core/io/InterruptInput.h>
 #include <smooth/application/io/MCP23017.h>
 #include <smooth/application/io/ADS1115.h>
+#include <smooth/application/sensor/BME280.h>
 #include "AnalogCycler.h"
 #include "I2CSetOutputCmd.h"
 
@@ -43,19 +44,22 @@ class I2CTask
         smooth::core::ipc::SubscribingTaskEventQueue<I2CSetOutput> set_output_cmd;
         std::unique_ptr<smooth::application::io::MCP23017> input_output{};
         std::unique_ptr<smooth::application::io::MCP23017> status_io{};
+        std::unique_ptr<smooth::application::sensor::BME280> sensor{};
         std::unique_ptr<AnalogCycler> cycler_1{};
         std::unique_ptr<AnalogCycler> cycler_2{};
         uint8_t output_state = 0;
-        bool initialized;
+        bool initialized{false};
 
         void update_inputs();
 
         void read_digital();
+        void read_sensor();
 
         void publish_digital(uint8_t pins);
         void publish_digital_status(uint8_t pins);
 
         std::tuple<bool,std::unique_ptr<smooth::application::io::MCP23017>> init_MCP23017_U1401();
         std::tuple<bool,std::unique_ptr<smooth::application::io::MCP23017>> init_MCP23017_U1402();
+        std::tuple<bool,std::unique_ptr<smooth::application::sensor::BME280>> init_BME280();
 };
 

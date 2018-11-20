@@ -10,7 +10,9 @@
 #include "AnalogValue.h"
 #include "DigitalValue.h"
 #include "DigitalStatusValue.h"
+#include "SensorValue.h"
 #include <smooth/core/util/ByteSet.h>
+#include <driver/gpio.h>
 
 using namespace std;
 using namespace std::chrono;
@@ -18,6 +20,7 @@ using namespace smooth::core::io;
 using namespace smooth::core::logging;
 using namespace smooth::core::util;
 using namespace smooth::application::io;
+using namespace smooth::application::sensor;
 using namespace smooth::core::ipc;
 
 static const gpio_num_t DIGITAL_CHANGE_PIN = GPIO_NUM_35;
@@ -47,7 +50,11 @@ void I2CTask::init()
     auto u1401 = init_MCP23017_U1401();
     auto u1402 = init_MCP23017_U1402();
 
-    if (std::get<0>(u1401) && std::get<1>(u1402))
+    // The BME280 device is optional
+    auto bme280 = init_BME280();
+    sensor = std::move(std::get<1>(bme280));
+
+    if (std::get<0>(u1401) && std::get<0>(u1402))
     {
         input_output = std::move(std::get<1>(u1401));
         status_io = std::move(std::get<1>(u1402));
@@ -62,9 +69,8 @@ void I2CTask::init()
                 cycler_2 = make_unique<AnalogCycler>(std::move(u502));
 
                 // Read inputs once on startup to clear waiting interrupts on the i2c devices.
-                update_inputs();
-
                 initialized = true;
+                update_inputs();
             }
             else
             {
@@ -86,7 +92,9 @@ void I2CTask::tick()
         cycler_1->trigger_read();
         cycler_2->trigger_read();
         read_digital();
+        read_sensor();
     }
+
 }
 
 void I2CTask::event(const smooth::core::io::InterruptInputEvent& ev)
@@ -173,10 +181,29 @@ void I2CTask::read_digital()
     Log::info(name, "Read digital 2");
 }
 
+void I2CTask::read_sensor()
+{
+    if (sensor)
+    {
+        float humidity;
+        float pressure;
+        float temperature;
+
+        auto id = sensor->read_id();
+        Log::info(name, Format("ID: {1}", Hex<uint8_t>(id, true)));
+
+        if (sensor->read_measurements(humidity, pressure, temperature))
+        {
+            SensorValue sv{humidity, pressure, temperature};
+            Publisher<SensorValue>::publish(sv);
+        }
+    }
+}
+
 std::tuple<bool, std::unique_ptr<smooth::application::io::MCP23017>>
 I2CTask::init_MCP23017_U1401()
 {
-    std::unique_ptr<smooth::application::io::MCP23017> device = i2c_master.create_device<MCP23017>(0x20);
+    auto device = i2c_master.create_device<MCP23017>(0x20);
 
     bool res = device->is_present();
 
@@ -225,7 +252,7 @@ I2CTask::init_MCP23017_U1401()
 std::tuple<bool, std::unique_ptr<smooth::application::io::MCP23017>>
 I2CTask::init_MCP23017_U1402()
 {
-    std::unique_ptr<smooth::application::io::MCP23017> device = i2c_master.create_device<MCP23017>(0x21);
+    auto device = i2c_master.create_device<MCP23017>(0x21);
 
     bool res = device->is_present();
 
@@ -267,6 +294,49 @@ I2CTask::init_MCP23017_U1402()
     else
     {
         Log::error(name, "U1402 not present");
+    }
+
+    return std::make_tuple(res, std::move(device));
+}
+
+std::tuple<bool, std::unique_ptr<smooth::application::sensor::BME280>> I2CTask::init_BME280()
+{
+    bool res = false;
+    auto device = i2c_master.create_device<smooth::application::sensor::BME280>(0x76);
+
+    if (device->is_present())
+    {
+        Log::info(name, Format("BME280 reset: {1}", Bool(device->reset())));
+
+        bool measuring = false;
+        bool loading_from_nvm = false;
+        while (!device->read_status(measuring, loading_from_nvm) || loading_from_nvm)
+        {
+            Log::info(name, Format("Waiting for BME280 to complete reset operation... {1} {2}", Bool(measuring),
+                                   Bool(loading_from_nvm)));
+        }
+
+        res = device->configure_sensor(BME280::SensorMode::Normal,
+                                            BME280::OverSampling::Oversamplingx1,
+                                            BME280::OverSampling::Oversamplingx1,
+                                            BME280::OverSampling::Oversamplingx1,
+                                            BME280::StandbyTimeMS::ST_1000,
+                                            BME280::FilterCoeff::FC_OFF);
+
+        Log::info(name, Format("Configure BME280: {1}", Bool(res)));
+
+        if (res)
+        {
+            Log::info(name, Format("BME280 initialized, ID: {1}", Hex<uint8_t>(device->read_id())));
+        }
+        else
+        {
+            Log::error(name, "Could not init BME280");
+        }
+    }
+    else
+    {
+        Log::info(name, "BME280 not present");
     }
 
     return std::make_tuple(res, std::move(device));
