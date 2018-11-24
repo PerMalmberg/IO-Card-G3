@@ -8,7 +8,8 @@ set(SOURCES main.cpp
         I2CSetOutputCmd.h
         I2CTask.h
         I2CTask.cpp
-        I2CSetOutputCmd.h)
+        I2CSetOutputCmd.h
+        led_pin_output_number.h)
 
 if (${ESP_PLATFORM})
     set(COMPONENT_SRCS ${SOURCES})

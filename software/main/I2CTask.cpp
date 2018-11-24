@@ -5,7 +5,6 @@
 #include "I2CTask.h"
 #include <memory>
 #include <smooth/core/util/ByteSet.h>
-#include <smooth/core/ipc/Publisher.h>
 #include <smooth/core/task_priorities.h>
 #include "AnalogValue.h"
 #include "DigitalValue.h"
@@ -37,7 +36,8 @@ I2CTask::I2CTask()
           analog_change_1(analog_change_queue_1, ANALOG_CHANGE_PIN_1, false, false, GPIO_INTR_NEGEDGE),
           analog_change_2(analog_change_queue_2, ANALOG_CHANGE_PIN_2, false, false, GPIO_INTR_NEGEDGE),
           i2c_reset(GPIO_NUM_25, false, false, false),
-          set_output_cmd("set_output_cmd", 10, *this, *this)
+          set_output_cmd("set_output_cmd", 10, *this, *this),
+          set_output_bit_cmd("set_output_bit_cmd", 10, *this, *this)
 {
 }
 
@@ -53,6 +53,9 @@ void I2CTask::init()
     // The BME280 device is optional
     auto bme280 = init_BME280();
     sensor = std::move(std::get<1>(bme280));
+
+    status_io = std::move(std::get<1>(u1402));
+    initialized = true;
 
     if (std::get<0>(u1401) && std::get<0>(u1402))
     {
@@ -89,12 +92,18 @@ void I2CTask::tick()
 {
     if (initialized)
     {
-        cycler_1->trigger_read();
-        cycler_2->trigger_read();
+        if (cycler_1)
+        {
+            cycler_1->trigger_read();
+        }
+        if (cycler_2)
+        {
+            cycler_2->trigger_read();
+        }
+
         read_digital();
         read_sensor();
     }
-
 }
 
 void I2CTask::event(const smooth::core::io::InterruptInputEvent& ev)
@@ -104,7 +113,7 @@ void I2CTask::event(const smooth::core::io::InterruptInputEvent& ev)
         uint8_t pins;
         if (input_output->read_interrupt_capture(MCP23017::Port::A, pins))
         {
-            publish_digital(pins);
+            publish_read_value<DigitalValue>(pins);
         }
     }
     else if (ev.get_io() == ANALOG_CHANGE_PIN_1)
@@ -133,27 +142,9 @@ void I2CTask::update_inputs()
     cycler_2->cycle();
 }
 
-void I2CTask::publish_digital(uint8_t pins)
-{
-    for (uint8_t i = 0;
-         i < 8;
-         ++i)
-    {
-        DigitalValue dv(i, static_cast<bool>(pins & 1));
-        Publisher<DigitalValue>::publish(dv);
-        pins >>= 1;
-    }
-}
-
-void I2CTask::publish_digital_status(uint8_t pins)
-{
-    // Only GPA7 (bit 7, port A) is an input
-    DigitalStatusValue dv(7, static_cast<bool>(pins & 0x8));
-    Publisher<DigitalStatusValue>::publish(dv);
-}
-
 void I2CTask::event(const I2CSetOutput& ev)
 {
+    uint8_t output_state = 0;
     smooth::core::util::ByteSet b(output_state);
     b.set(ev.get_io(), ev.get_state());
 
@@ -167,18 +158,42 @@ void I2CTask::event(const I2CSetOutput& ev)
     }
 }
 
+void I2CTask::event(const I2CSetOutputBit& ev)
+{
+    uint8_t output_state = 0;
+
+    auto& device = ev.is_status_device() ? status_io : input_output;
+
+    if (device->read_output(smooth::application::io::MCP23017::Port::B, output_state))
+    {
+        smooth::core::util::ByteSet b{output_state};
+        b.set(ev.get_bit(), ev.get_state());
+        if (!device->set_output(smooth::application::io::MCP23017::Port::B, b))
+        {
+            Log::error(name, "Failed to set output");
+        }
+    }
+    else
+    {
+        Log::error(name, "Failed to read outputs");
+    }
+}
+
 void I2CTask::read_digital()
 {
-    Log::info(name, "Read digital");
-    uint8_t digital;
-    input_output->read_input(MCP23017::Port::A, digital);
-    publish_digital(digital);
-    Log::info(name, "Read digital 1");
+    uint8_t val;
 
-    uint8_t status;
-    status_io->read_input(MCP23017::Port::A, status);
-    publish_digital_status(status);
-    Log::info(name, "Read digital 2");
+    if (input_output)
+    {
+        input_output->read_input(MCP23017::Port::A, val);
+        publish_read_value<DigitalValue>(val);
+    }
+
+    if (status_io)
+    {
+        status_io->read_input(MCP23017::Port::A, val);
+        publish_read_value<DigitalStatusValue>(val);
+    }
 }
 
 void I2CTask::read_sensor()
@@ -189,13 +204,9 @@ void I2CTask::read_sensor()
         float pressure;
         float temperature;
 
-        auto id = sensor->read_id();
-        Log::info(name, Format("ID: {1}", Hex<uint8_t>(id, true)));
-
         if (sensor->read_measurements(humidity, pressure, temperature))
         {
-            SensorValue sv{humidity, pressure, temperature};
-            Publisher<SensorValue>::publish(sv);
+            Publisher<SensorValue>::publish(SensorValue{humidity, pressure, temperature});
         }
     }
 }
@@ -264,7 +275,7 @@ I2CTask::init_MCP23017_U1402()
         res = device->configure_device(
                 false,// mirror_change_interrupt
                 false, // interrupt_polarity_active_high
-                0xFF, // interrupt_on_change_enable_a
+                0x00, // interrupt_on_change_enable_a
                 0x00, // interrupt_control_register_a
                 0x00, // interrupt_default_val_a
                 0x00, // interrupt_on_change_enable_b,
@@ -317,11 +328,11 @@ std::tuple<bool, std::unique_ptr<smooth::application::sensor::BME280>> I2CTask::
         }
 
         res = device->configure_sensor(BME280::SensorMode::Normal,
-                                            BME280::OverSampling::Oversamplingx1,
-                                            BME280::OverSampling::Oversamplingx1,
-                                            BME280::OverSampling::Oversamplingx1,
-                                            BME280::StandbyTimeMS::ST_1000,
-                                            BME280::FilterCoeff::FC_OFF);
+                                       BME280::OverSampling::Oversamplingx1,
+                                       BME280::OverSampling::Oversamplingx1,
+                                       BME280::OverSampling::Oversamplingx1,
+                                       BME280::StandbyTimeMS::ST_1000,
+                                       BME280::FilterCoeff::FC_OFF);
 
         Log::info(name, Format("Configure BME280: {1}", Bool(res)));
 

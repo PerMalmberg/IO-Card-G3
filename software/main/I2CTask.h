@@ -9,6 +9,7 @@
 #include <smooth/core/ipc/ISRTaskEventQueue.h>
 #include <smooth/core/ipc/SubscribingTaskEventQueue.h>
 #include <smooth/core/io/i2c/Master.h>
+#include <smooth/core/ipc/Publisher.h>
 #include <smooth/core/io/InterruptInput.h>
 #include <smooth/application/io/MCP23017.h>
 #include <smooth/application/io/ADS1115.h>
@@ -19,7 +20,8 @@
 class I2CTask
         : public smooth::core::Task,
           public smooth::core::ipc::IEventListener<smooth::core::io::InterruptInputEvent>,
-          public smooth::core::ipc::IEventListener<I2CSetOutput>
+          public smooth::core::ipc::IEventListener<I2CSetOutput>,
+          public smooth::core::ipc::IEventListener<I2CSetOutputBit>
 {
     public:
         I2CTask();
@@ -31,6 +33,7 @@ class I2CTask
         void event(const smooth::core::io::InterruptInputEvent& ev) override;
 
         void event(const I2CSetOutput& ev) override;
+        void event(const I2CSetOutputBit& ev) override;
 
     private:
         smooth::core::io::i2c::Master i2c_master;
@@ -42,24 +45,35 @@ class I2CTask
         smooth::core::io::InterruptInput analog_change_2;
         smooth::core::io::Output i2c_reset;
         smooth::core::ipc::SubscribingTaskEventQueue<I2CSetOutput> set_output_cmd;
+        smooth::core::ipc::SubscribingTaskEventQueue<I2CSetOutputBit> set_output_bit_cmd;
         std::unique_ptr<smooth::application::io::MCP23017> input_output{};
         std::unique_ptr<smooth::application::io::MCP23017> status_io{};
         std::unique_ptr<smooth::application::sensor::BME280> sensor{};
         std::unique_ptr<AnalogCycler> cycler_1{};
         std::unique_ptr<AnalogCycler> cycler_2{};
-        uint8_t output_state = 0;
         bool initialized{false};
 
         void update_inputs();
 
         void read_digital();
+
         void read_sensor();
 
-        void publish_digital(uint8_t pins);
-        void publish_digital_status(uint8_t pins);
+        template<typename T>
+        void publish_read_value(uint8_t value)
+        {
+            for (uint8_t i = 0; i < 8; ++i)
+            {
+                T dv(i, static_cast<bool>(value & 1));
+                smooth::core::ipc::Publisher<T>::publish(dv);
+                value >>= 1;
+            }
+        }
 
-        std::tuple<bool,std::unique_ptr<smooth::application::io::MCP23017>> init_MCP23017_U1401();
-        std::tuple<bool,std::unique_ptr<smooth::application::io::MCP23017>> init_MCP23017_U1402();
-        std::tuple<bool,std::unique_ptr<smooth::application::sensor::BME280>> init_BME280();
+        std::tuple<bool, std::unique_ptr<smooth::application::io::MCP23017>> init_MCP23017_U1401();
+
+        std::tuple<bool, std::unique_ptr<smooth::application::io::MCP23017>> init_MCP23017_U1402();
+
+        std::tuple<bool, std::unique_ptr<smooth::application::sensor::BME280>> init_BME280();
 };
 

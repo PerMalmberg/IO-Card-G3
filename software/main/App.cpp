@@ -4,16 +4,32 @@
 #include <atomic>
 #include <smooth/core/filesystem/MMCSDCard.h>
 #include <smooth/core/filesystem/SPISDCard.h>
-#include "I2CTask.h"
-#include "wifi-creds.h"
 #include <smooth/core/ipc/SubscribingTaskEventQueue.h>
+#include <smooth/core/ipc/Publisher.h>
+#include <smooth/core/timer/Timer.h>
+#include <smooth/core/network/Wifi.h>
+#include "I2CSetOutputCmd.h"
+#include "wifi-creds.h"
+#include "I2CTask.h"
+#include "led_pin_output_number.h"
+
+using namespace std::chrono;
+using namespace smooth::core::timer;
+using namespace smooth::core::network;
+using namespace smooth::core::filesystem;
+using namespace smooth::core::ipc;
+using namespace smooth::core::sntp;
 
 namespace g3
 {
     App::App()
             : Application(5, std::chrono::seconds{1}),
-              digital_status_queue("io_status_queue", 8, *this, *this)
-    {}
+              digital_status_queue("io_status_queue", 8, *this, *this),
+              sntp_queue("sntp_queue", 1, *this, *this),
+              network_status("network_status", 2, *this, *this)
+    {
+        sntp_timer = Timer::create("sntp", 1, sntp_queue, true, seconds{10});
+    }
 
     void App::init()
     {
@@ -21,15 +37,9 @@ namespace g3
         i2c = std::make_unique<I2CTask>();
         i2c->start();
 
-        // Init appropriate SD Card driver
-
         // Read device ID
 
-        // Start Wifi
-
         // Start MQTT
-
-        // Start I2C worker
 
         // Start Wiegand
 
@@ -44,8 +54,93 @@ namespace g3
     {
         if (event.get_name() == "s7")
         {
-            use_sd_spi = event.get_value();
-            Log::info(name, Format("Using SPI for SD Card: {1}", Bool(use_sd_spi)));
+            if (!sd_card)
+            {
+                // We now know the state of the SD Card mode selection switch.
+                // Cycle power to SD Card to ensure it can be initialized in whatever the selected mode is.
+                Publisher<I2CSetOutput>::publish(I2CSetOutput{I2CDevice::status, SD_CARD_POWER_CTRL, false});
+                std::this_thread::sleep_for(seconds{1});
+                Publisher<I2CSetOutput>::publish(I2CSetOutput{I2CDevice::status, SD_CARD_POWER_CTRL, true});
+                std::this_thread::sleep_for(seconds{1});
+
+                use_sd_spi = event.get_value();
+                Log::info(name, Format("Using SPI for SD Card: {1}", Bool(use_sd_spi)));
+
+                if (use_sd_spi)
+                {
+                    sd_card = std::make_unique<SPISDCard>(GPIO_NUM_19,
+                                                          GPIO_NUM_23,
+                                                          GPIO_NUM_18,
+                                                          GPIO_NUM_5,
+                                                          GPIO_NUM_21);
+                }
+                else
+                {
+                    sd_card = std::make_unique<MMCSDCard>(GPIO_NUM_15,
+                                                          GPIO_NUM_2,
+                                                          GPIO_NUM_26,
+                                                          GPIO_NUM_12,
+                                                          GPIO_NUM_13,
+                                                          false);
+                }
+
+                auto res = sd_card->init("/sdcard", false, 5);
+                Publisher<I2CSetOutput>::publish(I2CSetOutput{I2CDevice::status, SD_CARD_INIT_OK, res});
+
+                if (!res)
+                {
+                    Log::error(name, "Failed to initialize SD Card");
+                    sd_card.reset();
+                }
+                else
+                {
+                    Log::error(name, "Initialized SD Card");
+
+                    auto& wifi = get_wifi();
+                    // TODO: Read hostname from disk
+                    wifi.set_host_name("G3");
+                    wifi.set_auto_connect(true);
+                    wifi.set_ap_credentials(WIFI_SSID, WIFI_PASSWORD);
+                    wifi.connect_to_ap();
+
+                    sntp_timer->start();
+                }
+            }
         }
+    }
+
+    void App::event(const smooth::core::timer::TimerExpiredEvent& ev)
+    {
+        if(ev.get_id() == sntp_timer->get_id())
+        {
+            if(!sntp)
+            {
+                Log::info(name, "Starting SNTP");
+                // TODO: Read SNTP servers from disk
+                const std::vector<std::string> servers{"pool.ntp.org"};
+                sntp = std::make_unique<Sntp>(servers);
+                sntp->start();
+            }
+            else if(sntp->is_time_set())
+            {
+                auto t = system_clock::to_time_t(system_clock::now());
+                tm time{};
+                localtime_r(&t, &time);
+                Log::info(name, Format("Time set: {1}", Str(asctime(&time))));
+                Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit{I2CDevice::status, SNTP_TIME_SET, sntp->is_time_set()});
+                sntp_timer->stop();
+            }
+            else
+            {
+                Log::info(name, "Waiting for time to be set");
+            }
+        }
+    }
+
+    void App::event(const smooth::core::network::NetworkStatus& ev)
+    {
+        bool connected = ev.event == NetworkEvent::GOT_IP;
+        Log::info(name, Format("Network connected: {1}", Bool(connected)));
+        Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit{I2CDevice::status, WIFI_CONNECTED, connected});
     }
 }
