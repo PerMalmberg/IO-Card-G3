@@ -20,19 +20,14 @@ namespace g3
         public:
             App();
 
-            void init()
+            void init() override;
 
-            override;
+            void tick() override;
 
-            void tick()
-
-            override;
-
-            void event(const DigitalStatusValue& event)
-
-            override;
+            void event(const DigitalStatusValue& event) override;
 
             void event(const smooth::core::timer::TimerExpiredEvent& ev) override;
+
             void event(const smooth::core::network::NetworkStatus& ev) override;
 
         private:
