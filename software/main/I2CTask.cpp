@@ -52,7 +52,10 @@ void I2CTask::init()
 
     // The BME280 device is optional
     auto bme280 = init_BME280();
-    sensor = std::move(std::get<1>(bme280));
+    if(std::get<0>(bme280))
+    {
+        sensor = std::move(std::get<1>(bme280));
+    }
 
     status_io = std::move(std::get<1>(u1402));
     initialized = true;
