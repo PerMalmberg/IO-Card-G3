@@ -703,8 +703,8 @@ U 1 1 5BEBC44C
 P 6750 2900
 AR Path="/5B61FB63/5BEBC44C" Ref="R?"  Part="1" 
 AR Path="/5B61FB63/5B98DF5D/5BEBC44C" Ref="R406"  Part="1" 
-F 0 "R406" H 6820 2946 50  0000 L CNN
-F 1 "50k" H 6820 2855 50  0000 L CNN
+F 0 "R406" V 6650 2800 50  0000 L CNN
+F 1 "50k" V 6750 2850 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 6680 2900 50  0001 C CNN
 F 3 "https://www.mouser.se/ProductDetail/667-ERJ-6ENF5102V" H 6750 2900 50  0001 C CNN
 	1    6750 2900
@@ -759,8 +759,8 @@ Wire Notes Line
 	3750 4200 3750 2250
 Wire Notes Line
 	3750 2250 7350 2250
-Text Notes 3850 2550 0    50   ~ 0
-SD Pullups. R406 is placed on other side of MAX4948 to comply with ESP32\nWrover GPIO12 strapping pin for flash voltage (1.8V) selection regardless\nof SPI or MMC mode.
+Text Notes 3800 2750 0    50   ~ 0
+SD Pullups: R406 is placed on other side of MAX4948 to comply with ESP32\nWrover GPIO12 strapping pin for flash voltage (1.8V) selection regardless\nof SPI or MMC mode.\n\nWrover-B uses 3.3V so don't populate R406 and call gpio_pullup_en(GPIO_NUM_12)\nafter boot to allow SD Card operation.
 Wire Wire Line
 	3450 1950 3450 2900
 Wire Wire Line
