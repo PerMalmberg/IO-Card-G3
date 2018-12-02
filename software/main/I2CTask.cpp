@@ -27,7 +27,7 @@ static const gpio_num_t ANALOG_CHANGE_PIN_1 = GPIO_NUM_39;
 static const gpio_num_t ANALOG_CHANGE_PIN_2 = GPIO_NUM_36;
 
 I2CTask::I2CTask()
-        : Task("I2CTask", 8096, smooth::core::APPLICATION_BASE_PRIO, milliseconds(5000)),
+        : Task("I2CTask", 8096, smooth::core::APPLICATION_BASE_PRIO, seconds(5)),
           i2c_master(I2C_NUM_0, GPIO_NUM_33, false, GPIO_NUM_32, false, 100000),
           input_change_queue(*this, *this),
           analog_change_queue_1(*this, *this),
@@ -56,9 +56,6 @@ void I2CTask::init()
     {
         sensor = std::move(std::get<1>(bme280));
     }
-
-    status_io = std::move(std::get<1>(u1402));
-    initialized = true;
 
     if (std::get<0>(u1401) && std::get<0>(u1402))
     {

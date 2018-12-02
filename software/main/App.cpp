@@ -12,6 +12,7 @@
 #include "wifi-creds.h"
 #include "I2CTask.h"
 #include "led_pin_output_number.h"
+#include <driver/gpio.h>
 
 using namespace std::chrono;
 using namespace smooth::core::timer;
@@ -26,9 +27,9 @@ namespace g3
             : Application(5, std::chrono::seconds{1}),
               digital_status_queue("io_status_queue", 8, *this, *this),
               sntp_queue("sntp_queue", 1, *this, *this),
-              network_status("network_status", 2, *this, *this)
+              network_status("network_status", 2, *this, *this),
+              sntp_timer(Timer::create("sntp", 1, sntp_queue, true, seconds{10}))
     {
-        sntp_timer = Timer::create("sntp", 1, sntp_queue, true, seconds{10});
     }
 
     void App::init()
@@ -56,11 +57,17 @@ namespace g3
         {
             if (!sd_card)
             {
+                // Using Wrover-B module so must enable pullup on strapping pin GPIO12.
+                if (gpio_pullup_en(GPIO_NUM_12) != ESP_OK)
+                {
+                    Log::error(name, "Failed to enable pull-up on GPIO12");
+                }
+
                 // We now know the state of the SD Card mode selection switch.
                 // Cycle power to SD Card to ensure it can be initialized in whatever the selected mode is.
-                Publisher<I2CSetOutput>::publish(I2CSetOutput{I2CDevice::status, SD_CARD_POWER_CTRL, false});
+                Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit{I2CDevice::status, SD_CARD_POWER_CTRL, false});
                 std::this_thread::sleep_for(seconds{1});
-                Publisher<I2CSetOutput>::publish(I2CSetOutput{I2CDevice::status, SD_CARD_POWER_CTRL, true});
+                Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit{I2CDevice::status, SD_CARD_POWER_CTRL, true});
                 std::this_thread::sleep_for(seconds{1});
 
                 use_sd_spi = event.get_value();
@@ -69,7 +76,7 @@ namespace g3
                 if (use_sd_spi)
                 {
                     sd_card = std::make_unique<SPISDCard>(GPIO_NUM_19,
-                                                          GPIO_NUM_23,
+                                                          GPIO_NUM_22,
                                                           GPIO_NUM_18,
                                                           GPIO_NUM_5,
                                                           GPIO_NUM_21);
@@ -85,11 +92,10 @@ namespace g3
                 }
 
                 auto res = sd_card->init("/sdcard", false, 5);
-                Publisher<I2CSetOutput>::publish(I2CSetOutput{I2CDevice::status, SD_CARD_INIT_OK, res});
+                Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit{I2CDevice::status, SD_CARD_INIT_OK, res});
 
                 if (!res)
                 {
-                    Log::error(name, "Failed to initialize SD Card");
                     sd_card.reset();
                 }
                 else
@@ -111,9 +117,9 @@ namespace g3
 
     void App::event(const smooth::core::timer::TimerExpiredEvent& ev)
     {
-        if(ev.get_id() == sntp_timer->get_id())
+        if (ev.get_id() == sntp_timer->get_id())
         {
-            if(!sntp)
+            if (!sntp)
             {
                 Log::info(name, "Starting SNTP");
                 // TODO: Read SNTP servers from disk
@@ -121,13 +127,14 @@ namespace g3
                 sntp = std::make_unique<Sntp>(servers);
                 sntp->start();
             }
-            else if(sntp->is_time_set())
+            else if (sntp->is_time_set())
             {
                 auto t = system_clock::to_time_t(system_clock::now());
                 tm time{};
                 localtime_r(&t, &time);
                 Log::info(name, Format("Time set: {1}", Str(asctime(&time))));
-                Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit{I2CDevice::status, SNTP_TIME_SET, sntp->is_time_set()});
+                Publisher<I2CSetOutputBit>::publish(
+                        I2CSetOutputBit{I2CDevice::status, SNTP_TIME_SET, sntp->is_time_set()});
                 sntp_timer->stop();
             }
             else
