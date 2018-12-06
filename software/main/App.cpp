@@ -94,14 +94,8 @@ namespace g3
                 auto res = sd_card->init("/sdcard", false, 5);
                 Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit{I2CDevice::status, SD_CARD_INIT_OK, res});
 
-                if (!res)
+                if (res)
                 {
-                    sd_card.reset();
-                }
-                else
-                {
-                    Log::error(name, "Initialized SD Card");
-
                     auto& wifi = get_wifi();
                     // TODO: Read hostname from disk
                     wifi.set_host_name("G3");
@@ -110,6 +104,10 @@ namespace g3
                     wifi.connect_to_ap();
 
                     sntp_timer->start();
+                }
+                else
+                {
+                    sd_card.reset();
                 }
             }
         }
