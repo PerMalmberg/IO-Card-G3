@@ -1,4 +1,4 @@
 #pragma once
 
-#define WIFI_SSID "your ssid"
-#define WIFI_PASSWORD "your password"
+#define WIFI_SSID "Our place"
+#define WIFI_PASSWORD "TOKInDUmeGaNHaG"

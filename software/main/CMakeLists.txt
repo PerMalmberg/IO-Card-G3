@@ -13,6 +13,12 @@ set(SOURCES main.cpp
         I2CSetOutputCmd.h
         led_pin_output_number.h)
 
-add_executable(g3 ${SOURCES})
-target_link_libraries(g3 smooth)
+add_executable(${PROJECT_NAME} ${SOURCES})
+target_link_libraries(${PROJECT_NAME} smooth)
+
+# Place binary output in top-level build directory so that idf.py can find it.
+set_target_properties( ${PROJECT_NAME}
+        PROPERTIES
+        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/.."
+        )
 
