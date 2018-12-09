@@ -2,8 +2,10 @@
 
 #include <memory>
 #include <atomic>
+#include <driver/gpio.h>
 #include <smooth/core/filesystem/MMCSDCard.h>
 #include <smooth/core/filesystem/SPISDCard.h>
+#include <smooth/core/json/JsonFile.h>
 #include <smooth/core/ipc/SubscribingTaskEventQueue.h>
 #include <smooth/core/ipc/Publisher.h>
 #include <smooth/core/timer/Timer.h>
@@ -12,14 +14,14 @@
 #include "wifi-creds.h"
 #include "I2CTask.h"
 #include "led_pin_output_number.h"
-#include <driver/gpio.h>
 
 using namespace std::chrono;
-using namespace smooth::core::timer;
-using namespace smooth::core::network;
 using namespace smooth::core::filesystem;
 using namespace smooth::core::ipc;
+using namespace smooth::core::json;
+using namespace smooth::core::network;
 using namespace smooth::core::sntp;
+using namespace smooth::core::timer;
 
 namespace g3
 {
@@ -96,9 +98,10 @@ namespace g3
 
                 if (res)
                 {
+                    read_device_id();
+
                     auto& wifi = get_wifi();
-                    // TODO: Read hostname from disk
-                    wifi.set_host_name("G3");
+                    wifi.set_host_name(device_id);
                     wifi.set_auto_connect(true);
                     wifi.set_ap_credentials(WIFI_SSID, WIFI_PASSWORD);
                     wifi.connect_to_ap();
@@ -147,5 +150,34 @@ namespace g3
         bool connected = ev.event == NetworkEvent::GOT_IP;
         Log::info(name, Format("Network connected: {1}", Bool(connected)));
         Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit{I2CDevice::status, WIFI_CONNECTED, connected});
+    }
+
+    void App::read_device_id()
+    {
+        JsonFile f{"/sdcard/dev_id.cfg"};
+        auto& v = f.value();
+
+        device_id = v["device_id"].get_string("");
+
+        if(device_id.empty())
+        {
+            // No device id set in config, create a random id.
+            std::random_device rd;
+            std::mt19937 gen(rd());
+            std::uniform_int_distribution<> dis(0x0, 0xF);
+
+            std::stringstream ss;
+            for(int i = 0; i < 10; ++i)
+            {
+                ss << std::setfill('0') << std::setw(2) << std::hex << dis(gen);
+            }
+
+            device_id = ss.str();
+
+            v["device_id"] = device_id;
+            f.save();
+        }
+
+        Log::info(name, Format("Device id: {1}", Str(device_id)));
     }
 }

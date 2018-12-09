@@ -31,6 +31,8 @@ namespace g3
             void event(const smooth::core::network::NetworkStatus& ev) override;
 
         private:
+            void read_device_id();
+
             smooth::core::ipc::SubscribingTaskEventQueue<DigitalStatusValue> digital_status_queue;
             smooth::core::ipc::TaskEventQueue<smooth::core::timer::TimerExpiredEvent> sntp_queue;
             smooth::core::ipc::TaskEventQueue<smooth::core::network::NetworkStatus> network_status;
@@ -40,6 +42,7 @@ namespace g3
             std::shared_ptr<smooth::core::timer::Timer> sntp_timer{};
             std::unique_ptr<smooth::core::filesystem::SDCard> sd_card{};
             std::unique_ptr<smooth::core::sntp::Sntp> sntp{};
+            std::string device_id{"Not yet initialized"};
     };
 
 }
