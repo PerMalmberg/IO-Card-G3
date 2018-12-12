@@ -9,6 +9,7 @@
 #include <smooth/core/network/NetworkStatus.h>
 #include "DigitalStatusValue.h"
 #include "I2CTask.h"
+#include "Mqtt.h"
 
 namespace g3
 {
@@ -32,17 +33,19 @@ namespace g3
 
         private:
             void read_device_id();
+            void start_mqtt();
 
             smooth::core::ipc::SubscribingTaskEventQueue<DigitalStatusValue> digital_status_queue;
             smooth::core::ipc::TaskEventQueue<smooth::core::timer::TimerExpiredEvent> sntp_queue;
-            smooth::core::ipc::TaskEventQueue<smooth::core::network::NetworkStatus> network_status;
+            smooth::core::ipc::SubscribingTaskEventQueue<smooth::core::network::NetworkStatus> network_status;
 
             std::unique_ptr<I2CTask> i2c{};
             bool use_sd_spi{false};
             std::shared_ptr<smooth::core::timer::Timer> sntp_timer{};
             std::unique_ptr<smooth::core::filesystem::SDCard> sd_card{};
             std::unique_ptr<smooth::core::sntp::Sntp> sntp{};
-            std::string device_id{"Not yet initialized"};
+            std::string device_id{};
+            std::unique_ptr<Mqtt> mqtt{};
     };
 
 }

@@ -11,7 +11,8 @@ set(SOURCES main.cpp
         I2CTask.h
         I2CTask.cpp
         I2CSetOutputCmd.h
-        led_pin_output_number.h)
+        led_pin_output_number.h
+        Mqtt.cpp)
 
 add_executable(${PROJECT_NAME} ${SOURCES})
 target_link_libraries(${PROJECT_NAME} smooth)

@@ -43,6 +43,13 @@ I2CTask::I2CTask()
 
 void I2CTask::init()
 {
+    initialized = prepare_hw();    
+}
+
+bool I2CTask::prepare_hw()
+{
+    bool res = false;
+
     i2c_reset.set();
     std::this_thread::sleep_for(chrono::milliseconds(50));
     i2c_reset.clr();
@@ -72,7 +79,7 @@ void I2CTask::init()
                 cycler_2 = make_unique<AnalogCycler>(std::move(u502));
 
                 // Read inputs once on startup to clear waiting interrupts on the i2c devices.
-                initialized = true;
+                res = true;
                 update_inputs();
             }
             else
@@ -85,6 +92,8 @@ void I2CTask::init()
             Log::error(name, "u501 not present");
         }
     }
+
+    return res;
 }
 
 
@@ -103,6 +112,10 @@ void I2CTask::tick()
 
         read_digital();
         read_sensor();
+    }
+    else
+    {
+        initialized = prepare_hw();
     }
 }
 

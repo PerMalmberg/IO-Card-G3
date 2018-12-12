@@ -36,13 +36,11 @@ namespace g3
 
     void App::init()
     {
+        Application::init();
+
         // Initialize I2C
         i2c = std::make_unique<I2CTask>();
         i2c->start();
-
-        // Read device ID
-
-        // Start MQTT
 
         // Start Wiegand
 
@@ -51,6 +49,10 @@ namespace g3
 
     void App::tick()
     {
+        if(mqtt)
+        {
+            mqtt->tick();
+        }
     }
 
     void App::event(const DigitalStatusValue& event)
@@ -147,9 +149,14 @@ namespace g3
 
     void App::event(const smooth::core::network::NetworkStatus& ev)
     {
-        bool connected = ev.event == NetworkEvent::GOT_IP;
+        bool connected = ev.get_event() == NetworkEvent::GOT_IP;
         Log::info(name, Format("Network connected: {1}", Bool(connected)));
         Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit{I2CDevice::status, WIFI_CONNECTED, connected});
+
+        if(connected)
+        {
+            start_mqtt();
+        }
     }
 
     void App::read_device_id()
@@ -179,5 +186,13 @@ namespace g3
         }
 
         Log::info(name, Format("Device id: {1}", Str(device_id)));
+    }
+
+    void App::start_mqtt()
+    {
+        if(!mqtt)
+        {
+            mqtt = std::make_unique<Mqtt>(device_id, *this);
+        }
     }
 }
