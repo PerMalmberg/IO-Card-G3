@@ -10,6 +10,10 @@ class SensorValue
         {
         }
 
+        float get_humidity() const{ return humidity; }
+        float get_pressure() const{ return pressure; }
+        float get_temperature() const{ return temperature; }
+
     private:
         float humidity;
         float pressure;

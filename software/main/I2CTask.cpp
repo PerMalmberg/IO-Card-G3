@@ -27,7 +27,7 @@ static const gpio_num_t ANALOG_CHANGE_PIN_1 = GPIO_NUM_39;
 static const gpio_num_t ANALOG_CHANGE_PIN_2 = GPIO_NUM_36;
 
 I2CTask::I2CTask()
-        : Task("I2CTask", 8096, smooth::core::APPLICATION_BASE_PRIO, seconds(5)),
+        : Task("I2CTask", 8096, smooth::core::APPLICATION_BASE_PRIO, seconds(30)),
           i2c_master(I2C_NUM_0, GPIO_NUM_33, false, GPIO_NUM_32, false, 100000),
           input_change_queue(*this, *this),
           analog_change_queue_1(*this, *this),
@@ -132,7 +132,6 @@ void I2CTask::event(const smooth::core::io::InterruptInputEvent& ev)
     else if (ev.get_io() == ANALOG_CHANGE_PIN_1)
     {
         uint16_t result = cycler_1->get_value();
-
         AnalogValue av(10 + cycler_1->get_input_number(), result);
         Publisher<AnalogValue>::publish(av);
 

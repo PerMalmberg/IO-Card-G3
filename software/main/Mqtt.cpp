@@ -1,4 +1,5 @@
 #include "Mqtt.h"
+#include <chrono>
 #include <smooth/core/json/JsonFile.h>
 #include <smooth/core/logging/log.h>
 #include <smooth/core/task_priorities.h>
@@ -8,10 +9,14 @@ using namespace smooth::core;
 using namespace smooth::core::json;
 using namespace smooth::core::network;
 using namespace smooth::application::network::mqtt;
+using namespace std::chrono;
 
 Mqtt::Mqtt(std::string id, smooth::core::Task& task)
     : task(task),
       incoming_mqtt("incoming_mqtt", 10, task, *this),
+      analog_value("analog2mqtt", 10, task, *this),
+      digital_value("ditigal2mqtt", 16, task, *this),
+      sensor_value("sensor2mqtt", 2, task, *this),
       id(id)
 {
     JsonFile f{"/sdcard/mqtt.jsn"};
@@ -43,12 +48,61 @@ Mqtt::~Mqtt()
 
 void Mqtt::tick()
 {
-    if(client && client->is_connected())
-    {
-        client->publish(id, "Hello!", QoS::AT_LEAST_ONCE, false);
-    }
+    
+}
+
+void Mqtt::prepare_packet(smooth::core::json::Value& v)
+{
+    v["timestamp"] = std::to_string(static_cast<int64_t>(system_clock::now().time_since_epoch().count()));
 }
 
 void Mqtt::event(const smooth::application::network::mqtt::MQTTData &data)
 {
+    
+}
+
+void Mqtt::event(const AnalogValue& value)
+{
+    if(client)
+    {
+        Value v{};
+        prepare_packet(v);
+        v["value"] = static_cast<int32_t>(value.get_value());
+
+        std::string topic = id;
+        topic.append("/io/status/analog/input/");
+        topic.append(std::to_string(value.get_input()));
+        client->publish(topic, v.to_string(), QoS::EXACTLY_ONCE, false);
+    }
+}
+
+void Mqtt::event(const DigitalValue& value)
+{
+    if(client)
+    {
+        Value v{};
+        prepare_packet(v);
+        v["value"] = static_cast<int32_t>(value.get_value());
+
+        std::string topic = id;
+        topic.append("/io/status/digital/input/");
+        topic.append(value.get_name());
+        client->publish(topic, v.to_string(), QoS::EXACTLY_ONCE, false);
+    }
+}
+
+void Mqtt::event(const SensorValue& value)
+{
+    if(client)
+    {
+        Value v{};
+        prepare_packet(v);
+        v["temperature"] = value.get_temperature();
+        v["humidity"] = value.get_humidity();
+        v["pressure"] = value.get_pressure();
+
+        std::string topic = id;
+        topic.append("/io/status/sensor");
+        client->publish(topic, v.to_string(), QoS::EXACTLY_ONCE, false);
+    }
 }

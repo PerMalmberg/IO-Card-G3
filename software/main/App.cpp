@@ -26,7 +26,7 @@ using namespace smooth::core::timer;
 namespace g3
 {
     App::App()
-            : Application(5, std::chrono::seconds{1}),
+            : Application(5, std::chrono::seconds{10}),
               digital_status_queue("io_status_queue", 8, *this, *this),
               sntp_queue("sntp_queue", 1, *this, *this),
               network_status("network_status", 2, *this, *this),
@@ -53,6 +53,11 @@ namespace g3
         {
             mqtt->tick();
         }
+
+        auto free = heap_caps_get_free_size(MALLOC_CAP_8BIT);
+        auto max_size = heap_caps_get_largest_free_block(MALLOC_CAP_8BIT);
+
+        Log::info(name, Format("Free heap: {1} bytes, max block: {2}", UInt32(free), UInt32(max_size)));
     }
 
     void App::event(const DigitalStatusValue& event)
