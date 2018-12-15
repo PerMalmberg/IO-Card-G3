@@ -18,24 +18,7 @@ Mqtt::Mqtt(std::string id, smooth::core::Task& task)
       digital_value("ditigal2mqtt", 16, task, *this),
       sensor_value("sensor2mqtt", 2, task, *this),
       id(id)
-{
-    JsonFile f{"/sdcard/mqtt.jsn"};
-
-    auto &v = f.value();
-    auto keep_alive = std::chrono::seconds{v["keep_alive_seconds"].get_int(5)};
-    auto broker = v["broker"]["address"].get_string("");
-    auto port = v["broker"]["port"].get_int(1883);
-
-    if (broker.empty())
-    {
-        Log::error("Mqtt", "No broker specifified");
-    }
-    else
-    {
-        Log::info("Mqtt", Format("Starting MQTT client, id {1}", Str(id)));
-        client = std::make_unique<MqttClient>(id, keep_alive, 8 * 1024, APPLICATION_BASE_PRIO, incoming_mqtt);
-        client->connect_to(std::make_shared<IPv4>(broker, port), true);
-    }
+{    
 }
 
 Mqtt::~Mqtt()
@@ -46,9 +29,41 @@ Mqtt::~Mqtt()
     }
 }
 
-void Mqtt::tick()
+void Mqtt::start()
 {
-    
+    if(!client)
+    {
+        JsonFile f{mqtt_config};
+
+        auto &v = f.value();
+        auto keep_alive = std::chrono::seconds{v["keep_alive_seconds"].get_int(5)};
+        auto broker = v["broker"]["address"].get_string("");
+        auto port = v["broker"]["port"].get_int(1883);
+
+        if (broker.empty())
+        {
+            Log::error("Mqtt", "No broker specifified");
+        }
+        else
+        {
+            Log::info("Mqtt", Format("Starting MQTT client, id {1}", Str(id)));
+            client = std::make_unique<MqttClient>(id, keep_alive, 8 * 1024, APPLICATION_BASE_PRIO, incoming_mqtt);
+            client->connect_to(std::make_shared<IPv4>(broker, port), true);
+        }
+    }
+}
+
+void Mqtt::write_default()
+{
+    JsonFile f{mqtt_config};
+    if(!f.exists())
+    {
+        auto &v = f.value();
+        v["keep_alive_seconds"] = 5;
+        v["broker"]["address"] = "";
+        v["broker"]["port"] = 1883;
+        f.save();
+    }
 }
 
 void Mqtt::prepare_packet(smooth::core::json::Value& v)

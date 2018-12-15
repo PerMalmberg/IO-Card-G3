@@ -6,12 +6,12 @@
 #include <memory>
 #include <smooth/core/util/ByteSet.h>
 #include <smooth/core/task_priorities.h>
-#include "AnalogValue.h"
-#include "DigitalValue.h"
-#include "DigitalStatusValue.h"
-#include "SensorValue.h"
 #include <smooth/core/util/ByteSet.h>
 #include <driver/gpio.h>
+#include "io/analog/AnalogValue.h"
+#include "io/digital/DigitalValue.h"
+#include "io/digital/DigitalStatusValue.h"
+#include "io/sensor/SensorValue.h"
 
 using namespace std;
 using namespace std::chrono;
@@ -27,7 +27,7 @@ static const gpio_num_t ANALOG_CHANGE_PIN_1 = GPIO_NUM_39;
 static const gpio_num_t ANALOG_CHANGE_PIN_2 = GPIO_NUM_36;
 
 I2CTask::I2CTask()
-        : Task("I2CTask", 8096, smooth::core::APPLICATION_BASE_PRIO, seconds(30)),
+        : Task("I2CTask", 6 * 1024, smooth::core::APPLICATION_BASE_PRIO, seconds(30)),
           i2c_master(I2C_NUM_0, GPIO_NUM_33, false, GPIO_NUM_32, false, 100000),
           input_change_queue(*this, *this),
           analog_change_queue_1(*this, *this),

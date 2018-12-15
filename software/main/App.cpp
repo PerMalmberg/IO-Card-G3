@@ -1,36 +1,33 @@
 #include "App.h"
 
-#include <memory>
-#include <atomic>
 #include <driver/gpio.h>
 #include <smooth/core/filesystem/MMCSDCard.h>
 #include <smooth/core/filesystem/SPISDCard.h>
 #include <smooth/core/json/JsonFile.h>
 #include <smooth/core/ipc/SubscribingTaskEventQueue.h>
 #include <smooth/core/ipc/Publisher.h>
-#include <smooth/core/timer/Timer.h>
 #include <smooth/core/network/Wifi.h>
-#include "I2CSetOutputCmd.h"
-#include "wifi-creds.h"
-#include "I2CTask.h"
-#include "led_pin_output_number.h"
+#include "io/digital/I2CSetOutputCmd.h"
+#include "io/I2CTask.h"
+#include "io/led_pin_output_number.h"
 
 using namespace std::chrono;
 using namespace smooth::core::filesystem;
 using namespace smooth::core::ipc;
 using namespace smooth::core::json;
 using namespace smooth::core::network;
-using namespace smooth::core::sntp;
 using namespace smooth::core::timer;
 
 namespace g3
 {
     App::App()
             : Application(5, std::chrono::seconds{10}),
-              digital_status_queue("io_status_queue", 8, *this, *this),
-              sntp_queue("sntp_queue", 1, *this, *this),
+              digital_status_queue("io_status_queue", 8, *this, *this),              
               network_status("network_status", 2, *this, *this),
-              sntp_timer(Timer::create("sntp", 1, sntp_queue, true, seconds{10}))
+              i2c(),
+              id(),
+              sntp(*this),
+              wifi(*this, id, sntp)
     {
     }
 
@@ -38,9 +35,7 @@ namespace g3
     {
         Application::init();
 
-        // Initialize I2C
-        i2c = std::make_unique<I2CTask>();
-        i2c->start();
+        i2c.start();
 
         // Start Wiegand
 
@@ -49,11 +44,6 @@ namespace g3
 
     void App::tick()
     {
-        if(mqtt)
-        {
-            mqtt->tick();
-        }
-
         auto free = heap_caps_get_free_size(MALLOC_CAP_8BIT);
         auto max_size = heap_caps_get_largest_free_block(MALLOC_CAP_8BIT);
 
@@ -105,49 +95,14 @@ namespace g3
 
                 if (res)
                 {
-                    read_device_id();
-
-                    auto& wifi = get_wifi();
-                    wifi.set_host_name(device_id);
-                    wifi.set_auto_connect(true);
-                    wifi.set_ap_credentials(WIFI_SSID, WIFI_PASSWORD);
-                    wifi.connect_to_ap();
-
-                    sntp_timer->start();
+                    store_default_config();
+                    wifi.start();
+                    
                 }
                 else
                 {
                     sd_card.reset();
                 }
-            }
-        }
-    }
-
-    void App::event(const smooth::core::timer::TimerExpiredEvent& ev)
-    {
-        if (ev.get_id() == sntp_timer->get_id())
-        {
-            if (!sntp)
-            {
-                Log::info(name, "Starting SNTP");
-                // TODO: Read SNTP servers from disk
-                const std::vector<std::string> servers{"pool.ntp.org"};
-                sntp = std::make_unique<Sntp>(servers);
-                sntp->start();
-            }
-            else if (sntp->is_time_set())
-            {
-                auto t = system_clock::to_time_t(system_clock::now());
-                tm time{};
-                localtime_r(&t, &time);
-                Log::info(name, Format("Time set: {1}", Str(asctime(&time))));
-                Publisher<I2CSetOutputBit>::publish(
-                        I2CSetOutputBit{I2CDevice::status, SNTP_TIME_SET, sntp->is_time_set()});
-                sntp_timer->stop();
-            }
-            else
-            {
-                Log::info(name, "Waiting for time to be set");
             }
         }
     }
@@ -158,46 +113,26 @@ namespace g3
         Log::info(name, Format("Network connected: {1}", Bool(connected)));
         Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit{I2CDevice::status, WIFI_CONNECTED, connected});
 
-        if(connected)
+        if (connected)
         {
             start_mqtt();
         }
     }
 
-    void App::read_device_id()
-    {
-        JsonFile f{"/sdcard/dev_id.cfg"};
-        auto& v = f.value();
-
-        device_id = v["device_id"].get_string("");
-
-        if(device_id.empty())
-        {
-            // No device id set in config, create a random id.
-            std::random_device rd;
-            std::mt19937 gen(rd());
-            std::uniform_int_distribution<> dis(0x0, 0xF);
-
-            std::stringstream ss;
-            for(int i = 0; i < 10; ++i)
-            {
-                ss << std::setfill('0') << std::setw(2) << std::hex << dis(gen);
-            }
-
-            device_id = ss.str();
-
-            v["device_id"] = device_id;
-            f.save();
-        }
-
-        Log::info(name, Format("Device id: {1}", Str(device_id)));
-    }
-
     void App::start_mqtt()
     {
-        if(!mqtt)
+        if (!mqtt)
         {
-            mqtt = std::make_unique<Mqtt>(device_id, *this);
+            mqtt = std::make_unique<Mqtt>(id.get(), *this);
+            mqtt->start();
         }
+    }
+
+    void App::store_default_config() const
+    {
+        id.write_default();
+        sntp.write_default();
+        wifi.write_default();
+        Mqtt::write_default();
     }
 }

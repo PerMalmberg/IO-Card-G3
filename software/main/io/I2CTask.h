@@ -11,11 +11,11 @@
 #include <smooth/core/io/i2c/Master.h>
 #include <smooth/core/ipc/Publisher.h>
 #include <smooth/core/io/InterruptInput.h>
-#include <smooth/application/io/MCP23017.h>
-#include <smooth/application/io/ADS1115.h>
-#include <smooth/application/sensor/BME280.h>
-#include "AnalogCycler.h"
-#include "I2CSetOutputCmd.h"
+#include <smooth/application/io/i2c/MCP23017.h>
+#include <smooth/application/io/i2c/ADS1115.h>
+#include <smooth/application/io/i2c//BME280.h>
+#include "analog/AnalogCycler.h"
+#include "digital/I2CSetOutputCmd.h"
 
 class I2CTask
         : public smooth::core::Task,

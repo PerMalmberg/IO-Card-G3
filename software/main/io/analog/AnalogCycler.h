@@ -5,7 +5,7 @@
 #pragma once
 
 #include <memory>
-#include <smooth/application/io/ADS1115.h>
+#include <smooth/application/io/i2c/ADS1115.h>
 
 class AnalogCycler
 {
