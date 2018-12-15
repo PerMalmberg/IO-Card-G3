@@ -6,12 +6,12 @@
 #include <smooth/core/timer/Timer.h>
 #include <smooth/core/filesystem/SDCard.h>
 #include <smooth/core/network/NetworkStatus.h>
+#include "DeviceId.h"
 #include "io/digital//DigitalStatusValue.h"
 #include "io/I2CTask.h"
 #include "network/Mqtt.h"
-#include "DeviceId.h"
-#include "Sntp.h"
-#include "Wifi.h"
+#include "network/Sntp.h"
+#include "network/Wifi.h"
 
 namespace g3
 {
@@ -37,9 +37,9 @@ namespace g3
             smooth::core::ipc::SubscribingTaskEventQueue<DigitalStatusValue> digital_status_queue;
             smooth::core::ipc::SubscribingTaskEventQueue<smooth::core::network::NetworkStatus> network_status;
             I2CTask i2c;
-            DeviceId id;
-            Sntp sntp;
-            g3::Wifi wifi;
+            g3::DeviceId id;
+            g3::network::Sntp sntp;
+            g3::network::Wifi wifi;
 
             std::unique_ptr<Mqtt> mqtt;
 

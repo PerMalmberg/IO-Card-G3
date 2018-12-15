@@ -4,9 +4,8 @@ project(g3)
 
 set(SOURCES main.cpp
         App.cpp
-        DeviceId.cpp
-        Sntp.cpp
-        Wifi.cpp
+        DeviceId.cpp        
+        network/Wifi.cpp
         io/I2CTask.h
         io/I2CTask.cpp
         io/analog/AnalogCycler.h
@@ -17,6 +16,7 @@ set(SOURCES main.cpp
         io/led_pin_output_number.h
         network/Mqtt.cpp
         network/Mqtt.h        
+        network/Sntp.cpp
         )
 
 add_executable(${PROJECT_NAME} ${SOURCES})
