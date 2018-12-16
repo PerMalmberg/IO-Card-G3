@@ -3,6 +3,13 @@ cmake_minimum_required(VERSION 3.10)
 project(g3)
 
 set(SOURCES main.cpp
+        alarm/Alarm.cpp
+        alarm/state/Armed.h
+        alarm/state/BaseState.h
+        alarm/state/EntryDelay.h
+        alarm/state/ExitDelay.h
+        alarm/state/Idle.h
+        alarm/state/Triggered.h
         App.cpp
         DeviceId.cpp        
         network/Wifi.cpp

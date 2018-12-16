@@ -27,7 +27,8 @@ namespace g3
               i2c(),
               id(),
               sntp(*this),
-              wifi(*this, id, sntp)
+              wifi(*this, id, sntp),
+              alarm()
     {
     }
 

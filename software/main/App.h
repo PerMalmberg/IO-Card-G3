@@ -12,6 +12,7 @@
 #include "network/Mqtt.h"
 #include "network/Sntp.h"
 #include "network/Wifi.h"
+#include "alarm/Alarm.h"
 
 namespace g3
 {
@@ -40,6 +41,7 @@ namespace g3
             g3::DeviceId id;
             g3::network::Sntp sntp;
             g3::network::Wifi wifi;
+            g3::alarm::Alarm alarm;
 
             std::unique_ptr<Mqtt> mqtt;
 
