@@ -135,5 +135,6 @@ namespace g3
         sntp.write_default();
         wifi.write_default();
         Mqtt::write_default();
+        alarm.write_default();        
     }
 }

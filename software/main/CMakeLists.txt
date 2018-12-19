@@ -11,8 +11,8 @@ set(SOURCES main.cpp
         alarm/state/Idle.h
         alarm/state/Triggered.h
         App.cpp
+        alarm/AlarmConfig.cpp
         DeviceId.cpp        
-        network/Wifi.cpp
         io/I2CTask.h
         io/I2CTask.cpp
         io/analog/AnalogCycler.h
@@ -21,6 +21,7 @@ set(SOURCES main.cpp
         io/digital/I2CSetOutputCmd.h
         io/digital/I2CSetOutputCmd.h
         io/led_pin_output_number.h
+        network/Wifi.cpp
         network/Mqtt.cpp
         network/Mqtt.h        
         network/Sntp.cpp

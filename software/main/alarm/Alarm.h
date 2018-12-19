@@ -2,6 +2,7 @@
 
 #include "state/BaseState.h"
 #include <smooth/core/fsm/StaticFSM.h>
+#include "AlarmConfig.h"
 
 namespace g3
 {
@@ -21,6 +22,14 @@ namespace g3
                 {
                     get_state()->timeout();
                 }
+
+                void write_default() const
+                {
+                    cfg.write_default();
+                }
+
+                private:
+                    Config cfg{};
         };
     }
 }
