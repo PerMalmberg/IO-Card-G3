@@ -6,11 +6,12 @@
 
 namespace g3
 {
-    class Config
+    class AlarmConfig
     {
         public:
-            Config();
+            AlarmConfig();
 
+            void load();
             void write_default() const;
         private:
             smooth::core::json::JsonFile f;

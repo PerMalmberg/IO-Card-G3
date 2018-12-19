@@ -10,8 +10,8 @@ set(SOURCES main.cpp
         alarm/state/ExitDelay.h
         alarm/state/Idle.h
         alarm/state/Triggered.h
-        App.cpp
         alarm/AlarmConfig.cpp
+        App.cpp
         DeviceId.cpp        
         io/I2CTask.h
         io/I2CTask.cpp

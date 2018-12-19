@@ -15,7 +15,7 @@ Mqtt::Mqtt(std::string id, smooth::core::Task& task)
     : task(task),
       incoming_mqtt("incoming_mqtt", 10, task, *this),
       analog_value("analog2mqtt", 10, task, *this),
-      digital_value("ditigal2mqtt", 16, task, *this),
+      digital_value("ditigal2mqtt", 10, task, *this),
       sensor_value("sensor2mqtt", 2, task, *this),
       id(id)
 {    

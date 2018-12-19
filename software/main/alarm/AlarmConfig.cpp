@@ -8,12 +8,17 @@ namespace g3
 {
     static const char* config_file = "/sdcard/alarm.jsn";
 
-    Config::Config()
+    AlarmConfig::AlarmConfig()
         : f(config_file)
     {
     }
 
-    void Config::write_default() const
+    void AlarmConfig::load()
+    {
+        f.load();
+    }
+
+    void AlarmConfig::write_default() const
     {
         JsonFile f(config_file);
         if(!f.exists())

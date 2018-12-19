@@ -28,7 +28,7 @@ namespace g3
               id(),
               sntp(*this),
               wifi(*this, id, sntp),
-              alarm()
+              alarm(*this)
     {
     }
 
@@ -98,7 +98,9 @@ namespace g3
                 {
                     store_default_config();
                     wifi.start();
-                    
+
+                    // On first start, this will load the just written default config so make sure it is after the call to store_default_config()
+                    alarm.start();                    
                 }
                 else
                 {
