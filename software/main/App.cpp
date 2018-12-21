@@ -9,7 +9,7 @@
 #include <smooth/core/network/Wifi.h>
 #include "io/digital/I2CSetOutputCmd.h"
 #include "io/I2CTask.h"
-#include "io/led_pin_output_number.h"
+#include "hardware_info.h"
 
 using namespace std::chrono;
 using namespace smooth::core::filesystem;

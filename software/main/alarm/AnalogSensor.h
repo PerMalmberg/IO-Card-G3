@@ -1,20 +1,31 @@
 #pragma once
 
-#include <limits>
+#include "BaseSensor.h"
 #include <string>
 #include <chrono>
-#include "AlarmConfig.h"
+#include "io/analog/AnalogValue.h"
 
 namespace g3
 {
     namespace alarm
     {
-        class AnalogSensor
+        class AnalogSensor : public BaseSensor
         {
             public:
-                AnalogSensor(g3::AlarmConfig& config);
+                AnalogSensor(g3::AlarmConfig& config, int num);
+
+                    void update(const AnalogValue& value);
+                    bool is_triggered() override;
+
+            protected:
+                smooth::core::json::Value get_settings()
+                {
+                    return config.get_source()["sensors"]["digital"]["input"][name];
+                }
             private:
-                g3::AlarmConfig& config;
+                bool is_within_limits(uint32_t value);
+
+                AnalogValue last;
         };
     }
 }

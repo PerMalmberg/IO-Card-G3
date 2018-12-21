@@ -5,7 +5,7 @@
 #include <smooth/core/logging/log.h>
 #include <smooth/core/util/string_util.h>
 #include "io/digital/I2CSetOutputCmd.h"
-#include "io/led_pin_output_number.h"
+#include "hardware_info.h"
 
 using namespace std::chrono;
 using namespace smooth::core::ipc;

@@ -39,16 +39,25 @@ namespace g3
                     cfg.write_default();
                 }
 
-                void start()
-                {
-                    cfg.load();
-                    started = true;
-                }
+                void start();
 
                 void event(const AnalogValue& value);
                 void event(const DigitalValue& value);
 
                 private:
+                    template<typename SensorType, typename ValueType>
+                    void update_sensor(std::vector<SensorType>& container, const ValueType& value)
+                    {
+                        if(started)
+                        {
+                            auto ix = value.get_input();
+                            if(ix >= 0 && ix < container.size())
+                            {
+                                container[ix].update(value);
+                            }
+                        }
+                    }
+
                     smooth::core::Task& task;
                     smooth::core::ipc::SubscribingTaskEventQueue<AnalogValue> analog_value;
                     smooth::core::ipc::SubscribingTaskEventQueue<DigitalValue> digital_value;

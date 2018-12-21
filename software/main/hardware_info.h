@@ -10,3 +10,7 @@ constexpr uint8_t SD_CARD_INIT_OK = 3;
 constexpr uint8_t SNTP_TIME_SET = 4;
 constexpr uint8_t WIFI_CONNECTED = 5;
 constexpr uint8_t MQTT_CONNECTED = 6;
+
+constexpr int DIGITAL_INPUT_COUNT = 8;
+constexpr int ANALOG_INPUT_COUNT = 8;
+constexpr int DIGITAL_OUTPUT_COUNT = 8;
