@@ -20,5 +20,10 @@ namespace g3
             last = value;
             initialized = true;
         }
+
+        void DigitalSensor::tick()
+        {
+            
+        }
     }
 }

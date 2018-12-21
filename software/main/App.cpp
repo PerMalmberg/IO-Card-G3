@@ -21,7 +21,7 @@ using namespace smooth::core::timer;
 namespace g3
 {
     App::App()
-            : Application(5, std::chrono::seconds{10}),
+            : Application(5, std::chrono::seconds{1}),
               digital_status_queue("io_status_queue", 8, *this, *this),              
               network_status("network_status", 2, *this, *this),
               i2c(),
@@ -49,6 +49,8 @@ namespace g3
         auto max_size = heap_caps_get_largest_free_block(MALLOC_CAP_8BIT);
 
         Log::info(name, Format("Free heap: {1} bytes, max block: {2}", UInt32(free), UInt32(max_size)));
+
+        alarm.tick();
     }
 
     void App::event(const DigitalStatusValue& event)

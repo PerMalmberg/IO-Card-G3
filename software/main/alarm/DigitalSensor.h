@@ -16,9 +16,10 @@ namespace g3
 
                 void update(const DigitalValue& value);
                 bool is_triggered() override;
+                void tick() override;
 
             protected:
-                smooth::core::json::Value get_settings()
+                smooth::core::json::Value get_settings() override
                 {
                     return config.get_source()["sensors"]["digital"]["input"][name];
                 }               

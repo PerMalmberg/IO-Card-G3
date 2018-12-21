@@ -21,6 +21,11 @@ namespace g3
             initialized = true;
         }
 
+        void AnalogSensor::tick()
+        {
+            
+        }
+
         bool AnalogSensor::is_within_limits(uint32_t value)
         {
             auto min = config_value["allowed_range"]["min"].get_int(0);

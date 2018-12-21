@@ -10,7 +10,7 @@ namespace g3
         Alarm::Alarm(smooth::core::Task& task)
             :   task(task),
                 analog_value("analog2alarm", 10, task, *this),
-                digital_value("ditigal2alarm", 10, task, *this)
+                digital_value("digital2alarm", 10, task, *this)
         {            
             set_state(new(*this) state::Idle(*this));
             analog_sensors.reserve(ANALOG_INPUT_COUNT);
@@ -47,6 +47,12 @@ namespace g3
             }
             
             started = true;
+        }
+
+        void Alarm::tick()
+        {
+            do_tick(analog_sensors);
+            do_tick(digital_sensors);
         }
     }
 }

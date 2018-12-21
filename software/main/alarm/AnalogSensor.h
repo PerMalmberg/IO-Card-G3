@@ -14,11 +14,12 @@ namespace g3
             public:
                 AnalogSensor(g3::AlarmConfig& config, int num);
 
-                    void update(const AnalogValue& value);
-                    bool is_triggered() override;
+                void update(const AnalogValue& value);
+                bool is_triggered() override;
+                void tick() override;
 
             protected:
-                smooth::core::json::Value get_settings()
+                smooth::core::json::Value get_settings() override
                 {
                     return config.get_source()["sensors"]["digital"]["input"][name];
                 }

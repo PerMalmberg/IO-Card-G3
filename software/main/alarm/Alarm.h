@@ -34,6 +34,8 @@ namespace g3
                     get_state()->timeout();
                 }
 
+                void tick();
+
                 void write_default() const
                 {
                     cfg.write_default();
@@ -54,6 +56,18 @@ namespace g3
                             if(ix >= 0 && ix < container.size())
                             {
                                 container[ix].update(value);
+                            }
+                        }
+                    }
+
+                    template<typename SensorType>
+                    void do_tick(std::vector<SensorType>& container)
+                    {
+                        if(started)
+                        {
+                            for(auto& s : container)
+                            {
+                                s.tick();
                             }
                         }
                     }
