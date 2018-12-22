@@ -20,6 +20,8 @@ namespace g3
                     void leave_state() override;
 
                     void exit_timer_timeout() override;
+
+                    void code_entered(const std::string& code) override;
             };
         }
     }

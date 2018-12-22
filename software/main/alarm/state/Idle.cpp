@@ -11,16 +11,24 @@ namespace g3
     {
         namespace state
         {
-            void Idle::code_entered()
+            void Idle::code_entered(const std::string& code)
             {
-                if(alarm.are_any_sensors_triggered(seconds{0}))
+                if(alarm.validate_code(code))
                 {
-                    // TODO: Play error tune
+                    if(alarm.are_any_sensors_triggered(seconds{0}))
+                    {
+                        // TODO: Play error tune
+                    }
+                    else
+                    {
+                        alarm.set_state(new(alarm) ExitDelay(alarm));
+                    }
                 }
-                else
-                {
-                    alarm.set_state(new(alarm) ExitDelay(alarm));
-                }
+            }
+
+            void Idle::enter_state()
+            {
+                // TODO: Silence all alarms.            
             }
         }
     }

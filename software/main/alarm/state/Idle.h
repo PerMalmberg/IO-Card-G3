@@ -16,7 +16,9 @@ namespace g3
                     {
                     }
 
-                    void code_entered() override;
+                    void enter_state() override;
+
+                    void code_entered(const std::string& code) override;
             };
         }
     }

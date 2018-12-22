@@ -16,7 +16,7 @@ namespace g3
                         {                            
                         }
 
-                    void code_entered() override;
+                    void code_entered(const std::string& code) override;
 
                     bool is_armed() const { return true; }
             };

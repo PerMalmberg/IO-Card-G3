@@ -42,10 +42,7 @@ namespace g3
 
         void Alarm::code_entered(const std::string& code)
         {
-            if(validate_code(code))
-            {
-                get_state()->code_entered();
-            }
+            get_state()->code_entered(code);
         }
 
         void Alarm::event(const AnalogValue& value)

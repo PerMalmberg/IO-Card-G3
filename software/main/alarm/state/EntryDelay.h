@@ -15,6 +15,8 @@ namespace g3
                         : BaseState(alarm, "EntryDelay")
                         {                            
                         }
+
+                    void code_entered(const std::string& code) override;
             };
         }
     }

@@ -42,6 +42,7 @@ namespace g3
                 bool are_any_sensors_triggered(const std::chrono::seconds& time_since_triggered);
                 void start_exit_timer();
                 void stop_exit_timer();
+                bool validate_code(const std::string& code);
 
                 void event(const AnalogValue& value);
                 void event(const DigitalValue& value);
@@ -64,8 +65,6 @@ namespace g3
                         }
                     }
                 }
-
-                bool validate_code(const std::string& code);
 
                 smooth::core::Task& task;
                 smooth::core::ipc::SubscribingTaskEventQueue<AnalogValue> analog_value;

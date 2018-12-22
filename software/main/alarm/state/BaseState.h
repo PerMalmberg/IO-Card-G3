@@ -21,7 +21,7 @@ namespace g3
                     virtual void enter_state() {}
                     virtual void leave_state() {}
 
-                    virtual void code_entered() {}
+                    virtual void code_entered(const std::string& code) {}
                     virtual void exit_timer_timeout() {}
                     virtual void entry_timer_timeout() {}
 

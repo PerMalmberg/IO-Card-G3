@@ -1,9 +1,6 @@
-#include "Armed.h"
+#include "EntryDelay.h"
 #include "alarm/Alarm.h"
 #include "alarm/state/Idle.h"
-#include "alarm/state/Triggered.h"
-
-using namespace std::chrono;
 
 namespace g3
 {
@@ -11,17 +8,12 @@ namespace g3
     {
         namespace state
         {
-            void Armed::code_entered(const std::string& code)
+            void EntryDelay::code_entered(const std::string& code)
             {
                 if(alarm.validate_code(code))
                 {
                     alarm.set_state(new(alarm) Idle(alarm));
-                }                
-                else
-                {
-                    alarm.set_state(new(alarm) Triggered(alarm));
                 }
-                
             }
         }
     }
