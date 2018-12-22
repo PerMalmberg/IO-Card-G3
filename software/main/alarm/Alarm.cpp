@@ -122,26 +122,53 @@ namespace g3
 
         void Alarm::start_exit_timer()
         {
-            stop_exit_timer();
-
-            seconds max_delay{0};
-
-            auto find_max = [&max_delay](auto& sensor){ max_delay = std::max(sensor.get_exit_delay(), max_delay); };
-
-            std::for_each(analog_sensors.begin(), analog_sensors.end(), find_max);
-            std::for_each(digital_sensors.begin(), digital_sensors.end(), find_max);
-
-            // Yes, it is correct that this timer might expire imediately.
-            exit_timer = Timer::create("exit_timer", EXIT_DELAY_TIMER, timer_event, false, max_delay);
-            exit_timer->start();
+            auto find_max = [](BaseSensor& sensor, seconds& delay){ delay = std::max(sensor.get_exit_delay(), delay); };
+            seconds max_delay = get_delay(find_max);
+            start_delay_timer(EXIT_DELAY_TIMER, max_delay);
         }
 
-        void Alarm::stop_exit_timer()
+
+        void Alarm::start_entry_timer()
         {
-            if(exit_timer)
+            auto find_max = [](BaseSensor& sensor, seconds& delay){ delay = std::max(sensor.get_entry_delay(), delay); };
+            seconds max_delay = get_delay(find_max);
+            start_delay_timer(ENTRY_DELAY_TIMER, max_delay);
+        }
+
+        void Alarm::stop_delay_timer()
+        {
+            if(delay_timer)
             {
-                exit_timer->stop();
+                delay_timer->stop();
             }
+        }
+
+        std::chrono::seconds Alarm::get_delay(std::function<void(BaseSensor&, std::chrono::seconds& delay)> get_time_delay)
+        {
+            seconds delay{0};
+
+            for(auto b = analog_sensors.begin(); b != analog_sensors.end(); b++)
+            {
+                get_time_delay(*b, delay);
+            }
+
+            for(auto b = digital_sensors.begin(); b != digital_sensors.end(); b++)
+            {
+                get_time_delay(*b, delay);
+            }
+
+            return delay;
+        }
+
+        void Alarm::start_delay_timer(int timer_id, std::chrono::seconds delay)
+        {
+            if(delay_timer)
+            {
+                delay_timer->stop();
+            }
+
+            delay_timer = Timer::create("delay_timer", timer_id, timer_event, false, delay);
+            delay_timer->start();
         }
     }
 }

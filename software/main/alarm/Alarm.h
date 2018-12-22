@@ -41,7 +41,9 @@ namespace g3
 
                 bool are_any_sensors_triggered(const std::chrono::seconds& time_since_triggered);
                 void start_exit_timer();
-                void stop_exit_timer();
+                void stop_exit_timer() { stop_delay_timer(); }
+                void start_entry_timer();
+                void stop_entry_timer() { stop_delay_timer(); }
                 bool validate_code(const std::string& code);
 
                 void event(const AnalogValue& value);
@@ -66,6 +68,10 @@ namespace g3
                     }
                 }
 
+                std::chrono::seconds get_delay(std::function<void(BaseSensor&, std::chrono::seconds& delay)> get_time_delay);
+                void start_delay_timer(int timer_id, std::chrono::seconds delay);
+                void stop_delay_timer();
+
                 smooth::core::Task& task;
                 smooth::core::ipc::SubscribingTaskEventQueue<AnalogValue> analog_value;
                 smooth::core::ipc::SubscribingTaskEventQueue<DigitalValue> digital_value;
@@ -75,8 +81,8 @@ namespace g3
                 std::vector<DigitalSensor> digital_sensors{};
                 AlarmConfig cfg{};
                 bool started{false};
-                std::shared_ptr<smooth::core::timer::Timer> exit_timer{};
-                std::shared_ptr<smooth::core::timer::Timer> entry_timer{};
+                std::shared_ptr<smooth::core::timer::Timer> delay_timer{};
+                std::shared_ptr<smooth::core::timer::Timer> armed_timer{};
         };
     }
 }

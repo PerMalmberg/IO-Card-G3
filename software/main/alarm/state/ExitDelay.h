@@ -17,6 +17,7 @@ namespace g3
                         }
 
                     void enter_state() override;
+                    
                     void leave_state() override;
 
                     void exit_timer_timeout() override;
