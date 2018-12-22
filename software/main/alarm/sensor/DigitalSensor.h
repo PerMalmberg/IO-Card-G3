@@ -12,16 +12,15 @@ namespace g3
         class DigitalSensor : public BaseSensor
         {
             public: 
-                DigitalSensor(g3::AlarmConfig& config, int num);
+                DigitalSensor(AlarmConfig& config, int num);
 
                 void update(const DigitalValue& value);
-                bool is_triggered() override;
-                void tick() override;
+                bool is_triggered(const std::chrono::seconds& time_since_triggered, bool is_armed) override;
 
             protected:
                 smooth::core::json::Value get_settings() override
                 {
-                    return config.get_source()["sensors"]["digital"]["input"][name];
+                    return config.get_source()[SENSORS][DIGITAL][INPUT][name];
                 }               
 
             private:

@@ -12,9 +12,14 @@ namespace g3
             {
                 public:
                     ExitDelay(Alarm& alarm)
-                        : BaseState(alarm)
+                        : BaseState(alarm, "ExitDelay")
                         {                            
                         }
+
+                    void enter_state() override;
+                    void leave_state() override;
+
+                    void exit_timer_timeout() override;
             };
         }
     }

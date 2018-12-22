@@ -12,16 +12,15 @@ namespace g3
         class AnalogSensor : public BaseSensor
         {
             public:
-                AnalogSensor(g3::AlarmConfig& config, int num);
+                AnalogSensor(AlarmConfig& config, int num);
 
                 void update(const AnalogValue& value);
-                bool is_triggered() override;
-                void tick() override;
+                bool is_triggered(const std::chrono::seconds& time_since_triggered, bool is_armed) override;
 
             protected:
                 smooth::core::json::Value get_settings() override
                 {
-                    return config.get_source()["sensors"]["digital"]["input"][name];
+                    return config.get_source()[SENSORS][ANALOG][INPUT][name];
                 }
             private:
                 bool is_within_limits(uint32_t value);

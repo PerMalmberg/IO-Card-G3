@@ -12,9 +12,13 @@ namespace g3
             {
                 public:
                     Armed(Alarm& alarm)
-                        : BaseState(alarm)
+                        : BaseState(alarm, "Armed")
                         {                            
                         }
+
+                    void code_entered() override;
+
+                    bool is_armed() const { return true; }
             };
         }
     }

@@ -6,7 +6,7 @@ namespace g3
 {
     namespace alarm
     {
-        BaseSensor::BaseSensor(g3::AlarmConfig& config, int num)
+        BaseSensor::BaseSensor(g3::alarm::AlarmConfig& config, int num)
             : config(config), name(std::to_string(num))
         {
         }
@@ -19,6 +19,11 @@ namespace g3
         std::chrono::seconds BaseSensor::get_exit_delay()
         {
             return seconds{get_settings()["exit_delay"].get_int(0)};
+        }
+
+        void BaseSensor::update_age()
+        {   
+            last_update = std::chrono::steady_clock::now();
         }
     }
 }

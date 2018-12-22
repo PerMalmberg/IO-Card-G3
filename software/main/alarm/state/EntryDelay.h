@@ -12,7 +12,7 @@ namespace g3
             {
                 public:
                     EntryDelay(Alarm& alarm)
-                        : BaseState(alarm)
+                        : BaseState(alarm, "EntryDelay")
                         {                            
                         }
             };

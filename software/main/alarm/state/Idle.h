@@ -12,10 +12,11 @@ namespace g3
             {
                 public:
                     Idle(Alarm& alarm)
-                        : BaseState(alarm)
+                        : BaseState(alarm, "Idle")
                     {
-
                     }
+
+                    void code_entered() override;
             };
         }
     }

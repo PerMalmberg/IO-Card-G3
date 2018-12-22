@@ -1,0 +1,157 @@
+{
+	"sensors":	{
+		"digital":	{
+			"input":	{
+				"0":	{
+					"name":	"0",
+					"enabled":	0,
+					"armed_state":	1,
+					"entry_delay":	0,
+					"exit_delay":	0
+				},
+				"1":	{
+					"name":	"1",
+					"enabled":	0,
+					"armed_state":	1,
+					"entry_delay":	0,
+					"exit_delay":	0
+				},
+				"2":	{
+					"name":	"2",
+					"enabled":	0,
+					"armed_state":	1,
+					"entry_delay":	0,
+					"exit_delay":	0
+				},
+				"3":	{
+					"name":	"3",
+					"enabled":	0,
+					"armed_state":	1,
+					"entry_delay":	0,
+					"exit_delay":	0
+				},
+				"4":	{
+					"name":	"4",
+					"enabled":	0,
+					"armed_state":	1,
+					"entry_delay":	0,
+					"exit_delay":	0
+				},
+				"5":	{
+					"name":	"5",
+					"enabled":	0,
+					"armed_state":	1,
+					"entry_delay":	0,
+					"exit_delay":	0
+				},
+				"6":	{
+					"name":	"6",
+					"enabled":	0,
+					"armed_state":	1,
+					"entry_delay":	0,
+					"exit_delay":	0
+				},
+				"7":	{
+					"name":	"7",
+					"enabled":	0,
+					"armed_state":	1,
+					"entry_delay":	0,
+					"exit_delay":	0
+				}
+			}
+		},
+		"analog":	{
+			"input":	{
+				"0":	{
+					"name":	"0",
+					"enabled":	0,
+					"allowed_range":	{
+						"min":	0,
+						"max":	65535
+					},
+					"entry_delay":	0,
+					"exit_delay":	0
+				},
+				"1":	{
+					"name":	"1",
+					"enabled":	0,
+					"allowed_range":	{
+						"min":	0,
+						"max":	65535
+					},
+					"entry_delay":	0,
+					"exit_delay":	0
+				},
+				"2":	{
+					"name":	"2",
+					"enabled":	0,
+					"allowed_range":	{
+						"min":	0,
+						"max":	65535
+					},
+					"entry_delay":	0,
+					"exit_delay":	0
+				},
+				"3":	{
+					"name":	"3",
+					"enabled":	0,
+					"allowed_range":	{
+						"min":	0,
+						"max":	65535
+					},
+					"entry_delay":	0,
+					"exit_delay":	0
+				},
+				"4":	{
+					"name":	"4",
+					"enabled":	0,
+					"allowed_range":	{
+						"min":	0,
+						"max":	65535
+					},
+					"entry_delay":	0,
+					"exit_delay":	0
+				},
+				"5":	{
+					"name":	"5",
+					"enabled":	0,
+					"allowed_range":	{
+						"min":	0,
+						"max":	65535
+					},
+					"entry_delay":	0,
+					"exit_delay":	0
+				},
+				"6":	{
+					"name":	"6",
+					"enabled":	0,
+					"allowed_range":	{
+						"min":	0,
+						"max":	65535
+					},
+					"entry_delay":	0,
+					"exit_delay":	0
+				},
+				"7":	{
+					"name":	"7",
+					"enabled":	0,
+					"allowed_range":	{
+						"min":	0,
+						"max":	65535
+					},
+					"entry_delay":	0,
+					"exit_delay":	0
+				}
+			}
+		}
+	},
+	"section":	[{
+			"name":	"all",
+			"digital":	[7],
+			"analog":	[7]
+		}],
+	"codes":	[{
+			"user":	"name of user",
+			"verification_data":	"$argon2i$v=19$m=8,t=8,p=1$dV1A0OdqrR5R1QUbZFeTTw$RF3ZCtca6XG3DzCVnCTfAEy5cGq6tRInIJy9+Yl2q3Y"
+		}]
+}

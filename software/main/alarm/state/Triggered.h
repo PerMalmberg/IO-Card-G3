@@ -12,7 +12,7 @@ namespace g3
             {
                 public:
                     Triggered(Alarm& alarm)
-                        : BaseState(alarm)
+                        : BaseState(alarm, "Triggered")
                         {                            
                         }
             };

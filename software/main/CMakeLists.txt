@@ -4,16 +4,20 @@ project(g3)
 
 set(SOURCES main.cpp
         alarm/Alarm.cpp
+        alarm/AlarmConfig.cpp
         alarm/state/Armed.h
+        alarm/state/Armed.cpp
         alarm/state/BaseState.h
         alarm/state/EntryDelay.h
         alarm/state/ExitDelay.h
+        alarm/state/ExitDelay.cpp
         alarm/state/Idle.h
+        alarm/state/Idle.cpp
         alarm/state/Triggered.h
-        alarm/AlarmConfig.cpp
-        alarm/BaseSensor.cpp
-        alarm/AnalogSensor.cpp
-        alarm/DigitalSensor.cpp
+        alarm/sensor/BaseSensor.cpp
+        alarm/sensor/AnalogSensor.cpp
+        alarm/sensor/DigitalSensor.cpp
+        
         App.cpp
         DeviceId.cpp        
         io/I2CTask.h
