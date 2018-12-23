@@ -13,6 +13,10 @@ namespace g3
         constexpr const char* ENTRY_DELAY = "entry_delay";
         constexpr const char* EXIT_DELAY = "exit_delay";
         constexpr const char* INPUT = "input";
+        constexpr const char* TIMING = "timing";
+        constexpr const char* TIMEOUT = "timeout";
+        constexpr const char* TRIGGERED = "triggered";
+        constexpr const char* TRIGGERED_SILENCE = "silence";
         constexpr const char* SECTION = "section";
         constexpr const char* SENSORS = "sensors";
         constexpr const char* NAME = "name";

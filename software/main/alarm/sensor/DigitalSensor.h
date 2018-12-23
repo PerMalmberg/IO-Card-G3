@@ -15,13 +15,13 @@ namespace g3
                 DigitalSensor(AlarmConfig& config, int num);
 
                 void update(const DigitalValue& value);
-                bool is_triggered(const std::chrono::seconds& time_since_triggered, bool is_armed) override;
+                bool is_triggered() override;
 
             protected:
                 smooth::core::json::Value get_settings() override
                 {
                     return config.get_source()[SENSORS][DIGITAL][INPUT][name];
-                }               
+                }
 
             private:
                 DigitalValue last;

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <smooth/core/logging/log.h>
+#include <alarm/event/SensorTriggered.h>
 
 namespace g3
 {
@@ -22,8 +23,8 @@ namespace g3
                     virtual void leave_state() {}
 
                     virtual void code_entered(const std::string& code) {}
-                    virtual void exit_timer_timeout() {}
-                    virtual void entry_timer_timeout() {}
+                    virtual void tick() {}
+                    virtual void sensor_triggered(const event::SensorTriggered& sensor) {};
 
                     virtual bool is_armed() const { return false; }
 

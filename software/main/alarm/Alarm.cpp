@@ -23,6 +23,7 @@ namespace g3
                 analog_value("analog2alarm", 10, task, *this),
                 digital_value("digital2alarm", 10, task, *this),
                 code_entered_sub("code_entered_sub", 5, task, *this),
+                sensor_triggered_sub("sensor_triggered_sub", 16, task, *this),
                 timer_event("timer_event", 5, task, *this)
         {            
             set_state(new(*this) state::Idle(*this));
@@ -60,15 +61,16 @@ namespace g3
             code_entered(event.get_code());
         }
 
+        void Alarm::event(const event::SensorTriggered& event)
+        {
+            get_state()->sensor_triggered(event);
+        }
+
         void Alarm::event(const smooth::core::timer::TimerExpiredEvent& event)
         {
-            if(event.get_id() == EXIT_DELAY_TIMER)
+            if(event.get_id() == ALARM_TICK)
             {
-                get_state()->exit_timer_timeout();
-            }
-            else if(event.get_id() == ENTRY_DELAY_TIMER)
-            {
-                get_state()->entry_timer_timeout();
+                get_state()->tick();
             }
         }
 
@@ -91,6 +93,14 @@ namespace g3
                 digital_sensors.emplace_back(DigitalSensor{cfg, i});
             }
             
+            if(tick)
+            {
+                tick->stop();
+            }
+
+            tick = Timer::create("alarm_tick", ALARM_TICK, timer_event, true, seconds{1});
+            tick->start();
+
             started = true;
         }
 
@@ -111,36 +121,30 @@ namespace g3
                 }
             }
 
+            if(!valid)
+            {
+                // TODO: signal erroneous code
+            }
+
             return valid;
         }
 
-        bool Alarm::are_any_sensors_triggered(const std::chrono::seconds& time_since_triggered)
+        bool Alarm::are_any_sensors_triggered()
         {
-            return std::any_of(analog_sensors.begin(), analog_sensors.end(), [=](auto& o){return o.is_triggered(time_since_triggered, this->get_state()->is_armed());} )
-                    || std::any_of(digital_sensors.begin(), digital_sensors.end(), [=](auto& o){return o.is_triggered(time_since_triggered, this->get_state()->is_armed());} );
+            return std::any_of(analog_sensors.begin(), analog_sensors.end(), [&](auto& o){return o.is_triggered();} )
+                    || std::any_of(digital_sensors.begin(), digital_sensors.end(), [&](auto& o){return o.is_triggered();} );
         }
 
-        void Alarm::start_exit_timer()
+        std::chrono::seconds Alarm::get_max_exit_delay()
         {
             auto find_max = [](BaseSensor& sensor, seconds& delay){ delay = std::max(sensor.get_exit_delay(), delay); };
-            seconds max_delay = get_delay(find_max);
-            start_delay_timer(EXIT_DELAY_TIMER, max_delay);
+            return get_delay(find_max);            
         }
 
-
-        void Alarm::start_entry_timer()
+        std::chrono::seconds Alarm::get_max_entry_delay()
         {
             auto find_max = [](BaseSensor& sensor, seconds& delay){ delay = std::max(sensor.get_entry_delay(), delay); };
-            seconds max_delay = get_delay(find_max);
-            start_delay_timer(ENTRY_DELAY_TIMER, max_delay);
-        }
-
-        void Alarm::stop_delay_timer()
-        {
-            if(delay_timer)
-            {
-                delay_timer->stop();
-            }
+            return get_delay(find_max);
         }
 
         std::chrono::seconds Alarm::get_delay(std::function<void(BaseSensor&, std::chrono::seconds& delay)> get_time_delay)
@@ -160,15 +164,17 @@ namespace g3
             return delay;
         }
 
-        void Alarm::start_delay_timer(int timer_id, std::chrono::seconds delay)
+        std::chrono::seconds Alarm::get_triggered_timeout()
         {
-            if(delay_timer)
-            {
-                delay_timer->stop();
-            }
-
-            delay_timer = Timer::create("delay_timer", timer_id, timer_event, false, delay);
-            delay_timer->start();
+            seconds s{cfg.get_source()[TIMING][TIMEOUT][TRIGGERED].get_int(60)};
+            return s;
         }
+
+        std::chrono::seconds Alarm::get_triggered_silence_timeout()
+        {
+            seconds s{cfg.get_source()[TIMING][TIMEOUT][TRIGGERED_SILENCE].get_int(60)};
+            return s;
+        }
+        
     }
 }

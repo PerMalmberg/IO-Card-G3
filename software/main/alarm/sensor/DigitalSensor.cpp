@@ -6,16 +6,15 @@ namespace g3
     namespace alarm
     {
         DigitalSensor::DigitalSensor(AlarmConfig& config, int num)
-            : BaseSensor(config, num)
+            : BaseSensor(config, 'd', num)
         {            
             config_value = get_settings();
         }
 
-        bool DigitalSensor::is_triggered(const std::chrono::seconds& time_since_triggered, bool is_armed)
+        bool DigitalSensor::is_triggered()
         {
-            return initialized 
+            return has_value 
                 && is_enabled()
-                && (is_armed ? time_since_triggered > get_entry_delay() : time_since_triggered > get_exit_delay())
                 && last.get_value() != config_value.get_bool(ARMED_STATE);
         }
 
@@ -23,7 +22,12 @@ namespace g3
         {
             last = value;
             update_age();
-            initialized = true;
+            has_value = true;
+
+            if(is_triggered())
+            {
+                signal_triggered();
+            }
         }
     }
 }

@@ -71,6 +71,9 @@ namespace g3
                 code_0[USER] = "Default user";
                 code_0[VERIFICATION_DATA] = std::get<0>(hash_res) ? std::get<1>(hash_res) : "hashing failed";
 
+                v[TIMING][TIMEOUT][TRIGGERED] = 60;
+                v[TIMING][TIMEOUT][TRIGGERED_SILENCE] = 60;
+
                 f.save();
             }
         }

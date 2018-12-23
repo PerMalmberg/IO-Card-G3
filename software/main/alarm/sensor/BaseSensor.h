@@ -14,25 +14,28 @@ namespace g3
         class BaseSensor
         {
             public:
-                BaseSensor(g3::alarm::AlarmConfig& config, int num);
+                BaseSensor(g3::alarm::AlarmConfig& config, char name_char, int num);
 
                 virtual ~BaseSensor() {}
 
-                virtual bool is_triggered(const std::chrono::seconds& time_since_triggered, bool is_armed) = 0;
-                virtual bool is_initialized() const { return initialized; }
+                virtual bool is_triggered() = 0;
                 virtual smooth::core::json::Value get_settings() = 0;
                 std::chrono::seconds get_entry_delay();
                 std::chrono::seconds get_exit_delay();
             protected:
                 void update_age();
                 bool is_enabled() { return get_settings()[ENABLED].get_bool(false);}
+                void signal_triggered();
+                std::string get_sensor_name();
 
-                bool initialized{false};
+                bool has_value{false};
                 std::chrono::steady_clock::time_point last_update{std::chrono::steady_clock::time_point::min()};
                 smooth::core::json::Value config_value{};
 
                 g3::alarm::AlarmConfig& config;
+                char name_char;
                 const std::string name;
+            
         };
     }
 }

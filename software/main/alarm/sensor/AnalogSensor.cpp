@@ -5,16 +5,15 @@ namespace g3
     namespace alarm
     {
         AnalogSensor::AnalogSensor(AlarmConfig& config, int num)
-            : BaseSensor(config, num)
+            : BaseSensor(config, 'a', num)
         {
             config_value = get_settings();                        
         }
 
-        bool AnalogSensor::is_triggered(const std::chrono::seconds& time_since_triggered, bool is_armed)
+        bool AnalogSensor::is_triggered()
         {
-            return initialized 
+            return has_value 
                 && is_enabled()
-                && (is_armed ? time_since_triggered > get_entry_delay() : time_since_triggered > get_exit_delay())
                 && !is_within_limits(last.get_value());
         }
 
@@ -22,7 +21,12 @@ namespace g3
         {
             last = value;
             update_age();
-            initialized = true;
+            has_value = true;
+
+            if(is_triggered())
+            {
+                signal_triggered();
+            }
         }
 
         bool AnalogSensor::is_within_limits(uint32_t value)

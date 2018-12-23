@@ -1,6 +1,7 @@
 #pragma once
 
 #include "BaseState.h"
+#include <chrono>
 
 namespace g3
 {
@@ -11,18 +12,18 @@ namespace g3
             class EntryDelay : public BaseState
             {
                 public:
-                    EntryDelay(Alarm& alarm)
-                        : BaseState(alarm, "EntryDelay")
+                    EntryDelay(Alarm& alarm, const std::chrono::steady_clock::time_point& expires_at)
+                        : BaseState(alarm, "EntryDelay"), expires_at(expires_at)
                         {                            
                         }
 
-                    void enter_state() override;
-                    
-                    void leave_state() override;
+                    void tick() override;
 
-                    void entry_timer_timeout() override;
+                    void sensor_triggered(const event::SensorTriggered& sensor) override;
 
                     void code_entered(const std::string& code) override;
+                private:
+                    const std::chrono::steady_clock::time_point expires_at;
             };
         }
     }

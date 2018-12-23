@@ -15,7 +15,7 @@ namespace g3
             {
                 if(alarm.validate_code(code))
                 {
-                    if(alarm.are_any_sensors_triggered(seconds{0}))
+                    if(alarm.are_any_sensors_triggered())
                     {
                         // TODO: Play error tune
                     }

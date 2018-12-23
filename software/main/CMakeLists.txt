@@ -15,6 +15,7 @@ set(SOURCES main.cpp
         alarm/state/Idle.h
         alarm/state/Idle.cpp
         alarm/state/Triggered.h
+        alarm/state/Triggered.cpp        
         alarm/sensor/BaseSensor.cpp
         alarm/sensor/AnalogSensor.cpp
         alarm/sensor/DigitalSensor.cpp

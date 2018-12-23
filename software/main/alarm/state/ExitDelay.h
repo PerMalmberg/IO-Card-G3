@@ -1,6 +1,8 @@
 #pragma once
 
 #include "BaseState.h"
+#include "alarm/event/SensorTriggered.h"
+#include <chrono>
 
 namespace g3
 {
@@ -12,17 +14,18 @@ namespace g3
             {
                 public:
                     ExitDelay(Alarm& alarm)
-                        : BaseState(alarm, "ExitDelay")
+                        : BaseState(alarm, "ExitDelay"),
+                            exit_start(std::chrono::steady_clock::now())
                         {                            
                         }
 
-                    void enter_state() override;
-                    
-                    void leave_state() override;
-
-                    void exit_timer_timeout() override;
+                    void tick() override;
 
                     void code_entered(const std::string& code) override;
+                    void sensor_triggered(const event::SensorTriggered& sensor) override;
+
+                private:
+                    std::chrono::steady_clock::time_point exit_start;
             };
         }
     }
