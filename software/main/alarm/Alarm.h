@@ -41,6 +41,7 @@ namespace g3
                 void start();
 
                 bool are_any_sensors_triggered();
+                bool do_sensors_have_values() const;
                 bool validate_code(const std::string& code);
                 std::chrono::seconds get_max_exit_delay();
                 std::chrono::seconds get_max_entry_delay();

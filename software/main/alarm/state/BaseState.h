@@ -32,7 +32,6 @@ namespace g3
 
                 protected:
                     g3::alarm::Alarm& alarm;
-                private:
                     std::string name;
             };
         }

@@ -3,7 +3,7 @@
 		"digital":	{
 			"input":	{
 				"0":	{
-					"name":	"0",
+					"name":	"Sensor 0",
 					"enabled":	true,
 					"armed_state":	true,
 					"entry_delay":	0,
@@ -138,13 +138,13 @@
 		}
 	},
 	"section":	[{
-			"name":	true,
+			"name":	"all",
 			"digital":	[7],
 			"analog":	[7]
 		}],
 	"codes":	[{
-			"user":	true,
-			"verification_data":	"$argon2i$v=19$m=8,t=8,p=1$PvNuXvYBrj7JCeNhzkZx4w$w7/0yt3pc+or8qQF3Fppt9JZ6AfRbb+JVLrOJUXEGAc"
+			"user":	"Default user",
+			"verification_data":	"$argon2i$v=19$m=8,t=8,p=1$SLOu8+/8j9DVSLRKmGRKzg$j2AlpATWaSZ4gIeUmyYTMitegGJRWo800lI/6HPP2KY"
 		}],
 	"timing":	{
 		"timeout":	{

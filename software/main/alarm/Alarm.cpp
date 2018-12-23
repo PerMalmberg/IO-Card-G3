@@ -131,8 +131,14 @@ namespace g3
 
         bool Alarm::are_any_sensors_triggered()
         {
-            return std::any_of(analog_sensors.begin(), analog_sensors.end(), [&](auto& o){return o.is_triggered();} )
-                    || std::any_of(digital_sensors.begin(), digital_sensors.end(), [&](auto& o){return o.is_triggered();} );
+            return std::any_of(analog_sensors.begin(), analog_sensors.end(), [](auto& o){return o.is_triggered();} )
+                    || std::any_of(digital_sensors.begin(), digital_sensors.end(), [](auto& o){return o.is_triggered();} );
+        }
+
+        bool Alarm::do_sensors_have_values() const
+        {
+            return std::all_of(analog_sensors.begin(), analog_sensors.end(), [](auto& o){return o.has_actual_value();} )
+                    && std::all_of(digital_sensors.begin(), digital_sensors.end(), [](auto& o){return o.has_actual_value();} );
         }
 
         std::chrono::seconds Alarm::get_max_exit_delay()

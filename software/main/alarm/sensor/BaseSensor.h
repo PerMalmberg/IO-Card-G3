@@ -18,10 +18,12 @@ namespace g3
 
                 virtual ~BaseSensor() {}
 
+                bool has_actual_value() const { return has_value; }
                 virtual bool is_triggered() = 0;
                 virtual smooth::core::json::Value get_settings() = 0;
                 std::chrono::seconds get_entry_delay();
                 std::chrono::seconds get_exit_delay();
+
             protected:
                 void update_age();
                 bool is_enabled() { return get_settings()[ENABLED].get_bool(false);}
