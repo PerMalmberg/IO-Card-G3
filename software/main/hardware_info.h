@@ -2,6 +2,7 @@
 
 #include <cstdint>
 
+// Bit indexes for status outputs
 constexpr uint8_t PORTA_0 = 0;              // Port A, 0
 constexpr uint8_t SNTP_TIME_SET = 1;        // Port A, 1
 constexpr uint8_t PORTA_2 = 2;              // Port A, 2
@@ -18,7 +19,7 @@ constexpr uint8_t PORTB_5 = 13;             // Port B, 5
 constexpr uint8_t WIFI_CONNECTED = 14;      // Port B, 6
 constexpr uint8_t PORTB_7 = 15;             // Port B, 7
 
-
+// Number inputs and outputs
 constexpr int DIGITAL_INPUT_COUNT = 8;
 constexpr int ANALOG_INPUT_COUNT = 8;
 constexpr int DIGITAL_OUTPUT_COUNT = 8;

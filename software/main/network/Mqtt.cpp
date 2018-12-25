@@ -21,6 +21,8 @@ Mqtt::Mqtt(std::string id, smooth::core::Task& task)
       analog_value("analog2mqtt", 10, task, *this),
       digital_value("ditigal2mqtt", 10, task, *this),
       sensor_value("sensor2mqtt", 2, task, *this),
+      sensor_triggered("sensor_triggered", 16, task, *this),
+      sensor_restored("restored_triggered", 16, task, *this),
       id(id)
 {    
 }
@@ -84,14 +86,14 @@ void Mqtt::event(const AnalogValue& value)
 {
     if(client)
     {
-        Value v{};
-        prepare_packet(v);
+        Value v{};        
         v["value"] = static_cast<int32_t>(value.get_value());
 
         std::string topic = id;
         topic.append("/io/status/analog/input/");
         topic.append(std::to_string(value.get_input()));
-        client->publish(topic, v.to_string(), QoS::EXACTLY_ONCE, false);
+
+        send(topic, v);
     }
 }
 
@@ -102,13 +104,12 @@ void Mqtt::event(const DigitalValue& value)
         Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit{I2CDevice::status, MQTT_CONNECTED, client->is_connected()});
 
         Value v{};
-        prepare_packet(v);
         v["value"] = static_cast<int32_t>(value.get_value());
 
         std::string topic = id;
         topic.append("/io/status/digital/input/");
         topic.append(value.get_name());
-        client->publish(topic, v.to_string(), QoS::EXACTLY_ONCE, false);
+        send(topic, v);
     }
 }
 
@@ -117,13 +118,45 @@ void Mqtt::event(const SensorValue& value)
     if(client)
     {
         Value v{};
-        prepare_packet(v);
         v["temperature"] = value.get_temperature();
         v["humidity"] = value.get_humidity();
         v["pressure"] = value.get_pressure();
 
         std::string topic = id;
         topic.append("/io/status/sensor");
-        client->publish(topic, v.to_string(), QoS::EXACTLY_ONCE, false);
+        send(topic, v);
     }
+}
+
+void Mqtt::event(const g3::alarm::event::SensorTriggered& value)
+{
+    if(client)
+    {
+        Value v{};
+        prepare_packet(v);
+        v["triggered"] = true;
+        std::string topic = id;
+        topic.append("/alarm/sensor/");
+        topic.append(value.get_name());
+        send(topic, v);
+    }
+}
+
+void Mqtt::event(const g3::alarm::event::SensorRestored& value)
+{
+    if(client)
+    {
+        Value v{};
+        v["triggered"] = false;
+        std::string topic = id;
+        topic.append("/alarm/sensor/");
+        topic.append(value.get_name());
+        send(topic, v);
+    }
+}
+
+void Mqtt::send(const std::string& topic, smooth::core::json::Value& v)
+{
+    prepare_packet(v);
+    client->publish(topic, v.to_string(), QoS::EXACTLY_ONCE, false);
 }

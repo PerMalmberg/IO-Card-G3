@@ -139,19 +139,41 @@ void I2CTask::event(const smooth::core::io::InterruptInputEvent& ev)
     else if (ev.get_io() == ANALOG_CHANGE_PIN_1)
     {
         uint16_t result = cycler_1->get_value();
-        AnalogValue av(0 + cycler_1->get_input_number(), result);
-        Publisher<AnalogValue>::publish(av);
-
+        publish_analog(0, *cycler_1, result);
         cycler_1->cycle();
     }
     else if (ev.get_io() == ANALOG_CHANGE_PIN_2)
     {
         uint16_t result = cycler_2->get_value();
-        AnalogValue av(4 + cycler_2->get_input_number(), result);
-        Publisher<AnalogValue>::publish(av);
-
+        publish_analog(4, *cycler_2, result);
         cycler_2->cycle();
     }
+}
+
+void I2CTask::publish_analog(uint8_t base_address, const AnalogCycler& cycler, uint16_t value)
+{    
+    AnalogValue av(base_address + cycler.get_input_number(), value);
+
+    // TODO: Add hysteresis
+    if(should_send(av.get_name(), value))
+    {
+        Publisher<AnalogValue>::publish(av);
+    }
+}
+
+bool I2CTask::should_send(const std::string& name, uint16_t value)
+{
+    auto& last = send_filter[name];
+    auto last_value = std::get<1>(last);
+    auto now = steady_clock::now();
+    auto time_since_send = now - std::get<0>(last);
+    bool send = time_since_send > std::chrono::seconds{10} || last_value != value;
+
+    if(send)
+    {
+        send_filter[name] = std::make_tuple(now, value);
+    }
+    return send;
 }
 
 void I2CTask::update_inputs()

@@ -53,6 +53,7 @@ class I2CTask
         std::unique_ptr<AnalogCycler> cycler_2{};
         bool initialized{false};
         uint8_t digital_count{0};
+        std::unordered_map<std::string, std::tuple<std::chrono::steady_clock::time_point, uint16_t>> send_filter{};
 
         bool prepare_hw();
         void update_inputs();
@@ -61,16 +62,25 @@ class I2CTask
 
         void read_sensor();
 
+        bool should_send(const std::string& name, uint16_t value);
+
         template<typename T>
         void publish_read_value(uint8_t value)
         {
             for (uint8_t i = 0; i < 8; ++i)
             {
                 T dv(i, static_cast<bool>(value & 1));
-                smooth::core::ipc::Publisher<T>::publish(dv);
+
+                if(should_send(dv.get_name(), value & 1))
+                {
+                    smooth::core::ipc::Publisher<T>::publish(dv);
+                }
+                
                 value >>= 1;
             }
         }
+
+        void publish_analog(uint8_t base_address, const AnalogCycler& cycler, uint16_t value);
 
         std::tuple<bool, std::unique_ptr<smooth::application::io::MCP23017>> init_MCP23017_U1401();
 

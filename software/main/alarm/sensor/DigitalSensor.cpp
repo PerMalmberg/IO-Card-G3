@@ -28,6 +28,10 @@ namespace g3
             {
                 signal_triggered();
             }
+            else
+            {
+                signal_restored();
+            }
         }
     }
 }

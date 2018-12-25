@@ -28,6 +28,7 @@ namespace g3
                 void update_age();
                 bool is_enabled() { return get_settings()[ENABLED].get_bool(false);}
                 void signal_triggered();
+                void signal_restored();
                 std::string get_sensor_name();
 
                 bool has_value{false};

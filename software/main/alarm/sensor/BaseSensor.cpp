@@ -2,6 +2,7 @@
 #include <smooth/core/ipc/Publisher.h>
 #include <smooth/core/logging/log.h>
 #include "alarm/event/SensorTriggered.h"
+#include "alarm/event/SensorRestored.h"
 
 using namespace std::chrono;
 using namespace smooth::core::ipc;
@@ -35,8 +36,12 @@ namespace g3
 
         void BaseSensor::signal_triggered()
         {
-            Log::warning(get_sensor_name(), "Sensor triggered");
             Publisher<event::SensorTriggered>::publish(event::SensorTriggered(get_sensor_name(), get_entry_delay(), get_exit_delay()));
+        }
+
+        void BaseSensor::signal_restored()
+        {
+            Publisher<event::SensorRestored>::publish(event::SensorRestored(get_sensor_name()));
         }
 
         std::string BaseSensor::get_sensor_name()
@@ -44,7 +49,7 @@ namespace g3
             auto sensor_name = config.get_source()[SENSORS][DIGITAL][INPUT][name][NAME].get_string("");
             if(sensor_name.empty())
             {
-                sensor_name = "d";
+                sensor_name = name_char;
                 sensor_name += name;
             }
 

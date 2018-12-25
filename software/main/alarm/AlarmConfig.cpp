@@ -39,7 +39,7 @@ namespace g3
                     
                     {                    
                         auto a = a_input[num];
-                        a[NAME] = num;
+                        a[NAME] = std::string("Analog").append(num);
                         a[ENABLED] = false;
                         auto range = a[ALLOWED_RANGE];
                         range[MIN] = 0;
@@ -49,7 +49,7 @@ namespace g3
 
                     {
                         auto d = d_input[num];
-                        d[NAME] = num;
+                        d[NAME] = std::string("Digital").append(num);;
                         d[ENABLED] = false;
                         d[ARMED_STATE] = true;
                         d[ENTRY_DELAY] = 0;

@@ -27,6 +27,10 @@ namespace g3
             {
                 signal_triggered();
             }
+            else
+            {
+                signal_restored();
+            }
         }
 
         bool AnalogSensor::is_within_limits(uint32_t value)
