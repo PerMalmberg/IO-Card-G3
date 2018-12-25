@@ -4,8 +4,12 @@
 #include <smooth/core/logging/log.h>
 #include <smooth/core/task_priorities.h>
 #include <smooth/core/network/IPv4.h>
+#include <smooth/core/ipc/Publisher.h>
+#include "io/digital/I2CSetOutputCmd.h"
+#include "hardware_info.h"
 
 using namespace smooth::core;
+using namespace smooth::core::ipc;
 using namespace smooth::core::json;
 using namespace smooth::core::network;
 using namespace smooth::application::network::mqtt;
@@ -95,6 +99,8 @@ void Mqtt::event(const DigitalValue& value)
 {
     if(client)
     {
+        Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit{I2CDevice::status, MQTT_CONNECTED, client->is_connected()});
+
         Value v{};
         prepare_packet(v);
         v["value"] = static_cast<int32_t>(value.get_value());

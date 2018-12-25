@@ -62,7 +62,7 @@ namespace g3
                 tm time{};
                 localtime_r(&t, &time);
                 Log::info(name, Format("Time set: {1}", Str(asctime(&time))));
-                Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit{I2CDevice::status, SNTP_TIME_SET, sntp->is_time_set()});
+                Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit{I2CDevice::status, SNTP_TIME_SET, true});
                 sntp_timer->stop();
             }
             else

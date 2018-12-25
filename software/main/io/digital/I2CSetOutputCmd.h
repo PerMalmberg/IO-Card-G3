@@ -50,7 +50,7 @@ class I2CSetOutputBit
 
         /// Represents a command to set/clear an output bit on either one of the MCP23017 devices.
         /// \param status_device The device to set the bit on
-        /// \param io The but number, 0 indexed
+        /// \param io The bit number, 0 indexed
         /// \param state The desired state
         I2CSetOutputBit(I2CDevice dev, uint8_t bit, bool state)
         : device(dev), bit(bit), state(state)
