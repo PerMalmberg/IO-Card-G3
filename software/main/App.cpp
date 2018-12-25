@@ -47,8 +47,6 @@ namespace g3
         auto free = heap_caps_get_free_size(MALLOC_CAP_8BIT);
         auto max_size = heap_caps_get_largest_free_block(MALLOC_CAP_8BIT);
         Log::info(name, Format("Free heap: {1} bytes, max block: {2}", UInt32(free), UInt32(max_size)));
-        
-        Publisher<alarm::event::CodeEntered>::publish(alarm::event::CodeEntered{"", "123456"});
     }
 
     void App::event(const DigitalStatusValue& event)
@@ -97,7 +95,7 @@ namespace g3
                 if (res)
                 {
                     store_default_config();
-                    //qqq wifi.start();
+                    wifi.start();
 
                     // On first start, this will load the just written default config so make sure it is after the call to store_default_config()
                     alarm.start();                    
