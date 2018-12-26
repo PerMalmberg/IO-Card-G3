@@ -2,12 +2,12 @@
 
 #include <string>
 
-class AnalogValue
+class RawAnalogValue
 {
     public:
-        AnalogValue() = default;
+        RawAnalogValue() = default;
 
-        AnalogValue(int input, uint32_t value)
+        RawAnalogValue(int input, uint32_t value)
                 : input(input),
                   value(value),
                   name("a" + std::to_string(input))

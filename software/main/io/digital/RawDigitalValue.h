@@ -2,15 +2,15 @@
 
 #include <string>
 
-class DigitalValue
+class RawDigitalValue
 {
     public:
-        DigitalValue() = default;
+        RawDigitalValue() = default;
 
-        DigitalValue(uint8_t input, bool value, const char name_char = 'i')
+        RawDigitalValue(uint8_t input, bool value, char char_name = 'i')
                 : input(input),
                   value(value),
-                  name(name_char + std::to_string(input))
+                  name(char_name + std::to_string(input))
         {
         }
 

@@ -14,7 +14,7 @@ namespace g3
         class BaseSensor
         {
             public:
-                BaseSensor(g3::alarm::AlarmConfig& config, char name_char, int num);
+                BaseSensor(g3::alarm::AlarmConfig& config, char name_char, int num, bool is_digital);
 
                 virtual ~BaseSensor() {}
 
@@ -30,15 +30,21 @@ namespace g3
                 void signal_triggered();
                 void signal_restored();
                 std::string get_sensor_name();
+                bool time_to_send_status();
+
+                virtual void send_value() = 0;
 
                 bool has_value{false};
                 std::chrono::steady_clock::time_point last_update{std::chrono::steady_clock::time_point::min()};
                 smooth::core::json::Value config_value{};
+                std::chrono::seconds time_between_status{10};
+                std::chrono::steady_clock::time_point last_status{std::chrono::steady_clock::now()};
+                bool status_triggered{false};
 
                 g3::alarm::AlarmConfig& config;
                 char name_char;
                 const std::string name;
-            
+                bool is_digital;
         };
     }
 }

@@ -8,8 +8,8 @@
 #include <smooth/core/task_priorities.h>
 #include <smooth/core/util/ByteSet.h>
 #include <driver/gpio.h>
-#include "io/analog/AnalogValue.h"
-#include "io/digital/DigitalValue.h"
+#include "io/analog/RawAnalogValue.h"
+#include "io/digital/RawDigitalValue.h"
 #include "io/digital/DigitalStatusValue.h"
 #include "io/sensor/SensorValue.h"
 
@@ -28,7 +28,7 @@ static const gpio_num_t ANALOG_CHANGE_PIN_1 = GPIO_NUM_39;
 static const gpio_num_t ANALOG_CHANGE_PIN_2 = GPIO_NUM_36;
 
 I2CTask::I2CTask()
-        : Task("I2CTask", 6 * 1024, smooth::core::APPLICATION_BASE_PRIO, milliseconds(500)),
+        : Task("I2CTask", 6 * 1024, smooth::core::APPLICATION_BASE_PRIO, milliseconds(100)),
           i2c_master(I2C_NUM_0, GPIO_NUM_33, false, GPIO_NUM_32, false, 100000),
           input_change_queue(*this, *this),
           analog_change_queue_1(*this, *this),
@@ -133,7 +133,7 @@ void I2CTask::event(const smooth::core::io::InterruptInputEvent& ev)
         uint8_t pins;
         if (input_output->read_interrupt_capture(MCP23017::Port::A, pins))
         {
-            publish_read_value<DigitalValue>(pins);
+            publish_read_value<RawDigitalValue>(pins);
         }
     }
     else if (ev.get_io() == ANALOG_CHANGE_PIN_1)
@@ -152,28 +152,8 @@ void I2CTask::event(const smooth::core::io::InterruptInputEvent& ev)
 
 void I2CTask::publish_analog(uint8_t base_address, const AnalogCycler& cycler, uint16_t value)
 {    
-    AnalogValue av(base_address + cycler.get_input_number(), value);
-
-    // TODO: Add hysteresis
-    if(should_send(av.get_name(), value))
-    {
-        Publisher<AnalogValue>::publish(av);
-    }
-}
-
-bool I2CTask::should_send(const std::string& name, uint16_t value)
-{
-    auto& last = send_filter[name];
-    auto last_value = std::get<1>(last);
-    auto now = steady_clock::now();
-    auto time_since_send = now - std::get<0>(last);
-    bool send = time_since_send > std::chrono::seconds{10} || last_value != value;
-
-    if(send)
-    {
-        send_filter[name] = std::make_tuple(now, value);
-    }
-    return send;
+    RawAnalogValue av(base_address + cycler.get_input_number(), value);
+    Publisher<RawAnalogValue>::publish(av);
 }
 
 void I2CTask::update_inputs()
@@ -230,7 +210,7 @@ void I2CTask::read_digital()
     if (input_output)
     {
         input_output->read_input(MCP23017::Port::A, val);
-        publish_read_value<DigitalValue>(val);
+        publish_read_value<RawDigitalValue>(val);
     }
 
     if (status_io)

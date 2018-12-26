@@ -10,8 +10,8 @@
 #include <smooth/core/Task.h>
 #include "state/BaseState.h"
 #include "AlarmConfig.h"
-#include "io/analog/AnalogValue.h"
-#include "io/digital/DigitalValue.h"
+#include "io/analog/RawAnalogValue.h"
+#include "io/digital/RawDigitalValue.h"
 #include "sensor/AnalogSensor.h"
 #include "sensor/DigitalSensor.h"
 #include "event/CodeEntered.h"
@@ -22,8 +22,8 @@ namespace g3
     {
         class Alarm 
             :   public smooth::core::fsm::StaticFSM<g3::alarm::state::BaseState, 2 * sizeof(g3::alarm::state::BaseState)>,
-                public smooth::core::ipc::IEventListener<AnalogValue>,
-                public smooth::core::ipc::IEventListener<DigitalValue>,
+                public smooth::core::ipc::IEventListener<RawAnalogValue>,
+                public smooth::core::ipc::IEventListener<RawDigitalValue>,
                 public smooth::core::ipc::IEventListener<event::CodeEntered>,
                 public smooth::core::ipc::IEventListener<event::SensorTriggered>,
                 public smooth::core::ipc::IEventListener<smooth::core::timer::TimerExpiredEvent>
@@ -48,8 +48,8 @@ namespace g3
                 std::chrono::seconds get_triggered_timeout();
                 std::chrono::seconds get_triggered_silence_timeout();
 
-                void event(const AnalogValue& value);
-                void event(const DigitalValue& value);
+                void event(const RawAnalogValue& value);
+                void event(const RawDigitalValue& value);
                 void event(const event::CodeEntered& event);
                 void event(const event::SensorTriggered& event);
                 void event(const smooth::core::timer::TimerExpiredEvent& event);
@@ -74,8 +74,8 @@ namespace g3
                 std::chrono::seconds get_delay(std::function<void(BaseSensor&, std::chrono::seconds& delay)> get_time_delay);
 
                 smooth::core::Task& task;
-                smooth::core::ipc::SubscribingTaskEventQueue<AnalogValue> analog_value;
-                smooth::core::ipc::SubscribingTaskEventQueue<DigitalValue> digital_value;
+                smooth::core::ipc::SubscribingTaskEventQueue<RawAnalogValue> analog_value;
+                smooth::core::ipc::SubscribingTaskEventQueue<RawDigitalValue> digital_value;
                 smooth::core::ipc::SubscribingTaskEventQueue<event::CodeEntered> code_entered_sub;
                 smooth::core::ipc::SubscribingTaskEventQueue<event::SensorTriggered> sensor_triggered_sub;
                 smooth::core::ipc::TaskEventQueue<smooth::core::timer::TimerExpiredEvent> timer_event;

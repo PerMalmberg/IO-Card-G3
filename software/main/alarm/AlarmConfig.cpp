@@ -45,6 +45,7 @@ namespace g3
                         range[MIN] = 0;
                         range[MAX] = std::numeric_limits<uint16_t>::max();
                         a[ENTRY_DELAY] = 0;
+                        a[EXIT_DELAY] = 0;
                     }
 
                     {

@@ -26,7 +26,7 @@ set(SOURCES main.cpp
         io/I2CTask.cpp
         io/analog/AnalogCycler.h
         io/analog/AnalogCycler.cpp
-        io/analog/AnalogValue.h
+        io/analog/RawAnalogValue.h
         io/digital/I2CSetOutputCmd.h
         io/digital/I2CSetOutputCmd.h
         hardware_info.h

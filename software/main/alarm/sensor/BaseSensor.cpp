@@ -12,21 +12,22 @@ namespace g3
 {
     namespace alarm
     {
-        BaseSensor::BaseSensor(g3::alarm::AlarmConfig& config, char name_char, int num)
+        BaseSensor::BaseSensor(g3::alarm::AlarmConfig& config, char name_char, int num, bool is_digital)
             :   config(config),
                 name_char(name_char),
-                name(std::to_string(num))
+                name(std::to_string(num)),
+                is_digital(is_digital)
         {
         }
 
         std::chrono::seconds BaseSensor::get_entry_delay()
         {
-            return seconds{get_settings()["entry_delay"].get_int(0)};
+            return seconds{get_settings()[ENTRY_DELAY].get_int(0)};
         }
         
         std::chrono::seconds BaseSensor::get_exit_delay()
         {
-            return seconds{get_settings()["exit_delay"].get_int(0)};
+            return seconds{get_settings()[EXIT_DELAY].get_int(0)};
         }
 
         void BaseSensor::update_age()
@@ -36,17 +37,44 @@ namespace g3
 
         void BaseSensor::signal_triggered()
         {
-            Publisher<event::SensorTriggered>::publish(event::SensorTriggered(get_sensor_name(), get_entry_delay(), get_exit_delay()));
+            if(is_enabled() && (!status_triggered || time_to_send_status()))
+            {
+                status_triggered = true;
+                Publisher<event::SensorTriggered>::publish(event::SensorTriggered(get_sensor_name(), get_entry_delay(), get_exit_delay()));
+                send_value();
+                Log::info(get_sensor_name(), "Triggered.");
+            }
         }
 
         void BaseSensor::signal_restored()
         {
-            Publisher<event::SensorRestored>::publish(event::SensorRestored(get_sensor_name()));
+            if(is_enabled() && (status_triggered || time_to_send_status()))
+            {
+                status_triggered = false;
+                Publisher<event::SensorRestored>::publish(event::SensorRestored(get_sensor_name()));
+                send_value();
+                Log::info(get_sensor_name(), "Restored.");
+            }
+        }
+
+        bool BaseSensor::time_to_send_status()
+        {
+            auto now = steady_clock::now();
+
+            bool res = false;
+
+            if(last_status + time_between_status <= now)
+            {
+                last_status = now;
+                res = true;
+            }
+
+            return res;
         }
 
         std::string BaseSensor::get_sensor_name()
         {
-            auto sensor_name = config.get_source()[SENSORS][DIGITAL][INPUT][name][NAME].get_string("");
+            auto sensor_name = config.get_source()[SENSORS][is_digital?DIGITAL:ANALOG][INPUT][name][NAME].get_string("");
             if(sensor_name.empty())
             {
                 sensor_name = name_char;

@@ -46,12 +46,12 @@ namespace g3
             get_state()->code_entered(code);
         }
 
-        void Alarm::event(const AnalogValue& value)
+        void Alarm::event(const RawAnalogValue& value)
         {
             update_sensor(analog_sensors, value);
         }
 
-        void Alarm::event(const DigitalValue& value)
+        void Alarm::event(const RawDigitalValue& value)
         {
             update_sensor(digital_sensors, value);
         }

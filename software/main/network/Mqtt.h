@@ -6,8 +6,8 @@
 #include <smooth/application/network/mqtt/MqttClient.h>
 #include <smooth/core/ipc/TaskEventQueue.h>
 #include <smooth/core/json/Value.h>
-#include "io/analog/AnalogValue.h"
-#include "io/digital/DigitalValue.h"
+#include "alarm/event/AnalogValue.h"
+#include "alarm/event/DigitalValue.h"
 #include "io/sensor/SensorValue.h"
 #include "alarm/event/SensorTriggered.h"
 #include "alarm/event/SensorRestored.h"

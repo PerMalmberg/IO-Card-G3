@@ -1,12 +1,16 @@
 #include "DigitalSensor.h"
+#include <smooth/core/ipc/Publisher.h>
+#include "alarm/event/DigitalValue.h"
 #include "alarm/config_constants.h"
+
+using namespace smooth::core::ipc;
 
 namespace g3
 {
     namespace alarm
     {
         DigitalSensor::DigitalSensor(AlarmConfig& config, int num)
-            : BaseSensor(config, 'd', num)
+            : BaseSensor(config, 'd', num, true)
         {            
             config_value = get_settings();
         }
@@ -18,7 +22,7 @@ namespace g3
                 && last.get_value() != config_value.get_bool(ARMED_STATE);
         }
 
-        void DigitalSensor::update(const DigitalValue& value)
+        void DigitalSensor::update(const RawDigitalValue& value)
         {
             last = value;
             update_age();
@@ -32,6 +36,11 @@ namespace g3
             {
                 signal_restored();
             }
+        }
+
+        void DigitalSensor::send_value()
+        {
+            Publisher<DigitalValue>::publish(DigitalValue(last.get_input(), last.get_value()));
         }
     }
 }

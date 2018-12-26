@@ -92,7 +92,6 @@ void Mqtt::event(const AnalogValue& value)
         std::string topic = id;
         topic.append("/io/status/analog/input/");
         topic.append(std::to_string(value.get_input()));
-
         send(topic, v);
     }
 }

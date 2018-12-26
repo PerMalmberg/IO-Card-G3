@@ -3,7 +3,7 @@
 #include "BaseSensor.h"
 #include <string>
 #include <chrono>
-#include "io/analog/AnalogValue.h"
+#include "io/analog/RawAnalogValue.h"
 
 namespace g3
 {
@@ -14,7 +14,7 @@ namespace g3
             public:
                 AnalogSensor(AlarmConfig& config, int num);
 
-                void update(const AnalogValue& value);
+                void update(const RawAnalogValue& value);
                 bool is_triggered() override;
 
             protected:
@@ -23,9 +23,12 @@ namespace g3
                     return config.get_source()[SENSORS][ANALOG][INPUT][name];
                 }
             private:
+
                 bool is_within_limits(uint32_t value);
 
-                AnalogValue last;
+                void send_value() override;
+
+                RawAnalogValue last;
         };
     }
 }
