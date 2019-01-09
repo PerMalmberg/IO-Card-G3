@@ -5,16 +5,16 @@
     {
       "Vendor":      "KiCad",
       "Application": "Pcbnew",
-      "Version":     "5.0.1-33cea8e~68~ubuntu18.04.1"
+      "Version":     "5.0.2-bee76a0~70~ubuntu18.04.1"
     },
-    "CreationDate":  "2018-11-17T13:41:40+01:00"
+    "CreationDate":  "2019-01-09T20:50:44+01:00"
   },
   "GeneralSpecs":
   {
     "ProjectId":
     {
       "Name": "G3",
-      "GUID": "47332E6B696361645F70636200000000",
+      "GUID": "47332e6b-6963-4616-945f-706362585858",
       "Revision": "rev?"
     },
     "Size":
