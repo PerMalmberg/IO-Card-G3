@@ -39,7 +39,7 @@ namespace g3
 
         i2c.start();
 
-        // Start Wiegand
+        wiegand = std::make_unique<g3::io::wiegand::Wiegand>(*this, *this, GPIO_NUM_27, GPIO_NUM_26);
     }
 
     void App::tick()
@@ -136,5 +136,15 @@ namespace g3
         wifi.write_default();
         Mqtt::write_default();
         alarm.write_default();        
+    }
+
+    void App::wiegand_number(uint8_t num)
+    {
+        Log::info("Wiegand ==>>>", Format("Num: {1}", UInt32(num)));
+    }
+
+    void App::wiegand_id(uint32_t id, uint8_t byte_count)
+    {
+        Log::info("Wiegand ==>>>", Format("Num: {1}, count {2}", UInt32(id), UInt32(byte_count)));
     }
 }

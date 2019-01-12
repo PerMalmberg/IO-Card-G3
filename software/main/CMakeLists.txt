@@ -24,6 +24,8 @@ set(SOURCES main.cpp
         DeviceId.cpp        
         io/I2CTask.h
         io/I2CTask.cpp
+        io/wiegand/Wiegand.h
+        io/wiegand/Wiegand.cpp
         io/analog/AnalogCycler.h
         io/analog/AnalogCycler.cpp
         io/analog/RawAnalogValue.h

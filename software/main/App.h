@@ -13,12 +13,15 @@
 #include "network/Sntp.h"
 #include "network/Wifi.h"
 #include "alarm/Alarm.h"
+#include "io/wiegand/IWiegandSignal.h"
+#include "io/wiegand/Wiegand.h"
 
 namespace g3
 {
     class App : public smooth::core::Application,
                 smooth::core::ipc::IEventListener<DigitalStatusValue>,
-                smooth::core::ipc::IEventListener<smooth::core::network::NetworkStatus>
+                smooth::core::ipc::IEventListener<smooth::core::network::NetworkStatus>,
+                public g3::io::wiegand::IWiegandSignal
     {
         public:
             App();
@@ -31,9 +34,16 @@ namespace g3
 
             void event(const smooth::core::network::NetworkStatus& ev) override;
 
+            void wiegand_number(uint8_t num) override;
+            void wiegand_id(uint32_t id, uint8_t byte_count) override;
+
         private:
             void start_mqtt();
             void store_default_config() const;
+            bool use_sd_spi{false};
+            std::unique_ptr<smooth::core::filesystem::SDCard> sd_card{};
+            std::unique_ptr<Mqtt> mqtt{};
+            std::shared_ptr<g3::io::wiegand::Wiegand> wiegand{};
 
             smooth::core::ipc::SubscribingTaskEventQueue<DigitalStatusValue> digital_status_queue;
             smooth::core::ipc::SubscribingTaskEventQueue<smooth::core::network::NetworkStatus> network_status;
@@ -42,12 +52,6 @@ namespace g3
             g3::network::Sntp sntp;
             g3::network::Wifi wifi;
             g3::alarm::Alarm alarm;
-
-            std::unique_ptr<Mqtt> mqtt;
-
-            
-            bool use_sd_spi{false};            
-            std::unique_ptr<smooth::core::filesystem::SDCard> sd_card{};            
     };
 
 }
