@@ -95,10 +95,10 @@ namespace g3
                 if (res)
                 {
                     store_default_config();
-                    wifi.start();
-
                     // On first start, this will load the just written default config so make sure it is after the call to store_default_config()
-                    alarm.start();                    
+                    alarm.start();
+
+                    wifi.start();
                 }
                 else
                 {
