@@ -205,7 +205,7 @@ AR Path="/5B62EDB8/5BA2F275/5C425932" Ref="R2405"  Part="1"
 F 0 "R2405" H 4400 5800 50  0000 C CNN
 F 1 "120" V 4600 5750 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 4530 5750 50  0001 C CNN
-F 3 "~" H 4600 5750 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Yageo/RT0805FRE07120RL?qs=sGAEpiMZZMu61qfTUdNhGxEjuuBLd0B4GJARAMhcGkM%3d" H 4600 5750 50  0001 C CNN
 	1    4600 5750
 	0    1    1    0   
 $EndComp
@@ -225,8 +225,8 @@ AR Path="/5B62EDB8/5BA3564E/5C425939" Ref="R?"  Part="1"
 AR Path="/5B62EDB8/5BA2F275/5C425939" Ref="R2404"  Part="1" 
 F 0 "R2404" V 4350 5350 50  0000 L CNN
 F 1 "4.7k" V 4450 5350 50  0000 L CNN
-F 2 "" V 4380 5450 50  0001 C CNN
-F 3 "~" H 4450 5450 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4380 5450 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Yageo/RT0805FRE134K7L?qs=sGAEpiMZZMu61qfTUdNhG7aYZMPoYcGCBsSWytAGlDAzZPdys9pEHA%3d%3d" H 4450 5450 50  0001 C CNN
 	1    4450 5450
 	1    0    0    -1  
 $EndComp
@@ -380,7 +380,7 @@ Wire Wire Line
 	4450 6000 4450 5750
 Connection ~ 4450 5750
 Text Notes 3100 4800 0    50   ~ 0
-Zener diodes and stop resisitors must be placed as close\nto mosfets as possible with shortest possible traces to reduce\noscillation and reduce capacitance.
+Stop resisitors must be placed as close\nto mosfets as possible with shortest possible traces to reduce\noscillation and reduce capacitance.
 Wire Wire Line
 	5200 5650 5200 5200
 Wire Wire Line
