@@ -142,7 +142,7 @@ Text Notes 4750 4000 2    60   ~ 0
 Adress 0x20
 Text Notes 4100 1400 1    60   ~ 0
 Near MCP23017
-Text GLabel 8750 4000 0    60   Input ~ 0
+Text GLabel 8700 3900 0    60   Input ~ 0
 BELL_CTRL
 Wire Notes Line
 	3300 1500 4350 1500
@@ -253,7 +253,7 @@ Text GLabel 6650 2450 2    50   Input ~ 0
 DO4_PWR
 Text GLabel 6650 2900 2    50   Input ~ 0
 DO5_PWR
-Text GLabel 8750 3600 0    60   Input ~ 0
+Text GLabel 8700 4350 0    60   Input ~ 0
 EXTERNAL_SIREN_CTRL
 Text GLabel 3800 5100 0    60   Input ~ 0
 BELL_CTRL
@@ -470,26 +470,10 @@ F1 "5VDigitalOutput.sch" 50
 F2 "CTRL" I L 8750 3150 50 
 F3 "Output" I R 9700 3150 50 
 $EndSheet
-$Sheet
-S 8750 3900 1100 200 
-U 5BA3564E
-F0 "Bell control" 50
-F1 "SelectableVoltageOutput.sch" 50
-F2 "CTRL" I L 8750 4000 50 
-F3 "Output" I R 9850 4000 50 
-$EndSheet
-Text GLabel 9850 4000 2    50   Input ~ 0
+Text GLabel 9800 3900 2    50   Input ~ 0
 BELL_PWR
-Text GLabel 9700 3600 2    50   Input ~ 0
+Text GLabel 9800 4350 2    50   Input ~ 0
 SIREN_PWR
-$Sheet
-S 8750 3500 950  200 
-U 5BA35DC6
-F0 "External siren" 50
-F1 "12VDigitalOutput.sch" 50
-F2 "CTRL" I L 8750 3600 50 
-F3 "Output" I R 9700 3600 50 
-$EndSheet
 Text GLabel 1500 1300 0    50   Input ~ 0
 DI1_PWR
 Text GLabel 1500 1800 0    50   Input ~ 0
@@ -1469,4 +1453,20 @@ Text Notes 4800 5900 0    50   ~ 0
 "Status" device
 Text Notes 4250 3050 0    50   ~ 0
 "Input output" device
+$Sheet
+S 8700 4250 1100 200 
+U 5C44CE71
+F0 "ExternalSiren" 50
+F1 "SelectableVoltageOutput.sch" 50
+F2 "CTRL" I L 8700 4350 50 
+F3 "Output" I R 9800 4350 50 
+$EndSheet
+$Sheet
+S 8700 3800 1100 200 
+U 5C44D366
+F0 "Bell" 50
+F1 "SelectableVoltageOutput.sch" 50
+F2 "CTRL" I L 8700 3900 50 
+F3 "Output" I R 9800 3900 50 
+$EndSheet
 $EndSCHEMATC
