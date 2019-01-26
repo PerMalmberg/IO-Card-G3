@@ -7,12 +7,13 @@
 #include <smooth/core/filesystem/SDCard.h>
 #include <smooth/core/network/NetworkStatus.h>
 #include "DeviceId.h"
+#include "CommandDispatcher.h"
+#include "alarm/Alarm.h"
 #include "io/digital//DigitalStatusValue.h"
 #include "io/I2CTask.h"
 #include "network/Mqtt.h"
 #include "network/Sntp.h"
 #include "network/Wifi.h"
-#include "alarm/Alarm.h"
 #include "io/wiegand/IWiegandSignal.h"
 #include "io/wiegand/Wiegand.h"
 
@@ -52,6 +53,9 @@ namespace g3
             g3::network::Sntp sntp;
             g3::network::Wifi wifi;
             g3::alarm::Alarm alarm;
+            g3::CommandDispatcher cmd{};
+
+            void setup_commands();
     };
 
 }

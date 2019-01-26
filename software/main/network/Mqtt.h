@@ -2,6 +2,7 @@
 
 #include <string>
 #include <chrono>
+#include <vector>
 #include <smooth/core/Task.h>
 #include <smooth/application/network/mqtt/MqttClient.h>
 #include <smooth/core/ipc/TaskEventQueue.h>
@@ -11,6 +12,7 @@
 #include "io/sensor/SensorValue.h"
 #include "alarm/event/SensorTriggered.h"
 #include "alarm/event/SensorRestored.h"
+#include "CommandDispatcher.h"
 
 class Mqtt : 
     public smooth::core::ipc::IEventListener<smooth::application::network::mqtt::MQTTData>,
@@ -21,12 +23,14 @@ class Mqtt :
     public smooth::core::ipc::IEventListener<g3::alarm::event::SensorRestored>
 {
     public:
-        Mqtt(std::string id, smooth::core::Task& task);
+        Mqtt(std::string id, smooth::core::Task& task, g3::CommandDispatcher& cmd);
         ~Mqtt();
         void event(const smooth::application::network::mqtt::MQTTData& data);
 
         void start();
         static void write_default();
+
+        void add_subscription(const std::string& topic);
 
         void event(const AnalogValue& value);
         void event(const DigitalValue& value);
@@ -42,6 +46,7 @@ class Mqtt :
         void send(const std::string& topic, smooth::core::json::Value& v);        
 
         smooth::core::Task& task;
+        g3::CommandDispatcher& cmd;
         smooth::core::ipc::TaskEventQueue<smooth::application::network::mqtt::MQTTData> incoming_mqtt;
         smooth::core::ipc::SubscribingTaskEventQueue<AnalogValue> analog_value;
         smooth::core::ipc::SubscribingTaskEventQueue<DigitalValue> digital_value;
@@ -49,5 +54,6 @@ class Mqtt :
         smooth::core::ipc::SubscribingTaskEventQueue<g3::alarm::event::SensorTriggered> sensor_triggered;
         smooth::core::ipc::SubscribingTaskEventQueue<g3::alarm::event::SensorRestored> sensor_restored;
         std::unique_ptr<smooth::application::network::mqtt::MqttClient> client{};
+        std::vector<std::string> subscriptions{};
         std::string id;
 };

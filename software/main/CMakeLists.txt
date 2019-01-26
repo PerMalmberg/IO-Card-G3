@@ -21,7 +21,10 @@ set(SOURCES main.cpp
         alarm/sensor/DigitalSensor.cpp
         
         App.cpp
-        DeviceId.cpp        
+        hardware_info.h
+        DeviceId.cpp
+        CommandDispatcher.h     
+        CommandDispatcher.cpp
         io/I2CTask.h
         io/I2CTask.cpp
         io/wiegand/Wiegand.h
@@ -31,7 +34,6 @@ set(SOURCES main.cpp
         io/analog/RawAnalogValue.h
         io/digital/I2CSetOutputCmd.h
         io/digital/I2CSetOutputCmd.h
-        hardware_info.h
         network/Wifi.cpp
         network/Mqtt.cpp
         network/Mqtt.h        

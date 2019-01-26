@@ -40,6 +40,8 @@ namespace g3
         i2c.start();
 
         wiegand = std::make_unique<g3::io::wiegand::Wiegand>(*this, *this, GPIO_NUM_27, GPIO_NUM_26);
+
+        setup_commands();
     }
 
     void App::tick()
@@ -124,7 +126,31 @@ namespace g3
     {
         if (!mqtt)
         {
-            mqtt = std::make_unique<Mqtt>(id.get(), *this);
+            mqtt = std::make_unique<Mqtt>(id.get(), *this, cmd);
+
+            // Setup subscriptions
+            for (auto i = 1; i <= 8; ++i)
+            {
+                auto topic = id.get();
+                topic += "/io/set/";
+                topic += std::to_string(i);                
+
+                mqtt->add_subscription(topic);
+
+                cmd.add_command(topic, [this](const std::string& command, const std::string& data)
+                {
+                    // Get the number from the topic, only one character expected.
+                    std::string last_char{command[command.size()-1]};
+                    auto number = std::atoi(last_char.c_str());
+
+                    smooth::core::json::Value d{data};
+                    auto val = d["value"].get_bool(false);
+
+                    // Outputs are located on port B, so we have to offset it by 7.
+                    Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit(I2CDevice::output, number+7, val));
+                });
+            }
+
             mqtt->start();
         }
     }
@@ -146,5 +172,10 @@ namespace g3
     void App::wiegand_id(uint32_t id, uint8_t byte_count)
     {
         Log::info("Wiegand ==>>>", Format("Num: {1}, count {2}", UInt32(id), UInt32(byte_count)));
+    }
+
+    void App::setup_commands()
+    {
+
     }
 }

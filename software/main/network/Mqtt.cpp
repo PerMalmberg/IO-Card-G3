@@ -15,8 +15,9 @@ using namespace smooth::core::network;
 using namespace smooth::application::network::mqtt;
 using namespace std::chrono;
 
-Mqtt::Mqtt(std::string id, smooth::core::Task& task)
+Mqtt::Mqtt(std::string id, smooth::core::Task& task, g3::CommandDispatcher& cmd)
     : task(task),
+      cmd(cmd),
       incoming_mqtt("incoming_mqtt", 10, task, *this),
       analog_value("analog2mqtt", 10, task, *this),
       digital_value("ditigal2mqtt", 10, task, *this),
@@ -54,6 +55,11 @@ void Mqtt::start()
         {
             Log::info("Mqtt", Format("Starting MQTT client, id {1}", Str(id)));
             client = std::make_unique<MqttClient>(id, keep_alive, 8 * 1024, APPLICATION_BASE_PRIO, incoming_mqtt);
+            for(const auto& t : subscriptions)
+            {
+                client->subscribe(t, QoS::EXACTLY_ONCE);
+            }
+
             client->connect_to(std::make_shared<IPv4>(broker, port), true);
         }
     }
@@ -77,14 +83,24 @@ void Mqtt::prepare_packet(smooth::core::json::Value& v)
     v["timestamp"] = std::to_string(static_cast<int64_t>(system_clock::now().time_since_epoch().count()));
 }
 
+void Mqtt::add_subscription(const std::string& topic)
+{
+    if( std::find(std::begin(subscriptions), std::end(subscriptions), topic) == std::end(subscriptions))
+    {
+        subscriptions.emplace_back(topic);
+    }
+}
+
 void Mqtt::event(const smooth::application::network::mqtt::MQTTData &data)
 {
-    
+    const auto& payload = smooth::application::network::mqtt::MqttClient::get_payload(data);    
+
+    cmd.process(data.first, payload);
 }
 
 void Mqtt::event(const AnalogValue& value)
 {
-    if(client)
+    if (client)
     {
         Value v{};        
         v["value"] = static_cast<int32_t>(value.get_value());
