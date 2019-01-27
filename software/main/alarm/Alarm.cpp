@@ -36,12 +36,12 @@ namespace g3
 
         void Alarm::entering_state(g3::alarm::state::BaseState* state)
         {
-            Log::debug(tag, Format("Entering '{1}'.", Str(state->get_state_name())));
+            Log::info(tag, Format("Entering '{1}'.", Str(state->get_state_name())));
         }
 
         void Alarm::leaving_state(g3::alarm::state::BaseState* state)
         {
-            Log::debug(tag, Format("Leaving '{1}'.", Str(state->get_state_name())));
+            Log::info(tag, Format("Leaving '{1}'.", Str(state->get_state_name())));
         }
 
         void Alarm::code_entered(const std::string& code)

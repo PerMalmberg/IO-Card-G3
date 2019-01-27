@@ -157,6 +157,20 @@ namespace g3
                         alarm.set_output(last_char, val);
                     }
                 });
+
+                auto code_entered = id.get() + "/keypad/code/entered";
+                mqtt->add_subscription(code_entered);
+                cmd.add_command(code_entered, [this](const std::string& command, const std::string& data)
+                {
+                    // Expected payload: { "code": "1234" }
+                    smooth::core::json::Value d{data};
+                    auto code = d["code"].get_string("");
+                    if(!code.empty())
+                    {
+                        Publisher<g3::alarm::event::CodeEntered>::publish(g3::alarm::event::CodeEntered(code));
+                    }
+                });
+
             }
 
             mqtt->start();

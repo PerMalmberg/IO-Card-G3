@@ -23,7 +23,7 @@ namespace g3
             {
                 if(steady_clock::now() > times_out_at)
                 {
-                    // TODO: Silence alarm
+                    silence_alarm();
                 }
                 else if(steady_clock::now() > times_out_at_silence)
                 {
@@ -33,12 +33,12 @@ namespace g3
 
             void Triggered::enter_state()
             {
-                // TODO: Sound the alarm
+                sound_alarm();
             }
 
             void Triggered::leave_state()
             {
-                // TODO: Silence the alarm
+                silence_alarm();
             }
         }
     }

@@ -14,10 +14,7 @@ namespace g3
             class BaseState
             {
                 public:
-                    BaseState(Alarm& alarm, const char* name)
-                        : alarm(alarm), name(name)
-                    {
-                    }
+                    BaseState(Alarm& alarm, const char* name);
 
                     virtual void enter_state() {}
                     virtual void leave_state() {}
@@ -31,6 +28,9 @@ namespace g3
                     const std::string& get_state_name() const { return name; }
 
                 protected:
+                    void silence_alarm();
+                    void sound_alarm();
+
                     g3::alarm::Alarm& alarm;
                     std::string name;
             };

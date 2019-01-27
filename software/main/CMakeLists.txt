@@ -8,6 +8,7 @@ set(SOURCES main.cpp
         alarm/state/Armed.h
         alarm/state/Armed.cpp
         alarm/state/BaseState.h
+        alarm/state/BaseState.cpp
         alarm/state/EntryDelay.h
         alarm/state/EntryDelay.cpp
         alarm/state/ExitDelay.h

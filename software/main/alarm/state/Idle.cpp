@@ -35,7 +35,7 @@ namespace g3
 
             void Idle::enter_state()
             {
-                // TODO: Silence all alarms.            
+                silence_alarm();           
             }
         }
     }

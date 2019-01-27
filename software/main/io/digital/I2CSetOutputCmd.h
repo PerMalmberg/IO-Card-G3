@@ -77,3 +77,18 @@ class I2CSetOutputBit
         uint8_t bit;
         bool state;
 };
+
+class ExternalSirenCommand
+{
+    public:
+        ExternalSirenCommand() = default;
+
+        ExternalSirenCommand(bool state)
+            : state(state)
+            {                
+            }
+
+        bool get_state() const { return state; }
+    private:
+        bool state;
+};

@@ -37,8 +37,10 @@ I2CTask::I2CTask()
           analog_change_1(analog_change_queue_1, ANALOG_CHANGE_PIN_1, false, false, GPIO_INTR_NEGEDGE),
           analog_change_2(analog_change_queue_2, ANALOG_CHANGE_PIN_2, false, false, GPIO_INTR_NEGEDGE),
           i2c_reset(GPIO_NUM_25, false, false, false),
+          external_siren(GPIO_NUM_23, true, false, false ),
           set_output_cmd("set_output_cmd", 10, *this, *this),
-          set_output_bit_cmd("set_output_bit_cmd", 10, *this, *this)
+          set_output_bit_cmd("set_output_bit_cmd", 10, *this, *this),
+          set_external_siren("set_external_siren", 3, *this, *this)
 {
 }
 
@@ -201,6 +203,11 @@ void I2CTask::event(const I2CSetOutputBit& ev)
     {
         Log::error(name, "Failed to read outputs");
     }
+}
+
+void I2CTask::event(const ExternalSirenCommand& ev)
+{
+    external_siren.set(ev.get_state());
 }
 
 void I2CTask::read_digital()

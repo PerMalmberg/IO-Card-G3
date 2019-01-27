@@ -21,7 +21,8 @@ class I2CTask
         : public smooth::core::Task,
           public smooth::core::ipc::IEventListener<smooth::core::io::InterruptInputEvent>,
           public smooth::core::ipc::IEventListener<I2CSetOutput>,
-          public smooth::core::ipc::IEventListener<I2CSetOutputBit>
+          public smooth::core::ipc::IEventListener<I2CSetOutputBit>,
+          public smooth::core::ipc::IEventListener<ExternalSirenCommand>          
 {
     public:
         I2CTask();
@@ -34,6 +35,7 @@ class I2CTask
 
         void event(const I2CSetOutput& ev) override;
         void event(const I2CSetOutputBit& ev) override;
+        void event(const ExternalSirenCommand& ev) override;        
 
     private:
         smooth::core::io::i2c::Master i2c_master;
@@ -44,8 +46,10 @@ class I2CTask
         smooth::core::io::InterruptInput analog_change_1;
         smooth::core::io::InterruptInput analog_change_2;
         smooth::core::io::Output i2c_reset;
+        smooth::core::io::Output external_siren;
         smooth::core::ipc::SubscribingTaskEventQueue<I2CSetOutput> set_output_cmd;
         smooth::core::ipc::SubscribingTaskEventQueue<I2CSetOutputBit> set_output_bit_cmd;
+        smooth::core::ipc::SubscribingTaskEventQueue<ExternalSirenCommand> set_external_siren;
         std::unique_ptr<smooth::application::io::MCP23017> input_output{};
         std::unique_ptr<smooth::application::io::MCP23017> status_io{};
         std::unique_ptr<smooth::application::sensor::BME280> sensor{};
