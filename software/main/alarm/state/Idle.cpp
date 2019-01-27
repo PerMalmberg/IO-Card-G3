@@ -35,7 +35,7 @@ namespace g3
 
             void Idle::enter_state()
             {
-                silence_alarm();           
+                silence_alarm();
             }
         }
     }

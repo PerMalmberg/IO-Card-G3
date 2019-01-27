@@ -16,13 +16,13 @@ namespace g3
 
             void BaseState::silence_alarm()
             {
-                smooth::core::ipc::Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit(I2CDevice::status, INTERNAL_SIREN_CTRL, false));
+                smooth::core::ipc::Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit(I2CDevice::status, BUZZER, false));
                 smooth::core::ipc::Publisher<ExternalSirenCommand>::publish(ExternalSirenCommand(false));
             }
 
             void BaseState::sound_alarm()
             {
-                smooth::core::ipc::Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit(I2CDevice::status, INTERNAL_SIREN_CTRL, true));
+                smooth::core::ipc::Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit(I2CDevice::status, BUZZER, true));
                 smooth::core::ipc::Publisher<ExternalSirenCommand>::publish(ExternalSirenCommand(true));
             }
         }
