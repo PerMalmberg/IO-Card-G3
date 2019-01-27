@@ -20,7 +20,7 @@ namespace g3
             protected:
                 smooth::core::json::Value get_settings() override
                 {
-                    return config.get_source()[SENSORS][DIGITAL][INPUT][name];
+                    return config.get()[SENSORS][DIGITAL][INPUT][sensor_number];
                 }
 
                 void send_value() override;

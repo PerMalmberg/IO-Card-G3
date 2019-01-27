@@ -20,7 +20,7 @@ namespace g3
             protected:
                 smooth::core::json::Value get_settings() override
                 {
-                    return config.get_source()[SENSORS][ANALOG][INPUT][name];
+                    return config.get()[SENSORS][ANALOG][INPUT][sensor_number];
                 }
             private:
 

@@ -10,7 +10,7 @@ namespace g3
     namespace alarm
     {
         DigitalSensor::DigitalSensor(AlarmConfig& config, int num)
-            : BaseSensor(config, 'd', num, true)
+            : BaseSensor(config, num, true)
         {            
             config_value = get_settings();
         }
@@ -19,7 +19,7 @@ namespace g3
         {
             return has_value 
                 && is_enabled()
-                && last.get_value() != config_value.get_bool(ARMED_STATE);
+                && last.get_value() != config_value[ARMED_STATE].get_bool(false);
         }
 
         void DigitalSensor::update(const RawDigitalValue& value)

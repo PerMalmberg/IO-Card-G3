@@ -116,8 +116,6 @@ void Mqtt::event(const DigitalValue& value)
 {
     if(client)
     {
-        Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit{I2CDevice::status, MQTT_CONNECTED, client->is_connected()});
-
         Value v{};
         v["value"] = static_cast<int32_t>(value.get_value());
 

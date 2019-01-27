@@ -32,6 +32,7 @@ namespace g3
                 auto analog = sensors[ANALOG];
 
                 auto d_input = digital[INPUT];
+                auto d_output = digital[OUTPUT];
                 auto a_input = analog[INPUT];
                 for(int i = 0; i < 8; ++i)
                 {
@@ -39,7 +40,7 @@ namespace g3
                     
                     {                    
                         auto a = a_input[num];
-                        a[NAME] = std::string("Analog").append(num);
+                        a[NAME] = num;
                         a[ENABLED] = false;
                         auto range = a[ALLOWED_RANGE];
                         range[MIN] = 0;
@@ -50,11 +51,17 @@ namespace g3
 
                     {
                         auto d = d_input[num];
-                        d[NAME] = std::string("Digital").append(num);;
+                        d[NAME] = num;
                         d[ENABLED] = false;
                         d[ARMED_STATE] = true;
                         d[ENTRY_DELAY] = 0;
                         d[EXIT_DELAY] = 0;
+                    }
+
+                    {
+                        auto o = d_output[num];
+                        o[NAME] = num;
+                        o[ALLOW_EXTERNAL_CONTROL] = false;
                     }
                 }
 

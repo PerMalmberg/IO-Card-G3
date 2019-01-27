@@ -31,6 +31,7 @@ class Mqtt :
         static void write_default();
 
         void add_subscription(const std::string& topic);
+        bool is_connected() const { return client && client->is_connected(); }
 
         void event(const AnalogValue& value);
         void event(const DigitalValue& value);

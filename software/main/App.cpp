@@ -1,16 +1,17 @@
 #include "App.h"
 
 #include <driver/gpio.h>
+#include <smooth/core/task_priorities.h>
 #include <smooth/core/filesystem/MMCSDCard.h>
 #include <smooth/core/filesystem/SPISDCard.h>
 #include <smooth/core/json/JsonFile.h>
+#include <smooth/core/ipc/Publisher.h>
 #include <smooth/core/ipc/SubscribingTaskEventQueue.h>
 #include <smooth/core/network/Wifi.h>
 #include "io/digital/I2CSetOutputCmd.h"
 #include "io/I2CTask.h"
 #include "hardware_info.h"
 #include "alarm/event/CodeEntered.h"
-#include <smooth/core/ipc/Publisher.h>
 
 using namespace std::chrono;
 using namespace smooth::core::filesystem;
@@ -22,7 +23,7 @@ using namespace smooth::core::timer;
 namespace g3
 {
     App::App()
-            : Application(5, std::chrono::seconds{10}),
+            : Application(smooth::core::APPLICATION_BASE_PRIO, std::chrono::seconds{10}),
               digital_status_queue("io_status_queue", 8, *this, *this),              
               network_status("network_status", 2, *this, *this),
               i2c(),
@@ -40,8 +41,6 @@ namespace g3
         i2c.start();
 
         wiegand = std::make_unique<g3::io::wiegand::Wiegand>(*this, *this, GPIO_NUM_27, GPIO_NUM_26);
-
-        setup_commands();
     }
 
     void App::tick()
@@ -49,6 +48,11 @@ namespace g3
         auto free = heap_caps_get_free_size(MALLOC_CAP_8BIT);
         auto max_size = heap_caps_get_largest_free_block(MALLOC_CAP_8BIT);
         Log::info(name, Format("Free heap: {1} bytes, max block: {2}", UInt32(free), UInt32(max_size)));
+
+        if (mqtt)
+        {
+            Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit{I2CDevice::status, MQTT_CONNECTED, mqtt->is_connected()});
+        }
     }
 
     void App::event(const DigitalStatusValue& event)
@@ -96,8 +100,9 @@ namespace g3
 
                 if (res)
                 {
-                    store_default_config();
                     // On first start, this will load the just written default config so make sure it is after the call to store_default_config()
+                    prepare_config();
+
                     alarm.start();
 
                     wifi.start();
@@ -129,7 +134,7 @@ namespace g3
             mqtt = std::make_unique<Mqtt>(id.get(), *this, cmd);
 
             // Setup subscriptions
-            for (auto i = 1; i <= 8; ++i)
+            for (auto i = 0; i < 8; ++i)
             {
                 auto topic = id.get();
                 topic += "/io/set/";
@@ -139,15 +144,18 @@ namespace g3
 
                 cmd.add_command(topic, [this](const std::string& command, const std::string& data)
                 {
+                    // Expected topic: <id>/io/set/<num>
+                    // Expected payload: { "value": true }
+
                     // Get the number from the topic, only one character expected.
-                    std::string last_char{command[command.size()-1]};
-                    auto number = std::atoi(last_char.c_str());
+                    if(command.size() > 2 && command[command.length()-2] == '/')
+                    {
+                        std::string last_char{command[command.length()-1]};
+                        smooth::core::json::Value d{data};
 
-                    smooth::core::json::Value d{data};
-                    auto val = d["value"].get_bool(false);
-
-                    // Outputs are located on port B, so we have to offset it by 7.
-                    Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit(I2CDevice::output, number+7, val));
+                        auto val = d["value"].get_bool(false);
+                        alarm.set_output(last_char, val);
+                    }
                 });
             }
 
@@ -155,13 +163,13 @@ namespace g3
         }
     }
 
-    void App::store_default_config() const
+    void App::prepare_config()
     {
         id.write_default();
         sntp.write_default();
         wifi.write_default();
         Mqtt::write_default();
-        alarm.write_default();        
+        alarm.write_default();
     }
 
     void App::wiegand_number(uint8_t num)
@@ -172,10 +180,5 @@ namespace g3
     void App::wiegand_id(uint32_t id, uint8_t byte_count)
     {
         Log::info("Wiegand ==>>>", Format("Num: {1}, count {2}", UInt32(id), UInt32(byte_count)));
-    }
-
-    void App::setup_commands()
-    {
-
     }
 }

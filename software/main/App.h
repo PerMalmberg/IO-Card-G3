@@ -40,7 +40,7 @@ namespace g3
 
         private:
             void start_mqtt();
-            void store_default_config() const;
+            void prepare_config();
             bool use_sd_spi{false};
             std::unique_ptr<smooth::core::filesystem::SDCard> sd_card{};
             std::unique_ptr<Mqtt> mqtt{};
@@ -54,8 +54,6 @@ namespace g3
             g3::network::Wifi wifi;
             g3::alarm::Alarm alarm;
             g3::CommandDispatcher cmd{};
-
-            void setup_commands();
     };
 
 }

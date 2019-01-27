@@ -16,7 +16,7 @@ namespace g3
                 void load();
                 void write_default() const;
 
-                smooth::core::json::Value& get_source()
+                smooth::core::json::Value& get()
                 {
                     return f.value();
                 }

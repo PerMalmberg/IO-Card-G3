@@ -10,7 +10,7 @@ namespace g3
     namespace alarm
     {
         AnalogSensor::AnalogSensor(AlarmConfig& config, int num)
-            : BaseSensor(config, 'a', num, false)
+            : BaseSensor(config, num, false)
         {
             config_value = get_settings();                        
         }

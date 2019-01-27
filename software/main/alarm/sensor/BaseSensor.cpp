@@ -12,10 +12,9 @@ namespace g3
 {
     namespace alarm
     {
-        BaseSensor::BaseSensor(g3::alarm::AlarmConfig& config, char name_char, int num, bool is_digital)
+        BaseSensor::BaseSensor(g3::alarm::AlarmConfig& config, int sensor_number, bool is_digital)
             :   config(config),
-                name_char(name_char),
-                name(std::to_string(num)),
+                sensor_number(std::to_string(sensor_number)),
                 is_digital(is_digital)
         {
         }
@@ -74,11 +73,10 @@ namespace g3
 
         std::string BaseSensor::get_sensor_name()
         {
-            auto sensor_name = config.get_source()[SENSORS][is_digital?DIGITAL:ANALOG][INPUT][name][NAME].get_string("");
+            auto sensor_name = get_settings()[NAME].get_string("");
             if(sensor_name.empty())
             {
-                sensor_name = name_char;
-                sensor_name += name;
+                sensor_name = "NoName";
             }
 
             return sensor_name;

@@ -14,7 +14,7 @@ namespace g3
         class BaseSensor
         {
             public:
-                BaseSensor(g3::alarm::AlarmConfig& config, char name_char, int num, bool is_digital);
+                BaseSensor(g3::alarm::AlarmConfig& config, int sensor_number, bool is_digital);
 
                 virtual ~BaseSensor() {}
 
@@ -42,8 +42,7 @@ namespace g3
                 bool status_triggered{false};
 
                 g3::alarm::AlarmConfig& config;
-                char name_char;
-                const std::string name;
+                const std::string sensor_number;
                 bool is_digital;
         };
     }

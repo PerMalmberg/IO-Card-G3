@@ -48,6 +48,8 @@ namespace g3
                 std::chrono::seconds get_triggered_timeout();
                 std::chrono::seconds get_triggered_silence_timeout();
 
+                void set_output(const std::string& output_number, bool active);
+
                 void event(const RawAnalogValue& value);
                 void event(const RawDigitalValue& value);
                 void event(const event::CodeEntered& event);
