@@ -14,15 +14,15 @@
 #include "network/Mqtt.h"
 #include "network/Sntp.h"
 #include "network/Wifi.h"
-#include "io/wiegand/IWiegandSignal.h"
-#include "io/wiegand/Wiegand.h"
+#include <smooth/application/io/wiegand/Wiegand.h>
+#include <smooth/application/io/wiegand/IWiegandSignal.h>
 
 namespace g3
 {
     class App : public smooth::core::Application,
                 smooth::core::ipc::IEventListener<DigitalStatusValue>,
                 smooth::core::ipc::IEventListener<smooth::core::network::NetworkStatus>,
-                public g3::io::wiegand::IWiegandSignal
+                public smooth::application::io::wiegand::IWiegandSignal
     {
         public:
             App();
@@ -44,7 +44,7 @@ namespace g3
             bool use_sd_spi{false};
             std::unique_ptr<smooth::core::filesystem::SDCard> sd_card{};
             std::unique_ptr<Mqtt> mqtt{};
-            std::shared_ptr<g3::io::wiegand::Wiegand> wiegand{};
+            std::shared_ptr<smooth::application::io::wiegand::Wiegand> wiegand{};
 
             smooth::core::ipc::SubscribingTaskEventQueue<DigitalStatusValue> digital_status_queue;
             smooth::core::ipc::SubscribingTaskEventQueue<smooth::core::network::NetworkStatus> network_status;

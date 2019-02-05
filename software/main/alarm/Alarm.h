@@ -86,6 +86,7 @@ namespace g3
                 std::vector<DigitalSensor> digital_sensors{};
                 AlarmConfig cfg{};
                 bool started{false};
+                bool togle_status{false};
                 std::shared_ptr<smooth::core::timer::Timer> tick{};
         };
     }

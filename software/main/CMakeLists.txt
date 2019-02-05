@@ -28,8 +28,8 @@ set(SOURCES main.cpp
         CommandDispatcher.cpp
         io/I2CTask.h
         io/I2CTask.cpp
-        io/wiegand/Wiegand.h
-        io/wiegand/Wiegand.cpp
+        #smooth/application/io/wiegand/Wiegand.h
+        #smooth/application/io/wiegand/IWiegandSignal.h
         io/analog/AnalogCycler.h
         io/analog/AnalogCycler.cpp
         io/analog/RawAnalogValue.h

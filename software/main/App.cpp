@@ -40,7 +40,7 @@ namespace g3
 
         i2c.start();
 
-        wiegand = std::make_unique<g3::io::wiegand::Wiegand>(*this, *this, GPIO_NUM_27, GPIO_NUM_26);
+        wiegand = std::make_unique<smooth::application::io::wiegand::Wiegand>(*this, *this, GPIO_NUM_27, GPIO_NUM_26);
     }
 
     void App::tick()
