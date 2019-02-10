@@ -28,15 +28,14 @@ namespace g3
         void Keypad::wiegand_number(uint8_t num)
         {
             const int MAX_KEYPAD_LENGTH = 21;
-
-            Log::info("Wiegand ==>>>", Format("Num: {1}", UInt32(num)));
-            
+           
             keypad_entry_timer->reset();
             
             if (num == 11) // '#'
             {
                 auto command = id.get() + cmd_keypad_code_entered;
                 cmd.process(command, std::string(R"!!({ "code": ")!!") + keypad_entry + R"!!("})!!");
+                Log::info("Keypad", Format("{1}", Str(keypad_entry)));
                 keypad_entry.clear();
             }
             else if (keypad_entry.size() > MAX_KEYPAD_LENGTH)
@@ -48,7 +47,6 @@ namespace g3
                 keypad_entry += std::to_string(num);
             }
             
-            Log::info("Keypad", Format("{1}", Str(keypad_entry)));
         }
 
         void Keypad::wiegand_id(uint32_t id, uint8_t byte_count)
