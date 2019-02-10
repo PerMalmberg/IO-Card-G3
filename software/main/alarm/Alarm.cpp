@@ -8,7 +8,7 @@
 #include "state/Idle.h"
 #include "hardware_info.h"
 #include "config_constants.h"
-#include "alarm/timer_id.h"
+#include "timer_id.h"
 
 using namespace std::chrono;
 using namespace smooth::core::logging;

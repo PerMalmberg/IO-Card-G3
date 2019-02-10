@@ -1,6 +1,5 @@
 #include "App.h"
 
-#include <driver/gpio.h>
 #include <smooth/core/task_priorities.h>
 #include <smooth/core/filesystem/MMCSDCard.h>
 #include <smooth/core/filesystem/SPISDCard.h>
@@ -8,10 +7,13 @@
 #include <smooth/core/ipc/Publisher.h>
 #include <smooth/core/ipc/SubscribingTaskEventQueue.h>
 #include <smooth/core/network/Wifi.h>
+#include <smooth/core/timer/Timer.h>
+#include <smooth/core/timer/TimerExpiredEvent.h>
 #include "io/digital/I2CSetOutputCmd.h"
 #include "io/I2CTask.h"
 #include "hardware_info.h"
 #include "alarm/event/CodeEntered.h"
+#include "commands.h"
 
 using namespace std::chrono;
 using namespace smooth::core::filesystem;
@@ -30,8 +32,9 @@ namespace g3
               id(),
               sntp(*this),
               wifi(*this, id, sntp),
-              alarm(*this)
-    {
+              alarm(*this),
+              keypad(*this, cmd, id)
+    {        
     }
 
     void App::init()
@@ -39,8 +42,6 @@ namespace g3
         Application::init();
 
         i2c.start();
-
-        wiegand = std::make_unique<smooth::application::io::wiegand::Wiegand>(*this, *this, GPIO_NUM_27, GPIO_NUM_26);
     }
 
     void App::tick()
@@ -137,8 +138,8 @@ namespace g3
             for (auto i = 0; i < 8; ++i)
             {
                 auto topic = id.get();
-                topic += "/io/set/";
-                topic += std::to_string(i);                
+                topic += cmd_io_set;
+                topic += std::to_string(i);
 
                 mqtt->add_subscription(topic);
 
@@ -158,9 +159,9 @@ namespace g3
                     }
                 });
 
-                auto code_entered = id.get() + "/keypad/code/entered";
-                mqtt->add_subscription(code_entered);
-                cmd.add_command(code_entered, [this](const std::string& command, const std::string& data)
+                auto command = id.get() + cmd_keypad_code_entered;
+                mqtt->add_subscription(command);
+                cmd.add_command(command, [this](const std::string& command, const std::string& data)
                 {
                     // Expected payload: { "code": "1234" }
                     smooth::core::json::Value d{data};
@@ -184,15 +185,5 @@ namespace g3
         wifi.write_default();
         Mqtt::write_default();
         alarm.write_default();
-    }
-
-    void App::wiegand_number(uint8_t num)
-    {
-        Log::info("Wiegand ==>>>", Format("Num: {1}", UInt32(num)));
-    }
-
-    void App::wiegand_id(uint32_t id, uint8_t byte_count)
-    {
-        Log::info("Wiegand ==>>>", Format("Num: {1}, count {2}", UInt32(id), UInt32(byte_count)));
     }
 }

@@ -39,6 +39,8 @@ set(SOURCES main.cpp
         network/Mqtt.cpp
         network/Mqtt.h        
         network/Sntp.cpp
+        keypad/keypad.h
+        keypad/keypad.cpp
         )
 
 add_executable(${PROJECT_NAME} ${SOURCES})
