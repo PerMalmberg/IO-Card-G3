@@ -20,7 +20,7 @@ bool AnalogCycler::cycle()
     auto conf = analog->configure(current,
                                   ADS1115::Range::FSR_6_144,
                                   ADS1115::OperationalMode::SingleShot,
-                                  ADS1115::DataRate::SPS_860S,
+                                  ADS1115::DataRate::SPS_8,
                                   ADS1115::ComparatorMode::Traditional,
                                   ADS1115::Alert_Ready_Polarity::ActiveLow,
                                   ADS1115::LatchingComparator::NonLatching,
