@@ -81,7 +81,8 @@ bool I2CTask::prepare_hw()
                 cycler_1 = make_unique<AnalogCycler>(std::move(u501));
                 cycler_2 = make_unique<AnalogCycler>(std::move(u502));
 
-                // Read inputs once on startup to clear waiting interrupts on the i2c devices.
+                // Read inputs once on startup to clear waiting interrupts on the i2c devices
+                // and to get the ball rolling.
                 res = true;
                 update_inputs();
             }
@@ -104,15 +105,6 @@ void I2CTask::tick()
 {
     if (initialized)
     {
-        if (cycler_1)
-        {
-            cycler_1->trigger_read();
-        }
-        if (cycler_2)
-        {
-            cycler_2->trigger_read();
-        }
-
         // Read digital inputs every fourth cycle to 
         // match the number of analog reads.
         if(++digital_count >= 4)
@@ -121,6 +113,8 @@ void I2CTask::tick()
             read_sensor();
             digital_count = 0;
         }
+
+        read_analog();
     }
     else
     {
@@ -140,15 +134,33 @@ void I2CTask::event(const smooth::core::io::InterruptInputEvent& ev)
     }
     else if (ev.get_io() == ANALOG_CHANGE_PIN_1)
     {
-        uint16_t result = cycler_1->get_value();
-        publish_analog(0, *cycler_1, result);
-        cycler_1->cycle();
+        if(cycler_1)
+        {
+            if(cycler_1->cycle())
+            {
+                auto result = cycler_1->get_value();
+
+                if(result.first)
+                {
+                    publish_analog(0, *cycler_1, result.second);
+                }
+            }            
+        }
     }
     else if (ev.get_io() == ANALOG_CHANGE_PIN_2)
     {
-        uint16_t result = cycler_2->get_value();
-        publish_analog(4, *cycler_2, result);
-        cycler_2->cycle();
+        if(cycler_2)
+        {
+            if(cycler_2->cycle())
+            {
+                auto result = cycler_2->get_value();
+
+                if(result.first)
+                {
+                    publish_analog(4, *cycler_2, result.second);
+                }
+            }            
+        }
     }
 }
 
@@ -161,8 +173,7 @@ void I2CTask::publish_analog(uint8_t base_address, const AnalogCycler& cycler, u
 void I2CTask::update_inputs()
 {
     read_digital();
-    cycler_1->cycle();
-    cycler_2->cycle();
+    read_analog();
 }
 
 void I2CTask::event(const I2CSetOutput& ev)
@@ -224,6 +235,19 @@ void I2CTask::read_digital()
     {
         status_io->read_input(MCP23017::Port::A, val);
         publish_read_value<DigitalStatusValue>(val);
+    }
+}
+
+void I2CTask::read_analog()
+{
+    if(cycler_1)
+    {
+        cycler_1->cycle();
+    }
+
+    if(cycler_2)
+    {
+        cycler_2->cycle();
     }
 }
 

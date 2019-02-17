@@ -4,8 +4,9 @@
 
 #pragma once
 
-#include <memory>
+#include <utility>
 #include <smooth/application/io/i2c/ADS1115.h>
+#include <smooth/core/logging/log.h>
 
 class AnalogCycler
 {
@@ -22,16 +23,12 @@ class AnalogCycler
             return static_cast<int>(current - smooth::application::io::ADS1115::Multiplexer::Single_AIN0);
         }
 
-        uint16_t get_value() const
+        std::pair<bool, uint16_t> get_value() const
         {
             uint16_t result = 0;
-            analog->read_conversion(result);
-            return result;
-        }
-
-        void trigger_read() const
-        {
-            analog->trigger_single_read();
+            bool read_result = analog->trigger_single_read() 
+                               && analog->read_conversion(result);
+            return std::make_pair(read_result, result);
         }
 
     private:
