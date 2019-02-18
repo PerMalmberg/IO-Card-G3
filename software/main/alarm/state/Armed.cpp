@@ -1,10 +1,13 @@
 #include "Armed.h"
+#include <smooth/core/ipc/Publisher.h>
 #include "alarm/Alarm.h"
 #include "alarm/state/Idle.h"
 #include "alarm/state/Triggered.h"
 #include "alarm/state/EntryDelay.h"
+#include "sound/PlaySong.h"
 
 using namespace std::chrono;
+using namespace smooth::core::ipc;
 
 namespace g3
 {
@@ -14,6 +17,7 @@ namespace g3
         {
             void Armed::enter_state()
             {
+                Publisher<sound::PlaySong>::publish(sound::PlaySong("armed"));
             }
             
             void Armed::code_entered(const std::string& code)

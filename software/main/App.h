@@ -14,6 +14,7 @@
 #include "network/Sntp.h"
 #include "network/Wifi.h"
 #include "keypad/keypad.h"
+#include "sound/Player.h"
 
 namespace g3
 {
@@ -38,10 +39,12 @@ namespace g3
             bool use_sd_spi{false};
             std::unique_ptr<smooth::core::filesystem::SDCard> sd_card{};
             std::unique_ptr<Mqtt> mqtt{};            
-            g3::CommandDispatcher cmd{};            
+            g3::CommandDispatcher cmd{};
 
             smooth::core::ipc::SubscribingTaskEventQueue<DigitalStatusValue> digital_status_queue;
-            smooth::core::ipc::SubscribingTaskEventQueue<smooth::core::network::NetworkStatus> network_status;            
+            smooth::core::ipc::SubscribingTaskEventQueue<smooth::core::network::NetworkStatus> network_status;
+            std::unique_ptr<sound::Player> player{};
+
 
             I2CTask i2c;
             g3::DeviceId id;

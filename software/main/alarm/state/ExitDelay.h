@@ -20,6 +20,7 @@ namespace g3
                         }
 
                     void tick() override;
+                    void enter_state() override;
 
                     void code_entered(const std::string& code) override;
                     void sensor_triggered(const event::SensorTriggered& sensor) override;

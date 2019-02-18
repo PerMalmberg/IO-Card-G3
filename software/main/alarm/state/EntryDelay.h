@@ -18,6 +18,7 @@ namespace g3
                         }
 
                     void tick() override;
+                    void enter_state() override;
 
                     void sensor_triggered(const event::SensorTriggered& sensor) override;
 

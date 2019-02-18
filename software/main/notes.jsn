@@ -1,0 +1,22 @@
+{
+	"entry_delay": {
+		"signal": [500, 500],
+		"repeat": true
+	},
+	"exit_delay": {
+		"signal": [1500, 500],
+		"repeat": true
+	},
+	"error": {
+		"signal": [250, 250, 250, 250, 250],
+		"repeat": false
+	},
+	"armed": {
+		"signal": [2500, 2500, 2500, 2500],
+		"repeat": false
+	},
+	"disarmed": {
+		"signal": [2500, 2500, 2500, 2500],
+		"repeat": false
+	}
+}

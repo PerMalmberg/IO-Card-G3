@@ -1,9 +1,12 @@
 #include "EntryDelay.h"
+#include <smooth/core/ipc/Publisher.h>
 #include "alarm/Alarm.h"
 #include "alarm/state/Idle.h"
 #include "alarm/state/Triggered.h"
+#include "sound/PlaySong.h"
 
 using namespace std::chrono;
+using namespace smooth::core::ipc;
 
 namespace g3
 {
@@ -11,6 +14,11 @@ namespace g3
     {
         namespace state
         {
+            void EntryDelay::enter_state() 
+            {
+                 Publisher<sound::PlaySong>::publish(sound::PlaySong("entry_delay"));
+            }
+
             void EntryDelay::code_entered(const std::string& code)
             {
                 if(alarm.validate_code(code))

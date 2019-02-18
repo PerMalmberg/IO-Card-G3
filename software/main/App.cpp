@@ -101,6 +101,8 @@ namespace g3
 
                 if (res)
                 {
+                    player = std::make_unique<sound::Player>(*this);
+
                     // On first start, this will load the just written default config so make sure it is after the call to store_default_config()
                     prepare_config();
 

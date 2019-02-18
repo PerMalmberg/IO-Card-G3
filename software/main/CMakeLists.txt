@@ -28,8 +28,6 @@ set(SOURCES main.cpp
         CommandDispatcher.cpp
         io/I2CTask.h
         io/I2CTask.cpp
-        #smooth/application/io/wiegand/Wiegand.h
-        #smooth/application/io/wiegand/IWiegandSignal.h
         io/analog/AnalogCycler.h
         io/analog/AnalogCycler.cpp
         io/analog/RawAnalogValue.h
@@ -41,6 +39,7 @@ set(SOURCES main.cpp
         network/Sntp.cpp
         keypad/keypad.h
         keypad/keypad.cpp
+        sound/Player.cpp
         )
 
 add_executable(${PROJECT_NAME} ${SOURCES})

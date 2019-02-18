@@ -1,10 +1,13 @@
 #include "ExitDelay.h"
+#include <smooth/core/ipc/Publisher.h>
 #include "alarm/Alarm.h"
 #include "alarm/state/Idle.h"
 #include "alarm/state/Armed.h"
 #include "alarm/state/Triggered.h"
+#include "sound/PlaySong.h"
 
 using namespace std::chrono;
+using namespace smooth::core::ipc;
 
 namespace g3
 {
@@ -12,6 +15,11 @@ namespace g3
     {
         namespace state
         {
+            void ExitDelay::enter_state() 
+            {
+                 Publisher<sound::PlaySong>::publish(sound::PlaySong("exit_delay"));
+            }
+
             void ExitDelay::tick()
             {
                 // Wait for the maximum delay specified among the sensors.
