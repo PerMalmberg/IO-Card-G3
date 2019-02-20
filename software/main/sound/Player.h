@@ -28,6 +28,7 @@ namespace sound
         private:
             void on();
             void off();
+            void play_song(const std::string& name);
             void start_song();
             void time_next_tone();
 
@@ -37,8 +38,8 @@ namespace sound
             smooth::core::ipc::SubscribingTaskEventQueue<PlaySong> to_play;
             std::shared_ptr<smooth::core::timer::Timer> timer;
             smooth::core::json::JsonFile note_book;
-            smooth::core::json::Value page{};
-            std::list<std::chrono::milliseconds> song_timings{};
+            smooth::core::json::Value current_song{};
+            std::list<std::chrono::milliseconds> song_timings{};            
             bool is_on{false};
     };
 }

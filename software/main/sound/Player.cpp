@@ -82,6 +82,12 @@ namespace sound
         else
         {
             off();
+
+            if(current_song["repeat"].get_bool(false))
+            {
+                Log::info("Player", "Repeating song");
+                start_song();
+            }         
         }        
     }
 
@@ -93,15 +99,22 @@ namespace sound
         // Check if the requested song exits before trying to get it so that we don't create garbage in the JSON structure, taking up memory.
         if (std::find(std::begin(names), std::end(names), ev.get_name()) != names.end())
         {
-            Log::info("Player", Format("Playing song: '{1}'", Str(ev.get_name())));
-            page = note_book.value()[ev.get_name()];
-            start_song();
+            current_song = note_book.value()[ev.get_name()];
+            play_song(ev.get_name());
         }
         else
         {
             Log::info("Player", Format("Song '{1}' not found", Str(ev.get_name())));
             off();
+            song_timings.clear();
+            current_song = smooth::core::json::Value{};
         }        
+    }
+
+    void Player::play_song(const std::string& name)
+    {
+        Log::info("Player", Format("Playing song: '{1}'", Str(name)));
+        start_song();
     }
 
     void Player::start_song()
@@ -110,7 +123,7 @@ namespace sound
 
         song_timings.clear();
 
-        auto signal = page["signal"];
+        auto signal = current_song["signal"];
         for(auto i = 0; i < signal.get_array_size(); ++i)
         {
             song_timings.emplace_back(signal[i].get_int(0));

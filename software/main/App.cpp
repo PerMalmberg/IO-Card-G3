@@ -13,6 +13,7 @@
 #include "io/I2CTask.h"
 #include "hardware_info.h"
 #include "alarm/event/CodeEntered.h"
+#include "sound/PlaySong.h"
 #include "commands.h"
 
 using namespace std::chrono;
@@ -172,6 +173,14 @@ namespace g3
                     {
                         Publisher<g3::alarm::event::CodeEntered>::publish(g3::alarm::event::CodeEntered(code));
                     }
+                });
+
+                command = id.get() + cmd_play_song;
+                mqtt->add_subscription(command);
+                cmd.add_command(command, [this](const std::string& command, const std::string& data)
+                {
+                    smooth::core::json::Value d{data};
+                    Publisher<sound::PlaySong>::publish(sound::PlaySong(d["name"].get_string("")));
                 });
 
             }

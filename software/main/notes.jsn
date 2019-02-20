@@ -12,11 +12,11 @@
 		"repeat": false
 	},
 	"armed": {
-		"signal": [2500, 2500, 2500, 2500],
+		"signal": [800, 200, 800, 200, 800],
 		"repeat": false
 	},
 	"disarmed": {
-		"signal": [2500, 2500, 2500, 2500],
+		"signal": [800, 200, 800, 200],
 		"repeat": false
 	}
 }
