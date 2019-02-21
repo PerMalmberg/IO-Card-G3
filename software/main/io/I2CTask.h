@@ -11,6 +11,8 @@
 #include <smooth/core/io/i2c/Master.h>
 #include <smooth/core/ipc/Publisher.h>
 #include <smooth/core/io/InterruptInput.h>
+#include <smooth/core/timer/Timer.h>
+#include <smooth/core/timer/TimerExpiredEvent.h>
 #include <smooth/application/io/i2c/MCP23017.h>
 #include <smooth/application/io/i2c/ADS1115.h>
 #include <smooth/application/io/i2c//BME280.h>
@@ -22,7 +24,8 @@ class I2CTask
           public smooth::core::ipc::IEventListener<smooth::core::io::InterruptInputEvent>,
           public smooth::core::ipc::IEventListener<I2CSetOutput>,
           public smooth::core::ipc::IEventListener<I2CSetOutputBit>,
-          public smooth::core::ipc::IEventListener<ExternalSirenCommand>          
+          public smooth::core::ipc::IEventListener<ExternalSirenCommand>,
+          public smooth::core::ipc::IEventListener<smooth::core::timer::TimerExpiredEvent>
 {
     public:
         I2CTask();
@@ -32,6 +35,7 @@ class I2CTask
         void init() override;
 
         void event(const smooth::core::io::InterruptInputEvent& ev) override;
+        void event(const smooth::core::timer::TimerExpiredEvent& ev) override;
 
         void event(const I2CSetOutput& ev) override;
         void event(const I2CSetOutputBit& ev) override;
@@ -50,6 +54,8 @@ class I2CTask
         smooth::core::ipc::SubscribingTaskEventQueue<I2CSetOutput> set_output_cmd;
         smooth::core::ipc::SubscribingTaskEventQueue<I2CSetOutputBit> set_output_bit_cmd;
         smooth::core::ipc::SubscribingTaskEventQueue<ExternalSirenCommand> set_external_siren;
+        smooth::core::ipc::TaskEventQueue<smooth::core::timer::TimerExpiredEvent> publish_output_queue;
+        std::shared_ptr<smooth::core::timer::Timer> publish_output_timer;
         std::unique_ptr<smooth::application::io::MCP23017> input_output{};
         std::unique_ptr<smooth::application::io::MCP23017> status_io{};
         std::unique_ptr<smooth::application::sensor::BME280> sensor{};
@@ -66,11 +72,11 @@ class I2CTask
         void read_sensor();
 
         template<typename T>
-        void publish_read_value(uint8_t value)
+        void publish_read_value(uint8_t value, uint8_t offset = 0)
         {
             for (uint8_t i = 0; i < 8; ++i)
             {
-                T dv(i, static_cast<bool>(value & 1));
+                T dv(i + offset, static_cast<bool>(value & 1));
                 smooth::core::ipc::Publisher<T>::publish(dv);
                 value >>= 1;
             }
@@ -85,6 +91,5 @@ class I2CTask
         std::tuple<bool, std::unique_ptr<smooth::application::sensor::BME280>> init_BME280();
 
         void read_analog();
-        void publish_output_status();
 };
 

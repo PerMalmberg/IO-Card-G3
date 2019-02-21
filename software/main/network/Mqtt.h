@@ -9,9 +9,11 @@
 #include <smooth/core/json/Value.h>
 #include "alarm/event/AnalogValue.h"
 #include "alarm/event/DigitalValue.h"
-#include "io/sensor/SensorValue.h"
 #include "alarm/event/SensorTriggered.h"
 #include "alarm/event/SensorRestored.h"
+#include "io/sensor/SensorValue.h"
+#include "io/digital/DigitalOutputValue.h"
+#include "io/digital/DigitalStatusOutputValue.h"
 #include "CommandDispatcher.h"
 
 class Mqtt : 
@@ -19,6 +21,8 @@ class Mqtt :
     public smooth::core::ipc::IEventListener<AnalogValue>,
     public smooth::core::ipc::IEventListener<DigitalValue>,
     public smooth::core::ipc::IEventListener<SensorValue>,
+    public smooth::core::ipc::IEventListener<DigitalOutputValue>,
+    public smooth::core::ipc::IEventListener<DigitalStatusOutputValue>,
     public smooth::core::ipc::IEventListener<g3::alarm::event::SensorTriggered>,
     public smooth::core::ipc::IEventListener<g3::alarm::event::SensorRestored>
 {
@@ -36,6 +40,8 @@ class Mqtt :
         void event(const AnalogValue& value);
         void event(const DigitalValue& value);
         void event(const SensorValue& value);
+        void event(const DigitalOutputValue& value);
+        void event(const DigitalStatusOutputValue& value);
         void event(const g3::alarm::event::SensorTriggered& value);
         void event(const g3::alarm::event::SensorRestored& value);
 
@@ -52,6 +58,8 @@ class Mqtt :
         smooth::core::ipc::SubscribingTaskEventQueue<AnalogValue> analog_value;
         smooth::core::ipc::SubscribingTaskEventQueue<DigitalValue> digital_value;
         smooth::core::ipc::SubscribingTaskEventQueue<SensorValue> sensor_value;
+        smooth::core::ipc::SubscribingTaskEventQueue<DigitalOutputValue> digital_output_value;
+        smooth::core::ipc::SubscribingTaskEventQueue<DigitalStatusOutputValue> digital_status_output_value;
         smooth::core::ipc::SubscribingTaskEventQueue<g3::alarm::event::SensorTriggered> sensor_triggered;
         smooth::core::ipc::SubscribingTaskEventQueue<g3::alarm::event::SensorRestored> sensor_restored;
         std::unique_ptr<smooth::application::network::mqtt::MqttClient> client{};

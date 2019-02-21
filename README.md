@@ -32,7 +32,7 @@ This is my custom I/O card, third generation. Main purpose is to serve as an ala
 - I2C
   - On interrupt on `ANALOG_RDY_1` or `ANALOG_RDY_2`, read analog values; publish internally.
   - On interrupt on `DIA_Interrupt`, read digital input values; publish internally.
-  - Periodically read BME280 values and publish internally.
+  - Periodically read BME280 values and publish internally (&lt;id&gt;/io/status/sensor)
   - Receive control events and set digital outputs accordingly.
     - Also handle `SIREN_CTRL`, even though it is not on the I2C bus.
 - MQTT

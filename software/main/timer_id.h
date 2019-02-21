@@ -5,3 +5,4 @@
 constexpr const int ALARM_TICK = 1001;
 constexpr const int KEYPAD_ENTRY_TIMEOUT = 1002;
 constexpr const int PLAYER_ID = 1003;
+constexpr const int PUBLISH_OUTPUTS = 1004;

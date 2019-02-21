@@ -12,6 +12,9 @@
 #include "io/digital/DigitalInputValue.h"
 #include "io/digital/DigitalStatusValue.h"
 #include "io/sensor/SensorValue.h"
+#include "io/digital/DigitalOutputValue.h"
+#include "io/digital/DigitalStatusOutputValue.h"
+#include "timer_id.h"
 
 using namespace std;
 using namespace std::chrono;
@@ -40,13 +43,16 @@ I2CTask::I2CTask()
           external_siren(GPIO_NUM_23, true, false, false ),
           set_output_cmd("set_output_cmd", 10, *this, *this),
           set_output_bit_cmd("set_output_bit_cmd", 10, *this, *this),
-          set_external_siren("set_external_siren", 3, *this, *this)
+          set_external_siren("set_external_siren", 3, *this, *this),
+          publish_output_queue("publish_output", 3, *this, *this),
+          publish_output_timer(smooth::core::timer::Timer::create("publish_output", PUBLISH_OUTPUTS, publish_output_queue, true, seconds{15}))
 {
 }
 
 void I2CTask::init()
 {
-    initialized = prepare_hw();    
+    initialized = prepare_hw();
+    publish_output_timer->start();
 }
 
 bool I2CTask::prepare_hw()
@@ -115,11 +121,6 @@ void I2CTask::tick()
         }
 
         read_analog();
-        publish_output_status();
-    }
-    else
-    {
-        initialized = prepare_hw();
     }
 }
 
@@ -162,6 +163,28 @@ void I2CTask::event(const smooth::core::io::InterruptInputEvent& ev)
                 }
             }            
         }
+    }
+}
+
+void I2CTask::event(const smooth::core::timer::TimerExpiredEvent& ev)
+{
+    uint8_t val;
+
+    if (input_output)
+    {
+        input_output->read_output(MCP23017::Port::B, val);
+        publish_read_value<DigitalOutputValue>(val);
+    }
+
+    if (status_io)
+    {
+        status_io->read_output(MCP23017::Port::A, val);
+        // Filter GPA7 since it is an input
+        publish_read_value<DigitalStatusOutputValue>(val & 0x7F);
+
+        status_io->read_output(MCP23017::Port::B, val);
+        // Offset by 8 for port B, giving outputs 8-15
+        publish_read_value<DigitalStatusOutputValue>(val, 8);
     }
 }
 
@@ -409,15 +432,4 @@ std::tuple<bool, std::unique_ptr<smooth::application::sensor::BME280>> I2CTask::
     return std::make_tuple(res, std::move(device));
 }
 
-void I2CTask::publish_output_status()
-{
-    if(input_output)
-    {
-        uint8_t state;
-        if (input_output->read_output(MCP23017::Port::B, state))
-        {
-
-        }
-    }
-}
 

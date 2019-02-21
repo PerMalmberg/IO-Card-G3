@@ -22,6 +22,8 @@ Mqtt::Mqtt(std::string id, smooth::core::Task& task, g3::CommandDispatcher& cmd)
       analog_value("analog2mqtt", 10, task, *this),
       digital_value("ditigal2mqtt", 10, task, *this),
       sensor_value("sensor2mqtt", 2, task, *this),
+      digital_output_value("digital_output_value", 16, task, *this),
+      digital_status_output_value("digital_status_output_value", 16, task, *this),
       sensor_triggered("sensor_triggered", 16, task, *this),
       sensor_restored("restored_triggered", 16, task, *this),
       id(id)
@@ -70,7 +72,8 @@ void Mqtt::write_default()
     JsonFile f{mqtt_config};
     if(!f.exists())
     {
-        auto &v = f.value();
+        auto &v = f.value();void event(const DigitalOutputValue& value);
+        void event(const DigitalStatusOutputValue& value);
         v["keep_alive_seconds"] = 5;
         v["broker"]["address"] = "";
         v["broker"]["port"] = 1883;
@@ -121,6 +124,34 @@ void Mqtt::event(const DigitalValue& value)
 
         std::string topic = id;
         topic.append("/io/status/digital/input/");
+        topic.append(value.get_name());
+        send(topic, v);
+    }
+}
+
+void Mqtt::event(const DigitalOutputValue& value)
+{
+    if(client)
+    {
+        Value v{};
+        v["value"] = static_cast<int32_t>(value.get_value());
+
+        std::string topic = id;
+        topic.append("/io/status/digital/output/");
+        topic.append(value.get_name());
+        send(topic, v);
+    }
+}
+
+void Mqtt::event(const DigitalStatusOutputValue& value)
+{
+    if(client)
+    {
+        Value v{};
+        v["value"] = static_cast<int32_t>(value.get_value());
+
+        std::string topic = id;
+        topic.append("/io/status/digital/status/");
         topic.append(value.get_name());
         send(topic, v);
     }
