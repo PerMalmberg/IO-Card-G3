@@ -9,7 +9,7 @@
 #include <smooth/core/util/ByteSet.h>
 #include <driver/gpio.h>
 #include "io/analog/RawAnalogValue.h"
-#include "io/digital/RawDigitalValue.h"
+#include "io/digital/DigitalInputValue.h"
 #include "io/digital/DigitalStatusValue.h"
 #include "io/sensor/SensorValue.h"
 
@@ -115,6 +115,7 @@ void I2CTask::tick()
         }
 
         read_analog();
+        publish_output_status();
     }
     else
     {
@@ -129,7 +130,7 @@ void I2CTask::event(const smooth::core::io::InterruptInputEvent& ev)
         uint8_t pins;
         if (input_output->read_interrupt_capture(MCP23017::Port::A, pins))
         {
-            publish_read_value<RawDigitalValue>(pins);
+            publish_read_value<DigitalInputValue>(pins);
         }
     }
     else if (ev.get_io() == ANALOG_CHANGE_PIN_1)
@@ -228,7 +229,7 @@ void I2CTask::read_digital()
     if (input_output)
     {
         input_output->read_input(MCP23017::Port::A, val);
-        publish_read_value<RawDigitalValue>(val);
+        publish_read_value<DigitalInputValue>(val);
     }
 
     if (status_io)
@@ -406,5 +407,17 @@ std::tuple<bool, std::unique_ptr<smooth::application::sensor::BME280>> I2CTask::
     }
 
     return std::make_tuple(res, std::move(device));
+}
+
+void I2CTask::publish_output_status()
+{
+    if(input_output)
+    {
+        uint8_t state;
+        if (input_output->read_output(MCP23017::Port::B, state))
+        {
+
+        }
+    }
 }
 

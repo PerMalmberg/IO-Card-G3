@@ -11,7 +11,7 @@
 #include "state/BaseState.h"
 #include "AlarmConfig.h"
 #include "io/analog/RawAnalogValue.h"
-#include "io/digital/RawDigitalValue.h"
+#include "io/digital/DigitalInputValue.h"
 #include "sensor/AnalogSensor.h"
 #include "sensor/DigitalSensor.h"
 #include "event/CodeEntered.h"
@@ -23,7 +23,7 @@ namespace g3
         class Alarm 
             :   public smooth::core::fsm::StaticFSM<g3::alarm::state::BaseState, 2 * sizeof(g3::alarm::state::BaseState)>,
                 public smooth::core::ipc::IEventListener<RawAnalogValue>,
-                public smooth::core::ipc::IEventListener<RawDigitalValue>,
+                public smooth::core::ipc::IEventListener<DigitalInputValue>,
                 public smooth::core::ipc::IEventListener<event::CodeEntered>,
                 public smooth::core::ipc::IEventListener<event::SensorTriggered>,
                 public smooth::core::ipc::IEventListener<smooth::core::timer::TimerExpiredEvent>
@@ -51,7 +51,7 @@ namespace g3
                 void set_output(const std::string& output_number, bool active);
 
                 void event(const RawAnalogValue& value);
-                void event(const RawDigitalValue& value);
+                void event(const DigitalInputValue& value);
                 void event(const event::CodeEntered& event);
                 void event(const event::SensorTriggered& event);
                 void event(const smooth::core::timer::TimerExpiredEvent& event);
@@ -77,7 +77,7 @@ namespace g3
 
                 smooth::core::Task& task;
                 smooth::core::ipc::SubscribingTaskEventQueue<RawAnalogValue> analog_value;
-                smooth::core::ipc::SubscribingTaskEventQueue<RawDigitalValue> digital_value;
+                smooth::core::ipc::SubscribingTaskEventQueue<DigitalInputValue> digital_value;
                 smooth::core::ipc::SubscribingTaskEventQueue<event::CodeEntered> code_entered_sub;
                 smooth::core::ipc::SubscribingTaskEventQueue<event::SensorTriggered> sensor_triggered_sub;
                 smooth::core::ipc::TaskEventQueue<smooth::core::timer::TimerExpiredEvent> timer_event;

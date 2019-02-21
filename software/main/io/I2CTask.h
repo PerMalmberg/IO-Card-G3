@@ -85,5 +85,6 @@ class I2CTask
         std::tuple<bool, std::unique_ptr<smooth::application::sensor::BME280>> init_BME280();
 
         void read_analog();
+        void publish_output_status();
 };
 

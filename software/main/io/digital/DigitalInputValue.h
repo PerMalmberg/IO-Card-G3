@@ -2,12 +2,12 @@
 
 #include <string>
 
-class RawDigitalValue
+class DigitalInputValue
 {
     public:
-        RawDigitalValue() = default;
+        DigitalInputValue() = default;
 
-        RawDigitalValue(uint8_t input, bool value, char char_name = 'i')
+        DigitalInputValue(uint8_t input, bool value, char char_name = 'i')
                 : input(input),
                   value(value),
                   name(char_name + std::to_string(input))

@@ -54,7 +54,7 @@ namespace g3
             update_sensor(analog_sensors, value);
         }
 
-        void Alarm::event(const RawDigitalValue& value)
+        void Alarm::event(const DigitalInputValue& value)
         {
             update_sensor(digital_sensors, value);
         }

@@ -1,14 +1,14 @@
 #pragma once
 
-#include "RawDigitalValue.h"
+#include "DigitalInputValue.h"
 
-class DigitalStatusValue : public RawDigitalValue
+class DigitalStatusValue : public DigitalInputValue
 {
     public:
         DigitalStatusValue() = default;
 
         DigitalStatusValue(uint8_t input, bool value)
-                : RawDigitalValue(input, value, 's')
+                : DigitalInputValue(input, value, 's')
         {
         }
 };

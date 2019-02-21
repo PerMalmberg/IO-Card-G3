@@ -3,7 +3,7 @@
 #include "BaseSensor.h"
 #include <string>
 #include <chrono>
-#include "io/digital/RawDigitalValue.h"
+#include "io/digital/DigitalInputValue.h"
 
 namespace g3
 {
@@ -14,7 +14,7 @@ namespace g3
             public: 
                 DigitalSensor(AlarmConfig& config, int num);
 
-                void update(const RawDigitalValue& value);
+                void update(const DigitalInputValue& value);
                 bool is_triggered() override;
 
             protected:
@@ -26,7 +26,7 @@ namespace g3
                 void send_value() override;
 
             private:
-                RawDigitalValue last;
+                DigitalInputValue last;
         };
     }
 }

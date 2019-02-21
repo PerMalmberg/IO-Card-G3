@@ -22,7 +22,7 @@ namespace g3
                 && last.get_value() != config_value[ARMED_STATE].get_bool(false);
         }
 
-        void DigitalSensor::update(const RawDigitalValue& value)
+        void DigitalSensor::update(const DigitalInputValue& value)
         {
             last = value;
             update_age();
