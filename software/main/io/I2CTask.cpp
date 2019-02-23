@@ -31,7 +31,7 @@ static const gpio_num_t ANALOG_CHANGE_PIN_1 = GPIO_NUM_39;
 static const gpio_num_t ANALOG_CHANGE_PIN_2 = GPIO_NUM_36;
 
 I2CTask::I2CTask()
-        : Task("I2CTask", 6 * 1024, smooth::core::APPLICATION_BASE_PRIO, milliseconds(100)),
+        : Task("I2CTask", 6 * 1024, smooth::core::APPLICATION_BASE_PRIO, seconds{10}),
           i2c_master(I2C_NUM_0, GPIO_NUM_33, false, GPIO_NUM_32, false, 100000),
           input_change_queue(*this, *this),
           analog_change_queue_1(*this, *this),
@@ -111,16 +111,9 @@ void I2CTask::tick()
 {
     if (initialized)
     {
-        // Read digital inputs every fourth cycle to 
-        // match the number of analog reads.
-        if(++digital_count >= 4)
-        {
-            read_digital();
-            read_sensor();
-            digital_count = 0;
-        }
-
+        read_digital();
         read_analog();
+        read_sensor();
     }
 }
 

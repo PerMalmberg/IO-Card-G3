@@ -62,7 +62,6 @@ class I2CTask
         std::unique_ptr<AnalogCycler> cycler_1{};
         std::unique_ptr<AnalogCycler> cycler_2{};
         bool initialized{false};
-        uint8_t digital_count{0};
 
         bool prepare_hw();
         void update_inputs();
