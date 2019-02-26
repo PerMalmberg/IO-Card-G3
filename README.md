@@ -81,75 +81,280 @@ This is my custom I/O card, third generation. Main purpose is to serve as an ala
 - Start Wiegand worker
 - Start Alarm worker
 
-## Configuration structure/example
-
-```json
-{
-    "ntp": {
-        "servers": ["0.se.pool.ntp.org", "1.se.pool.ntp.org"]
-    },
-    "i2c":
-    {
-        "bme280": {
-            "enabled": true
-        }
-    },
-    "mqtt": {
-        "rename_topic" : {
-            "io/status/digital/input/1" : "@ID@/Hallway",
-            "io/status/digital/input/2" : "@ID@/FrontDoor"
-        }
-    },
-    "wiegand": {
-        "execute_button": 11,
-        "cancel_button": 12,
-        "entry_timeout": 2000
-    },
-    "alarm": {
-        "output":
-        {
-            "digital":
-            {
-            }
-        },
-        "input":
-        {
-            "analog":
-            {
-                "1": {
-                    "active": true,
-                    "value": 1235,
-                    "allowed_hysteresis": 500
-                },
-                "2": {
-                    "active": false,
-                    "value": 0,
-                    "allowed_hysteresis": 0
-                }
-            },
-            "digital":
-            {
-                "1": {
-                    "active": true,
-                    "armed_state": true,
-                },
-                "2": {
-                    "active": true,
-                    "armed_state": false,
-                    "entry_delay": 30000
-                },
-                "3": {
-                    "active": false,
-                    "armed_state": false
-                }
-            }
-        }
-    }
-}
-```
-
 ## Rendering of the PCB
 
 (sorry, no 3D models for some components)
 
 ![PCB Rendering](hardware/pcb-rendering-2018-10-17.png)
+
+## Configuration file examples
+
+`alarm.jsn`
+
+```json
+{
+	"sensors":	{
+		"digital":	{
+			"input":	{
+				"0":	{
+					"name":	"D0",
+					"enabled":	true,
+					"armed_state":	true,
+					"entry_delay":	5,
+					"exit_delay":	5
+				},
+				"1":	{
+					"name":	"1",
+					"enabled":	false,
+					"armed_state":	true,
+					"entry_delay":	0,
+					"exit_delay":	0
+				},
+				"2":	{
+					"name":	"2",
+					"enabled":	false,
+					"armed_state":	true,
+					"entry_delay":	0,
+					"exit_delay":	0
+				},
+				"3":	{
+					"name":	"3",
+					"enabled":	false,
+					"armed_state":	true,
+					"entry_delay":	0,
+					"exit_delay":	0
+				},
+				"4":	{
+					"name":	"4",
+					"enabled":	false,
+					"armed_state":	true,
+					"entry_delay":	0,
+					"exit_delay":	0
+				},
+				"5":	{
+					"name":	"5",
+					"enabled":	false,
+					"armed_state":	true,
+					"entry_delay":	0,
+					"exit_delay":	0
+				},
+				"6":	{
+					"name":	"6",
+					"enabled":	false,
+					"armed_state":	true,
+					"entry_delay":	0,
+					"exit_delay":	0
+				},
+				"7":	{
+					"name":	"7",
+					"enabled":	false,
+					"armed_state":	true,
+					"entry_delay":	0,
+					"exit_delay":	0
+				}
+			},
+			"output":	{
+				"0":	{
+					"name":	"0",
+					"allow_external_control":	true
+				},
+				"1":	{
+					"name":	"1",
+					"allow_external_control":	true
+				},
+				"2":	{
+					"name":	"2",
+					"allow_external_control":	true
+				},
+				"3":	{
+					"name":	"3",
+					"allow_external_control":	true
+				},
+				"4":	{
+					"name":	"4",
+					"allow_external_control":	true
+				},
+				"5":	{
+					"name":	"5",
+					"allow_external_control":	true
+				},
+				"6":	{
+					"name":	"6",
+					"allow_external_control":	true
+				},
+				"7":	{
+					"name":	"7",
+					"allow_external_control":	true
+				}
+			}
+		},
+		"analog":	{
+			"input":	{
+				"0":	{
+					"name":	"0",
+					"enabled":	true,
+					"allowed_range":	{
+						"min":	10000,
+						"max":	14000
+					},
+					"entry_delay":	0,
+					"exit_delay":	0
+				},
+				"1":	{
+					"name":	"1",
+					"enabled":	false,
+					"allowed_range":	{
+						"min":	10000,
+						"max":	14000
+					},
+					"entry_delay":	0,
+					"exit_delay":	0
+				},
+				"2":	{
+					"name":	"2",
+					"enabled":	false,
+					"allowed_range":	{
+						"min":	10000,
+						"max":	14000
+					},
+					"entry_delay":	0,
+					"exit_delay":	0
+				},
+				"3":	{
+					"name":	"3",
+					"enabled":	false,
+					"allowed_range":	{
+						"min":	10000,
+						"max":	14000
+					},
+					"entry_delay":	0,
+					"exit_delay":	0
+				},
+				"4":	{
+					"name":	"4",
+					"enabled":	false,
+					"allowed_range":	{
+						"min":	10000,
+						"max":	14000
+					},
+					"entry_delay":	0,
+					"exit_delay":	0
+				},
+				"5":	{
+					"name":	"5",
+					"enabled":	false,
+					"allowed_range":	{
+						"min":	10000,
+						"max":	14000
+					},
+					"entry_delay":	0,
+					"exit_delay":	0
+				},
+				"6":	{
+					"name":	"6",
+					"enabled":	false,
+					"allowed_range":	{
+						"min":	10000,
+						"max":	14000
+					},
+					"entry_delay":	0,
+					"exit_delay":	0
+				},
+				"7":	{
+					"name":	"7",
+					"enabled":	false,
+					"allowed_range":	{
+						"min":	10000,
+						"max":	14000
+					},
+					"entry_delay":	0,
+					"exit_delay":	0
+				}
+			}
+		}
+	},
+	"section":	[{
+			"name":	"all",
+			"digital":	[7],
+			"analog":	[7]
+		}],
+	"codes":	[{
+			"user":	"Default user",
+			"verification_data":	"$argon2i$v=19$m=8,t=8,p=1$qoM58bCkv0Pqu4P+USzH2g$iIjDNYha1Ab0H1o+wSv7xXZted1obgT7GGxm6XM5tVw"
+		}],
+	"timing":	{
+		"timeout":	{
+			"triggered":	60,
+			"silence":	60
+		}
+	}
+}
+```
+
+`dev_id.jsn`
+
+```json
+{
+	"device_id":	"g3"
+}
+```
+
+`mqtt.jsn`
+
+```json
+{
+	"keep_alive_seconds":	15,
+	"broker":	{
+		"address":	"1.2.3.4",
+		"port":	1883
+	}
+}
+```
+
+`notes.jsn`
+
+```json
+{
+	"entry_delay": {
+		"signal": [500, 500],
+		"repeat": true
+	},
+	"exit_delay": {
+		"signal": [1500, 500],
+		"repeat": true
+	},
+	"error": {
+		"signal": [250, 250, 250, 250, 250],
+		"repeat": false
+	},
+	"armed": {
+		"signal": [800, 200, 800, 200, 800],
+		"repeat": false
+	},
+	"disarmed": {
+		"signal": [800, 200, 800, 200],
+		"repeat": false
+	},
+	"key_entry_timeout": {
+		"signal": [200, 200, 200, 200, 200, 200],
+		"repeat": false
+	}
+}
+```
+
+`sntp.jsn`
+
+```
+{
+	"sntp_servers":	["0.se.pool.ntp.org", "1.se.pool.ntp.org", "2.se.pool.ntp.org"]
+}
+```
+
+`wifi.jsn`
+
+```json
+{
+	"ssid":	"Your SSID",
+	"password":	"Your password"
+}
+```
