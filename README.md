@@ -44,8 +44,7 @@ This is my custom I/O card, third generation. Main purpose is to serve as an ala
     - `<ID>`/io/status/buzzer
     - `<ID>`/io/status/siren
     - Publish Wiegand button sequences on topic `<ID>`/io/status/wiegand
-    - If enabled in configuration, allow I/O to be controlled via topic `<ID>/io/set/channel_no`, where `channel_no` is a number between 1 and 8.
-  - All published items shall have an `age` value which tells how long has passed since the value was last updated from the actual I/O.
+    - If enabled in configuration, allow I/O to be controlled via topic `<ID>/io/set/channel_no`, where `channel_no` is a number between 0 and 7.
   - All published items shall have a `unix_timestamp` value which tells when the item was created.
   - a value of `true` shall be interpreted as 'active', regardless if the input/output is active high or low. i.e. if the buzzer is making sounds, the the status is `true`.
   - All topics can be renamed via configuration.
@@ -62,11 +61,6 @@ This is my custom I/O card, third generation. Main purpose is to serve as an ala
       - Delay for the configured `entry_delay` if the triggering input has one larger than 0. Immediately sound the siren if an input other than the first is triggered during the wait time.
     - Silence siren after X minutes, regardless if an IO marked as `armed` has returned to its `armed_state` or not.
       - Do not sound the siren again until after Y minutes.
-    - Based on configuration, allow inputs to be grouped into 'zones' so that two or more inputs can be (un)marked as `armed` with a single command.
-      - MQTT topic: `<ID>/alarm/zone/set/<zone_name>`, with a payload of `true` or `false`.
-      - Wiegand: A series of digits (i.e. a code) can via configuration be associated to a 'zone'. Each entry of the code toggles the `armed` marker for all inputs in that zone. 
-    - Whenever an input or zone is armed/disarmed, play a distict sound using the buzzer to signify the event.
-    - Whenever the last input has its `armed` mark removed, play a distict sound to signify that the alarm now is 'off'.
     - Inputs with `active` set to `false` are never considered for any operation.
 
 #### Startup procedure

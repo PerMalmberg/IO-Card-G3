@@ -112,7 +112,6 @@ void I2CTask::tick()
     if (initialized)
     {
         read_digital();
-        read_analog();
         read_sensor();
     }
 }

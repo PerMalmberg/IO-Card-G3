@@ -18,5 +18,9 @@
 	"disarmed": {
 		"signal": [800, 200, 800, 200],
 		"repeat": false
+	},
+	"key_entry_timeout": {
+		"signal": [200, 200, 200, 200, 200, 200],
+		"repeat": false
 	}
 }
