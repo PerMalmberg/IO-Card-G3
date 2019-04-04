@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:G3-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -14,19 +14,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L Connector:Micro_SD_Card_Det J?
-U 1 1 5B98DFAA
-P 10150 4900
-AR Path="/5B61FB63/5B98DFAA" Ref="J?"  Part="1" 
-AR Path="/5B61FB63/5B98DF5D/5B98DFAA" Ref="J401"  Part="1" 
-F 0 "J401" H 10100 5717 50  0000 C CNN
-F 1 "Micro_SD_Card_Det" H 10100 5626 50  0000 C CNN
-F 2 "Connector_Card:microSD_HC_Hirose_DM3AT-SF-PEJM5" H 12200 5600 50  0001 C CNN
-F 3 "https://www.mouser.se/ProductDetail/Hirose-Connector/DM3AT-SF-PEJM5?qs=sGAEpiMZZMuJakaoiLiBpvjg2IzEXJkOoUNaxaL8lrc%3d" H 10150 5000 50  0001 C CNN
-	1    10150 4900
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:+3.3V #PWR0420
 U 1 1 5B98DFF9
@@ -975,5 +962,16 @@ F 2 "" H 9250 4800 50  0001 C CNN
 F 3 "" H 9250 4800 50  0001 C CNN
 	1    9250 4800
 	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:Micro_SD_Card_Det J401
+U 1 1 5CA9057E
+P 10150 4900
+F 0 "J401" H 10100 5717 50  0000 C CNN
+F 1 "Micro_SD_Card_Det" H 10100 5626 50  0000 C CNN
+F 2 "Connector_Card:microSD_HC_Hirose_DM3AT-SF-PEJM5" H 12200 5600 50  0001 C CNN
+F 3 "https://www.mouser.se/ProductDetail/Hirose-Connector/DM3AT-SF-PEJM5?qs=sGAEpiMZZMuJakaoiLiBpvjg2IzEXJkOoUNaxaL8lrc%3d" H 10150 5000 50  0001 C CNN
+	1    10150 4900
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
