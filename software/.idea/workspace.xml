@@ -1,0 +1,1519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="Project" targetName="___idf_expat" />
+      <config projectName="Project" targetName="__idf_esp32" />
+      <config projectName="Project" targetName="__idf_esp_event" />
+      <config projectName="Project" targetName="___idf_openssl" />
+      <config projectName="Project" targetName="___idf_sdmmc" />
+      <config projectName="Project" targetName="__idf_wear_levelling" />
+      <config projectName="Project" targetName="___idf_asio" />
+      <config projectName="Project" targetName="bootloader" />
+      <config projectName="Project" targetName="__idf_mbedtls" />
+      <config projectName="Project" targetName="smooth" />
+      <config projectName="Project" targetName="flash_project_args_target" />
+      <config projectName="Project" targetName="show_efuse_table" />
+      <config projectName="Project" targetName="___idf_wear_levelling" />
+      <config projectName="Project" targetName="__idf_nvs_flash" />
+      <config projectName="Project" targetName="app" />
+      <config projectName="Project" targetName="___idf_log" />
+      <config projectName="Project" targetName="__idf_soc" />
+      <config projectName="Project" targetName="___idf_smartconfig_ack" />
+      <config projectName="Project" targetName="mbedcrypto" />
+      <config projectName="Project" targetName="__idf_app_trace" />
+      <config projectName="Project" targetName="apidoc" />
+      <config projectName="Project" targetName="___idf_lwip" />
+      <config projectName="Project" targetName="flash" />
+      <config projectName="Project" targetName="___idf_esp-tls" />
+      <config projectName="Project" targetName="___idf_esptool_py" />
+      <config projectName="Project" targetName="___idf_pthread" />
+      <config projectName="Project" targetName="___idf_heap" />
+      <config projectName="Project" targetName="Project" />
+      <config projectName="Project" targetName="__idf_esp_wifi" />
+      <config projectName="Project" targetName="___idf_console" />
+      <config projectName="Project" targetName="___idf_json" />
+      <config projectName="Project" targetName="___idf_mqtt" />
+      <config projectName="Project" targetName="___idf_mbedtls" />
+      <config projectName="Project" targetName="__idf_fatfs" />
+      <config projectName="Project" targetName="efuse_test_table" />
+      <config projectName="Project" targetName="__ldgen_output_esp32.project.ld" />
+      <config projectName="Project" targetName="___idf_app_update" />
+      <config projectName="Project" targetName="___idf_freemodbus" />
+      <config projectName="Project" targetName="__idf_sdmmc" />
+      <config projectName="Project" targetName="__idf_vfs" />
+      <config projectName="Project" targetName="__idf_freertos" />
+      <config projectName="Project" targetName="___idf_esp32" />
+      <config projectName="Project" targetName="___idf_protobuf-c" />
+      <config projectName="Project" targetName="___idf_partition_table" />
+      <config projectName="Project" targetName="___idf_bt" />
+      <config projectName="Project" targetName="menuconfig" />
+      <config projectName="Project" targetName="___idf_spi_flash" />
+      <config projectName="Project" targetName="___idf_esp_http_server" />
+      <config projectName="Project" targetName="___idf_esp_common" />
+      <config projectName="Project" targetName="___idf_esp_event" />
+      <config projectName="Project" targetName="confserver" />
+      <config projectName="Project" targetName="gen_secure_boot_signing_key" />
+      <config projectName="Project" targetName="___idf_espcoredump" />
+      <config projectName="Project" targetName="app-flash" />
+      <config projectName="Project" targetName="__idf_cxx" />
+      <config projectName="Project" targetName="__idf_ethernet" />
+      <config projectName="Project" targetName="__idf_bootloader_support" />
+      <config projectName="Project" targetName="___idf_esp_https_server" />
+      <config projectName="Project" targetName="efuse_custom_table" />
+      <config projectName="Project" targetName="___idf_tcp_transport" />
+      <config projectName="Project" targetName="__idf_spi_flash" />
+      <config projectName="Project" targetName="__idf_driver" />
+      <config projectName="Project" targetName="g3" />
+      <config projectName="Project" targetName="___idf_tcpip_adapter" />
+      <config projectName="Project" targetName="gen_project_binary" />
+      <config projectName="Project" targetName="__idf_smartconfig_ack" />
+      <config projectName="Project" targetName="___idf_wpa_supplicant" />
+      <config projectName="Project" targetName="___idf_esp_https_ota" />
+      <config projectName="Project" targetName="___idf_app_trace" />
+      <config projectName="Project" targetName="___idf_ulp" />
+      <config projectName="Project" targetName="___idf_unity" />
+      <config projectName="Project" targetName="___idf_protocomm" />
+      <config projectName="Project" targetName="___idf_vfs" />
+      <config projectName="Project" targetName="___idf_fatfs" />
+      <config projectName="Project" targetName="efuse_common_table" />
+      <config projectName="Project" targetName="__idf_newlib" />
+      <config projectName="Project" targetName="___idf_smooth_idf_component" />
+      <config projectName="Project" targetName="__idf_wpa_supplicant" />
+      <config projectName="Project" targetName="___idf_wifi_provisioning" />
+      <config projectName="Project" targetName="__idf_app_update" />
+      <config projectName="Project" targetName="___idf_freertos" />
+      <config projectName="Project" targetName="___idf_esp_rom" />
+      <config projectName="Project" targetName="___idf_esp_wifi" />
+      <config projectName="Project" targetName="___idf_cxx" />
+      <config projectName="Project" targetName="___idf_idf_test" />
+      <config projectName="Project" targetName="__idf_tcpip_adapter" />
+      <config projectName="Project" targetName="__idf_xtensa" />
+      <config projectName="Project" targetName="___idf_esp_ringbuf" />
+      <config projectName="Project" targetName="bootloader-flash" />
+      <config projectName="Project" targetName="__idf_heap" />
+      <config projectName="Project" targetName="___idf_xtensa" />
+      <config projectName="Project" targetName="___idf_esp_adc_cal" />
+      <config projectName="Project" targetName="__idf_json" />
+      <config projectName="Project" targetName="___idf_bootloader_support" />
+      <config projectName="Project" targetName="__idf_libsodium" />
+      <config projectName="Project" targetName="___idf_esp_http_client" />
+      <config projectName="Project" targetName="___idf_efuse" />
+      <config projectName="Project" targetName="___idf_mdns" />
+      <config projectName="Project" targetName="mbedx509" />
+      <config projectName="Project" targetName="__idf_lwip" />
+      <config projectName="Project" targetName="___idf_coap" />
+      <config projectName="Project" targetName="__idf_espcoredump" />
+      <config projectName="Project" targetName="mconf-idf" />
+      <config projectName="Project" targetName="__idf_log" />
+      <config projectName="Project" targetName="__idf_esp_ringbuf" />
+      <config projectName="Project" targetName="___idf_spiffs" />
+      <config projectName="Project" targetName="__idf_esp_rom" />
+      <config projectName="Project" targetName="___idf_soc" />
+      <config projectName="Project" targetName="___idf_newlib" />
+      <config projectName="Project" targetName="___idf_libsodium" />
+      <config projectName="Project" targetName="__idf_pthread" />
+      <config projectName="Project" targetName="__idf_efuse" />
+      <config projectName="Project" targetName="___idf_nghttp" />
+      <config projectName="Project" targetName="___idf_nvs_flash" />
+      <config projectName="Project" targetName="__idf_build_target" />
+      <config projectName="Project" targetName="___idf_bootloader" />
+      <config projectName="Project" targetName="__idf_esp_common" />
+      <config projectName="Project" targetName="partition_table" />
+      <config projectName="Project" targetName="___idf_jsmn" />
+      <config projectName="Project" targetName="lib" />
+      <config projectName="Project" targetName="mbedtls" />
+      <config projectName="Project" targetName="___idf_driver" />
+      <config projectName="Project" targetName="___idf_ethernet" />
+      <config projectName="Project" targetName="esp32_linker_script" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug">
+        <ADDITIONAL_GENERATION_ENVIRONMENT>
+          <envs>
+            <env name="IDF_PATH" value="$USER_HOME$/esp/esp-idf" />
+          </envs>
+        </ADDITIONAL_GENERATION_ENVIRONMENT>
+      </configuration>
+      <configuration PROFILE_NAME="xtensa" CONFIG_NAME="Debug" TOOLCHAIN_NAME="xtensa-gcc" GENERATION_OPTIONS="-DESP_PLATFORM=1 -DCMAKE_TOOLCHAIN_FILE=/home/permal/esp/esp-idf/tools/cmake/toolchain-esp32.cmake -DIDF_TARGET=esp32">
+        <ADDITIONAL_GENERATION_ENVIRONMENT>
+          <envs>
+            <env name="PATH" value="/usr/bin:/bin:/home/permal/esp/xtensa-esp32-elf/bin" />
+            <env name="IDF_PATH" value="$USER_HOME$/esp/esp-idf" />
+          </envs>
+        </ADDITIONAL_GENERATION_ENVIRONMENT>
+      </configuration>
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5ccc03e1-75e0-472e-bdec-cd3ff406382a" name="Default Changelist" comment="Can be built aga">
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/externals/smooth" beforeDir="false" afterPath="$PROJECT_DIR$/externals/smooth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/main/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partitions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/partitions.csv" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/cmake-build-debug-gcc/" />
+    <ignored path="$PROJECT_DIR$/cmake-build-xtensa/" />
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="765">
+              <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/partitions.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/externals/smooth/lib/smooth/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/externals/smooth/lib/smooth/idf_utils.cmake">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="47" column="26" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/externals/smooth/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>cycler_1</find>
+      <find>GLIBCXX_USE_C99</find>
+      <find>esp32.project.ld</find>
+      <find>.app_hash</find>
+      <find>$ENV{IDF_PATH}/tools/cmake/build.cmake</find>
+      <find>link_to_source</find>
+      <find>target</find>
+    </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/..</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/main/App.cpp" />
+        <option value="$PROJECT_DIR$/externals/smooth/lib/smooth/application/io/i2c/ADS1115.cpp" />
+        <option value="$PROJECT_DIR$/main/io/I2CTask.cpp" />
+        <option value="$PROJECT_DIR$/externals/smooth/lib/smooth/idf_utils.cmake" />
+        <option value="$USER_HOME$/esp/esp-idf/components/mbedtls/mbedtls/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/partitions.csv" />
+        <option value="$PROJECT_DIR$/main/CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="894" />
+    <option name="y" value="24" />
+    <option name="width" value="2530" />
+    <option name="height" value="1416" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="g3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="software" type="47feb1d3:ProjectViewModuleNode" />
+            </path>
+            <path>
+              <item name="g3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="software" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="software" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="g3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="software" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="software" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="CMake Application.g3">
+    <configuration name="Project" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="Project" CONFIG_NAME="xtensa" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="Project">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_app_trace" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_app_trace" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_app_update" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_app_update" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_asio" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_asio" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_bootloader" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_bootloader" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_bootloader_support" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_bootloader_support" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_bt" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_bt" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_coap" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_coap" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_console" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_console" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_cxx" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_cxx" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_driver" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_driver" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_efuse" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_efuse" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_esp-tls" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_esp-tls" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_esp32" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_esp32" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_esp_adc_cal" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_esp_adc_cal" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_esp_common" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_esp_common" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_esp_event" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_esp_event" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_esp_http_client" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_esp_http_client" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_esp_http_server" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_esp_http_server" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_esp_https_ota" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_esp_https_ota" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_esp_https_server" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_esp_https_server" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_esp_ringbuf" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_esp_ringbuf" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_esp_rom" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_esp_rom" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_esp_wifi" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_esp_wifi" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_espcoredump" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_espcoredump" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_esptool_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_esptool_py" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_ethernet" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_ethernet" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_expat" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_expat" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_fatfs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_fatfs" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_freemodbus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_freemodbus" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_freertos" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_freertos" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_heap" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_heap" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_idf_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_idf_test" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_jsmn" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_jsmn" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_json" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_json" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_libsodium" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_libsodium" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_log" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_log" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_lwip" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_lwip" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_mbedtls" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_mbedtls" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_mdns" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_mdns" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_mqtt" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_mqtt" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_newlib" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_newlib" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_nghttp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_nghttp" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_nvs_flash" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_nvs_flash" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_openssl" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_openssl" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_partition_table" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_partition_table" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_protobuf-c" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_protobuf-c" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_protocomm" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_protocomm" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_pthread" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_pthread" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_sdmmc" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_sdmmc" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_smartconfig_ack" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_smartconfig_ack" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_smooth_idf_component" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_smooth_idf_component" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_soc" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_soc" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_spi_flash" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_spi_flash" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_spiffs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_spiffs" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_tcp_transport" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_tcp_transport" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_tcpip_adapter" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_tcpip_adapter" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_ulp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_ulp" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_unity" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_unity" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_vfs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_vfs" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_wear_levelling" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_wear_levelling" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_wifi_provisioning" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_wifi_provisioning" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_wpa_supplicant" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_wpa_supplicant" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="___idf_xtensa" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="___idf_xtensa" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_app_trace" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_app_trace" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_app_update" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_app_update" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_bootloader_support" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_bootloader_support" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_build_target" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_build_target" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_cxx" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_cxx" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_driver" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_driver" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_efuse" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_efuse" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_esp32" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_esp32" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_esp_common" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_esp_common" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_esp_event" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_esp_event" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_esp_ringbuf" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_esp_ringbuf" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_esp_rom" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_esp_rom" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_esp_wifi" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_esp_wifi" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_espcoredump" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_espcoredump" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_ethernet" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_ethernet" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_fatfs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_fatfs" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_freertos" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_freertos" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_heap" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_heap" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_json" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_json" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_libsodium" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_libsodium" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_log" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_log" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_lwip" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_lwip" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_mbedtls" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_mbedtls" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_newlib" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_newlib" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_nvs_flash" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_nvs_flash" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_pthread" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_pthread" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_sdmmc" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_sdmmc" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_smartconfig_ack" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_smartconfig_ack" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_soc" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_soc" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_spi_flash" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_spi_flash" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_tcpip_adapter" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_tcpip_adapter" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_vfs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_vfs" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_wear_levelling" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_wear_levelling" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_wpa_supplicant" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_wpa_supplicant" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__idf_xtensa" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__idf_xtensa" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="__ldgen_output_esp32.project.ld" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="__ldgen_output_esp32.project.ld" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="apidoc" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="apidoc" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app-flash" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="app-flash" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="app" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="bootloader-flash" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="bootloader-flash" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="bootloader" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="bootloader" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="confserver" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="confserver" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="efuse_common_table" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="efuse_common_table" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="efuse_custom_table" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="efuse_custom_table" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="efuse_test_table" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="efuse_test_table" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="esp32_linker_script" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="esp32_linker_script" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="flash" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="flash" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="flash_project_args_target" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="flash_project_args_target" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="g3" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="g3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="g3">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gen_project_binary" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="gen_project_binary" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gen_secure_boot_signing_key" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="gen_secure_boot_signing_key" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="lib" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="lib" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mbedcrypto" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="mbedcrypto" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mbedtls" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="mbedtls" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mbedx509" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="mbedx509" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mconf-idf" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="mconf-idf" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="menuconfig" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="menuconfig" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="partition_table" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="partition_table" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="show_efuse_table" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="show_efuse_table" CONFIG_NAME="xtensa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="smooth" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="smooth" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.smooth" />
+      <item itemvalue="CMake Application.___idf_app_trace" />
+      <item itemvalue="CMake Application.___idf_app_update" />
+      <item itemvalue="CMake Application.___idf_asio" />
+      <item itemvalue="CMake Application.___idf_bootloader" />
+      <item itemvalue="CMake Application.___idf_bootloader_support" />
+      <item itemvalue="CMake Application.___idf_bt" />
+      <item itemvalue="CMake Application.___idf_coap" />
+      <item itemvalue="CMake Application.___idf_console" />
+      <item itemvalue="CMake Application.___idf_cxx" />
+      <item itemvalue="CMake Application.___idf_driver" />
+      <item itemvalue="CMake Application.___idf_efuse" />
+      <item itemvalue="CMake Application.___idf_esp-tls" />
+      <item itemvalue="CMake Application.___idf_esp32" />
+      <item itemvalue="CMake Application.___idf_esp_adc_cal" />
+      <item itemvalue="CMake Application.___idf_esp_common" />
+      <item itemvalue="CMake Application.___idf_esp_event" />
+      <item itemvalue="CMake Application.___idf_esp_http_client" />
+      <item itemvalue="CMake Application.___idf_esp_http_server" />
+      <item itemvalue="CMake Application.___idf_esp_https_ota" />
+      <item itemvalue="CMake Application.___idf_esp_https_server" />
+      <item itemvalue="CMake Application.___idf_esp_ringbuf" />
+      <item itemvalue="CMake Application.___idf_esp_rom" />
+      <item itemvalue="CMake Application.___idf_esp_wifi" />
+      <item itemvalue="CMake Application.___idf_espcoredump" />
+      <item itemvalue="CMake Application.___idf_esptool_py" />
+      <item itemvalue="CMake Application.___idf_ethernet" />
+      <item itemvalue="CMake Application.___idf_expat" />
+      <item itemvalue="CMake Application.___idf_fatfs" />
+      <item itemvalue="CMake Application.___idf_freemodbus" />
+      <item itemvalue="CMake Application.___idf_freertos" />
+      <item itemvalue="CMake Application.___idf_heap" />
+      <item itemvalue="CMake Application.___idf_idf_test" />
+      <item itemvalue="CMake Application.___idf_jsmn" />
+      <item itemvalue="CMake Application.___idf_json" />
+      <item itemvalue="CMake Application.___idf_libsodium" />
+      <item itemvalue="CMake Application.___idf_log" />
+      <item itemvalue="CMake Application.___idf_lwip" />
+      <item itemvalue="CMake Application.___idf_mbedtls" />
+      <item itemvalue="CMake Application.___idf_mdns" />
+      <item itemvalue="CMake Application.___idf_mqtt" />
+      <item itemvalue="CMake Application.___idf_newlib" />
+      <item itemvalue="CMake Application.___idf_nghttp" />
+      <item itemvalue="CMake Application.___idf_nvs_flash" />
+      <item itemvalue="CMake Application.___idf_openssl" />
+      <item itemvalue="CMake Application.___idf_partition_table" />
+      <item itemvalue="CMake Application.___idf_protobuf-c" />
+      <item itemvalue="CMake Application.___idf_protocomm" />
+      <item itemvalue="CMake Application.___idf_pthread" />
+      <item itemvalue="CMake Application.___idf_sdmmc" />
+      <item itemvalue="CMake Application.___idf_smartconfig_ack" />
+      <item itemvalue="CMake Application.___idf_smooth_idf_component" />
+      <item itemvalue="CMake Application.___idf_soc" />
+      <item itemvalue="CMake Application.___idf_spi_flash" />
+      <item itemvalue="CMake Application.___idf_spiffs" />
+      <item itemvalue="CMake Application.___idf_tcp_transport" />
+      <item itemvalue="CMake Application.___idf_tcpip_adapter" />
+      <item itemvalue="CMake Application.___idf_ulp" />
+      <item itemvalue="CMake Application.___idf_unity" />
+      <item itemvalue="CMake Application.___idf_vfs" />
+      <item itemvalue="CMake Application.___idf_wear_levelling" />
+      <item itemvalue="CMake Application.___idf_wifi_provisioning" />
+      <item itemvalue="CMake Application.___idf_wpa_supplicant" />
+      <item itemvalue="CMake Application.___idf_xtensa" />
+      <item itemvalue="CMake Application.__idf_build_target" />
+      <item itemvalue="CMake Application.app" />
+      <item itemvalue="CMake Application.app-flash" />
+      <item itemvalue="CMake Application.bootloader" />
+      <item itemvalue="CMake Application.bootloader-flash" />
+      <item itemvalue="CMake Application.confserver" />
+      <item itemvalue="CMake Application.flash" />
+      <item itemvalue="CMake Application.flash_project_args_target" />
+      <item itemvalue="CMake Application.gen_project_binary" />
+      <item itemvalue="CMake Application.gen_secure_boot_signing_key" />
+      <item itemvalue="CMake Application.g3" />
+      <item itemvalue="CMake Application.Project" />
+      <item itemvalue="CMake Application.__idf_app_trace" />
+      <item itemvalue="CMake Application.__idf_app_update" />
+      <item itemvalue="CMake Application.__idf_bootloader_support" />
+      <item itemvalue="CMake Application.__idf_cxx" />
+      <item itemvalue="CMake Application.__idf_driver" />
+      <item itemvalue="CMake Application.__idf_efuse" />
+      <item itemvalue="CMake Application.efuse_common_table" />
+      <item itemvalue="CMake Application.efuse_custom_table" />
+      <item itemvalue="CMake Application.efuse_test_table" />
+      <item itemvalue="CMake Application.show_efuse_table" />
+      <item itemvalue="CMake Application.__idf_esp32" />
+      <item itemvalue="CMake Application.__ldgen_output_esp32.project.ld" />
+      <item itemvalue="CMake Application.esp32_linker_script" />
+      <item itemvalue="CMake Application.__idf_esp_common" />
+      <item itemvalue="CMake Application.__idf_esp_event" />
+      <item itemvalue="CMake Application.__idf_esp_ringbuf" />
+      <item itemvalue="CMake Application.__idf_esp_rom" />
+      <item itemvalue="CMake Application.__idf_esp_wifi" />
+      <item itemvalue="CMake Application.__idf_espcoredump" />
+      <item itemvalue="CMake Application.__idf_ethernet" />
+      <item itemvalue="CMake Application.__idf_fatfs" />
+      <item itemvalue="CMake Application.__idf_freertos" />
+      <item itemvalue="CMake Application.__idf_heap" />
+      <item itemvalue="CMake Application.__idf_json" />
+      <item itemvalue="CMake Application.__idf_libsodium" />
+      <item itemvalue="CMake Application.__idf_log" />
+      <item itemvalue="CMake Application.__idf_lwip" />
+      <item itemvalue="CMake Application.__idf_mbedtls" />
+      <item itemvalue="CMake Application.apidoc" />
+      <item itemvalue="CMake Application.lib" />
+      <item itemvalue="CMake Application.mbedcrypto" />
+      <item itemvalue="CMake Application.mbedtls" />
+      <item itemvalue="CMake Application.mbedx509" />
+      <item itemvalue="CMake Application.__idf_newlib" />
+      <item itemvalue="CMake Application.__idf_nvs_flash" />
+      <item itemvalue="CMake Application.partition_table" />
+      <item itemvalue="CMake Application.__idf_pthread" />
+      <item itemvalue="CMake Application.__idf_sdmmc" />
+      <item itemvalue="CMake Application.__idf_smartconfig_ack" />
+      <item itemvalue="CMake Application.__idf_soc" />
+      <item itemvalue="CMake Application.__idf_spi_flash" />
+      <item itemvalue="CMake Application.__idf_tcpip_adapter" />
+      <item itemvalue="CMake Application.__idf_vfs" />
+      <item itemvalue="CMake Application.__idf_wear_levelling" />
+      <item itemvalue="CMake Application.__idf_wpa_supplicant" />
+      <item itemvalue="CMake Application.__idf_xtensa" />
+      <item itemvalue="CMake Application.mconf-idf" />
+      <item itemvalue="CMake Application.menuconfig" />
+    </list>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5ccc03e1-75e0-472e-bdec-cd3ff406382a" name="Default Changelist" comment="" />
+      <created>1539884658437</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1539884658437</updated>
+      <workItem from="1539884660879" duration="5524000" />
+      <workItem from="1539969294674" duration="353000" />
+      <workItem from="1539969670245" duration="6233000" />
+      <workItem from="1540034821760" duration="17323000" />
+      <workItem from="1540054680334" duration="121000" />
+      <workItem from="1540054849594" duration="7286000" />
+      <workItem from="1540106663806" duration="21918000" />
+      <workItem from="1540627801469" duration="3016000" />
+      <workItem from="1541013717967" duration="1119000" />
+      <workItem from="1541336156064" duration="235000" />
+      <workItem from="1541617233984" duration="3175000" />
+      <workItem from="1541624102387" duration="2179000" />
+      <workItem from="1541702407711" duration="570000" />
+      <workItem from="1541837627697" duration="2381000" />
+      <workItem from="1541841087691" duration="1246000" />
+      <workItem from="1541842862568" duration="18429000" />
+      <workItem from="1541873191527" duration="5845000" />
+      <workItem from="1541949441378" duration="4059000" />
+      <workItem from="1542137119436" duration="111000" />
+      <workItem from="1542540402853" duration="26106000" />
+      <workItem from="1542571669632" duration="2224000" />
+      <workItem from="1542652271380" duration="7877000" />
+      <workItem from="1542737190059" duration="1890000" />
+      <workItem from="1543006826697" duration="16000" />
+      <workItem from="1543051905449" duration="17823000" />
+      <workItem from="1543095553764" duration="746000" />
+      <workItem from="1543149032084" duration="2161000" />
+      <workItem from="1543691321531" duration="1465000" />
+      <workItem from="1543698546419" duration="4120000" />
+      <workItem from="1543742187981" duration="13799000" />
+      <workItem from="1543863394981" duration="2310000" />
+      <workItem from="1543948513713" duration="1152000" />
+      <workItem from="1544119850721" duration="7728000" />
+      <workItem from="1544271377362" duration="12449000" />
+      <workItem from="1544292928355" duration="1012000" />
+      <workItem from="1544342300599" duration="10067000" />
+      <workItem from="1544374086924" duration="6762000" />
+      <workItem from="1544469308808" duration="2002000" />
+      <workItem from="1544548923997" duration="1061000" />
+      <workItem from="1544822484336" duration="560000" />
+      <workItem from="1544864231213" duration="619000" />
+      <workItem from="1544866433274" duration="119000" />
+      <workItem from="1544868082301" duration="1393000" />
+      <workItem from="1545071436419" duration="677000" />
+      <workItem from="1547285720075" duration="13000" />
+      <workItem from="1547285761321" duration="447000" />
+      <workItem from="1548680865965" duration="15000" />
+      <workItem from="1551467737090" duration="14000" />
+      <workItem from="1551467771824" duration="147000" />
+      <workItem from="1551815325973" duration="847000" />
+      <workItem from="1551898896748" duration="95000" />
+      <workItem from="1551899053116" duration="1136000" />
+      <workItem from="1560627499776" duration="6770000" />
+      <workItem from="1560682708634" duration="21000" />
+      <workItem from="1560696618287" duration="3901000" />
+      <workItem from="1561098979919" duration="667000" />
+      <workItem from="1561100316982" duration="427000" />
+      <workItem from="1561121251490" duration="7058000" />
+    </task>
+    <task id="LOCAL-00001" summary="Use relative path for smooth_idf_component.">
+      <created>1561128014112</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1561128014112</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Got rid of util/make_unique.h">
+      <created>1541842323980</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1541842323980</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Typo: slc -&gt; scl">
+      <created>1541877639088</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1541877639088</updated>
+    </task>
+    <task id="LOCAL-00004" summary="active_high matters to set() and clr()">
+      <created>1541877694357</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1541877694357</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Logging and proper startup behavior.">
+      <created>1541878868178</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1541878868178</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Main and I2CTask added.">
+      <created>1541878996173</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1541878996173</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Typo fix.">
+      <created>1542737672017</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1542737672017</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added logging for read/write errors.">
+      <created>1542737706442</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1542737706442</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Code style (for-loops)">
+      <created>1542738374936</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1542738374936</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added BME280 to file list.">
+      <created>1542738428738</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1542738428738</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added BME280 read and value publishing.">
+      <created>1542738462257</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1542738462257</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added to git.">
+      <created>1543081152688</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1543081152688</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added read_output to MCP23017">
+      <created>1543083742663</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1543083742663</updated>
+    </task>
+    <task id="LOCAL-00014" summary="- Initialization of SD Card.&#10;- Wifi&#10;- SNTP&#10;- Status LEDs">
+      <created>1543083991779</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1543083991779</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Fix formatting.">
+      <created>1543176663930</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1543176663930</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Removed left over code from previous tests.&#10;Adjusted for ESP32 Wrover-B module.">
+      <created>1543769452700</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1543769452700</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Use positive logic.">
+      <created>1544121697367</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1544121697367</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Include corrected">
+      <created>1544121729494</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1544121729494</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Builds as library">
+      <created>1544279962340</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1544279962340</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Cleanup">
+      <created>1544284895453</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1544284895453</updated>
+    </task>
+    <task id="LOCAL-00021" summary="menuconfig now builds">
+      <created>1544284933223</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1544284933223</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Updated readme.">
+      <created>1544352553423</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1544352553424</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Moved IDF-related things to idf_utils.cmake.">
+      <created>1544354981594</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1544354981594</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Removed test value.">
+      <created>1544378298020</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1544378298020</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Publish read raw values.">
+      <created>1544823005460</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1544823005460</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="23637000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="894" y="24" width="2530" height="1416" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22785829" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3297062" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27312297" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.34609374" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.23359375" />
+      <window_info active="true" anchor="bottom" id="CMake" order="12" visible="true" weight="0.28984374" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.3299941" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27481323" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3297062" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31229597" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.34711644" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.15995647" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.29053319" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/externals/Smooth" />
+      <path value="$PROJECT_DIR$/components/smooth" />
+    </ignored-roots>
+    <MESSAGE value="Got rid of util/make_unique.h" />
+    <MESSAGE value="Typo: slc -&gt; scl" />
+    <MESSAGE value="active_high matters to set() and clr()" />
+    <MESSAGE value="Logging and proper startup behavior." />
+    <MESSAGE value="Main and I2CTask added." />
+    <MESSAGE value="Typo fix." />
+    <MESSAGE value="Added logging for read/write errors." />
+    <MESSAGE value="Code style (for-loops)" />
+    <MESSAGE value="Added BME280 to file list." />
+    <MESSAGE value="Added BME280 read and value publishing." />
+    <MESSAGE value="Added to git." />
+    <MESSAGE value="Added read_output to MCP23017" />
+    <MESSAGE value="- Initialization of SD Card.&#10;- Wifi&#10;- SNTP&#10;- Status LEDs" />
+    <MESSAGE value="Fix formatting." />
+    <MESSAGE value="Removed left over code from previous tests.&#10;Adjusted for ESP32 Wrover-B module." />
+    <MESSAGE value="Use positive logic." />
+    <MESSAGE value="Include corrected" />
+    <MESSAGE value="Builds as library" />
+    <MESSAGE value="Cleanup" />
+    <MESSAGE value="menuconfig now builds" />
+    <MESSAGE value="Updated readme." />
+    <MESSAGE value="Moved IDF-related things to idf_utils.cmake." />
+    <MESSAGE value="Removed test value." />
+    <MESSAGE value="Publish read raw values." />
+    <MESSAGE value="Use relative path for smooth_idf_component." />
+    <option name="LAST_COMMIT_MESSAGE" value="Use relative path for smooth_idf_component." />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/externals/smooth/lib/smooth/application/network/mqtt/MqttClient.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="238" column="41" selection-start-line="238" selection-start-column="41" selection-end-line="238" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/App.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/externals/smooth/lib/smooth/application/io/i2c/ADS1115.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/io/I2CTask.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="753">
+          <caret line="146" column="9" selection-start-line="146" selection-start-column="9" selection-end-line="146" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/App.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="826">
+          <caret line="65" column="52" selection-start-line="65" selection-start-column="52" selection-end-line="65" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/io/analog/AnalogCycler.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/esp/esp-idf/components/newlib/include/sys/reent.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="165" selection-start-line="165" selection-end-line="165" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/externals/smooth/Doxyfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/esp/esp-idf/tools/cmake/project.cmake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/G3.code-workspace">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/esp/esp-idf/components/mbedtls/mbedtls/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="73" column="74" selection-start-line="73" selection-start-column="74" selection-end-line="73" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/esp/esp-idf/tools/cmake/build.cmake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="852">
+          <caret line="436" column="9" selection-start-line="436" selection-start-column="9" selection-end-line="436" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/esp/esp-idf/tools/cmake/component.cmake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="852">
+          <caret line="162" selection-start-line="162" selection-end-line="162" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/externals/smooth/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/externals/smooth/lib/smooth/idf_utils.cmake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="47" column="26" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/externals/smooth/lib/smooth/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partitions.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

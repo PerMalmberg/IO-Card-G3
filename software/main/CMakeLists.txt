@@ -44,11 +44,17 @@ set(SOURCES main.cpp
 
 add_executable(${PROJECT_NAME} ${SOURCES})
 target_link_libraries(${PROJECT_NAME} smooth)
-set_target_properties(${PROJECT_NAME} PROPERTIES INCLUDE_DIRECTORIES ${CMAKE_CURRENT_LIST_DIR})
+target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_LIST_DIR})
+
+include(../externals/smooth/lib/smooth/idf_utils.cmake)
+idf_build_executable(${PROJECT_NAME})
+include($ENV{IDF_PATH}/tools/cmake/project.cmake)
+__project_info("")
+
 
 # Place binary output in top-level build directory so that idf.py can find it.
-set_target_properties( ${PROJECT_NAME}
+set_target_properties(${PROJECT_NAME}
         PROPERTIES
-        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/.."
+        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}"
         )
 
