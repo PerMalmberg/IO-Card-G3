@@ -216,19 +216,22 @@ void I2CTask::event(const I2CSetOutputBit& ev)
     auto port = ev.get_bit() < 8 ? MCP23017::Port::A : MCP23017::Port::B;
     const auto bit = ev.get_bit() < 8 ? ev.get_bit() : ev.get_bit() - 8;
 
-    if (device->read_output(port, output_state))
+    if(device)
     {
-        smooth::core::util::ByteSet b{output_state};
-        b.set(bit, ev.get_state());
-
-        if (!device->set_output(port, b))
+        if (device->read_output(port, output_state))
         {
-            Log::error(name, "Failed to set output");
+            smooth::core::util::ByteSet b{output_state};
+            b.set(bit, ev.get_state());
+
+            if (!device->set_output(port, b))
+            {
+                Log::error(name, "Failed to set output");
+            }
         }
-    }
-    else
-    {
-        Log::error(name, "Failed to read outputs");
+        else
+        {
+            Log::error(name, "Failed to read outputs");
+        }
     }
 }
 
