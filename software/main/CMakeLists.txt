@@ -22,6 +22,7 @@ set(SOURCES main.cpp
         alarm/sensor/BaseSensor.cpp
         alarm/sensor/AnalogSensor.cpp
         alarm/sensor/DigitalSensor.cpp
+        http/TemplateDataRetriever.h
 
         App.cpp
         hardware_info.h

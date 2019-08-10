@@ -15,6 +15,9 @@
 #include "network/Wifi.h"
 #include "keypad/keypad.h"
 #include "sound/Player.h"
+#include <smooth/application/network/http/HTTPServer.h>
+#include <smooth/core/network/ServerSocket.h>
+#include "http/TemplateDataRetriever.h"
 
 namespace g3
 {
@@ -48,6 +51,8 @@ namespace g3
             std::shared_ptr<NetworkStatusQueue> network_status;
             std::unique_ptr<sound::Player> player{};
 
+            http::DataRetriever data_retriever{};
+            std::unique_ptr<smooth::application::network::http::InsecureServer> insecure_server{};
 
             I2CTask i2c;
             g3::DeviceId id;

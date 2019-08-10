@@ -14,13 +14,16 @@
 #include "alarm/event/CodeEntered.h"
 #include "sound/PlaySong.h"
 #include "commands.h"
+#include <smooth/core/SystemStatistics.h>
 
 using namespace std::chrono;
+using namespace smooth::core;
 using namespace smooth::core::filesystem;
 using namespace smooth::core::ipc;
 using namespace smooth::core::json;
 using namespace smooth::core::network;
 using namespace smooth::core::timer;
+using namespace smooth::application::network::http;
 
 namespace g3
 {
@@ -28,13 +31,14 @@ namespace g3
             : Application(smooth::core::APPLICATION_BASE_PRIO, std::chrono::seconds{10}),
               digital_status_queue(DigitalStatusQueue::create("io_status_queue", 8, *this, *this)),
               network_status(NetworkStatusQueue::create("network_status", 2, *this, *this)),
+              data_retriever(),
               i2c(),
               id(),
               sntp(*this),
               wifi(*this, id, sntp),
               alarm(*this),
               keypad(*this, cmd, id)
-    {        
+    {
     }
 
     void App::init()
@@ -46,13 +50,12 @@ namespace g3
 
     void App::tick()
     {
-        auto free = heap_caps_get_free_size(MALLOC_CAP_8BIT);
-        auto max_size = heap_caps_get_largest_free_block(MALLOC_CAP_8BIT);
-        Log::info(name, Format("Free heap: {1} bytes, max block: {2}", UInt32(free), UInt32(max_size)));
+        SystemStatistics::instance().dump();
 
         if (mqtt)
         {
-            Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit{I2CDevice::status, MQTT_CONNECTED, mqtt->is_connected()});
+            Publisher<I2CSetOutputBit>::publish(
+                    I2CSetOutputBit{I2CDevice::status, MQTT_CONNECTED, mqtt->is_connected()});
         }
     }
 
@@ -109,6 +112,16 @@ namespace g3
                     alarm.start();
 
                     wifi.start();
+
+                    insecure_server = std::make_unique<InsecureServer>(*this,
+                                                                       HTTPServerConfig{"/sdcard/web_root",
+                                                                                        {"index.html"},
+                                                                                        {".html"},
+                                                                                        data_retriever,
+                                                                                        4096,
+                                                                                        4096});
+
+                    insecure_server->start(6, 1, std::make_shared<IPv4>("0.0.0.0", 80));
                 }
                 else
                 {
@@ -145,15 +158,14 @@ namespace g3
 
                 mqtt->add_subscription(topic);
 
-                cmd.add_command(topic, [this](const std::string& command, const std::string& data)
-                {
+                cmd.add_command(topic, [this](const std::string& command, const std::string& data) {
                     // Expected topic: <id>/io/set/<num>
                     // Expected payload: { "value": true }
 
                     // Get the number from the topic, only one character expected.
-                    if(command.size() > 2 && command[command.length()-2] == '/')
+                    if (command.size() > 2 && command[command.length() - 2] == '/')
                     {
-                        std::string last_char{command[command.length()-1]};
+                        std::string last_char{command[command.length() - 1]};
                         smooth::core::json::Value d{data};
 
                         auto val = d["value"].get_bool(false);
@@ -163,12 +175,11 @@ namespace g3
 
                 auto command = id.get() + cmd_keypad_code_entered;
                 mqtt->add_subscription(command);
-                cmd.add_command(command, [this](const std::string& command, const std::string& data)
-                {
+                cmd.add_command(command, [this](const std::string& command, const std::string& data) {
                     // Expected payload: { "code": "1234" }
                     smooth::core::json::Value d{data};
                     auto code = d["code"].get_string("");
-                    if(!code.empty())
+                    if (!code.empty())
                     {
                         Publisher<g3::alarm::event::CodeEntered>::publish(g3::alarm::event::CodeEntered(code));
                     }
@@ -176,8 +187,7 @@ namespace g3
 
                 command = id.get() + cmd_play_song;
                 mqtt->add_subscription(command);
-                cmd.add_command(command, [this](const std::string& command, const std::string& data)
-                {
+                cmd.add_command(command, [this](const std::string& command, const std::string& data) {
                     smooth::core::json::Value d{data};
                     Publisher<sound::PlaySong>::publish(sound::PlaySong(d["name"].get_string("")));
                 });
