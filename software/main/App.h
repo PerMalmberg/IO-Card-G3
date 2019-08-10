@@ -41,8 +41,11 @@ namespace g3
             std::unique_ptr<Mqtt> mqtt{};            
             g3::CommandDispatcher cmd{};
 
-            smooth::core::ipc::SubscribingTaskEventQueue<DigitalStatusValue> digital_status_queue;
-            smooth::core::ipc::SubscribingTaskEventQueue<smooth::core::network::NetworkStatus> network_status;
+            using DigitalStatusQueue = smooth::core::ipc::SubscribingTaskEventQueue<DigitalStatusValue>;
+            using NetworkStatusQueue = smooth::core::ipc::SubscribingTaskEventQueue<smooth::core::network::NetworkStatus>;
+
+            std::shared_ptr<DigitalStatusQueue> digital_status_queue;
+            std::shared_ptr<NetworkStatusQueue> network_status;
             std::unique_ptr<sound::Player> player{};
 
 

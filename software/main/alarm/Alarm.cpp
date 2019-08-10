@@ -23,11 +23,11 @@ namespace g3
     {
         Alarm::Alarm(smooth::core::Task& task)
             :   task(task),
-                analog_value("analog2alarm", 10, task, *this),
-                digital_value("digital2alarm", 10, task, *this),
-                code_entered_sub("code_entered_sub", 5, task, *this),
-                sensor_triggered_sub("sensor_triggered_sub", 16, task, *this),
-                timer_event("timer_event", 5, task, *this)
+                analog_value( RawAnalogQueue::create("analog2alarm", 10, task, *this)),
+                digital_value(DigitalInputValueQueue::create("digital2alarm", 10, task, *this)),
+                code_entered_sub(CodeEnteredQueue::create("code_entered_sub", 5, task, *this)),
+                sensor_triggered_sub(SensorTriggeredQueue::create("sensor_triggered_sub", 16, task, *this)),
+                timer_event(TimerExpiredQueue::create("timer_event", 5, task, *this))
         {            
             set_state(new(*this) state::Idle(*this));
             analog_sensors.reserve(ANALOG_INPUT_COUNT);

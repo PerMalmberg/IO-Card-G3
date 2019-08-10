@@ -75,19 +75,25 @@ namespace g3
 
                 std::chrono::seconds get_delay(std::function<void(BaseSensor&, std::chrono::seconds& delay)> get_time_delay);
 
+                using RawAnalogQueue = smooth::core::ipc::SubscribingTaskEventQueue<RawAnalogValue>;
+                using DigitalInputValueQueue = smooth::core::ipc::SubscribingTaskEventQueue<DigitalInputValue>;
+                using CodeEnteredQueue = smooth::core::ipc::SubscribingTaskEventQueue<event::CodeEntered>;
+                using SensorTriggeredQueue = smooth::core::ipc::SubscribingTaskEventQueue<event::SensorTriggered>;
+                using TimerExpiredQueue = smooth::core::ipc::TaskEventQueue<smooth::core::timer::TimerExpiredEvent>;
+
                 smooth::core::Task& task;
-                smooth::core::ipc::SubscribingTaskEventQueue<RawAnalogValue> analog_value;
-                smooth::core::ipc::SubscribingTaskEventQueue<DigitalInputValue> digital_value;
-                smooth::core::ipc::SubscribingTaskEventQueue<event::CodeEntered> code_entered_sub;
-                smooth::core::ipc::SubscribingTaskEventQueue<event::SensorTriggered> sensor_triggered_sub;
-                smooth::core::ipc::TaskEventQueue<smooth::core::timer::TimerExpiredEvent> timer_event;
+                std::shared_ptr<RawAnalogQueue> analog_value;
+                std::shared_ptr<DigitalInputValueQueue> digital_value;
+                std::shared_ptr<CodeEnteredQueue> code_entered_sub;
+                std::shared_ptr<SensorTriggeredQueue> sensor_triggered_sub;
+                std::shared_ptr<TimerExpiredQueue> timer_event;
                 
                 std::vector<AnalogSensor> analog_sensors{};
                 std::vector<DigitalSensor> digital_sensors{};
                 AlarmConfig cfg{};
                 bool started{false};
                 bool togle_status{false};
-                std::shared_ptr<smooth::core::timer::Timer> tick{};
+                smooth::core::timer::TimerOwner tick{};
         };
     }
 }

@@ -35,27 +35,39 @@ class I2CTask
         void init() override;
 
         void event(const smooth::core::io::InterruptInputEvent& ev) override;
+
         void event(const smooth::core::timer::TimerExpiredEvent& ev) override;
 
         void event(const I2CSetOutput& ev) override;
+
         void event(const I2CSetOutputBit& ev) override;
-        void event(const ExternalSirenCommand& ev) override;        
+
+        void event(const ExternalSirenCommand& ev) override;
 
     private:
         smooth::core::io::i2c::Master i2c_master;
-        smooth::core::ipc::ISRTaskEventQueue<smooth::core::io::InterruptInputEvent, 5> input_change_queue;
-        smooth::core::ipc::ISRTaskEventQueue<smooth::core::io::InterruptInputEvent, 5> analog_change_queue_1;
-        smooth::core::ipc::ISRTaskEventQueue<smooth::core::io::InterruptInputEvent, 5> analog_change_queue_2;
+
+        using ISRInputQueue = smooth::core::ipc::ISRTaskEventQueue<smooth::core::io::InterruptInputEvent, 5>;
+
+        std::shared_ptr<ISRInputQueue> input_change_queue;
+        std::shared_ptr<ISRInputQueue> analog_change_queue_1;
+        std::shared_ptr<ISRInputQueue> analog_change_queue_2;
         smooth::core::io::InterruptInput digital_input_change;
         smooth::core::io::InterruptInput analog_change_1;
         smooth::core::io::InterruptInput analog_change_2;
         smooth::core::io::Output i2c_reset;
         smooth::core::io::Output external_siren;
-        smooth::core::ipc::SubscribingTaskEventQueue<I2CSetOutput> set_output_cmd;
-        smooth::core::ipc::SubscribingTaskEventQueue<I2CSetOutputBit> set_output_bit_cmd;
-        smooth::core::ipc::SubscribingTaskEventQueue<ExternalSirenCommand> set_external_siren;
-        smooth::core::ipc::TaskEventQueue<smooth::core::timer::TimerExpiredEvent> publish_output_queue;
-        std::shared_ptr<smooth::core::timer::Timer> publish_output_timer;
+
+        using I2CSetOutputQueue = smooth::core::ipc::SubscribingTaskEventQueue<I2CSetOutput>;
+        using I2CSetOutputBitQueue = smooth::core::ipc::SubscribingTaskEventQueue<I2CSetOutputBit>;
+        using ExternalSirenCommandQueue = smooth::core::ipc::SubscribingTaskEventQueue<ExternalSirenCommand>;
+        using TimerExpiredQueue = smooth::core::ipc::TaskEventQueue<smooth::core::timer::TimerExpiredEvent>;
+
+        std::shared_ptr<I2CSetOutputQueue> set_output_cmd;
+        std::shared_ptr<I2CSetOutputBitQueue> set_output_bit_cmd;
+        std::shared_ptr<ExternalSirenCommandQueue> set_external_siren;
+        std::shared_ptr<TimerExpiredQueue> publish_output_queue;
+        smooth::core::timer::TimerOwner  publish_output_timer;
         std::unique_ptr<smooth::application::io::MCP23017> input_output{};
         std::unique_ptr<smooth::application::io::MCP23017> status_io{};
         std::unique_ptr<smooth::application::sensor::BME280> sensor{};
@@ -64,6 +76,7 @@ class I2CTask
         bool initialized{false};
 
         bool prepare_hw();
+
         void update_inputs();
 
         void read_digital();
@@ -81,7 +94,7 @@ class I2CTask
             }
         }
 
-        void publish_analog(uint8_t base_address, const AnalogCycler& cycler, uint16_t value);
+        void publish_analog(uint8_t base_address, const AnalogCycler& cycler, uint16_t value) const;
 
         std::tuple<bool, std::unique_ptr<smooth::application::io::MCP23017>> init_MCP23017_U1401();
 

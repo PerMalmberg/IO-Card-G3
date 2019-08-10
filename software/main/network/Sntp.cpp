@@ -20,8 +20,8 @@ namespace g3
 
         Sntp::Sntp(smooth::core::Task &task) :
             task(task),
-            sntp_queue("sntp_queue", 1, task, *this),
-            sntp_timer(smooth::core::timer::Timer::create("sntp", 1, sntp_queue, true, seconds{10}))
+            sntp_queue(SNTPQueue::create("sntp_queue", 1, task, *this)),
+            sntp_timer("sntp", 1, sntp_queue, true, seconds{10})
         {            
         }
 
@@ -45,7 +45,7 @@ namespace g3
                     }
                 }
 
-                if(servers.size() > 0 )
+                if(!servers.empty() )
                 {
                     sntp = std::make_unique<smooth::core::sntp::Sntp>(servers);
                     sntp->start();

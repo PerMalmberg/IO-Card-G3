@@ -26,8 +26,9 @@ namespace g3
 
             private:
                   smooth::core::Task &task;
-                  smooth::core::ipc::TaskEventQueue<smooth::core::timer::TimerExpiredEvent> sntp_queue;
-                  std::shared_ptr<smooth::core::timer::Timer> sntp_timer{};
+                  using SNTPQueue = smooth::core::ipc::TaskEventQueue<smooth::core::timer::TimerExpiredEvent>;
+                  std::shared_ptr<SNTPQueue> sntp_queue;
+                  smooth::core::timer::TimerOwner sntp_timer{};
                   std::unique_ptr<smooth::core::sntp::Sntp> sntp{};
             };
       }

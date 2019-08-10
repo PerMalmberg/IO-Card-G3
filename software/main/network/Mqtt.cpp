@@ -1,5 +1,6 @@
 #include "Mqtt.h"
 #include <chrono>
+#include <utility>
 #include <smooth/core/json/JsonFile.h>
 #include <smooth/core/logging/log.h>
 #include <smooth/core/task_priorities.h>
@@ -16,23 +17,24 @@ using namespace smooth::application::network::mqtt;
 using namespace std::chrono;
 
 Mqtt::Mqtt(std::string id, smooth::core::Task& task, g3::CommandDispatcher& cmd)
-    : task(task),
-      cmd(cmd),
-      incoming_mqtt("incoming_mqtt", 10, task, *this),
-      analog_value("analog2mqtt", 10, task, *this),
-      digital_value("ditigal2mqtt", 10, task, *this),
-      sensor_value("sensor2mqtt", 2, task, *this),
-      digital_output_value("digital_output_value", 16, task, *this),
-      digital_status_output_value("digital_status_output_value", 16, task, *this),
-      sensor_triggered("sensor_triggered", 16, task, *this),
-      sensor_restored("restored_triggered", 16, task, *this),
-      id(id)
-{    
+        : task(task),
+          cmd(cmd),
+          incoming_mqtt(MQTTQueue::create("incoming_mqtt", 10, task, *this)),
+          analog_value(AnalogQueue::create("analog2mqtt", 10, task, *this)),
+          digital_value(DigitalValueQueue::create("ditigal2mqtt", 10, task, *this)),
+          sensor_value(SensorValueQueue::create("sensor2mqtt", 2, task, *this)),
+          digital_output_value(DigitalOutputValueQueue::create("digital_output_value", 16, task, *this)),
+          digital_status_output_value(
+                  DigitalStatusOutputValueQueue::create("digital_status_output_value", 16, task, *this)),
+          sensor_triggered(SensorTriggeredQueue::create("sensor_triggered", 16, task, *this)),
+          sensor_restored(SensorRestoredQueue::create("restored_triggered", 16, task, *this)),
+          id(std::move(id))
+{
 }
 
 Mqtt::~Mqtt()
 {
-    if(client)
+    if (client)
     {
         client->disconnect();
     }
@@ -40,11 +42,11 @@ Mqtt::~Mqtt()
 
 void Mqtt::start()
 {
-    if(!client)
+    if (!client)
     {
         JsonFile f{mqtt_config};
 
-        auto &v = f.value();
+        auto& v = f.value();
         auto keep_alive = std::chrono::seconds{v["keep_alive_seconds"].get_int(5)};
         auto broker = v["broker"]["address"].get_string("");
         auto port = v["broker"]["port"].get_int(1883);
@@ -57,7 +59,7 @@ void Mqtt::start()
         {
             Log::info("Mqtt", Format("Starting MQTT client, id {1}", Str(id)));
             client = std::make_unique<MqttClient>(id, keep_alive, 8 * 1024, APPLICATION_BASE_PRIO, incoming_mqtt);
-            for(const auto& t : subscriptions)
+            for (const auto& t : subscriptions)
             {
                 client->subscribe(t, QoS::EXACTLY_ONCE);
             }
@@ -70,9 +72,10 @@ void Mqtt::start()
 void Mqtt::write_default()
 {
     JsonFile f{mqtt_config};
-    if(!f.exists())
+    if (!f.exists())
     {
-        auto &v = f.value();void event(const DigitalOutputValue& value);
+        auto& v = f.value();
+        void event(const DigitalOutputValue& value);
         void event(const DigitalStatusOutputValue& value);
         v["keep_alive_seconds"] = 5;
         v["broker"]["address"] = "";
@@ -88,15 +91,15 @@ void Mqtt::prepare_packet(smooth::core::json::Value& v)
 
 void Mqtt::add_subscription(const std::string& topic)
 {
-    if( std::find(std::begin(subscriptions), std::end(subscriptions), topic) == std::end(subscriptions))
+    if (std::find(std::begin(subscriptions), std::end(subscriptions), topic) == std::end(subscriptions))
     {
         subscriptions.emplace_back(topic);
     }
 }
 
-void Mqtt::event(const smooth::application::network::mqtt::MQTTData &data)
+void Mqtt::event(const smooth::application::network::mqtt::MQTTData& data)
 {
-    const auto& payload = smooth::application::network::mqtt::MqttClient::get_payload(data);    
+    const auto& payload = smooth::application::network::mqtt::MqttClient::get_payload(data);
 
     cmd.process(data.first, payload);
 }
@@ -105,7 +108,7 @@ void Mqtt::event(const AnalogValue& value)
 {
     if (client)
     {
-        Value v{};        
+        Value v{};
         v["value"] = static_cast<int32_t>(value.get_value());
 
         std::string topic = id;
@@ -117,7 +120,7 @@ void Mqtt::event(const AnalogValue& value)
 
 void Mqtt::event(const DigitalValue& value)
 {
-    if(client)
+    if (client)
     {
         Value v{};
         v["value"] = static_cast<int32_t>(value.get_value());
@@ -131,7 +134,7 @@ void Mqtt::event(const DigitalValue& value)
 
 void Mqtt::event(const DigitalOutputValue& value)
 {
-    if(client)
+    if (client)
     {
         Value v{};
         v["value"] = static_cast<int32_t>(value.get_value());
@@ -145,7 +148,7 @@ void Mqtt::event(const DigitalOutputValue& value)
 
 void Mqtt::event(const DigitalStatusOutputValue& value)
 {
-    if(client)
+    if (client)
     {
         Value v{};
         v["value"] = static_cast<int32_t>(value.get_value());
@@ -159,7 +162,7 @@ void Mqtt::event(const DigitalStatusOutputValue& value)
 
 void Mqtt::event(const SensorValue& value)
 {
-    if(client)
+    if (client)
     {
         Value v{};
         v["temperature"] = value.get_temperature();
@@ -174,7 +177,7 @@ void Mqtt::event(const SensorValue& value)
 
 void Mqtt::event(const g3::alarm::event::SensorTriggered& value)
 {
-    if(client)
+    if (client)
     {
         Value v{};
         prepare_packet(v);
@@ -188,7 +191,7 @@ void Mqtt::event(const g3::alarm::event::SensorTriggered& value)
 
 void Mqtt::event(const g3::alarm::event::SensorRestored& value)
 {
-    if(client)
+    if (client)
     {
         Value v{};
         v["triggered"] = false;

@@ -7,7 +7,6 @@
 #include <smooth/core/ipc/Publisher.h>
 #include <smooth/core/ipc/SubscribingTaskEventQueue.h>
 #include <smooth/core/network/Wifi.h>
-#include <smooth/core/timer/Timer.h>
 #include <smooth/core/timer/TimerExpiredEvent.h>
 #include "io/digital/I2CSetOutputCmd.h"
 #include "io/I2CTask.h"
@@ -27,8 +26,8 @@ namespace g3
 {
     App::App()
             : Application(smooth::core::APPLICATION_BASE_PRIO, std::chrono::seconds{10}),
-              digital_status_queue("io_status_queue", 8, *this, *this),              
-              network_status("network_status", 2, *this, *this),
+              digital_status_queue(DigitalStatusQueue::create("io_status_queue", 8, *this, *this)),
+              network_status(NetworkStatusQueue::create("network_status", 2, *this, *this)),
               i2c(),
               id(),
               sntp(*this),

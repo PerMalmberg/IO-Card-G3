@@ -44,9 +44,9 @@ namespace sound
 {
     Player::Player(smooth::core::Task& task)
         : task(task),
-          queue("player", 3, task, *this),
-          to_play("to_play", 3, task, *this),
-          timer(Timer::create("player_timer", PLAYER_ID, queue, false, std::chrono::milliseconds{0})),
+          queue(TimerExpiredQueue::create("player", 3, task, *this)),
+          to_play(PlaySongQueue::create("to_play", 3, task, *this)),
+          timer("player_timer", PLAYER_ID, queue, false, std::chrono::milliseconds{0}),
           note_book("/sdcard/notes.jsn")
     {        
     }
@@ -65,7 +65,7 @@ namespace sound
 
     void Player::event(const smooth::core::timer::TimerExpiredEvent& ev)
     {
-        if (song_timings.size() > 0)
+        if (!song_timings.empty())
         {
             // Alternate between on/off each time the timer expires.
             if (is_on)
@@ -129,7 +129,7 @@ namespace sound
             song_timings.emplace_back(signal[i].get_int(0));
         }
 
-        if(song_timings.size() > 0)
+        if(!song_timings.empty())
         {
             on();
             time_next_tone();

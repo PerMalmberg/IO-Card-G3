@@ -33,19 +33,19 @@ static const gpio_num_t ANALOG_CHANGE_PIN_2 = GPIO_NUM_36;
 I2CTask::I2CTask()
         : Task("I2CTask", 6 * 1024, smooth::core::APPLICATION_BASE_PRIO, seconds{10}),
           i2c_master(I2C_NUM_0, GPIO_NUM_33, false, GPIO_NUM_32, false, 100000),
-          input_change_queue(*this, *this),
-          analog_change_queue_1(*this, *this),
-          analog_change_queue_2(*this, *this),
+          input_change_queue(ISRInputQueue::create(*this, *this)),
+          analog_change_queue_1(ISRInputQueue::create(*this, *this)),
+          analog_change_queue_2(ISRInputQueue::create(*this, *this)),
           digital_input_change(input_change_queue, DIGITAL_CHANGE_PIN, false, false, GPIO_INTR_ANYEDGE),
           analog_change_1(analog_change_queue_1, ANALOG_CHANGE_PIN_1, false, false, GPIO_INTR_NEGEDGE),
           analog_change_2(analog_change_queue_2, ANALOG_CHANGE_PIN_2, false, false, GPIO_INTR_NEGEDGE),
           i2c_reset(GPIO_NUM_25, false, false, false),
           external_siren(GPIO_NUM_23, true, false, false ),
-          set_output_cmd("set_output_cmd", 10, *this, *this),
-          set_output_bit_cmd("set_output_bit_cmd", 10, *this, *this),
-          set_external_siren("set_external_siren", 3, *this, *this),
-          publish_output_queue("publish_output", 3, *this, *this),
-          publish_output_timer(smooth::core::timer::Timer::create("publish_output", PUBLISH_OUTPUTS, publish_output_queue, true, seconds{15}))
+          set_output_cmd(I2CSetOutputQueue::create("set_output_cmd", 10, *this, *this)),
+          set_output_bit_cmd(I2CSetOutputBitQueue::create("set_output_bit_cmd", 10, *this, *this)),
+          set_external_siren(ExternalSirenCommandQueue::create("set_external_siren", 3, *this, *this)),
+          publish_output_queue(TimerExpiredQueue::create("publish_output", 3, *this, *this)),
+          publish_output_timer("publish_output", PUBLISH_OUTPUTS, publish_output_queue, true, seconds{15})
 {
 }
 
@@ -180,7 +180,7 @@ void I2CTask::event(const smooth::core::timer::TimerExpiredEvent& ev)
     }
 }
 
-void I2CTask::publish_analog(uint8_t base_address, const AnalogCycler& cycler, uint16_t value)
+void I2CTask::publish_analog(uint8_t base_address, const AnalogCycler& cycler, uint16_t value) const
 {    
     RawAnalogValue av(base_address + cycler.get_input_number(), value);
     Publisher<RawAnalogValue>::publish(av);

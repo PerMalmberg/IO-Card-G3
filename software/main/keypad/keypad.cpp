@@ -15,25 +15,26 @@ namespace g3
     namespace keypad
     {
         Keypad::Keypad(smooth::core::Task& task, g3::CommandDispatcher& cmd, g3::DeviceId& id)
-                :task(task),
-                cmd(cmd),
-                id(id),
-                timer_expired_queue("timer_expired_queue", 2, task, *this),
-                keypad_entry_timer(smooth::core::timer::Timer::create("keypad_entry_timer",
-                                                                      KEYPAD_ENTRY_TIMEOUT,
-                                                                      timer_expired_queue,
-                                                                      false,
-                                                                      std::chrono::seconds{2}))
+                : task(task),
+                  cmd(cmd),
+                  id(id),
+                  timer_expired_queue(TimerExpiredQueue::create("timer_expired_queue", 2, task, *this)),
+                  keypad_entry_timer("keypad_entry_timer",
+                                     KEYPAD_ENTRY_TIMEOUT,
+                                     timer_expired_queue,
+                                     false,
+                                     std::chrono::seconds{2})
         {
-            wiegand = std::make_unique<smooth::application::io::wiegand::Wiegand>(task, *this, GPIO_NUM_27, GPIO_NUM_26);
+            wiegand = std::make_unique<smooth::application::io::wiegand::Wiegand>(task, *this, GPIO_NUM_27,
+                                                                                  GPIO_NUM_26);
         }
 
         void Keypad::wiegand_number(uint8_t num)
         {
             const int MAX_KEYPAD_LENGTH = 21;
-           
+
             keypad_entry_timer->reset();
-            
+
             if (num == 11) // '#'
             {
                 auto command = id.get() + cmd_keypad_code_entered;
@@ -41,7 +42,7 @@ namespace g3
                 Log::info("Keypad", Format("{1}", Str(keypad_entry)));
                 keypad_entry.clear();
             }
-            else if(num == 10 ) // '*'
+            else if (num == 10) // '*'
             {
                 keypad_entry.clear();
             }
@@ -52,7 +53,7 @@ namespace g3
             else
             {
                 keypad_entry += std::to_string(num);
-            }            
+            }
         }
 
         void Keypad::wiegand_id(uint32_t id, uint8_t byte_count)

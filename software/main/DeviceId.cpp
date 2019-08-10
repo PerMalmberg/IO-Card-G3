@@ -4,6 +4,7 @@
 #include <smooth/core/logging/log.h>
 #include <smooth/core/util/string_util.h>
 
+using namespace smooth::core;
 using namespace smooth::core::json;
 using namespace smooth::core::util;
 using namespace smooth::core::logging;
@@ -20,7 +21,7 @@ namespace g3
             auto& v = f.value();
 
             id = v["device_id"].get_string("");
-            trim(id);
+            string_util::trim(id);
 
             if (id.empty())
             {

@@ -27,8 +27,9 @@ namespace g3
                 smooth::core::Task& task;
                 g3::CommandDispatcher& cmd;
                 g3::DeviceId& id;
-                smooth::core::ipc::TaskEventQueue<smooth::core::timer::TimerExpiredEvent> timer_expired_queue;
-                std::shared_ptr<smooth::core::timer::Timer> keypad_entry_timer;
+                using TimerExpiredQueue = smooth::core::ipc::TaskEventQueue<smooth::core::timer::TimerExpiredEvent>;
+                std::shared_ptr<TimerExpiredQueue> timer_expired_queue;
+                smooth::core::timer::TimerOwner keypad_entry_timer;
         };
     } // keypad
     

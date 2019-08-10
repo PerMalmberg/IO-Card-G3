@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 
+set(CMAKE_CXX_STANDARD 17)
+
 project(g3)
 
 set(SOURCES main.cpp
@@ -56,7 +58,7 @@ include(../externals/smooth/lib/smooth/idf_utils.cmake)
 idf_build_executable(${PROJECT_NAME})
 
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
-__project_info("")
+#__project_info("")
 
 
 

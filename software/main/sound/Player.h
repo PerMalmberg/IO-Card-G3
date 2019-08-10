@@ -20,10 +20,10 @@ namespace sound
           public smooth::core::ipc::IEventListener<PlaySong>
     {
         public:
-            Player(smooth::core::Task&);
+            explicit Player(smooth::core::Task&);
 
-            void event(const smooth::core::timer::TimerExpiredEvent& ev);
-            void event(const PlaySong& ev);
+            void event(const smooth::core::timer::TimerExpiredEvent& ev) override;
+            void event(const PlaySong& ev) override;
 
         private:
             void on();
@@ -34,9 +34,13 @@ namespace sound
 
             
             smooth::core::Task& task;
-            smooth::core::ipc::TaskEventQueue<smooth::core::timer::TimerExpiredEvent> queue;
-            smooth::core::ipc::SubscribingTaskEventQueue<PlaySong> to_play;
-            std::shared_ptr<smooth::core::timer::Timer> timer;
+
+            using TimerExpiredQueue = smooth::core::ipc::TaskEventQueue<smooth::core::timer::TimerExpiredEvent>;
+            using PlaySongQueue = smooth::core::ipc::SubscribingTaskEventQueue<PlaySong>;
+
+            std::shared_ptr<TimerExpiredQueue> queue;
+            std::shared_ptr<PlaySongQueue> to_play;
+            smooth::core::timer::TimerOwner timer;
             smooth::core::json::JsonFile note_book;
             smooth::core::json::Value current_song{};
             std::list<std::chrono::milliseconds> song_timings{};            

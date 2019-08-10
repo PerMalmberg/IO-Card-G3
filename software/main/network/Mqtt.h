@@ -54,14 +54,25 @@ class Mqtt :
 
         smooth::core::Task& task;
         g3::CommandDispatcher& cmd;
-        smooth::core::ipc::TaskEventQueue<smooth::application::network::mqtt::MQTTData> incoming_mqtt;
-        smooth::core::ipc::SubscribingTaskEventQueue<AnalogValue> analog_value;
-        smooth::core::ipc::SubscribingTaskEventQueue<DigitalValue> digital_value;
-        smooth::core::ipc::SubscribingTaskEventQueue<SensorValue> sensor_value;
-        smooth::core::ipc::SubscribingTaskEventQueue<DigitalOutputValue> digital_output_value;
-        smooth::core::ipc::SubscribingTaskEventQueue<DigitalStatusOutputValue> digital_status_output_value;
-        smooth::core::ipc::SubscribingTaskEventQueue<g3::alarm::event::SensorTriggered> sensor_triggered;
-        smooth::core::ipc::SubscribingTaskEventQueue<g3::alarm::event::SensorRestored> sensor_restored;
+
+        using MQTTQueue = smooth::core::ipc::TaskEventQueue<smooth::application::network::mqtt::MQTTData>;
+        using AnalogQueue = smooth::core::ipc::SubscribingTaskEventQueue<AnalogValue>;
+        using DigitalValueQueue = smooth::core::ipc::SubscribingTaskEventQueue<DigitalValue>;
+        using SensorValueQueue = smooth::core::ipc::SubscribingTaskEventQueue<SensorValue>;
+        using DigitalOutputValueQueue = smooth::core::ipc::SubscribingTaskEventQueue<DigitalOutputValue>;
+        using DigitalStatusOutputValueQueue = smooth::core::ipc::SubscribingTaskEventQueue<DigitalStatusOutputValue>;
+        using SensorTriggeredQueue = smooth::core::ipc::SubscribingTaskEventQueue<g3::alarm::event::SensorTriggered>;
+        using SensorRestoredQueue = smooth::core::ipc::SubscribingTaskEventQueue<g3::alarm::event::SensorRestored>;
+
+
+        std::shared_ptr<MQTTQueue> incoming_mqtt;
+        std::shared_ptr<AnalogQueue> analog_value;
+        std::shared_ptr<DigitalValueQueue> digital_value;
+        std::shared_ptr<SensorValueQueue> sensor_value;
+        std::shared_ptr<DigitalOutputValueQueue> digital_output_value;
+        std::shared_ptr<DigitalStatusOutputValueQueue> digital_status_output_value;
+        std::shared_ptr<SensorTriggeredQueue> sensor_triggered;
+        std::shared_ptr<SensorRestoredQueue> sensor_restored;
         std::unique_ptr<smooth::application::network::mqtt::MqttClient> client{};
         std::vector<std::string> subscriptions{};
         std::string id;
