@@ -17,17 +17,10 @@ using namespace smooth::application::network::mqtt;
 using namespace std::chrono;
 
 Mqtt::Mqtt(std::string id, smooth::core::Task& task, g3::CommandDispatcher& cmd)
-        : task(task),
+        : DataListener(task),
+          task(task),
           cmd(cmd),
           incoming_mqtt(MQTTQueue::create("incoming_mqtt", 10, task, *this)),
-          analog_value(AnalogQueue::create("analog2mqtt", 10, task, *this)),
-          digital_value(DigitalValueQueue::create("ditigal2mqtt", 10, task, *this)),
-          sensor_value(SensorValueQueue::create("sensor2mqtt", 2, task, *this)),
-          digital_output_value(DigitalOutputValueQueue::create("digital_output_value", 16, task, *this)),
-          digital_status_output_value(
-                  DigitalStatusOutputValueQueue::create("digital_status_output_value", 16, task, *this)),
-          sensor_triggered(SensorTriggeredQueue::create("sensor_triggered", 16, task, *this)),
-          sensor_restored(SensorRestoredQueue::create("restored_triggered", 16, task, *this)),
           id(std::move(id))
 {
 }

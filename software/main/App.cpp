@@ -15,6 +15,7 @@
 #include "sound/PlaySong.h"
 #include "commands.h"
 #include <smooth/core/SystemStatistics.h>
+#include "http/WSDataConnection.h"
 
 using namespace std::chrono;
 using namespace smooth::core;
@@ -122,6 +123,7 @@ namespace g3
                                                                                         4096});
 
                     insecure_server->start(6, 1, std::make_shared<IPv4>("0.0.0.0", 80));
+                    insecure_server->enable_websocket_on<http::WSDataConnection>("/data");
                 }
                 else
                 {

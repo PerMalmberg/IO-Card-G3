@@ -23,6 +23,9 @@ set(SOURCES main.cpp
         alarm/sensor/AnalogSensor.cpp
         alarm/sensor/DigitalSensor.cpp
         http/TemplateDataRetriever.h
+        http/WSDataConnection.h
+        http/WSDataConnection.cpp
+        DataListener.h
 
         App.cpp
         hardware_info.h
@@ -47,6 +50,7 @@ set(SOURCES main.cpp
 
 add_executable(${PROJECT_NAME} ${SOURCES})
 target_link_libraries(${PROJECT_NAME} smooth)
+target_link_options(${PROJECT_NAME} PUBLIC "-mlongcalls" "-mtext-section-literals")
 target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_LIST_DIR})
 
 # Place binary output in top-level build directory so that idf.py can find it.
