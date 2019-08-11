@@ -23,6 +23,9 @@ set(SOURCES main.cpp
         alarm/sensor/AnalogSensor.cpp
         alarm/sensor/DigitalSensor.cpp
         http/TemplateDataRetriever.h
+        http/WSDataConnection.h
+        http/WSDataConnection.cpp
+        DataListener.h
 
         App.cpp
         hardware_info.h
@@ -48,6 +51,12 @@ set(SOURCES main.cpp
 add_executable(${PROJECT_NAME} ${SOURCES})
 target_link_libraries(${PROJECT_NAME} smooth)
 target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_LIST_DIR})
+
+if(${ESP_PLATFORM})
+    # Setting -mlongcalls and -mtext-section-literals is required to prevent linker errors when building for Xtensa.
+    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -mlongcalls -mtext-section-literals")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mlongcalls -mtext-section-literals")
+endif()
 
 # Place binary output in top-level build directory so that idf.py can find it.
 set_target_properties(${PROJECT_NAME}
