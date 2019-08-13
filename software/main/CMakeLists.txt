@@ -67,9 +67,5 @@ set_target_properties(${PROJECT_NAME}
 include(../externals/smooth/lib/smooth/idf_utils.cmake)
 idf_build_executable(${PROJECT_NAME})
 
-include($ENV{IDF_PATH}/tools/cmake/project.cmake)
-#__project_info("")
-
-
 
 
