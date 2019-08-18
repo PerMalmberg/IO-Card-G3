@@ -2,8 +2,6 @@ cmake_minimum_required(VERSION 3.10)
 
 set(CMAKE_CXX_STANDARD 17)
 
-project(g3)
-
 set(SOURCES main.cpp
         alarm/Alarm.cpp
         alarm/AlarmConfig.cpp
@@ -48,24 +46,10 @@ set(SOURCES main.cpp
         sound/Player.cpp
         )
 
-add_executable(${PROJECT_NAME} ${SOURCES})
-target_link_libraries(${PROJECT_NAME} smooth)
-target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_LIST_DIR})
-
-if(${ESP_PLATFORM})
-    # Setting -mlongcalls and -mtext-section-literals is required to prevent linker errors when building for Xtensa.
-    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -mlongcalls -mtext-section-literals")
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mlongcalls -mtext-section-literals")
-endif()
-
-# Place binary output in top-level build directory so that idf.py can find it.
-set_target_properties(${PROJECT_NAME}
-        PROPERTIES
-        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}"
+idf_component_register(SRCS ${SOURCES}
+        INCLUDE_DIRS
+            ${CMAKE_CURRENT_LIST_DIR}
+            $ENV{IDF_PATH}/components
+        REQUIRES
+            smooth_component
         )
-
-include(../externals/smooth/lib/smooth/idf_utils.cmake)
-idf_build_executable(${PROJECT_NAME})
-
-
-
