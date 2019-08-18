@@ -1,9 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <title>G3 I/O</title>
     </head>
-    <body>
-        Nothing to see here.
+    <body onload="connect();">
+        <div id ="app">
+            <p>{{input_analog}}</p><br>
+            <p>{{input_digital}}</p><br>
+            <p>{{sensor}}</p><br>
+            <p>{{output_digital}}</p><br>
+            <p>{{sensor_triggered}}</p><br>
+        </div>
     </body>
+    <script src="index.js"></script>
 </html>
