@@ -100,7 +100,7 @@ namespace g3
                                                           false);
                 }
 
-                auto res = sd_card->init("/sdcard", false, 5);
+                auto res = sd_card->init(SDCardMount::instance(), false, 5);
                 Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit{I2CDevice::status, SD_CARD_INIT_OK, res});
 
                 if (res)
