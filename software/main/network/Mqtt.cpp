@@ -14,7 +14,11 @@ using namespace smooth::core::ipc;
 using namespace smooth::core::json;
 using namespace smooth::core::network;
 using namespace smooth::application::network::mqtt;
+
+
 using namespace std::chrono;
+
+static const std::string mqtt_config = smooth::core::filesystem::SDCardMount::instance().mount_point() / "mqtt.jsn";
 
 Mqtt::Mqtt(std::string id, smooth::core::Task& task, g3::CommandDispatcher& cmd)
         : DataListener(task),

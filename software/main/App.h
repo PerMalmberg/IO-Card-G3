@@ -51,7 +51,7 @@ namespace g3
             std::shared_ptr<NetworkStatusQueue> network_status;
             std::unique_ptr<sound::Player> player{};
 
-            http::DataRetriever data_retriever{};
+            std::shared_ptr<http::DataRetriever> data_retriever{};
             std::unique_ptr<smooth::application::network::http::InsecureServer> insecure_server{};
 
             I2CTask i2c;

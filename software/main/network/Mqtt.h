@@ -6,6 +6,7 @@
 #include <smooth/core/Task.h>
 #include <smooth/application/network/mqtt/MqttClient.h>
 #include <smooth/core/ipc/TaskEventQueue.h>
+#include <smooth/core/filesystem/MountPoint.h>
 #include <smooth/core/json/Value.h>
 #include "alarm/event/AnalogValue.h"
 #include "alarm/event/DigitalValue.h"
@@ -42,8 +43,6 @@ class Mqtt :
         void event(const g3::alarm::event::SensorRestored& value) override;
 
     private:
-        static constexpr const char* mqtt_config = "/sdcard/mqtt.jsn";
-
         void start_mqtt();
         void prepare_packet(smooth::core::json::Value& v);
         void send(const std::string& topic, smooth::core::json::Value& v);        

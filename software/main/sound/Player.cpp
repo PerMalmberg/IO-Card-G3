@@ -5,9 +5,11 @@
 #include <smooth/core/ipc/Publisher.h>
 #include "io/digital/I2CSetOutputCmd.h"
 #include "timer_id.h"
+#include <smooth/core/filesystem/MountPoint.h>
 
 using namespace smooth::core::ipc;
 using namespace smooth::core::timer;
+using namespace smooth::core::filesystem;
 
 /*
 
@@ -47,7 +49,7 @@ namespace sound
           queue(TimerExpiredQueue::create("player", 3, task, *this)),
           to_play(PlaySongQueue::create("to_play", 3, task, *this)),
           timer("player_timer", PLAYER_ID, queue, false, std::chrono::milliseconds{0}),
-          note_book("/sdcard/notes.jsn")
+          note_book(SDCardMount::instance().mount_point() / "notes.jsn")
     {        
     }
 

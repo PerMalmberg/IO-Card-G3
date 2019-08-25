@@ -16,6 +16,7 @@
 #include "commands.h"
 #include <smooth/core/SystemStatistics.h>
 #include "http/WSDataConnection.h"
+#include <smooth/core/filesystem/MountPoint.h>
 
 using namespace std::chrono;
 using namespace smooth::core;
@@ -32,7 +33,6 @@ namespace g3
             : Application(smooth::core::APPLICATION_BASE_PRIO, std::chrono::seconds{10}),
               digital_status_queue(DigitalStatusQueue::create("io_status_queue", 8, *this, *this)),
               network_status(NetworkStatusQueue::create("network_status", 2, *this, *this)),
-              data_retriever(),
               i2c(),
               id(),
               sntp(*this),
@@ -114,8 +114,9 @@ namespace g3
 
                     wifi.start();
 
+                    data_retriever = std::make_shared<http::DataRetriever>();
                     insecure_server = std::make_unique<InsecureServer>(*this,
-                                                                       HTTPServerConfig{"/sdcard/web_root",
+                                                                       HTTPServerConfig{ SDCardMount::instance().mount_point() / "web_root",
                                                                                         {"index.html"},
                                                                                         {".html"},
                                                                                         data_retriever,
@@ -177,7 +178,7 @@ namespace g3
 
                 auto command = id.get() + cmd_keypad_code_entered;
                 mqtt->add_subscription(command);
-                cmd.add_command(command, [this](const std::string& command, const std::string& data) {
+                cmd.add_command(command, [](const std::string& command, const std::string& data) {
                     // Expected payload: { "code": "1234" }
                     smooth::core::json::Value d{data};
                     auto code = d["code"].get_string("");
@@ -189,7 +190,7 @@ namespace g3
 
                 command = id.get() + cmd_play_song;
                 mqtt->add_subscription(command);
-                cmd.add_command(command, [this](const std::string& command, const std::string& data) {
+                cmd.add_command(command, [](const std::string& command, const std::string& data) {
                     smooth::core::json::Value d{data};
                     Publisher<sound::PlaySong>::publish(sound::PlaySong(d["name"].get_string("")));
                 });
