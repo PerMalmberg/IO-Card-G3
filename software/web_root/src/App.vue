@@ -57,6 +57,30 @@
         >Fake first</button>
       </tfoot>
     </table>
+    <hr />
+    <table>
+      <caption>Users</caption>
+      <th>Name</th>
+      <th>Passcode</th>
+      <User
+        v-for="(input, index) in codes"
+        v-bind:key="index"
+        :settings="codes[index]"
+      />
+      <tfoot>
+        <button
+          v-on:click="add_default_user"
+          v-if="codes.length == 0"
+        >Add default user</button>
+      </tfoot>
+    </table>
+    <hr />
+    <table>
+      <caption>Timings</caption>
+      <th>Triggered</th>
+      <th>Silence</th>
+      <Timeout :settings='timing.timeout'/>
+    </table>
   </div>
 </template>
 
@@ -65,6 +89,8 @@ import Vue from 'vue'
 import DigitalInput from './components/DigitalInput.vue'
 import DigitalOutput from './components/DigitalOutput.vue'
 import AnalogInput from './components/AnalogInput.vue'
+import User from './components/User.vue'
+import Timeout from './components/Timeout.vue'
 
 export default {
   name: 'app',
@@ -79,15 +105,21 @@ export default {
           input: []
         }
       },
-      digital_output: [],
-      analog_input: [],
-      environment_sensor: {}
+      codes: [],
+      timing: {
+        timeout: {
+          triggered: 60,
+          silence: 60
+        }
+      }
     }
   },
   components: {
     DigitalInput,
     DigitalOutput,
-    AnalogInput
+    AnalogInput,
+    User,
+    Timeout
   },
   methods: {
     fake_first_input: function () {
@@ -115,6 +147,12 @@ export default {
         },
         entry_delay: 0,
         exit_delay: 0
+      })
+    },
+    add_default_user: function () {
+      Vue.set(this.codes, 0, {
+        name: 'Owner',
+        verification_data: null
       })
     }
   }
