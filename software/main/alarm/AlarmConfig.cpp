@@ -82,7 +82,10 @@ namespace g3::alarm
             v[TIMING][TIMEOUT][TRIGGERED] = 60;
             v[TIMING][TIMEOUT][TRIGGERED_SILENCE] = 60;
 
-            f.save();
+            if(!f.save())
+            {
+                Log::error("Alarm", "Could not save default config.");
+            }
         }
     }
 }

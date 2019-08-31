@@ -60,6 +60,12 @@ namespace g3
             g3::network::Wifi wifi;
             g3::alarm::Alarm alarm;
             g3::keypad::Keypad keypad;
+
+#ifdef ESP_PLATFORM
+            const int http_port = 80;
+#else
+            const int http_port = 8080;
+#endif
     };
 
 }

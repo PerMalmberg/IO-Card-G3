@@ -78,11 +78,14 @@ namespace g3
             auto configured_servers = v["sntp_servers"];
             
             std::vector <std::string> servers{};
-            if( configured_servers.get_array_size() == 0)
+            if (configured_servers.get_array_size() == 0)
             {        
                 // Write default config.
                 configured_servers[0] = "";
-                server.save();
+                if (!server.save())
+                {
+                    Log::error("SNTP", "Could not write default SNTP config.");
+                }
             }
         }
     }

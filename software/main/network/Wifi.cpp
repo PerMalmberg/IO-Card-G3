@@ -40,7 +40,10 @@ namespace g3::network
             auto& v = wifi_creds.value();
             v["ssid"] = "";
             v["password"] = "";
-            wifi_creds.save();
+            if(!wifi_creds.save())
+            {
+                Log::error("Wifi", "Could not save default wifi config.");
+            }
         }
     }
 }

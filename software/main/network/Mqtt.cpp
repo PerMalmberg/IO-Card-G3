@@ -77,7 +77,11 @@ void Mqtt::write_default()
         v["keep_alive_seconds"] = 5;
         v["broker"]["address"] = "";
         v["broker"]["port"] = 1883;
-        f.save();
+
+        if (!f.save())
+        {
+            Log::error("MQTT", "Could not write default MQTT config");
+        }
     }
 }
 

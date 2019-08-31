@@ -29,7 +29,11 @@ namespace g3
             {
                 id = generate();
                 v["device_id"] = id;
-                f.save();
+
+                if(!f.save())
+                {
+                    Log::error("Device ID", "Could not save device id.");
+                }
             }
 
             Log::info("Device ID", id);
@@ -48,9 +52,14 @@ namespace g3
 
             const auto& generated = generate();
             v["device_id"] = generated;
-            f.save();
-
-            Log::info("Generated device ID", generated);
+            if(f.save())
+            {
+                Log::info("Generated device ID", generated);
+            }
+            else
+            {
+                Log::error("Device ID", "Could not save device id.");
+            }
         }
     }
 

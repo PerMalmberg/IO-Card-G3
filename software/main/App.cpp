@@ -123,7 +123,7 @@ namespace g3
                                                                                         4096,
                                                                                         4096});
 
-                    insecure_server->start(6, 1, std::make_shared<IPv4>("0.0.0.0", 80));
+                    insecure_server->start(6, 1, std::make_shared<IPv4>("0.0.0.0", http_port));
                     insecure_server->enable_websocket_on<http::WSDataConnection>("/data");
                 }
                 else
