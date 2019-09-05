@@ -10,15 +10,15 @@ using namespace smooth::core::filesystem;
 
 namespace g3::network
 {
-    static const char* wifi_cfg = SDCardMount::instance().mount_point() / "wifi.jsn";
+    static const auto wifi_cfg = SDCardMount::instance().mount_point() / "wifi.jsn";
 
     void Wifi::start()
     {
         JsonFile wifi_creds{wifi_cfg};
         auto& v = wifi_creds.value();
 
-        const auto ssid = v["ssid"].get_string("");
-        const auto password = v["password"].get_string("");
+        const auto ssid = v.value("ssid", "");
+        const auto password = v.value("password", "");
 
         if (!ssid.empty() && !password.empty())
         {

@@ -8,10 +8,10 @@
 #include <smooth/core/timer/TimerExpiredEvent.h>
 #include <smooth/core/ipc/TaskEventQueue.h>
 #include <smooth/core/ipc/SubscribingTaskEventQueue.h>
-#include <smooth/core/json/Value.h>
 #include <smooth/core/json/JsonFile.h>
 #include "hardware_info.h"
 #include "PlaySong.h"
+#include <nlohmann/json.hpp>
 
 namespace sound
 {
@@ -42,7 +42,7 @@ namespace sound
             std::shared_ptr<PlaySongQueue> to_play;
             smooth::core::timer::TimerOwner timer;
             smooth::core::json::JsonFile note_book;
-            smooth::core::json::Value current_song{};
+            nlohmann::json current_song{};
             std::list<std::chrono::milliseconds> song_timings{};            
             bool is_on{false};
     };

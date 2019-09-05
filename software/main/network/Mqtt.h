@@ -7,7 +7,6 @@
 #include <smooth/application/network/mqtt/MqttClient.h>
 #include <smooth/core/ipc/TaskEventQueue.h>
 #include <smooth/core/filesystem/MountPoint.h>
-#include <smooth/core/json/Value.h>
 #include "alarm/event/AnalogValue.h"
 #include "alarm/event/DigitalValue.h"
 #include "alarm/event/SensorTriggered.h"
@@ -17,6 +16,7 @@
 #include "io/digital/DigitalStatusOutputValue.h"
 #include "CommandDispatcher.h"
 #include "DataListener.h"
+#include <nlohmann/json.hpp>
 
 class Mqtt : 
     public smooth::core::ipc::IEventListener<smooth::application::network::mqtt::MQTTData>,
@@ -44,8 +44,8 @@ class Mqtt :
 
     private:
         void start_mqtt();
-        void prepare_packet(smooth::core::json::Value& v);
-        void send(const std::string& topic, smooth::core::json::Value& v);        
+        void prepare_packet(nlohmann::json& v);
+        void send(const std::string& topic, nlohmann::json& v);
 
         smooth::core::Task& task;
         g3::CommandDispatcher& cmd;

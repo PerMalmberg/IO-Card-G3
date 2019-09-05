@@ -17,12 +17,14 @@
 #include <smooth/core/SystemStatistics.h>
 #include "http/WSDataConnection.h"
 #include <smooth/core/filesystem/MountPoint.h>
+#include <smooth/core/util/json_util.h>
 
 using namespace std::chrono;
 using namespace smooth::core;
 using namespace smooth::core::filesystem;
 using namespace smooth::core::ipc;
 using namespace smooth::core::json;
+using namespace smooth::core::json_util;
 using namespace smooth::core::network;
 using namespace smooth::core::timer;
 using namespace smooth::application::network::http;
@@ -169,9 +171,9 @@ namespace g3
                     if (command.size() > 2 && command[command.length() - 2] == '/')
                     {
                         std::string last_char{command[command.length() - 1]};
-                        smooth::core::json::Value d{data};
+                        nlohmann::json d{data};
 
-                        auto val = d["value"].get_bool(false);
+                        auto val = default_value(d, "value", false);
                         alarm.set_output(last_char, val);
                     }
                 });
@@ -180,8 +182,8 @@ namespace g3
                 mqtt->add_subscription(command);
                 cmd.add_command(command, [](const std::string& command, const std::string& data) {
                     // Expected payload: { "code": "1234" }
-                    smooth::core::json::Value d{data};
-                    auto code = d["code"].get_string("");
+                    nlohmann::json d{data};
+                    auto code = default_value(d, "code", "");
                     if (!code.empty())
                     {
                         Publisher<g3::alarm::event::CodeEntered>::publish(g3::alarm::event::CodeEntered(code));
@@ -191,8 +193,8 @@ namespace g3
                 command = id.get() + cmd_play_song;
                 mqtt->add_subscription(command);
                 cmd.add_command(command, [](const std::string& command, const std::string& data) {
-                    smooth::core::json::Value d{data};
-                    Publisher<sound::PlaySong>::publish(sound::PlaySong(d["name"].get_string("")));
+                    nlohmann::json d{data};
+                    Publisher<sound::PlaySong>::publish(sound::PlaySong(default_value(d, "name", "")));
                 });
 
             }

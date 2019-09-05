@@ -2,23 +2,24 @@
 #include <chrono>
 #include <utility>
 #include <smooth/core/json/JsonFile.h>
+#include <smooth/core/util/json_util.h>
 #include <smooth/core/logging/log.h>
 #include <smooth/core/task_priorities.h>
 #include <smooth/core/network/IPv4.h>
 #include <smooth/core/ipc/Publisher.h>
-#include "io/digital/I2CSetOutputCmd.h"
-#include "hardware_info.h"
+#include <smooth/core/util/json_util.h>
 
 using namespace smooth::core;
 using namespace smooth::core::ipc;
 using namespace smooth::core::json;
+using namespace smooth::core::json_util;
 using namespace smooth::core::network;
 using namespace smooth::application::network::mqtt;
 
 
 using namespace std::chrono;
 
-static const std::string mqtt_config = smooth::core::filesystem::SDCardMount::instance().mount_point() / "mqtt.jsn";
+static const auto mqtt_config = smooth::core::filesystem::SDCardMount::instance().mount_point() / "mqtt.jsn";
 
 Mqtt::Mqtt(std::string id, smooth::core::Task& task, g3::CommandDispatcher& cmd)
         : DataListener(task),
@@ -44,13 +45,13 @@ void Mqtt::start()
         JsonFile f{mqtt_config};
 
         auto& v = f.value();
-        auto keep_alive = std::chrono::seconds{v["keep_alive_seconds"].get_int(5)};
-        auto broker = v["broker"]["address"].get_string("");
-        auto port = v["broker"]["port"].get_int(1883);
+        auto keep_alive = std::chrono::seconds{default_value(v, "keep_alive_seconds", 5)};
+        auto broker = default_value(v["broker"], "address", "");
+        auto port = default_value(v["broker"], "port", 1883);
 
         if (broker.empty())
         {
-            Log::error("Mqtt", "No broker specifified");
+            Log::error("Mqtt", "No broker specified");
         }
         else
         {
@@ -85,7 +86,7 @@ void Mqtt::write_default()
     }
 }
 
-void Mqtt::prepare_packet(smooth::core::json::Value& v)
+void Mqtt::prepare_packet(nlohmann::json& v)
 {
     v["timestamp"] = std::to_string(static_cast<int64_t>(system_clock::now().time_since_epoch().count()));
 }
@@ -109,7 +110,7 @@ void Mqtt::event(const AnalogValue& value)
 {
     if (client)
     {
-        Value v{};
+        nlohmann::json v{};
         v["value"] = static_cast<int32_t>(value.get_value());
 
         std::string topic = id;
@@ -123,7 +124,7 @@ void Mqtt::event(const DigitalValue& value)
 {
     if (client)
     {
-        Value v{};
+        nlohmann::json v{};
         v["value"] = static_cast<int32_t>(value.get_value());
 
         std::string topic = id;
@@ -137,7 +138,7 @@ void Mqtt::event(const DigitalOutputValue& value)
 {
     if (client)
     {
-        Value v{};
+        nlohmann::json v{};
         v["value"] = static_cast<int32_t>(value.get_value());
 
         std::string topic = id;
@@ -151,7 +152,7 @@ void Mqtt::event(const DigitalStatusOutputValue& value)
 {
     if (client)
     {
-        Value v{};
+        nlohmann::json v{};
         v["value"] = static_cast<int32_t>(value.get_value());
 
         std::string topic = id;
@@ -165,7 +166,7 @@ void Mqtt::event(const SensorValue& value)
 {
     if (client)
     {
-        Value v{};
+        nlohmann::json v{};
         v["temperature"] = value.get_temperature();
         v["humidity"] = value.get_humidity();
         v["pressure"] = value.get_pressure();
@@ -180,7 +181,7 @@ void Mqtt::event(const g3::alarm::event::SensorTriggered& value)
 {
     if (client)
     {
-        Value v{};
+        nlohmann::json v{};
         prepare_packet(v);
         v["triggered"] = true;
         std::string topic = id;
@@ -194,7 +195,7 @@ void Mqtt::event(const g3::alarm::event::SensorRestored& value)
 {
     if (client)
     {
-        Value v{};
+        nlohmann::json v{};
         v["triggered"] = false;
         std::string topic = id;
         topic.append("/alarm/sensor/");
@@ -203,8 +204,8 @@ void Mqtt::event(const g3::alarm::event::SensorRestored& value)
     }
 }
 
-void Mqtt::send(const std::string& topic, smooth::core::json::Value& v)
+void Mqtt::send(const std::string& topic, nlohmann::json& v)
 {
     prepare_packet(v);
-    client->publish(topic, v.to_string(), QoS::EXACTLY_ONCE, false);
+    client->publish(topic, v.dump(), QoS::EXACTLY_ONCE, false);
 }

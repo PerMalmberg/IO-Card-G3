@@ -1,11 +1,13 @@
 #include "BaseSensor.h"
 #include <smooth/core/ipc/Publisher.h>
 #include <smooth/core/logging/log.h>
+#include <smooth/core/util/json_util.h>
 #include "alarm/event/SensorTriggered.h"
 #include "alarm/event/SensorRestored.h"
 
 using namespace std::chrono;
 using namespace smooth::core::ipc;
+using namespace smooth::core::json_util;
 using namespace smooth::core::logging;
 
 namespace g3
@@ -21,12 +23,12 @@ namespace g3
 
         std::chrono::seconds BaseSensor::get_entry_delay()
         {
-            return seconds{get_settings()[ENTRY_DELAY].get_int(0)};
+            return seconds{default_value(get_settings(), ENTRY_DELAY, 0)};
         }
         
         std::chrono::seconds BaseSensor::get_exit_delay()
         {
-            return seconds{get_settings()[EXIT_DELAY].get_int(0)};
+            return seconds{default_value(get_settings(), EXIT_DELAY, 0)};
         }
 
         void BaseSensor::update_age()
@@ -73,7 +75,7 @@ namespace g3
 
         std::string BaseSensor::get_sensor_name()
         {
-            auto sensor_name = get_settings()[NAME].get_string("");
+            auto sensor_name = default_value(get_settings(), NAME, "");
             if(sensor_name.empty())
             {
                 sensor_name = "NoName";

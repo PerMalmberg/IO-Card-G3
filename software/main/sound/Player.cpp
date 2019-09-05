@@ -1,8 +1,8 @@
 #include "Player.h"
 
 #include <string>
-#include <algorithm>
 #include <smooth/core/ipc/Publisher.h>
+#include <smooth/core/util/json_util.h>
 #include "io/digital/I2CSetOutputCmd.h"
 #include "timer_id.h"
 #include <smooth/core/filesystem/MountPoint.h>
@@ -10,6 +10,7 @@
 using namespace smooth::core::ipc;
 using namespace smooth::core::timer;
 using namespace smooth::core::filesystem;
+using namespace smooth::core::json_util;
 
 /*
 
@@ -85,7 +86,7 @@ namespace sound
         {
             off();
 
-            if(current_song["repeat"].get_bool(false))
+            if(default_value(current_song, "repeat", false))
             {
                 Log::info("Player", "Repeating song");
                 start_song();
@@ -95,13 +96,12 @@ namespace sound
 
     void Player::event(const PlaySong& ev)
     {
-        std::vector<std::string> names{};
-        note_book.value().get_member_names(names);
+        const auto& book = note_book.value();
+        auto song = book.find(ev.get_name());
 
-        // Check if the requested song exits before trying to get it so that we don't create garbage in the JSON structure, taking up memory.
-        if (std::find(std::begin(names), std::end(names), ev.get_name()) != names.end())
+        if(song != book.end())
         {
-            current_song = note_book.value()[ev.get_name()];
+            current_song = *song;
             play_song(ev.get_name());
         }
         else
@@ -109,7 +109,7 @@ namespace sound
             Log::info("Player", Format("Song '{1}' not found", Str(ev.get_name())));
             off();
             song_timings.clear();
-            current_song = smooth::core::json::Value{};
+            current_song.clear();
         }        
     }
 
@@ -126,9 +126,9 @@ namespace sound
         song_timings.clear();
 
         auto signal = current_song["signal"];
-        for(auto i = 0; i < signal.get_array_size(); ++i)
+        for(auto t : signal)
         {
-            song_timings.emplace_back(signal[i].get_int(0));
+            song_timings.emplace_back(t);
         }
 
         if(!song_timings.empty())

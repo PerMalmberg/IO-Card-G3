@@ -35,9 +35,8 @@ namespace g3
                 auto configured_servers = v["sntp_servers"];
                 
                 std::vector <std::string> servers{};
-                for(int i = 0; i < configured_servers.get_array_size(); ++i)
+                for(const auto & s : configured_servers)
                 {
-                    const auto& s = configured_servers[i].get_string("");
                     if(!s.empty())
                     {
                         Log::info(name, Format("SNTP server: {1}", Str(s)));
@@ -78,7 +77,7 @@ namespace g3
             auto configured_servers = v["sntp_servers"];
             
             std::vector <std::string> servers{};
-            if (configured_servers.get_array_size() == 0)
+            if (configured_servers.empty())
             {        
                 // Write default config.
                 configured_servers[0] = "";

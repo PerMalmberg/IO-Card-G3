@@ -4,6 +4,7 @@
 #include <smooth/application/security/PasswordHash.h>
 #include <smooth/core/ipc/Publisher.h>
 #include <smooth/core/logging/log.h>
+#include <smooth/core/util/json_util.h>
 #include "io/digital/I2CSetOutputCmd.h"
 #include "state/Idle.h"
 #include "hardware_info.h"
@@ -14,6 +15,7 @@ using namespace std::chrono;
 using namespace smooth::core::logging;
 using namespace smooth::core::timer;
 using namespace smooth::core::ipc;
+using namespace smooth::core::json_util;
 
 static constexpr const char* tag = "Alarm";
 
@@ -111,7 +113,7 @@ namespace g3
 
         bool Alarm::validate_code(const std::string& code)
         {            
-            auto number_of_codes = cfg.get()[CODES].get_array_size();
+            auto number_of_codes = cfg.get()[CODES].size();
             smooth::application::security::PasswordHash ph{};
 
             Log::info(tag, Format("Code: {1}", Str(code)));
@@ -119,7 +121,7 @@ namespace g3
             bool valid = false;
             for (auto i = 0; !valid && i < number_of_codes; ++i)
             {
-                valid = ph.verify_password_against_hash(code, cfg.get()[CODES][i][VERIFICATION_DATA].get_string(""));
+                valid = ph.verify_password_against_hash(code, default_value(cfg.get()[CODES][i], VERIFICATION_DATA, ""));
                 if(valid)
                 {
                     Log::info(tag, Format("Code validated against hash {1}", Int32(i)));
@@ -177,19 +179,19 @@ namespace g3
 
         std::chrono::seconds Alarm::get_triggered_timeout()
         {
-            seconds s{cfg.get()[TIMING][TIMEOUT][TRIGGERED].get_int(60)};
+            seconds s{default_value(cfg.get()[TIMING][TIMEOUT], TRIGGERED, 60)};
             return s;
         }
 
         std::chrono::seconds Alarm::get_triggered_silence_timeout()
         {
-            seconds s{cfg.get()[TIMING][TIMEOUT][TRIGGERED_SILENCE].get_int(60)};
+            seconds s{default_value(cfg.get()[TIMING][TIMEOUT], TRIGGERED_SILENCE, 60)};
             return s;
         }
 
         void Alarm::set_output(const std::string& output_number, bool active)
         {
-            auto external_control_allowed = cfg.get()[SENSORS][DIGITAL][OUTPUT][output_number][ALLOW_EXTERNAL_CONTROL].get_bool(false);
+            auto external_control_allowed = default_value(cfg.get()[SENSORS][DIGITAL][OUTPUT][output_number], ALLOW_EXTERNAL_CONTROL, false);
 
             if (external_control_allowed)
             {

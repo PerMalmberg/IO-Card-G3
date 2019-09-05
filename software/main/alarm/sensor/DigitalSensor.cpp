@@ -1,9 +1,11 @@
 #include "DigitalSensor.h"
 #include <smooth/core/ipc/Publisher.h>
+#include <smooth/core/util/json_util.h>
 #include "alarm/event/DigitalValue.h"
 #include "alarm/config_constants.h"
 
 using namespace smooth::core::ipc;
+using namespace smooth::core::json_util;
 
 namespace g3
 {
@@ -19,7 +21,7 @@ namespace g3
         {
             return has_value 
                 && is_enabled()
-                && last.get_value() != config_value[ARMED_STATE].get_bool(false);
+                && last.get_value() != default_value(config_value, ARMED_STATE, false);
         }
 
         void DigitalSensor::update(const DigitalInputValue& value)

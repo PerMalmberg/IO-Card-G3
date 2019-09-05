@@ -64,7 +64,7 @@ namespace g3
 #ifdef ESP_PLATFORM
             const int http_port = 80;
 #else
-            const int http_port = 8080;
+            const int http_port = 8081;
 #endif
     };
 

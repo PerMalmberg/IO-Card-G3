@@ -1,29 +1,26 @@
 #pragma once
 
-#include <smooth/core/json/Value.h>
+#include <nlohmann/json.hpp>
 #include <smooth/core/json/JsonFile.h>
 #include <smooth/application/security/PasswordHash.h>
 
-namespace g3
+namespace g3::alarm
 {
-    namespace alarm
+    class AlarmConfig
     {
-        class AlarmConfig
-        {
-            public:
-                AlarmConfig();
+        public:
+            AlarmConfig();
 
-                void load();
-                void write_default() const;
+            void load();
+            void write_default() const;
 
-                smooth::core::json::Value& get()
-                {
-                    return f.value();
-                }
+            nlohmann::json& get()
+            {
+                return f.value();
+            }
 
-            private:
-                smooth::core::json::JsonFile f;
-                smooth::application::security::PasswordHash ph{};
-        };
-    }
+        private:
+            smooth::core::json::JsonFile f;
+            smooth::application::security::PasswordHash ph{};
+    };
 }

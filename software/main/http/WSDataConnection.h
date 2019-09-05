@@ -1,7 +1,7 @@
 #pragma once
 
-#include <smooth/application/network/http/websocket/WebsocketServer.h>
 #include "DataListener.h"
+#include <smooth/application/network/http/websocket/WebsocketServer.h>
 
 namespace http
 {
@@ -25,6 +25,6 @@ namespace http
             void event(const g3::alarm::event::SensorTriggered& value) override;
             void event(const g3::alarm::event::SensorRestored& value) override;
         private:
-
+            std::stringstream ss{};
     };
 }

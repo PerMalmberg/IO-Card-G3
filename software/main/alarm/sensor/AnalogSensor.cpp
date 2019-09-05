@@ -2,8 +2,10 @@
 #include <smooth/core/ipc/Publisher.h>
 #include "alarm/event/AnalogValue.h"
 #include "alarm/config_constants.h"
+#include <smooth/core/util/json_util.h>
 
 using namespace smooth::core::ipc;
+using namespace smooth::core::json_util;
 
 namespace g3
 {
@@ -40,8 +42,8 @@ namespace g3
 
         bool AnalogSensor::is_within_limits(uint32_t value)
         {
-            auto min = config_value[ALLOWED_RANGE][MIN].get_int(0);
-            auto max = config_value[ALLOWED_RANGE][MAX].get_int(std::numeric_limits<uint32_t>::max());
+            auto min = default_value(config_value[ALLOWED_RANGE], MIN, 0);
+            auto max = default_value(config_value[ALLOWED_RANGE], MAX, std::numeric_limits<uint32_t>::max());
             return value >= min && value <= max;
         }
 

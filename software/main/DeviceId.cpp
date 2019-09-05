@@ -2,18 +2,20 @@
 #include <random>
 #include <smooth/core/json/JsonFile.h>
 #include <smooth/core/logging/log.h>
+#include <smooth/core/util/json_util.h>
 #include <smooth/core/util/string_util.h>
 #include <smooth/core/filesystem/MountPoint.h>
 
 using namespace smooth::core;
 using namespace smooth::core::json;
+using namespace smooth::core::json_util;
 using namespace smooth::core::util;
 using namespace smooth::core::logging;
 using namespace smooth::core::filesystem;
 
 namespace g3
 {
-    static const std::string id_file = SDCardMount::instance().mount_point() / "dev_id.jsn";
+    static const auto id_file = SDCardMount::instance().mount_point() / "dev_id.jsn";
 
     const std::string& DeviceId::get()
     {
@@ -22,7 +24,7 @@ namespace g3
             JsonFile f{id_file};
             auto& v = f.value();
 
-            id = v["device_id"].get_string("");
+            id =  default_value(v, "device_id", "");
             string_util::trim(id);
 
             if (id.empty())

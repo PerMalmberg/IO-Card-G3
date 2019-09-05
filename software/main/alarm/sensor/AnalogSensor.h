@@ -18,7 +18,7 @@ namespace g3
                 bool is_triggered() override;
 
             protected:
-                smooth::core::json::Value get_settings() override
+                nlohmann::json& get_settings() override
                 {
                     return config.get()[SENSORS][ANALOG][INPUT][sensor_number];
                 }

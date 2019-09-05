@@ -1,6 +1,23 @@
 <template>
   <div id="app">
     <table>
+      <caption>Environment</caption>
+      <tr>
+        <td>Temperature</td>
+        <td>{{root.vm.environment.temperature}}</td>
+      </tr>
+      <tr>
+        <td>Humidity</td>
+        <td>{{root.vm.environment.humidity}}</td>
+      </tr>
+      <tr>
+        <td>Preassure</td>
+        <td>{{root.vm.environment.preassure}}</td>
+      </tr>
+    </table>
+    <br/>
+    <button v-on:click="request_config">Request config</button>
+    <table>
       <caption>Digital Inputs Settings</caption>
       <th>Name</th>
       <th>Enabled</th>
@@ -8,14 +25,14 @@
       <th>Entry delay</th>
       <th>Exit delay</th>
       <DigitalInput
-        v-for="(input, name) in sensors.digital.input"
+        v-for="(input, name) in root.config.sensors.digital.input"
         v-bind:key="name"
-        :settings="sensors.digital.input[name]"
+        :settings="root.config.sensors.digital.input[name]"
       />
       <tfoot>
         <button
           v-on:click="fake_first_input"
-          v-if="sensors.digital.input['0'] == undefined"
+          v-if="root.config.sensors.digital.input['0'] == undefined"
         >Fake first</button>
       </tfoot>
     </table>
@@ -25,14 +42,14 @@
       <th>Name</th>
       <th>Allow external control</th>
       <DigitalOutput
-        v-for="(input, name) in sensors.digital.output"
+        v-for="(input, name) in root.config.sensors.digital.output"
         v-bind:key="name"
-        :settings="sensors.digital.output[name]"
+        :settings="root.config.sensors.digital.output[name]"
       />
       <tfoot>
         <button
           v-on:click="fake_first_output"
-          v-if="sensors.digital.output['0'] == undefined"
+          v-if="root.config.sensors.digital.output['0'] == undefined"
         >Fake first</button>
       </tfoot>
     </table>
@@ -46,14 +63,14 @@
       <th>Entry delay</th>
       <th>Exit delay</th>
       <AnalogInput
-        v-for="(input, name) in sensors.analog.input"
+        v-for="(input, name) in root.config.sensors.analog.input"
         v-bind:key="name"
-        :settings="sensors.analog.input[name]"
+        :settings="root.config.sensors.analog.input[name]"
       />
       <tfoot>
         <button
           v-on:click="fake_first_analog_input"
-          v-if="sensors.analog.input['0'] == undefined"
+          v-if="root.config.sensors.analog.input['0'] == undefined"
         >Fake first</button>
       </tfoot>
     </table>
@@ -62,16 +79,9 @@
       <caption>Users</caption>
       <th>Name</th>
       <th>Passcode</th>
-      <User
-        v-for="(input, index) in codes"
-        v-bind:key="index"
-        :settings="codes[index]"
-      />
+      <User v-for="(input, index) in root.config.codes" v-bind:key="index" :settings="root.config.codes[index]" />
       <tfoot>
-        <button
-          v-on:click="add_default_user"
-          v-if="codes.length == 0"
-        >Add default user</button>
+        <button v-on:click="add_default_user" v-if="root.config.codes.length == 0">Add default user</button>
       </tfoot>
     </table>
     <hr />
@@ -79,7 +89,7 @@
       <caption>Timings</caption>
       <th>Triggered</th>
       <th>Silence</th>
-      <Timeout :settings='timing.timeout'/>
+      <Timeout :settings="root.config.timing.timeout" />
     </table>
   </div>
 </template>
@@ -91,25 +101,47 @@ import DigitalOutput from './components/DigitalOutput.vue'
 import AnalogInput from './components/AnalogInput.vue'
 import User from './components/User.vue'
 import Timeout from './components/Timeout.vue'
+import VueNativeSock from 'vue-native-websocket'
+
+// let url = ((window.location.protocol === 'https:') ? 'wss://' : 'ws://') + window.location.host + '/data'
+let url =
+  (window.location.protocol === 'https:' ? 'wss://' : 'ws://localhost:8081') +
+  '/data'
+Vue.use(VueNativeSock, url, {
+  format: 'json',
+  reconnection: true,
+  reconnectionDelay: 1000
+})
 
 export default {
   name: 'app',
   data: function () {
     return {
-      sensors: {
-        digital: {
-          input: {},
-          output: {}
+      root: {
+        vm: {
+          environment: {
+            temperature: 0,
+            humidity: 0,
+            preassure: 0
+          }
         },
-        analog: {
-          input: []
-        }
-      },
-      codes: [],
-      timing: {
-        timeout: {
-          triggered: 60,
-          silence: 60
+        config: {
+          sensors: {
+            digital: {
+              input: {},
+              output: {}
+            },
+            analog: {
+              input: []
+            }
+          },
+          codes: [],
+          timing: {
+            timeout: {
+              triggered: 60,
+              silence: 60
+            }
+          }
         }
       }
     }
@@ -121,9 +153,25 @@ export default {
     User,
     Timeout
   },
+  created: function () {
+    this.$options.sockets.onmessage = msg =>
+      this.messageReceived(JSON.parse(msg.data))
+  },
   methods: {
+    messageReceived: function (data) {
+      if ('alarm_config' in data) {
+        this.root.config = data.alarm_config
+      } else if ('sensor' in data) {
+        this.root.vm.environment['humidity'] = data['sensor']['humidity']
+        this.root.vm.environment.pressure = data['sensor']['pressure']
+        this.root.vm.environment.temperature = data['sensor']['temperature']
+      }
+    },
+    request_config: function () {
+      this.$socket.sendObj({ command: { request_config: true } })
+    },
     fake_first_input: function () {
-      Vue.set(this.sensors.digital.input, '0', {
+      Vue.set(this.root.config.sensors.digital.input, '0', {
         name: 'Fake',
         enabled: false,
         armed_state: true,
@@ -132,13 +180,13 @@ export default {
       })
     },
     fake_first_output: function () {
-      Vue.set(this.sensors.digital.output, '0', {
+      Vue.set(this.root.config.sensors.digital.output, '0', {
         name: '0',
         allow_external_control: true
       })
     },
     fake_first_analog_input: function () {
-      Vue.set(this.sensors.analog.input, '0', {
+      Vue.set(this.root.config.sensors.analog.input, '0', {
         name: '0',
         enabled: true,
         allowed_range: {
@@ -150,7 +198,7 @@ export default {
       })
     },
     add_default_user: function () {
-      Vue.set(this.codes, 0, {
+      Vue.set(this.root.config.codes, 0, {
         name: 'Owner',
         verification_data: null
       })

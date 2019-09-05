@@ -9,7 +9,7 @@ using namespace smooth::core::filesystem;
 
 namespace g3::alarm
 {
-    static const std::string config_file = SDCardMount::instance().mount_point() / "alarm.jsn";
+    static const auto config_file = SDCardMount::instance().mount_point() / "alarm.jsn";
 
     AlarmConfig::AlarmConfig()
             : f(config_file)
