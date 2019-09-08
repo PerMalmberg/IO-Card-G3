@@ -206,6 +206,9 @@ void I2CTask::event(const I2CSetOutput& ev)
     {
         input_output->set_output(smooth::application::io::MCP23017::Port::B, b);
     }
+
+    // Request a new status publish
+    publish_output_queue->push(smooth::core::timer::TimerExpiredEvent());
 }
 
 void I2CTask::event(const I2CSetOutputBit& ev)
@@ -232,6 +235,9 @@ void I2CTask::event(const I2CSetOutputBit& ev)
         {
             Log::error(name, "Failed to read outputs");
         }
+
+        // Request a new status publish
+        publish_output_queue->push(smooth::core::timer::TimerExpiredEvent());
     }
 }
 
