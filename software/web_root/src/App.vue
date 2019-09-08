@@ -25,10 +25,12 @@
       <th>Armed state</th>
       <th>Entry delay</th>
       <th>Exit delay</th>
+      <th>Current status</th>
       <DigitalInput
-        v-for="(input, name) in root.config.sensors.digital.input"
+        v-for="(input, index, name) in root.config.sensors.digital.input"
         v-bind:key="name"
         :settings="root.config.sensors.digital.input[name]"
+        :status="root.vm.state.digital.input[index]"
       />
     </table>
     <hr />
@@ -36,10 +38,12 @@
       <caption>Digital Output</caption>
       <th>Name</th>
       <th>Allow external control</th>
+      <th>Current status</th>
       <DigitalOutput
-        v-for="(input, name) in root.config.sensors.digital.output"
+        v-for="(input, index, name) in root.config.sensors.digital.output"
         v-bind:key="name"
         :settings="root.config.sensors.digital.output[name]"
+        :status="root.vm.state.digital.output[index]"
       />
     </table>
     <hr />
@@ -94,17 +98,8 @@ import User from './components/User.vue'
 import Timeout from './components/Timeout.vue'
 import VueNativeSock from 'vue-native-websocket'
 
-window.sodium = {
-  onload: function (sodium) {
-    let h = sodium.crypto_generichash(64, sodium.from_string('test'))
-    console.log(sodium.to_hex(h))
-  }
-}
-
-let url = ((window.location.protocol === 'https:') ? 'wss://' : 'ws://') + window.location.host + '/data'
-/* let url =
-  (window.location.protocol === 'https:' ? 'wss://' : 'ws://localhost:8081') +
-  '/data' */
+// let url = ((window.location.protocol === 'https:') ? 'wss://' : 'ws://') + window.location.host + '/data'
+let url = (window.location.protocol === 'https:' ? 'wss://' : 'ws://localhost:8081') + '/data'
 Vue.use(VueNativeSock, url, {
   format: 'json',
   reconnection: true,
@@ -123,7 +118,11 @@ export default {
             preassure: 0
           },
           state: {
-            config_loaded: false
+            config_loaded: false,
+            digital: {
+              input: [],
+              output: []
+            }
           }
         },
         config: {
@@ -160,6 +159,7 @@ export default {
   },
   methods: {
     messageReceived: function (data) {
+      console.log(data)
       if ('alarm_config' in data) {
         this.root.config = data.alarm_config
         this.root.vm.state.config_loaded = true
@@ -167,6 +167,10 @@ export default {
         this.root.vm.environment['humidity'] = data['sensor']['humidity']
         this.root.vm.environment.pressure = data['sensor']['pressure']
         this.root.vm.environment.temperature = data['sensor']['temperature']
+      } else if ('input' in data) {
+        Vue.set(this.root.vm.state.digital.input, data.input.digital.input, data.input.digital)
+      } else if ('output' in data) {
+        Vue.set(this.root.vm.state.digital.output, data.output.digital.output, data.output.digital)
       }
     },
     request_config: function () {

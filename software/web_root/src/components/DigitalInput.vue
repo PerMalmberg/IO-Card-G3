@@ -15,6 +15,7 @@
     <td>
       <input v-model.number="settings.exit_delay" type="number" id="exit_delay" />
     </td>
+    <td>{{status == undefined ? '-' : status.value}}</td>
   </tr>
 </template>
 
@@ -22,7 +23,8 @@
 export default {
   name: 'DigitalInput',
   props: {
-    settings: Object
+    settings: Object,
+    status: Object
   }
 }
 </script>
