@@ -29,7 +29,8 @@ namespace g3
                 digital_value(DigitalInputValueQueue::create("digital2alarm", 10, task, *this)),
                 code_entered_sub(CodeEnteredQueue::create("code_entered_sub", 5, task, *this)),
                 sensor_triggered_sub(SensorTriggeredQueue::create("sensor_triggered_sub", 16, task, *this)),
-                timer_event(TimerExpiredQueue::create("timer_event", 5, task, *this))
+                timer_event(TimerExpiredQueue::create("timer_event", 5, task, *this)),
+                new_config(NewConfigQueue::create("", 1, task, *this))
         {            
             set_state(new(*this) state::Idle(*this));
             analog_sensors.reserve(ANALOG_INPUT_COUNT);
@@ -79,6 +80,14 @@ namespace g3
                 togle_status = !togle_status;
                 Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit(I2CDevice::status, SNTP_TIME_SET, togle_status));
             }
+        }
+
+        void Alarm::event(const NewConfig& event)
+        {
+            auto& cfg = AlarmConfig::instance();
+            cfg.get() =  event.get();
+            cfg.save();
+            start();
         }
 
         void Alarm::start()

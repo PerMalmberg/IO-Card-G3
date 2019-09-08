@@ -17,6 +17,7 @@
     </table>
     <br />
     <button v-on:click="request_config">Request config</button>
+    <button v-on:click="apply_config" :hidden="!root.vm.state.config_loaded">Apply config</button>
     <table>
       <caption>Digital Inputs Settings</caption>
       <th>Name</th>
@@ -93,10 +94,17 @@ import User from './components/User.vue'
 import Timeout from './components/Timeout.vue'
 import VueNativeSock from 'vue-native-websocket'
 
-// let url = ((window.location.protocol === 'https:') ? 'wss://' : 'ws://') + window.location.host + '/data'
-let url =
+window.sodium = {
+  onload: function (sodium) {
+    let h = sodium.crypto_generichash(64, sodium.from_string('test'))
+    console.log(sodium.to_hex(h))
+  }
+}
+
+let url = ((window.location.protocol === 'https:') ? 'wss://' : 'ws://') + window.location.host + '/data'
+/* let url =
   (window.location.protocol === 'https:' ? 'wss://' : 'ws://localhost:8081') +
-  '/data'
+  '/data' */
 Vue.use(VueNativeSock, url, {
   format: 'json',
   reconnection: true,
@@ -113,6 +121,9 @@ export default {
             temperature: 0,
             humidity: 0,
             preassure: 0
+          },
+          state: {
+            config_loaded: false
           }
         },
         config: {
@@ -151,6 +162,7 @@ export default {
     messageReceived: function (data) {
       if ('alarm_config' in data) {
         this.root.config = data.alarm_config
+        this.root.vm.state.config_loaded = true
       } else if ('sensor' in data) {
         this.root.vm.environment['humidity'] = data['sensor']['humidity']
         this.root.vm.environment.pressure = data['sensor']['pressure']
@@ -159,6 +171,15 @@ export default {
     },
     request_config: function () {
       this.$socket.sendObj({ command: { request_config: true } })
+    },
+    apply_config: function () {
+      var o = {
+        command: {
+          apply_config: true,
+          data: this.root.config }
+      }
+
+      this.$socket.sendObj(o)
     },
     add_default_user: function () {
       Vue.set(this.root.config.codes, 0, {

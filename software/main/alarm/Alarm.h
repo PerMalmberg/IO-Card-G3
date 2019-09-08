@@ -15,6 +15,7 @@
 #include "sensor/AnalogSensor.h"
 #include "sensor/DigitalSensor.h"
 #include "event/CodeEntered.h"
+#include "event/NewConfig.h"
 
 namespace g3
 {
@@ -26,7 +27,8 @@ namespace g3
                 public smooth::core::ipc::IEventListener<DigitalInputValue>,
                 public smooth::core::ipc::IEventListener<event::CodeEntered>,
                 public smooth::core::ipc::IEventListener<event::SensorTriggered>,
-                public smooth::core::ipc::IEventListener<smooth::core::timer::TimerExpiredEvent>
+                public smooth::core::ipc::IEventListener<smooth::core::timer::TimerExpiredEvent>,
+                public smooth::core::ipc::IEventListener<NewConfig>
         {
             public:
                 Alarm(smooth::core::Task& task);
@@ -55,6 +57,7 @@ namespace g3
                 void event(const event::CodeEntered& event) override;
                 void event(const event::SensorTriggered& event) override;
                 void event(const smooth::core::timer::TimerExpiredEvent& event) override;
+                void event(const NewConfig& event) override;
 
             protected:
                 void entering_state(g3::alarm::state::BaseState* state) override;
@@ -80,6 +83,7 @@ namespace g3
                 using CodeEnteredQueue = smooth::core::ipc::SubscribingTaskEventQueue<event::CodeEntered>;
                 using SensorTriggeredQueue = smooth::core::ipc::SubscribingTaskEventQueue<event::SensorTriggered>;
                 using TimerExpiredQueue = smooth::core::ipc::TaskEventQueue<smooth::core::timer::TimerExpiredEvent>;
+                using NewConfigQueue = smooth::core::ipc::SubscribingTaskEventQueue<NewConfig>;
 
                 smooth::core::Task& task;
                 std::shared_ptr<RawAnalogQueue> analog_value;
@@ -87,6 +91,7 @@ namespace g3
                 std::shared_ptr<CodeEnteredQueue> code_entered_sub;
                 std::shared_ptr<SensorTriggeredQueue> sensor_triggered_sub;
                 std::shared_ptr<TimerExpiredQueue> timer_event;
+                std::shared_ptr<NewConfigQueue> new_config;
                 
                 std::vector<AnalogSensor> analog_sensors{};
                 std::vector<DigitalSensor> digital_sensors{};

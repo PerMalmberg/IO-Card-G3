@@ -1,12 +1,12 @@
 #include "WSDataConnection.h"
 #include <nlohmann/json.hpp>
-#include <smooth/core/json/JsonFile.h>
 #include <smooth/application/network/http/websocket/responses/WSResponse.h>
 #include <smooth/application/network/http/IServerResponse.h>
-#include <smooth/core/filesystem/MountPoint.h>
 #include <smooth/core/filesystem/Path.h>
 #include <chrono>
 #include <alarm/AlarmConfig.h>
+#include <alarm/event/NewConfig.h>
+#include <smooth/core/ipc/Publisher.h>
 
 using namespace smooth::core::json;
 using namespace smooth::core::filesystem;
@@ -25,8 +25,8 @@ namespace http
                 ss.str("");
             }
 
-            // Never accept more than 1k data
-            if (static_cast<std::size_t>(ss.tellp()) + data.size() < 1024)
+            // Never accept more than 10k data
+            if (static_cast<std::size_t>(ss.tellp()) + data.size() < 1024 * 10)
             {
                 for (const auto c : data)
                 {
@@ -44,6 +44,10 @@ namespace http
                         json to_send{};
                         to_send["alarm_config"] = g3::alarm::AlarmConfig::instance().get();
                         response.reply(std::make_unique<WSResponse>(to_send.dump(), true, true), false);
+                    }
+                    else if(v["command"].value("apply_config", false))
+                    {
+                        smooth::core::ipc::Publisher<NewConfig>::publish(NewConfig{v["command"]["data"]});
                     }
                 }
             }

@@ -171,7 +171,7 @@ namespace g3
                     if (command.size() > 2 && command[command.length() - 2] == '/')
                     {
                         std::string last_char{command[command.length() - 1]};
-                        nlohmann::json d{data};
+                        nlohmann::json d = nlohmann::json::parse(data);
 
                         auto val = default_value(d, "value", false);
                         alarm.set_output(last_char, val);
@@ -182,7 +182,7 @@ namespace g3
                 mqtt->add_subscription(command);
                 cmd.add_command(command, [](const std::string& command, const std::string& data) {
                     // Expected payload: { "code": "1234" }
-                    nlohmann::json d{data};
+                    nlohmann::json d = nlohmann::json::parse(data, nullptr, false);
                     auto code = default_value(d, "code", "");
                     if (!code.empty())
                     {

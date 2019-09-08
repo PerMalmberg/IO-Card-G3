@@ -21,6 +21,7 @@ namespace g3::alarm
             AlarmConfig(AlarmConfig&&) = delete;
 
             void load();
+            void save();
 
             void write_default() const;
             nlohmann::json& get()

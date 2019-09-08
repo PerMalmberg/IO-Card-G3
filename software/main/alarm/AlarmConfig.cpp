@@ -21,6 +21,11 @@ namespace g3::alarm
         f.load();
     }
 
+    void AlarmConfig::save()
+    {
+        (void)f.save();
+    }
+
     void AlarmConfig::write_default() const
     {
         JsonFile f(config_file);
