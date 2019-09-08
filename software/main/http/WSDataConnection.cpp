@@ -6,6 +6,7 @@
 #include <smooth/core/filesystem/MountPoint.h>
 #include <smooth/core/filesystem/Path.h>
 #include <chrono>
+#include <alarm/AlarmConfig.h>
 
 using namespace smooth::core::json;
 using namespace smooth::core::filesystem;
@@ -40,9 +41,8 @@ namespace http
 
                     if (v["command"].value("request_config", false))
                     {
-                        JsonFile cfg{SDCardMount::instance().mount_point() / "alarm.jsn"};
                         json to_send{};
-                        to_send["alarm_config"] = cfg.value();
+                        to_send["alarm_config"] = g3::alarm::AlarmConfig::instance().get();
                         response.reply(std::make_unique<WSResponse>(to_send.dump(), true, true), false);
                     }
                 }

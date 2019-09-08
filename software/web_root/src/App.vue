@@ -15,7 +15,7 @@
         <td>{{root.vm.environment.preassure}}</td>
       </tr>
     </table>
-    <br/>
+    <br />
     <button v-on:click="request_config">Request config</button>
     <table>
       <caption>Digital Inputs Settings</caption>
@@ -29,16 +29,10 @@
         v-bind:key="name"
         :settings="root.config.sensors.digital.input[name]"
       />
-      <tfoot>
-        <button
-          v-on:click="fake_first_input"
-          v-if="root.config.sensors.digital.input['0'] == undefined"
-        >Fake first</button>
-      </tfoot>
     </table>
     <hr />
     <table>
-      <caption>Digital Output Settings</caption>
+      <caption>Digital Output</caption>
       <th>Name</th>
       <th>Allow external control</th>
       <DigitalOutput
@@ -46,16 +40,10 @@
         v-bind:key="name"
         :settings="root.config.sensors.digital.output[name]"
       />
-      <tfoot>
-        <button
-          v-on:click="fake_first_output"
-          v-if="root.config.sensors.digital.output['0'] == undefined"
-        >Fake first</button>
-      </tfoot>
     </table>
     <hr />
     <table>
-      <caption>Analog Input Settings</caption>
+      <caption>Analog Input</caption>
       <th>Name</th>
       <th>Enabled</th>
       <th>Min</th>
@@ -67,19 +55,19 @@
         v-bind:key="name"
         :settings="root.config.sensors.analog.input[name]"
       />
-      <tfoot>
-        <button
-          v-on:click="fake_first_analog_input"
-          v-if="root.config.sensors.analog.input['0'] == undefined"
-        >Fake first</button>
-      </tfoot>
     </table>
     <hr />
     <table>
       <caption>Users</caption>
-      <th>Name</th>
-      <th>Passcode</th>
-      <User v-for="(input, index) in root.config.codes" v-bind:key="index" :settings="root.config.codes[index]" />
+      <tr>
+        <th>Name</th>
+        <th>Passcode</th>
+      </tr>
+      <User
+        v-for="(input, index) in root.config.codes"
+        v-bind:key="index"
+        :settings="root.config.codes[index]"
+      />
       <tfoot>
         <button v-on:click="add_default_user" v-if="root.config.codes.length == 0">Add default user</button>
       </tfoot>
@@ -87,8 +75,10 @@
     <hr />
     <table>
       <caption>Timings</caption>
-      <th>Triggered</th>
-      <th>Silence</th>
+      <tr>
+        <th>Triggered</th>
+        <th>Silence</th>
+      </tr>
       <Timeout :settings="root.config.timing.timeout" />
     </table>
   </div>
@@ -170,36 +160,9 @@ export default {
     request_config: function () {
       this.$socket.sendObj({ command: { request_config: true } })
     },
-    fake_first_input: function () {
-      Vue.set(this.root.config.sensors.digital.input, '0', {
-        name: 'Fake',
-        enabled: false,
-        armed_state: true,
-        entry_delay: 5,
-        exit_delay: 5
-      })
-    },
-    fake_first_output: function () {
-      Vue.set(this.root.config.sensors.digital.output, '0', {
-        name: '0',
-        allow_external_control: true
-      })
-    },
-    fake_first_analog_input: function () {
-      Vue.set(this.root.config.sensors.analog.input, '0', {
-        name: '0',
-        enabled: true,
-        allowed_range: {
-          min: 10000,
-          max: 14000
-        },
-        entry_delay: 0,
-        exit_delay: 0
-      })
-    },
     add_default_user: function () {
       Vue.set(this.root.config.codes, 0, {
-        name: 'Owner',
+        user: 'Owner',
         verification_data: null
       })
     }

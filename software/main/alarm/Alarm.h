@@ -35,14 +35,14 @@ namespace g3
 
                 void write_default() const
                 {
-                    cfg.write_default();
+                    AlarmConfig::instance().write_default();
                 }
 
                 void start();
 
                 bool are_any_sensors_triggered();
                 bool do_sensors_have_values() const;
-                bool validate_code(const std::string& code);
+                bool validate_code(const std::string& code) const;
                 std::chrono::seconds get_max_exit_delay();
                 std::chrono::seconds get_max_entry_delay();
                 std::chrono::seconds get_triggered_timeout();
@@ -50,11 +50,11 @@ namespace g3
 
                 void set_output(const std::string& output_number, bool active);
 
-                void event(const RawAnalogValue& value);
-                void event(const DigitalInputValue& value);
-                void event(const event::CodeEntered& event);
-                void event(const event::SensorTriggered& event);
-                void event(const smooth::core::timer::TimerExpiredEvent& event);
+                void event(const RawAnalogValue& value) override;
+                void event(const DigitalInputValue& value) override;
+                void event(const event::CodeEntered& event) override;
+                void event(const event::SensorTriggered& event) override;
+                void event(const smooth::core::timer::TimerExpiredEvent& event) override;
 
             protected:
                 void entering_state(g3::alarm::state::BaseState* state) override;
@@ -90,7 +90,6 @@ namespace g3
                 
                 std::vector<AnalogSensor> analog_sensors{};
                 std::vector<DigitalSensor> digital_sensors{};
-                AlarmConfig cfg{};
                 bool started{false};
                 bool togle_status{false};
                 smooth::core::timer::TimerOwner tick{};

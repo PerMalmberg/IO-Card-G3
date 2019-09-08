@@ -17,4 +17,3 @@ export default {
   }
 }
 </script>
-<!-- td><img v-if="input_data.enabled" src='../assets/accept.png'/><img v-else src="../assets/stop.png"/> </td -->

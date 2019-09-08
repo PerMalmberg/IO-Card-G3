@@ -5,7 +5,7 @@
         <table>
           <tr>
             <td>
-              <input v-model="settings.name" placeholder="Enter user name" />
+              <input v-model="settings.user" placeholder="Enter user name" />
             </td>
             <td>
               <input

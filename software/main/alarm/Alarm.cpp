@@ -84,6 +84,7 @@ namespace g3
         void Alarm::start()
         {
             // Load config again in case the default one was just written to disk
+            auto& cfg = AlarmConfig::instance();
             cfg.load();
 
             analog_sensors.clear();
@@ -111,8 +112,9 @@ namespace g3
             started = true;
         }
 
-        bool Alarm::validate_code(const std::string& code)
-        {            
+        bool Alarm::validate_code(const std::string& code) const
+        {
+            auto& cfg = AlarmConfig::instance();
             auto number_of_codes = cfg.get()[CODES].size();
             smooth::application::security::PasswordHash ph{};
 
@@ -179,19 +181,19 @@ namespace g3
 
         std::chrono::seconds Alarm::get_triggered_timeout()
         {
-            seconds s{default_value(cfg.get()[TIMING][TIMEOUT], TRIGGERED, 60)};
+            seconds s{default_value(AlarmConfig::instance().get()[TIMING][TIMEOUT], TRIGGERED, 60)};
             return s;
         }
 
         std::chrono::seconds Alarm::get_triggered_silence_timeout()
         {
-            seconds s{default_value(cfg.get()[TIMING][TIMEOUT], TRIGGERED_SILENCE, 60)};
+            seconds s{default_value(AlarmConfig::instance().get()[TIMING][TIMEOUT], TRIGGERED_SILENCE, 60)};
             return s;
         }
 
         void Alarm::set_output(const std::string& output_number, bool active)
         {
-            auto external_control_allowed = default_value(cfg.get()[SENSORS][DIGITAL][OUTPUT][output_number], ALLOW_EXTERNAL_CONTROL, false);
+            auto external_control_allowed = default_value(AlarmConfig::instance().get()[SENSORS][DIGITAL][OUTPUT][output_number], ALLOW_EXTERNAL_CONTROL, false);
 
             if (external_control_allowed)
             {

@@ -73,8 +73,6 @@ void Mqtt::write_default()
     if (!f.exists())
     {
         auto& v = f.value();
-        void event(const DigitalOutputValue& value);
-        void event(const DigitalStatusOutputValue& value);
         v["keep_alive_seconds"] = 5;
         v["broker"]["address"] = "";
         v["broker"]["port"] = 1883;

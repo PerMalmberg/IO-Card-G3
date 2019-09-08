@@ -109,9 +109,9 @@ namespace g3
                 {
                     player = std::make_unique<sound::Player>(*this);
 
-                    // On first start, this will load the just written default config so make sure it is after the call to store_default_config()
                     prepare_config();
 
+                    // On first start, this will load the just written default config so make sure it is after the call to prepare_config()
                     alarm.start();
 
                     wifi.start();

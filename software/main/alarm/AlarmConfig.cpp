@@ -27,22 +27,22 @@ namespace g3::alarm
         if (!f.exists())
         {
             auto& v = f.value();
-            auto sensors = v[SENSORS];
-            auto digital = sensors[DIGITAL];
-            auto analog = sensors[ANALOG];
+            auto& sensors = v[SENSORS];
+            auto& digital = sensors[DIGITAL];
+            auto& analog = sensors[ANALOG];
 
-            auto d_input = digital[INPUT];
-            auto d_output = digital[OUTPUT];
-            auto a_input = analog[INPUT];
+            auto& d_input = digital[INPUT];
+            auto& d_output = digital[OUTPUT];
+            auto& a_input = analog[INPUT];
             for (int i = 0; i < 8; ++i)
             {
                 auto num = std::to_string(i);
 
                 {
-                    auto a = a_input[num];
+                    auto& a = a_input[num];
                     a[NAME] = num;
                     a[ENABLED] = false;
-                    auto range = a[ALLOWED_RANGE];
+                    auto& range = a[ALLOWED_RANGE];
                     range[MIN] = 0;
                     range[MAX] = std::numeric_limits<uint16_t>::max();
                     a[ENTRY_DELAY] = 0;
@@ -50,7 +50,7 @@ namespace g3::alarm
                 }
 
                 {
-                    auto d = d_input[num];
+                    auto& d = d_input[num];
                     d[NAME] = num;
                     d[ENABLED] = false;
                     d[ARMED_STATE] = true;
@@ -59,13 +59,13 @@ namespace g3::alarm
                 }
 
                 {
-                    auto o = d_output[num];
+                    auto& o = d_output[num];
                     o[NAME] = num;
                     o[ALLOW_EXTERNAL_CONTROL] = false;
                 }
             }
 
-            auto section = v[SECTION][0];
+            auto& section = v[SECTION][0];
             section[NAME] = "all";
 
             for (int i = 0; i < 8; ++i)
@@ -74,7 +74,7 @@ namespace g3::alarm
                 section[ANALOG][0] = i;
             }
 
-            auto code_0 = v[CODES][0];
+            auto& code_0 = v[CODES][0];
             auto hash_res = ph.hash("123456");
             code_0[USER] = "Default user";
             code_0[VERIFICATION_DATA] = std::get<0>(hash_res) ? std::get<1>(hash_res) : "hashing failed";
