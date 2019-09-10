@@ -55,10 +55,12 @@
       <th>Max</th>
       <th>Entry delay</th>
       <th>Exit delay</th>
+      <th>Current value</th>
       <AnalogInput
-        v-for="(input, name) in root.config.sensors.analog.input"
+        v-for="(input, index, name) in root.config.sensors.analog.input"
         v-bind:key="name"
         :settings="root.config.sensors.analog.input[name]"
+        :status="root.vm.state.analog.input[index]"
       />
     </table>
     <hr />
@@ -98,8 +100,8 @@ import User from './components/User.vue'
 import Timeout from './components/Timeout.vue'
 import VueNativeSock from 'vue-native-websocket'
 
-// let url = ((window.location.protocol === 'https:') ? 'wss://' : 'ws://') + window.location.host + '/data'
-let url = (window.location.protocol === 'https:' ? 'wss://' : 'ws://localhost:8081') + '/data'
+let url = ((window.location.protocol === 'https:') ? 'wss://' : 'ws://') + window.location.host + '/data'
+// let url = (window.location.protocol === 'https:' ? 'wss://' : 'ws://localhost:8081') + '/data'
 Vue.use(VueNativeSock, url, {
   format: 'json',
   reconnection: true,
@@ -122,6 +124,9 @@ export default {
             digital: {
               input: [],
               output: []
+            },
+            analog: {
+              input: []
             }
           }
         },
@@ -159,7 +164,6 @@ export default {
   },
   methods: {
     messageReceived: function (data) {
-      console.log(data)
       if ('alarm_config' in data) {
         this.root.config = data.alarm_config
         this.root.vm.state.config_loaded = true
@@ -168,7 +172,11 @@ export default {
         this.root.vm.environment.pressure = data['sensor']['pressure']
         this.root.vm.environment.temperature = data['sensor']['temperature']
       } else if ('input' in data) {
-        Vue.set(this.root.vm.state.digital.input, data.input.digital.input, data.input.digital)
+        if ('digital' in data.input) {
+          Vue.set(this.root.vm.state.digital.input, data.input.digital.input, data.input.digital)
+        } else if ('analog' in data.input) {
+          Vue.set(this.root.vm.state.analog.input, data.input.analog.input, data.input.analog)
+        }
       } else if ('output' in data) {
         Vue.set(this.root.vm.state.digital.output, data.output.digital.output, data.output.digital)
       }

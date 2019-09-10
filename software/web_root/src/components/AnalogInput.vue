@@ -6,6 +6,7 @@
       <td><input v-model.number="settings.allowed_range.max" type="number"/></td>
       <td><input v-model.number="settings.entry_delay" type="number" id="entry_delay"/></td>
       <td><input v-model.number="settings.exit_delay" type="number" id="exit_delay"/></td>
+      <td>{{status == undefined ? '-' : status.value}}</td>
     </tr>
 </template>
 
@@ -13,7 +14,8 @@
 export default {
   name: 'AnalogInput',
   props: {
-    settings: Object
+    settings: Object,
+    status: Object
   }
 }
 </script>
