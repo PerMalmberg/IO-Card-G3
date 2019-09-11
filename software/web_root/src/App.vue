@@ -1,5 +1,9 @@
 <template>
   <div id="app">
+    <div style="text-align: left">
+      <img src="./assets/bullet_green.png" v-show="this.root.vm.status_toggle % 3 == 0" />
+      <img src="./assets/bullet_yellow.png" v-show="this.root.vm.status_toggle % 3 != 0" />
+    </div>
     <table>
       <caption>Environment</caption>
       <tr>
@@ -100,8 +104,9 @@ import User from './components/User.vue'
 import Timeout from './components/Timeout.vue'
 import VueNativeSock from 'vue-native-websocket'
 
-let url = ((window.location.protocol === 'https:') ? 'wss://' : 'ws://') + window.location.host + '/data'
-// let url = (window.location.protocol === 'https:' ? 'wss://' : 'ws://localhost:8081') + '/data'
+// let url = ((window.location.protocol === 'https:') ? 'wss://' : 'ws://') + window.location.host + '/data'
+let url = (window.location.protocol === 'https:' ? 'wss://' : 'ws://localhost:8081') + '/data'
+
 Vue.use(VueNativeSock, url, {
   format: 'json',
   reconnection: true,
@@ -119,6 +124,7 @@ export default {
             humidity: 0,
             preassure: 0
           },
+          status_toggle: 0,
           state: {
             config_loaded: false,
             digital: {
@@ -164,6 +170,8 @@ export default {
   },
   methods: {
     messageReceived: function (data) {
+      this.root.vm.status_toggle += 1
+
       if ('alarm_config' in data) {
         this.root.config = data.alarm_config
         this.root.vm.state.config_loaded = true
