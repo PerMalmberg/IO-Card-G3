@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div style="text-align: left">
-      <img src="./assets/bullet_green.png" v-show="this.root.vm.status_toggle % 3 == 0" />
-      <img src="./assets/bullet_yellow.png" v-show="this.root.vm.status_toggle % 3 != 0" />
+      <img src="./assets/bullet_green.png" v-show="this.root.vm.status_toggle" />
+      <img src="./assets/bullet_yellow.png" v-show="!this.root.vm.status_toggle" />
     </div>
     <table>
       <caption>Environment</caption>
@@ -124,7 +124,7 @@ export default {
             humidity: 0,
             preassure: 0
           },
-          status_toggle: 0,
+          status_toggle: false,
           state: {
             config_loaded: false,
             digital: {
@@ -170,8 +170,6 @@ export default {
   },
   methods: {
     messageReceived: function (data) {
-      this.root.vm.status_toggle += 1
-
       if ('alarm_config' in data) {
         this.root.config = data.alarm_config
         this.root.vm.state.config_loaded = true
@@ -187,6 +185,8 @@ export default {
         }
       } else if ('output' in data) {
         Vue.set(this.root.vm.state.digital.output, data.output.digital.output, data.output.digital)
+      } else if ('ping' in data) {
+        this.root.vm.status_toggle = !this.root.vm.status_toggle
       }
     },
     request_config: function () {

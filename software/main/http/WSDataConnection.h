@@ -2,16 +2,25 @@
 
 #include "DataListener.h"
 #include <smooth/application/network/http/websocket/WebsocketServer.h>
+#include <smooth/core/timer/TimerExpiredEvent.h>
+#include <smooth/core/timer/Timer.h>
+#include <smooth/core/ipc/TaskEventQueue.h>
 
 namespace http
 {
-    class WSDataConnection : public smooth::application::network::http::websocket::WebsocketServer, public DataListener
+    class WSDataConnection
+            : public smooth::application::network::http::websocket::WebsocketServer,
+            public DataListener,
+            public smooth::core::ipc::IEventListener<smooth::core::timer::TimerExpiredEvent>
     {
         public:
             WSDataConnection(smooth::application::network::http::IServerResponse& response, smooth::core::Task& task)
                     : WebsocketServer(response, task),
-                      DataListener(task)
+                      DataListener(task),
+                      timer_queue(TimerQueue::create("", 1, task, *this)),
+                      status_toggle(smooth::core::timer::Timer::create("", 0, timer_queue, true, std::chrono::milliseconds{1500}))
             {
+                status_toggle->start();
             }
 
             void
@@ -24,7 +33,11 @@ namespace http
             void event(const DigitalStatusOutputValue& value) override;
             void event(const g3::alarm::event::SensorTriggered& value) override;
             void event(const g3::alarm::event::SensorRestored& value) override;
+            void event(const smooth::core::timer::TimerExpiredEvent& event) override;
         private:
             std::stringstream ss{};
+            using TimerQueue = smooth::core::ipc::TaskEventQueue<smooth::core::timer::TimerExpiredEvent>;
+            std::shared_ptr<TimerQueue> timer_queue;
+            smooth::core::timer::TimerOwner status_toggle;
     };
 }

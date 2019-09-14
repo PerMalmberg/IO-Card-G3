@@ -16,7 +16,7 @@ using json = nlohmann::json;
 namespace http
 {
     void
-    WSDataConnection::data_received(bool first_part, bool last_part, bool is_text, const std::vector<uint8_t>& data)
+    WSDataConnection::data_received(bool first_part, bool last_part, bool /*is_text*/, const std::vector<uint8_t>& data)
     {
         try
         {
@@ -127,6 +127,14 @@ namespace http
         auto& a = v["sensor"];
         a["triggered"] = false;
         a["name"] = value.get_name();
+        response.reply(std::make_unique<WSResponse>(v.dump(), true, true), false);
+    }
+
+    void WSDataConnection::event(const smooth::core::timer::TimerExpiredEvent& event)
+    {
+        json v;
+        auto& ping = v["ping"];
+        ping["time"] = std::chrono::system_clock::now().time_since_epoch().count();
         response.reply(std::make_unique<WSResponse>(v.dump(), true, true), false);
     }
 }
