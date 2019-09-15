@@ -25,6 +25,6 @@ namespace g3
         constexpr const char* TRIGGERED = "triggered";
         constexpr const char* TRIGGERED_SILENCE = "silence";
         constexpr const char* USER = "user";
-        constexpr const char* VERIFICATION_DATA = "verification_data";
+        constexpr const char* CODE = "code";
     }
 }

@@ -45,7 +45,7 @@
       <th>Current status</th>
       <DigitalOutput
         v-for="(input, index, name) in root.config.sensors.digital.output"
-        v-bind:key="name"
+        v-bind:key="index"
         :settings="root.config.sensors.digital.output[name]"
         :status="root.vm.state.digital.output[index]"
       />
@@ -62,7 +62,7 @@
       <th>Current value</th>
       <AnalogInput
         v-for="(input, index, name) in root.config.sensors.analog.input"
-        v-bind:key="name"
+        v-bind:key="index"
         :settings="root.config.sensors.analog.input[name]"
         :status="root.vm.state.analog.input[index]"
       />
@@ -72,15 +72,17 @@
       <caption>Users</caption>
       <tr>
         <th>Name</th>
-        <th>Passcode</th>
+        <th>Pin code</th>
       </tr>
       <User
         v-for="(input, index) in root.config.codes"
         v-bind:key="index"
-        :settings="root.config.codes[index]"
+        :user_data="root.config.codes[index]"
+        :user_index="index"
+        v-on:delete_user="delete_user"
       />
       <tfoot>
-        <button v-on:click="add_default_user" v-if="root.config.codes.length == 0">Add default user</button>
+        <button v-on:click="add_default_user">Add user</button>
       </tfoot>
     </table>
     <hr />
@@ -127,6 +129,7 @@ export default {
           status_toggle: false,
           state: {
             config_loaded: false,
+            config_auto_requested: false,
             digital: {
               input: [],
               output: []
@@ -170,6 +173,11 @@ export default {
   },
   methods: {
     messageReceived: function (data) {
+      if (!this.root.vm.state.config_auto_requested) {
+        this.root.vm.state.config_auto_requested = true
+        this.request_config()
+      }
+
       if ('alarm_config' in data) {
         this.root.config = data.alarm_config
         this.root.vm.state.config_loaded = true
@@ -202,22 +210,16 @@ export default {
       this.$socket.sendObj(o)
     },
     add_default_user: function () {
-      Vue.set(this.root.config.codes, 0, {
-        user: 'Owner',
-        verification_data: null
-      })
+      this.root.config.codes.push(
+        {
+          user: '',
+          code: ''
+        })
+    },
+    delete_user: function (index) {
+      console.log(index)
+      this.root.config.codes.splice(index, 1)
     }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

@@ -22,5 +22,9 @@
 	"key_entry_timeout": {
 		"signal": [200, 200, 200, 200, 200, 200],
 		"repeat": false
+	},
+	"invalid_code" : {
+	    "signal": [100, 100, 100],
+        "repeat": false
 	}
 }

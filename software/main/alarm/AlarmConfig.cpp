@@ -80,9 +80,8 @@ namespace g3::alarm
             }
 
             auto& code_0 = v[CODES][0];
-            auto hash_res = ph.hash("123456");
             code_0[USER] = "Default user";
-            code_0[VERIFICATION_DATA] = std::get<0>(hash_res) ? std::get<1>(hash_res) : "hashing failed";
+            code_0[CODE] = "123456";
 
             v[TIMING][TIMEOUT][TRIGGERED] = 60;
             v[TIMING][TIMEOUT][TRIGGERED_SILENCE] = 60;

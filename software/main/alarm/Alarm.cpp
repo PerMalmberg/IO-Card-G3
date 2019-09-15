@@ -10,6 +10,7 @@
 #include "hardware_info.h"
 #include "config_constants.h"
 #include "timer_id.h"
+#include <sound/PlaySong.h>
 
 using namespace std::chrono;
 using namespace smooth::core::logging;
@@ -132,16 +133,23 @@ namespace g3
             bool valid = false;
             for (auto i = 0; !valid && i < number_of_codes; ++i)
             {
-                valid = ph.verify_password_against_hash(code, default_value(cfg.get()[CODES][i], VERIFICATION_DATA, ""));
-                if(valid)
+                auto& current = cfg.get()[CODES][i];
+                auto stored_code = default_value( current, CODE, "");
+                if (!stored_code.empty())
                 {
-                    Log::info(tag, Format("Code validated against hash {1}", Int32(i)));
+                    valid = code == stored_code;
+
+                    if (valid)
+                    {
+                        Log::info(tag, Format("Code validated for user {1}",
+                                              Str(default_value(current, USER, "--NO-USER--"))));
+                    }
                 }
             }
 
             if(!valid)
             {
-                // TODO: signal erroneous code
+                Publisher<sound::PlaySong>::publish(sound::PlaySong("invalid_code"));
             }
 
             return valid;
