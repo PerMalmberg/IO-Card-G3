@@ -24,7 +24,7 @@
 		"repeat": false
 	},
 	"invalid_code" : {
-	    "signal": [100, 100, 100],
-        "repeat": false
-	}
+		"signal": [100, 100, 100],
+		"repeat": false
+		}
 }
