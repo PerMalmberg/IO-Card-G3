@@ -16,7 +16,7 @@ using namespace smooth::core::json_util;
 
 A note book looks like follows.
 Each signal starts with the time, in milliseconds, the buzzer should be on, then off, then on and so on.
-The player will always turn off the buzzer when the last entry has been reched.
+The player will always turn off the buzzer when the last entry has been reached.
 
 {
 	"entry_delay": {
