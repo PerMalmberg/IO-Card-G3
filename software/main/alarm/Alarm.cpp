@@ -78,8 +78,11 @@ namespace g3
             if(event.get_id() == ALARM_TICK)
             {
                 get_state()->tick();
-                togle_status = !togle_status;
-                Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit(I2CDevice::status, SNTP_TIME_SET, togle_status));
+                toggle_status = !toggle_status;
+                Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit(I2CDevice::status, SNTP_TIME_SET, toggle_status));
+
+                // Signal on alarm ouput too
+                Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit(I2CDevice::output, 7 + 8, toggle_status));
             }
         }
 

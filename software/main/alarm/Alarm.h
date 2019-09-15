@@ -96,7 +96,7 @@ namespace g3
                 std::vector<AnalogSensor> analog_sensors{};
                 std::vector<DigitalSensor> digital_sensors{};
                 bool started{false};
-                bool togle_status{false};
+                bool toggle_status{false};
                 smooth::core::timer::TimerOwner tick{};
         };
     }
