@@ -106,8 +106,8 @@ import User from './components/User.vue'
 import Timeout from './components/Timeout.vue'
 import VueNativeSock from 'vue-native-websocket'
 
-// let url = ((window.location.protocol === 'https:') ? 'wss://' : 'ws://') + window.location.host + '/data'
-let url = (window.location.protocol === 'https:' ? 'wss://' : 'ws://localhost:8081') + '/data'
+let url = ((window.location.protocol === 'https:') ? 'wss://' : 'ws://') + window.location.host + '/data'
+// let url = (window.location.protocol === 'https:' ? 'wss://' : 'ws://localhost:8081') + '/data'
 
 document.title = 'G3'
 
