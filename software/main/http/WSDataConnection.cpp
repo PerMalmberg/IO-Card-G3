@@ -86,7 +86,7 @@ namespace http
     void WSDataConnection::event(const SensorValue& value)
     {
         json v;
-        auto& a = v["sensor"];
+        auto& a = v["environment"];
         a["humidity"] = value.get_humidity();
         a["pressure"] = value.get_pressure();
         a["temperature"] = value.get_temperature();

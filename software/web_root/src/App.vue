@@ -15,8 +15,8 @@
         <td>{{root.vm.environment.humidity}}</td>
       </tr>
       <tr>
-        <td>Preassure</td>
-        <td>{{root.vm.environment.preassure}}</td>
+        <td>Pressure</td>
+        <td>{{root.vm.environment.pressure}}</td>
       </tr>
     </table>
     <br />
@@ -126,7 +126,7 @@ export default {
           environment: {
             temperature: 0,
             humidity: 0,
-            preassure: 0
+            pressure: 0
           },
           status_toggle: false,
           state: {
@@ -183,10 +183,10 @@ export default {
       if ('alarm_config' in data) {
         this.root.config = data.alarm_config
         this.root.vm.state.config_loaded = true
-      } else if ('sensor' in data) {
-        this.root.vm.environment['humidity'] = data['sensor']['humidity']
-        this.root.vm.environment.pressure = data['sensor']['pressure']
-        this.root.vm.environment.temperature = data['sensor']['temperature']
+      } else if ('environment' in data) {
+        this.root.vm.environment.humidity = data.environment.humidity
+        this.root.vm.environment.pressure = data.environment.pressure
+        this.root.vm.environment.temperature = data.environment.temperature
       } else if ('input' in data) {
         if ('digital' in data.input) {
           Vue.set(this.root.vm.state.digital.input, data.input.digital.input, data.input.digital)
