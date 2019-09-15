@@ -109,6 +109,8 @@ import VueNativeSock from 'vue-native-websocket'
 // let url = ((window.location.protocol === 'https:') ? 'wss://' : 'ws://') + window.location.host + '/data'
 let url = (window.location.protocol === 'https:' ? 'wss://' : 'ws://localhost:8081') + '/data'
 
+document.title = 'G3'
+
 Vue.use(VueNativeSock, url, {
   format: 'json',
   reconnection: true,
@@ -217,7 +219,6 @@ export default {
         })
     },
     delete_user: function (index) {
-      console.log(index)
       this.root.config.codes.splice(index, 1)
     }
   }
