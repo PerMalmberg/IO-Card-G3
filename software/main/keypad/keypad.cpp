@@ -56,7 +56,7 @@ namespace g3
             }
         }
 
-        void Keypad::wiegand_id(uint32_t id, uint8_t byte_count)
+        void Keypad::wiegand_id(uint32_t id)
         {
             auto command = this->id.get() + cmd_keypad_code_entered;
             cmd.process(command, std::string(R"!!({ "code": ")!!") + std::to_string(id) + R"!!("})!!");

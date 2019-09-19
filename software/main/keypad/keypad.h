@@ -20,7 +20,7 @@ namespace g3
                 void event(const smooth::core::timer::TimerExpiredEvent& event) override;
 
                 void wiegand_number(uint8_t num) override;
-                void wiegand_id(uint32_t id, uint8_t byte_count) override;
+                void wiegand_id(uint32_t id) override;
             private:
                 std::shared_ptr<smooth::application::io::wiegand::Wiegand> wiegand{};
                 std::string keypad_entry{};
