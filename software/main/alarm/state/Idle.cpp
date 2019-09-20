@@ -34,11 +34,6 @@ namespace g3
                         alarm.set_state(new(alarm) ExitDelay(alarm));
                     }
                 }
-                else
-                {
-                    Publisher<sound::PlaySong>::publish(sound::PlaySong("error"));
-                }
-                
             }
 
             void Idle::enter_state()

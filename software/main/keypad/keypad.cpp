@@ -41,10 +41,12 @@ namespace g3
                 cmd.process(command, std::string(R"!!({ "code": ")!!") + keypad_entry + R"!!("})!!");
                 Log::info("Keypad", Format("{1}", Str(keypad_entry)));
                 keypad_entry.clear();
+                keypad_entry_timer->stop();
             }
             else if (num == 10) // '*'
             {
                 keypad_entry.clear();
+                keypad_entry_timer->stop();
             }
             else if (keypad_entry.size() > MAX_KEYPAD_LENGTH)
             {
