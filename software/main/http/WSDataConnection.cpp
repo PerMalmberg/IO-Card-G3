@@ -137,4 +137,12 @@ namespace http
         ping["time"] = std::chrono::system_clock::now().time_since_epoch().count();
         response.reply(std::make_unique<WSResponse>(v.dump(), true, true), false);
     }
+
+    void WSDataConnection::event(const ArmedStatus& event)
+    {
+        json v;
+        auto& ping = v["state"];
+        ping["armed"] = event.is_armed();
+        response.reply(std::make_unique<WSResponse>(v.dump(), true, true), false);
+    }
 }

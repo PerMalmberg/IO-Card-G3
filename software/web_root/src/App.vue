@@ -4,6 +4,10 @@
       <img src="./assets/bullet_green.png" v-show="this.root.vm.status_toggle" />
       <img src="./assets/bullet_yellow.png" v-show="!this.root.vm.status_toggle" />
     </div>
+    <div style="text-align: left">
+      <img src="./assets/lock.png" v-show="this.root.vm.armed" />
+      <img src="./assets/lock_open.png" v-show="!this.root.vm.armed" />
+    </div>
     <table>
       <caption>Environment</caption>
       <tr>
@@ -129,6 +133,7 @@ export default {
             pressure: 0
           },
           status_toggle: false,
+          armed: false,
           state: {
             config_loaded: false,
             config_auto_requested: false,
@@ -197,6 +202,8 @@ export default {
         Vue.set(this.root.vm.state.digital.output, data.output.digital.output, data.output.digital)
       } else if ('ping' in data) {
         this.root.vm.status_toggle = !this.root.vm.status_toggle
+      } else if ('state' in data) {
+        this.root.vm.armed = data.state.armed
       }
     },
     request_config: function () {

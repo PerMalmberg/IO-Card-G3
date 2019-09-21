@@ -22,6 +22,8 @@ namespace g3
 
                     void sensor_triggered(const event::SensorTriggered& sensor) override;
 
+                     [[nodiscard]] bool is_armed() const override { return true; }
+
                     void code_entered(const std::string& code) override;
                 private:
                     const std::chrono::steady_clock::time_point expires_at;

@@ -2,28 +2,22 @@
 
 #include "BaseState.h"
 
-namespace g3
+namespace g3::alarm::state
 {
-    namespace alarm
+    class Armed : public BaseState
     {
-        namespace state
-        {
-            class Armed : public BaseState
-            {
-                public:
-                    Armed(Alarm& alarm)
-                        : BaseState(alarm, "Armed")
-                        {                            
-                        }
+        public:
+            Armed(Alarm& alarm)
+                : BaseState(alarm, "Armed")
+                {
+                }
 
-                    void enter_state() override;
-                    
-                    void code_entered(const std::string& code) override;
+            void enter_state() override;
 
-                    void sensor_triggered(const event::SensorTriggered& sensor) override;
+            void code_entered(const std::string& code) override;
 
-                    bool is_armed() const { return true; }
-            };
-        }
-    }
+            void sensor_triggered(const event::SensorTriggered& sensor) override;
+
+            bool is_armed() const { return true; }
+    };
 }

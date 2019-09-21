@@ -23,9 +23,9 @@ namespace g3
                     virtual void tick() {}
                     virtual void sensor_triggered(const event::SensorTriggered& sensor) {};
 
-                    virtual bool is_armed() const { return false; }
+                    [[nodiscard]] virtual bool is_armed() const { return false; }
 
-                    const std::string& get_state_name() const { return name; }
+                    [[nodiscard]] const std::string& get_state_name() const { return name; }
 
                 protected:
                     void silence_alarm();

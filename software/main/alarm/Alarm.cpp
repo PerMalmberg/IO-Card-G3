@@ -11,6 +11,7 @@
 #include "config_constants.h"
 #include "timer_id.h"
 #include <sound/PlaySong.h>
+#include <alarm/event/ArmedStatus.h>
 
 using namespace std::chrono;
 using namespace smooth::core::logging;
@@ -41,6 +42,9 @@ namespace g3
         void Alarm::entering_state(g3::alarm::state::BaseState* state)
         {
             Log::info(tag, Format("Entering '{1}'.", Str(state->get_state_name())));
+
+            Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit{I2CDevice::status, ARMED, state->is_armed()});
+            Publisher<ArmedStatus>::publish(ArmedStatus{state->is_armed()});
         }
 
         void Alarm::leaving_state(g3::alarm::state::BaseState* state)
