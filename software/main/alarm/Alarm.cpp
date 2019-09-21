@@ -85,8 +85,11 @@ namespace g3
                 toggle_status = !toggle_status;
                 Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit(I2CDevice::status, SNTP_TIME_SET, toggle_status));
 
-                // Signal on alarm ouput too
+                // Signal on digital output too
                 Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit(I2CDevice::output, 7 + 8, toggle_status));
+
+                // Refresh armed status
+                Publisher<ArmedStatus>::publish(ArmedStatus{get_state()->is_armed()});
             }
         }
 
