@@ -25,7 +25,7 @@ Mqtt::Mqtt(std::string id, smooth::core::Task& task, g3::CommandDispatcher& cmd)
         : DataListener(task),
           task(task),
           cmd(cmd),
-          incoming_mqtt(MQTTQueue::create("incoming_mqtt", 10, task, *this)),
+          incoming_mqtt(MQTTQueue::create(10, task, *this)),
           id(std::move(id))
 {
 }
@@ -55,7 +55,7 @@ void Mqtt::start()
         }
         else
         {
-            Log::info("Mqtt", Format("Starting MQTT client, id {1}", Str(id)));
+            Log::info("Mqtt", "Starting MQTT client, id {}", id);
             client = std::make_unique<MqttClient>(id, keep_alive, 8 * 1024, APPLICATION_BASE_PRIO, incoming_mqtt);
             for (const auto& t : subscriptions)
             {

@@ -20,8 +20,8 @@ namespace g3::network
 
     Sntp::Sntp(smooth::core::Task &task) :
         task(task),
-        sntp_queue(SNTPQueue::create("sntp_queue", 1, task, *this)),
-        sntp_timer("sntp", 1, sntp_queue, true, seconds{10})
+        sntp_queue(SNTPQueue::create(1, task, *this)),
+        sntp_timer(1, sntp_queue, true, seconds{10})
     {
     }
 
@@ -39,7 +39,7 @@ namespace g3::network
             {
                 if(!s.empty())
                 {
-                    Log::info(name, Format("SNTP server: {1}", Str(s)));
+                    Log::info(name, "SNTP server: {}", s.get<std::string>());
                     servers.push_back(s);
                 }
             }
@@ -60,7 +60,7 @@ namespace g3::network
             auto t = system_clock::to_time_t(system_clock::now());
             tm time{};
             localtime_r(&t, &time);
-            Log::info(name, Format("Time set: {1}", Str(asctime(&time))));
+            Log::info(name, "Time set: {}", asctime(&time));
             Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit{I2CDevice::status, SNTP_TIME_SET, true});
             sntp_timer->stop();
         }

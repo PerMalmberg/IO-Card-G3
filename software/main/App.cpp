@@ -33,8 +33,8 @@ namespace g3
 {
     App::App()
             : Application(smooth::core::APPLICATION_BASE_PRIO, std::chrono::seconds{10}),
-              digital_status_queue(DigitalStatusQueue::create("io_status_queue", 8, *this, *this)),
-              network_status(NetworkStatusQueue::create("network_status", 2, *this, *this)),
+              digital_status_queue(DigitalStatusQueue::create(8, *this, *this)),
+              network_status(NetworkStatusQueue::create(2, *this, *this)),
               i2c(),
               id(),
               sntp(*this),
@@ -82,7 +82,7 @@ namespace g3
                 std::this_thread::sleep_for(seconds{1});
 
                 use_sd_spi = event.get_value();
-                Log::info(name, Format("Using SPI for SD Card: {1}", Bool(use_sd_spi)));
+                Log::info(name, "Using SPI for SD Card: {}", use_sd_spi);
 
                 if (use_sd_spi)
                 {
@@ -139,7 +139,7 @@ namespace g3
     void App::event(const smooth::core::network::NetworkStatus& ev)
     {
         bool connected = ev.get_event() == NetworkEvent::GOT_IP;
-        Log::info(name, Format("Network connected: {1}", Bool(connected)));
+        Log::info(name, "Network connected: {}", connected);
         Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit{I2CDevice::status, WIFI_CONNECTED, connected});
 
         if (connected)

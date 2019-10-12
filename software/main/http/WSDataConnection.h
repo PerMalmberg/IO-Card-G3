@@ -1,6 +1,7 @@
 #pragma once
 
 #include "DataListener.h"
+#include <sstream>
 #include <smooth/application/network/http/websocket/WebsocketServer.h>
 #include <smooth/core/timer/TimerExpiredEvent.h>
 #include <smooth/core/timer/Timer.h>
@@ -19,9 +20,9 @@ namespace http
             WSDataConnection(smooth::application::network::http::IServerResponse& response, smooth::core::Task& task)
                     : WebsocketServer(response, task),
                       DataListener(task),
-                      timer_queue(TimerQueue::create("", 1, task, *this)),
-                      status_toggle(smooth::core::timer::Timer::create("", 0, timer_queue, true, std::chrono::milliseconds{1500})),
-                      armed_status(ArmedQueue::create("", 1, task, *this))
+                      timer_queue(TimerQueue::create(1, task, *this)),
+                      status_toggle(smooth::core::timer::Timer::create(0, timer_queue, true, std::chrono::milliseconds{1500})),
+                      armed_status(ArmedQueue::create(1, task, *this))
             {
                 status_toggle->start();
             }

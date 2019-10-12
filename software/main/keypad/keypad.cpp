@@ -18,9 +18,8 @@ namespace g3
                 : task(task),
                   cmd(cmd),
                   id(id),
-                  timer_expired_queue(TimerExpiredQueue::create("timer_expired_queue", 2, task, *this)),
-                  keypad_entry_timer("keypad_entry_timer",
-                                     KEYPAD_ENTRY_TIMEOUT,
+                  timer_expired_queue(TimerExpiredQueue::create(2, task, *this)),
+                  keypad_entry_timer(KEYPAD_ENTRY_TIMEOUT,
                                      timer_expired_queue,
                                      false,
                                      std::chrono::seconds{2})
@@ -39,7 +38,7 @@ namespace g3
             {
                 auto command = id.get() + cmd_keypad_code_entered;
                 cmd.process(command, std::string(R"!!({ "code": ")!!") + keypad_entry + R"!!("})!!");
-                Log::info("Keypad", Format("{1}", Str(keypad_entry)));
+                Log::info("Keypad", "{}", keypad_entry);
                 keypad_entry.clear();
                 keypad_entry_timer->stop();
             }
@@ -62,7 +61,7 @@ namespace g3
         {
             auto command = this->id.get() + cmd_keypad_code_entered;
             cmd.process(command, std::string(R"!!({ "code": ")!!") + std::to_string(id) + R"!!("})!!");
-            Log::info("Keycard", Format("Num: {1}", Str(std::to_string(id))));
+            Log::info("Keycard", "Num: {}", std::to_string(id));
         }
 
         void Keypad::event(const smooth::core::timer::TimerExpiredEvent& event)

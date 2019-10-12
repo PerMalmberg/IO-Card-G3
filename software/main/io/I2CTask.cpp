@@ -41,11 +41,11 @@ I2CTask::I2CTask()
           analog_change_2(analog_change_queue_2, ANALOG_CHANGE_PIN_2, false, false, GPIO_INTR_NEGEDGE),
           i2c_reset(GPIO_NUM_25, false, false, false),
           external_siren(GPIO_NUM_23, true, false, false ),
-          set_output_cmd(I2CSetOutputQueue::create("set_output_cmd", 10, *this, *this)),
-          set_output_bit_cmd(I2CSetOutputBitQueue::create("set_output_bit_cmd", 10, *this, *this)),
-          set_external_siren(ExternalSirenCommandQueue::create("set_external_siren", 3, *this, *this)),
-          publish_output_queue(TimerExpiredQueue::create("publish_output", 3, *this, *this)),
-          publish_output_timer("publish_output", PUBLISH_OUTPUTS, publish_output_queue, true, seconds{15})
+          set_output_cmd(I2CSetOutputQueue::create(10, *this, *this)),
+          set_output_bit_cmd(I2CSetOutputBitQueue::create(10, *this, *this)),
+          set_external_siren(ExternalSirenCommandQueue::create(3, *this, *this)),
+          publish_output_queue(TimerExpiredQueue::create(3, *this, *this)),
+          publish_output_timer(PUBLISH_OUTPUTS, publish_output_queue, true, seconds{15})
 {
 }
 
@@ -313,7 +313,7 @@ I2CTask::init_MCP23017_U1401()
                 0x00  // interrupt_default_val_b
         );
 
-        Log::info(name, Format("Configure U1401: {1}", Bool(res)));
+        Log::info(name, "Configure U1401: {}", res);
 
         if (res)
         {
@@ -327,7 +327,7 @@ I2CTask::init_MCP23017_U1401()
                     0x00,  // pullup
                     0x00); // polarity
 
-            Log::info(name, Format("Configure ports U1401: {1}", Bool(res)));
+            Log::info(name, "Configure ports U1401: {}", res);
 
             device->set_output(MCP23017::Port::B, 0);
         }
@@ -363,7 +363,7 @@ I2CTask::init_MCP23017_U1402()
                 0x00  // interrupt_default_val_b
         );
 
-        Log::info(name, Format("Configure U1402: {1}", Bool(res)));
+        Log::info(name, "Configure U1402: {}", res);
 
         if (res)
         {
@@ -377,7 +377,7 @@ I2CTask::init_MCP23017_U1402()
                     0x00,
                     0x00);
 
-            Log::info(name, Format("Configure ports U1402: {1}", Bool(res)));
+            Log::info(name, "Configure ports U1402: {}",res);
 
             device->set_output(MCP23017::Port::B, 0);
         }
@@ -397,14 +397,13 @@ std::tuple<bool, std::unique_ptr<smooth::application::sensor::BME280>> I2CTask::
 
     if (device->is_present())
     {
-        Log::info(name, Format("BME280 reset: {1}", Bool(device->reset())));
+        Log::info(name, "BME280 reset: {}", device->reset());
 
         bool measuring = false;
         bool loading_from_nvm = false;
         while (!device->read_status(measuring, loading_from_nvm) || loading_from_nvm)
         {
-            Log::info(name, Format("Waiting for BME280 to complete reset operation... {1} {2}", Bool(measuring),
-                                   Bool(loading_from_nvm)));
+            Log::info(name, "Waiting for BME280 to complete reset operation... {} {}", measuring, loading_from_nvm);
         }
 
         res = device->configure_sensor(BME280::SensorMode::Normal,
@@ -414,11 +413,11 @@ std::tuple<bool, std::unique_ptr<smooth::application::sensor::BME280>> I2CTask::
                                        BME280::StandbyTimeMS::ST_1000,
                                        BME280::FilterCoeff::FC_OFF);
 
-        Log::info(name, Format("Configure BME280: {1}", Bool(res)));
+        Log::info(name, "Configure BME280: {}", res);
 
         if (res)
         {
-            Log::info(name, Format("BME280 initialized, ID: {1}", Hex<uint8_t>(device->read_id())));
+            Log::info(name, "BME280 initialized, ID: {}", device->read_id());
         }
         else
         {

@@ -1,5 +1,7 @@
 #include "DeviceId.h"
 #include <random>
+#include <iomanip>
+#include <sstream>
 #include <smooth/core/json/JsonFile.h>
 #include <smooth/core/logging/log.h>
 #include <smooth/core/util/json_util.h>

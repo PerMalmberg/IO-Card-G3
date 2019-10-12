@@ -47,9 +47,9 @@ namespace sound
 {
     Player::Player(smooth::core::Task& task)
         : task(task),
-          queue(TimerExpiredQueue::create("player", 3, task, *this)),
-          to_play(PlaySongQueue::create("to_play", 3, task, *this)),
-          timer("player_timer", PLAYER_ID, queue, false, std::chrono::milliseconds{0}),
+          queue(TimerExpiredQueue::create(3, task, *this)),
+          to_play(PlaySongQueue::create(3, task, *this)),
+          timer(PLAYER_ID, queue, false, std::chrono::milliseconds{0}),
           note_book(SDCardMount::instance().mount_point() / "notes.jsn")
     {        
     }
@@ -106,7 +106,7 @@ namespace sound
         }
         else
         {
-            Log::info("Player", Format("Song '{1}' not found", Str(ev.get_name())));
+            Log::info("Player","'{}' not found", ev.get_name());
             off();
             song_timings.clear();
             current_song.clear();
@@ -115,7 +115,7 @@ namespace sound
 
     void Player::play_song(const std::string& name)
     {
-        Log::info("Player", Format("Playing song: '{1}'", Str(name)));
+        Log::info("Player", "Playing song: '{}'", name);
         start_song();
     }
 

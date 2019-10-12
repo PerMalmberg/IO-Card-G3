@@ -27,12 +27,12 @@ namespace g3
     {
         Alarm::Alarm(smooth::core::Task& task)
             :   task(task),
-                analog_value( RawAnalogQueue::create("analog2alarm", 10, task, *this)),
-                digital_value(DigitalInputValueQueue::create("digital2alarm", 10, task, *this)),
-                code_entered_sub(CodeEnteredQueue::create("code_entered_sub", 5, task, *this)),
-                sensor_triggered_sub(SensorTriggeredQueue::create("sensor_triggered_sub", 16, task, *this)),
-                timer_event(TimerExpiredQueue::create("timer_event", 5, task, *this)),
-                new_config(NewConfigQueue::create("", 1, task, *this))
+                analog_value( RawAnalogQueue::create(10, task, *this)),
+                digital_value(DigitalInputValueQueue::create(10, task, *this)),
+                code_entered_sub(CodeEnteredQueue::create(5, task, *this)),
+                sensor_triggered_sub(SensorTriggeredQueue::create(16, task, *this)),
+                timer_event(TimerExpiredQueue::create(5, task, *this)),
+                new_config(NewConfigQueue::create(1, task, *this))
         {            
             set_state(new(*this) state::Idle(*this));
             analog_sensors.reserve(ANALOG_INPUT_COUNT);
@@ -41,7 +41,7 @@ namespace g3
 
         void Alarm::entering_state(g3::alarm::state::BaseState* state)
         {
-            Log::info(tag, Format("Entering '{1}'.", Str(state->get_state_name())));
+            Log::info(tag, "Entering '{}'.", state->get_state_name());
 
             Publisher<I2CSetOutputBit>::publish(I2CSetOutputBit{I2CDevice::status, ARMED, state->is_armed()});
             Publisher<ArmedStatus>::publish(ArmedStatus{state->is_armed()});
@@ -49,7 +49,7 @@ namespace g3
 
         void Alarm::leaving_state(g3::alarm::state::BaseState* state)
         {
-            Log::info(tag, Format("Leaving '{1}'.", Str(state->get_state_name())));
+            Log::info(tag, "Leaving '{}'.", state->get_state_name());
         }
 
         void Alarm::code_entered(const std::string& code)
@@ -126,7 +126,7 @@ namespace g3
                 tick->stop();
             }
 
-            tick = Timer::create("alarm_tick", ALARM_TICK, timer_event, true, seconds{1});
+            tick = Timer::create(ALARM_TICK, timer_event, true, seconds{1});
             tick->start();
 
             started = true;
@@ -138,7 +138,7 @@ namespace g3
             auto number_of_codes = cfg.get()[CODES].size();
             smooth::application::security::PasswordHash ph{};
 
-            Log::info(tag, Format("Code: {1}", Str(code)));
+            Log::info(tag, "Code: {}", code);
 
             bool valid = false;
             for (auto i = 0; !valid && i < number_of_codes; ++i)
@@ -151,8 +151,8 @@ namespace g3
 
                     if (valid)
                     {
-                        Log::info(tag, Format("Code validated for user {1}",
-                                              Str(default_value(current, USER, "--NO-USER--"))));
+                        Log::info(tag, "Code validated for user {}",
+                                              default_value(current, USER, "--NO-USER--"));
                     }
                 }
             }
